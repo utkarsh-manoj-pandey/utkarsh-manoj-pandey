@@ -58,5 +58,3 @@ Thanks for visiting my GitHub profile! I hope you find something interesting her
 [![Visitor Count](https://visitor-badge.glitch.me/badge?page_id=utkarsh-manoj-pandey.utkarsh-manoj-pandey)](https://github.com/utkarsh-manoj-pandey)
 
 ---
-
-**Disclaimer**: This README template is provided as a starting point. Please customize it to reflect your own personality, interests, and projects.
