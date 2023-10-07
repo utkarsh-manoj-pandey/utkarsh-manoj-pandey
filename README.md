@@ -27,7 +27,7 @@ Here are some of my notable projects:
 2. [Project Name](Link to the project): A brief description of the project.
 3. [Project Name](Link to the project): A brief description of the project.
 
-You can find more of my projects on my [GitHub repositories](https://github.com/yourusername).
+You can find more of my projects on my [GitHub repositories](https://github.com/utkarsh-manoj-pandey).
 
 ## Contributions
 
