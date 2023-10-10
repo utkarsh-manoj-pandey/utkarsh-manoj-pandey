@@ -23,9 +23,13 @@ I'm interested in a wide range of Python-related topics, including:
 
 Here are some of my notable projects:
 
-1. [Project Name](Link to the project): A brief description of the project.
-2. [Project Name](Link to the project): A brief description of the project.
+1. Stock Market Analysis Using Python 📊
+   ([See the Project here](https://github.com/utkarsh-manoj-pandey/Stock-Market-Analysis-Using-Python--)):
+   
+   The project's primary objective was to analyze the historical performance of four prominent companies: Apple, Google, Microsoft, and Amazon. By sourcing data from Yahoo Finance, I aimed to uncover trends,
+   assess risk, and enhance decision-making capabilities in the financial markets.
 3. [Project Name](Link to the project): A brief description of the project.
+4. [Project Name](Link to the project): A brief description of the project.
 
 You can find more of my projects on my [GitHub repositories](https://github.com/utkarsh-manoj-pandey).
 
