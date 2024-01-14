@@ -33,9 +33,10 @@ Here are some of my notable projects:
 
    Amazon Product Insight Miner is a Python script designed to scrape product data from Amazon's search results pages. It offers the ability to extract key information, such as the product URL, name, price,
    rating, and the number of reviews. This versatile tool can help you gather valuable product data from Amazon for various purposes, including market research, price tracking, and competitive analysis.
-6. [Project Name](Link to the project): A brief description of the project.
-
-You can find more of my projects on my [GitHub repositories](https://github.com/utkarsh-manoj-pandey).
+3. Twitter Sentiment Analysis with NLP and LSTM 📊🚀
+   ([See the Project here](https://github.com/utkarsh-manoj-pandey/Twitter-Sentiment-Analysis-with-NLP-and-LSTM)):
+   
+   Predicting sentiments in tweets using the magic of Natural Language Processing (NLP) and the wizardry of Long Short-Term Memory (LSTM) networks! 🧙‍♂️✨
 
 ## Contributions
 
