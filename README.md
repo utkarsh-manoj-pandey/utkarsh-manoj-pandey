@@ -23,21 +23,19 @@ I'm interested in a wide range of Python-related topics, including:
 
 Here are some of my notable projects:
 
-1. Stock Market Analysis Using Python 📊
+### 1. Stock Market Analysis Using Python 📊
    ([See the Project here](https://github.com/utkarsh-manoj-pandey/Stock-Market-Analysis-Using-Python--)):
    
-   The project's primary objective was to analyze the historical performance of four prominent companies: Apple, Google, Microsoft, and Amazon. By sourcing data from Yahoo Finance, I aimed to uncover trends,
-   assess risk, and enhance decision-making capabilities in the financial markets.
-2. 🛒 Amazon Product Insight Miner 🌟
-    ([See the Project here](https://github.com/utkarsh-manoj-pandey/-Amazon-Product-Insight-Miner-)):
+   The project's primary objective was to analyze the historical performance of four prominent companies: Apple, Google, Microsoft, and Amazon. By sourcing data from Yahoo Finance, I aimed to uncover trends, assess risk, and enhance decision-making capabilities in the financial markets.
+### 2. 🛒 Amazon Product Insight Miner 🌟
+   ([See the Project here](https://github.com/utkarsh-manoj-pandey/-Amazon-Product-Insight-Miner-)):
 
-   Amazon Product Insight Miner is a Python script designed to scrape product data from Amazon's search results pages. It offers the ability to extract key information, such as the product URL, name, price,
-   rating, and the number of reviews. This versatile tool can help you gather valuable product data from Amazon for various purposes, including market research, price tracking, and competitive analysis.
-3. Twitter Sentiment Analysis with NLP and LSTM 📊🚀
+   Amazon Product Insight Miner is a Python script designed to scrape product data from Amazon's search results pages. It offers the ability to extract key information, such as the product URL, name, price, rating, and the number of reviews. This versatile tool can help you gather valuable product data from Amazon for various purposes, including market research, price tracking, and competitive analysis.
+### 3. Twitter Sentiment Analysis with NLP and LSTM 📊🚀
    ([See the Project here](https://github.com/utkarsh-manoj-pandey/Twitter-Sentiment-Analysis-with-NLP-and-LSTM)):
    
    Predicting sentiments in tweets using the magic of Natural Language Processing (NLP) and the wizardry of Long Short-Term Memory (LSTM) networks! 🧙‍♂️✨
-4. Awesome Consumer Complaints Analysis 📊💬
+### 4. Awesome Consumer Complaints Analysis 📊💬
    ([See the Project here](https://github.com/utkarsh-manoj-pandey/-Consumer-Insight-Explorer-)):
    
    Welcome to the Awesome Consumer Complaints Analysis project! 🎉 This project explores consumer complaints data, aiming to uncover insights and trends. Analyzing complaints can empower companies to enhance their services and foster 
