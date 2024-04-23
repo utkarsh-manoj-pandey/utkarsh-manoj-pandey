@@ -44,6 +44,10 @@ Here are some of my notable projects:
    
    Welcome to the Awesome Consumer Complaints Analysis project! 🎉 This project explores consumer complaints data, aiming to uncover insights and trends. Analyzing complaints can empower companies to enhance their services and foster 
    better consumer relationships. 🚀
+### 6. 🎬 Movie Recommendation System 🍿
+   ([See the Project here](https://github.com/utkarsh-manoj-pandey/-Movie-Recommendation-System-)):
+   
+   This project is a Movie Recommendation System built using Flask, Pandas, and scikit-learn. It recommends movies based on either genre preferences or popularity, leveraging a combination of content-based and popularity-based recommendation techniques. 📊🚀
 ## Contributions
 
 I'm an active contributor to the open-source community. Some of the projects I've contributed to include:
