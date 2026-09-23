@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. MASTER COMMAND DECK & HERO MASTHEAD                                -->
+<!-- 1. CYBERDECK HUD MASTHEAD                                             -->
 <!-- ===================================================================== -->
 
-<img src="./assets/banner.svg" width="900" alt="Utkarsh Manoj Pandey — Command Deck" />
+<img src="./assets/cyberdeck_hud.svg" width="900" alt="Utkarsh Manoj Pandey — Cyberdeck Console" />
 
 <br/><br/>
 
@@ -21,38 +21,20 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 3. ARCHITECTURAL DOSSIER // SYSTEM SPECIFICATIONS                    -->
+<!-- 3. HARDWARE & OPERATING SYSTEM ARCHITECTURAL BLUEPRINT                -->
 <!-- ===================================================================== -->
 
-### `SYSTEM_OVERVIEW` // CORE ARCHITECTURE
+<div align="center">
 
-```yaml
-architect:
-  name: "Utkarsh Manoj Pandey"
-  designation: "Artificial Intelligence & Data Systems Architect"
-  alumnus: "Meta Scifor Technologies"
-  location: "Mumbai, India (Global Remote Capable)"
-  status: "Active // Engineering Resilient AI & Quantitative Pipelines"
+### `SYSTEM_BLUEPRINT` // SIFRA EDGE AI & PROMETHEUS OS
 
-engineering_ethos:
-  philosophy: "Transforming stochastic real-world data into high-precision algorithmic value."
-  discipline: "Clean, vectorized code with mathematical rigor and production resilience."
+<p align="center"><i>End-to-end full-stack integration spanning bare-metal ARM64 hardware to edge-hosted fine-tuned LLMs.</i></p>
 
-technical_pillars:
-  deep_learning:
-    - "Recurrent Neural Networks (Bidirectional LSTM)"
-    - "Natural Language Processing (Sequence Classification & Sentiment Mining)"
-    - "Deep PyTorch & TensorFlow Model Architectures"
-  quantitative_finance:
-    - "Multi-Asset Historical Risk & Beta Volatility Modeling"
-    - "Time-Series Econometrics via Financial APIs"
-  data_engineering:
-    - "High-Throughput Distributed Web Crawlers"
-    - "Automated ETL Pipelines & Exploratory Feature Engineering"
-  systems_backend:
-    - "Low-Latency FastAPI Microservices & Flask REST APIs"
-    - "Structured SQL & Document Stores (PostgreSQL, MySQL, MongoDB)"
-```
+<br/>
+
+<img src="./assets/hardware_architecture.svg" width="900" alt="Hardware & OS Architecture Blueprint" />
+
+</div>
 
 <br/>
 
@@ -61,33 +43,104 @@ technical_pillars:
 </div>
 
 <!-- ===================================================================== -->
-<!-- 4. TECHNICAL ARSENAL // CURATED BENTO MATRIX                         -->
+<!-- 4. ADVANCED DOMAIN MASTERY // DEEP TECHNICAL CAPABILITIES             -->
+<!-- ===================================================================== -->
+
+### `CORE_CAPABILITIES` // ADVANCED DOMAIN ARCHITECTURE
+
+```yaml
+architect:
+  name: "Utkarsh Manoj Pandey"
+  specialization: "AI & Intelligent Systems Developer // Embedded Linux Architect"
+  credentials: "M.Sc. IT (CGPA 8.7, Final Year Project Grant Winner) • ISRO • IIT Madras"
+  primary_platforms: ["Raspberry Pi 5 (ARM64)", "x86_64 High-Compute", "RISC-V Microarchitecture"]
+
+flagship_systems:
+  prometheus_os:
+    type: "Custom Operating System (Arch Linux derivative)"
+    architecture: "ARM64 (Raspberry Pi 5) & x86_64"
+    features: "External NVMe SSD boot pipeline, minimal footprint kernel, custom shell automation"
+  
+  sifra_voice_agent:
+    type: "Edge-Hosted Autonomous Multimodal Voice Assistant"
+    hardware: "Raspberry Pi 5 + M.2 NVMe PCIe Gen3 storage"
+    neural_models: "Fine-tuned Llama 3.3 & DeepSeek R1 open-source weights"
+    biometrics: "Facial authentication via OpenCV + Voiceprint biometric recognition"
+    automation: "Real-time continuous ASR with Playwright/Selenium browser execution"
+
+  edith_system:
+    type: "x86_64 Machine Intelligence Assistant"
+    capabilities: "Continuous ASR-based desktop automation, real-time event loop execution"
+```
+
+<br/>
+
+---
+
+### `DEEP_DIVE` // WHAT I BRING TO THE TABLE IN AN ADVANCED WAY
+
+> #### 🧠 01 / Autonomous AI Agents & Edge-Hosted LLMs
+> - **Fine-Tuning Open Weights**: Hands-on fine-tuning and quantization of state-of-the-art open-source LLMs (**Llama 3.3** and **DeepSeek R1**) for edge inference.
+> - **Multimodal Biometric Pipelines**: Dual-factor hardware authentication combining **facial biometric recognition** (computer vision) and **voiceprint audio verification**.
+> - **Continuous ASR Automation**: Low-latency speech recognition streaming pipelines driving autonomous desktop and browser actions.
+
+<br/>
+
+> #### ⚡ 02 / Custom Operating Systems & Kernel Architecture
+> - **Prometheus OS**: Engineered a personalized, custom **Arch Linux-based Operating System** optimized to boot from high-speed external M.2 NVMe SSDs on ARM64.
+> - **Embedded Linux Mastery**: Deep configuration and kernel tuning across **Manjaro Linux, Oracle Linux, Raspberry Pi OS, and Arch Linux**.
+> - **RISC-V Architecture**: In-depth understanding of **Instruction Set Architecture (ISA)**, instruction pipelining, branch prediction, and processor microarchitecture.
+
+<br/>
+
+> #### 🤖 03 / Advanced Automation & Headless Browser Engineering
+> - **Autonomous Web Execution**: Programmatic browser automation utilizing **Playwright & Selenium** for complex, multi-stage workflows (autonomous YouTube and Amazon automation).
+> - **Desktop GUIs & Asynchronous Backends**: Designing responsive, multi-threaded desktop graphical applications via **PyQt** coupled with modular Python backend logic.
+> - **Audio-Visual Dataset Curation**: Building structured local storage pipelines (**SQLite / NoSQL**) for multimodal training sets and audio telemetry.
+
+<br/>
+
+> #### 🔬 04 / Data Science, Econometrics & Machine Learning
+> - **End-to-End Analytics**: High-throughput ETL, feature engineering, mathematical optimization, and predictive modeling.
+> - **Enterprise Analytics & Dashboards**: Creating executive-grade intelligence dashboards in **Tableau** and **Power BI**.
+> - **Research Accreditations**: Certified in **Geographical Information Systems (GIS) by ISRO** and **Data Science for Engineers by IIT Madras**.
+
+<br/>
+
+<div align="center">
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
+</div>
+
+<!-- ===================================================================== -->
+<!-- 5. POLYGLOT MATRIX // LANGUAGES & ENVIRONMENTS                        -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-### `TECH_ARSENAL` // WEAPONS & INFRASTRUCTURE
+### `POLYGLOT_MATRIX` // SYSTEMS, AI & DATABASE STACK
 
-<p align="center"><i>Curated tools and frameworks deployed across machine learning, analytical modeling, and distributed backend systems.</i></p>
+<p align="center"><i>Multi-paradigm mastery across bare-metal systems, scientific data runtimes, and distributed datastores.</i></p>
 
 <br/>
 
-<img src="./assets/tech_matrix.svg" width="900" alt="Technical Arsenal Bento Grid" />
+<img src="./assets/polyglot_matrix.svg" width="900" alt="Polyglot Systems Matrix" />
 
 <br/>
 
 <p align="center">
-  <code>Python 3.11+</code> &nbsp;•&nbsp;
-  <code>PyTorch</code> &nbsp;•&nbsp;
-  <code>TensorFlow</code> &nbsp;•&nbsp;
-  <code>Scikit-Learn</code> &nbsp;•&nbsp;
-  <code>Pandas</code> &nbsp;•&nbsp;
-  <code>NumPy</code> &nbsp;•&nbsp;
-  <code>FastAPI</code> &nbsp;•&nbsp;
-  <code>Flask</code> &nbsp;•&nbsp;
-  <code>PostgreSQL</code> &nbsp;•&nbsp;
-  <code>Docker</code> &nbsp;•&nbsp;
-  <code>Linux (Ubuntu)</code>
+  <code>C</code> &nbsp;•&nbsp;
+  <code>C++</code> &nbsp;•&nbsp;
+  <code>Rust</code> &nbsp;•&nbsp;
+  <code>Go</code> &nbsp;•&nbsp;
+  <code>Python</code> &nbsp;•&nbsp;
+  <code>Julia</code> &nbsp;•&nbsp;
+  <code>R</code> &nbsp;•&nbsp;
+  <code>Scala</code> &nbsp;•&nbsp;
+  <code>Java</code> &nbsp;•&nbsp;
+  <code>Bash / Shell</code> &nbsp;•&nbsp;
+  <code>PowerShell</code> &nbsp;•&nbsp;
+  <code>SQL</code> &nbsp;•&nbsp;
+  <code>Pro*C</code>
 </p>
 
 </div>
@@ -99,76 +152,25 @@ technical_pillars:
 </div>
 
 <!-- ===================================================================== -->
-<!-- 5. FLAGSHIP ENGINEERING SYSTEMS // CASE STUDIES                       -->
+<!-- 6. VERIFIED CREDENTIALS & RESEARCH PEDIGREE                           -->
 <!-- ===================================================================== -->
 
-### `CASE_STUDIES` // FLAGSHIP SYSTEMS & REPOSITORIES
+<div align="center">
+
+### `ACCREDITATIONS` // RESEARCH & ACADEMIC PEDIGREE
 
 <br/>
 
-> ### `01` / SCIFOR ENTERPRISE DATA INTELLIGENCE PLATFORM
-> **Meta Scifor Technologies** • *Data Science & Predictive Modeling Infrastructure*
->
-> High-performance exploratory data analysis and statistical machine learning infrastructure engineered during data science tenure at Meta Scifor Technologies. Bridges the gap between experimental data exploration and production-grade analytical pipelines.
->
-> - **Architecture Highlights**: Modular statistical feature extraction, anomaly detection, vectorized ETL workflows.
-> - **Technologies**: `Python 3.x` • `Scikit-Learn` • `Pandas` • `NumPy` • `Matplotlib` • `EDA`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/SciFor)
+<img src="./assets/credentials_bar.svg" width="900" alt="Verified Credentials & Accreditations" />
 
 <br/>
 
-> ### `02` / MULTI-ASSET QUANTITATIVE FINANCIAL ANALYZER
-> **Quantitative Finance** • *Algorithmic Risk & Volatility Analysis*
->
-> Algorithmic time-series analysis framework evaluating historical risk, beta, volatility, and return distributions for **Apple, Google, Microsoft, and Amazon** using streaming Yahoo Finance APIs. Uncovers market correlations and enhances systematic capital allocation decisions.
->
-> - **Architecture Highlights**: Multi-asset time-series modeling, covariance risk matrix computation, automated metric plots.
-> - **Technologies**: `Quantitative Finance` • `NumPy` • `Pandas` • `Yahoo Finance API` • `Matplotlib`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/Stock-Market-Analysis-Using-Python--)
+<p align="center">
+  🎓 <b>Master of Science in Information Technology (M.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.7</b>) • <i>Passed Inter-Collegiate Test for Final Year Project Grant</i><br/>
+  🎓 <b>Bachelor of Science in Information Technology (B.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.3</b>) • <i>Event Lead for Inter-Collegiate Tech Summit</i>
+</p>
 
-<br/>
-
-> ### `03` / HIGH-THROUGHPUT AMAZON MARKETPLACE MINER
-> **Distributed Systems** • *Automated E-Commerce Intelligence Crawler*
->
-> High-throughput automated web data extraction framework engineered to crawl, parse, and normalize Amazon search catalog data at scale. Extracts pricing elasticity, customer review sentiment, rating distributions, and competitive market signals.
->
-> - **Architecture Highlights**: Automated catalog parsing, proxy rotation, anti-bot mitigation, structured JSON pipeline.
-> - **Technologies**: `Web Scraping` • `Python` • `Data Mining` • `ETL Pipelines` • `Automation`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/-Amazon-Product-Insight-Miner-)
-
-<br/>
-
-> ### `04` / REAL-TIME TWITTER NLP & RECURRENT NEURAL ENGINE
-> **Deep Learning & NLP** • *Sequence Modeling with Bidirectional LSTM*
->
-> Deep learning recurrent neural network classifier utilizing **Natural Language Processing** and **Long Short-Term Memory (LSTM)** architectures to predict sentiment vectors across dynamic microblog streams with granular confidence scores.
->
-> - **Architecture Highlights**: Tokenization & embedding matrices, recurrent sequential memory cells, hyperparameter tuning.
-> - **Technologies**: `Deep Learning` • `LSTM Recurrent Nets` • `TensorFlow` • `Keras` • `NLP`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/Twitter-Sentiment-Analysis-with-NLP-and-LSTM)
-
-<br/>
-
-> ### `05` / ENTERPRISE CONSUMER COMPLAINT INTELLIGENCE
-> **Data Intelligence** • *Customer Experience Text Analytics & Resolution Forecasting*
->
-> Exploratory data analytics and statistical modeling suite analyzing large-scale consumer complaint corpora to isolate operational bottlenecks, classify service friction categories, and empower proactive customer retention.
->
-> - **Architecture Highlights**: Multi-class text classification, trend seasonality discovery, executive reporting dashboards.
-> - **Technologies**: `Statistical Modeling` • `Seaborn` • `Pandas` • `Data Visualization`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/-Consumer-Insight-Explorer-)
-
-<br/>
-
-> ### `06` / HYBRID INTELLIGENT MOVIE RECOMMENDER
-> **Information Retrieval** • *Collaborative Filtering & Content Similarity Microservice*
->
-> Dual-model recommendation architecture blending content-based cosine similarity with popularity heuristics. Deployed as a low-latency **Flask** REST microservice delivering real-time personalized recommendations.
->
-> - **Architecture Highlights**: Cosine distance spatial indexing, genre affinity weighting, sub-10ms inference latency.
-> - **Technologies**: `Scikit-Learn` • `Flask REST` • `Cosine Distance` • `Pandas`
-> - **Source Code**: [**Explore Repository & Architecture →**](https://github.com/utkarsh-manoj-pandey/-Movie-Recommendation-System-)
+</div>
 
 <br/>
 
@@ -177,14 +179,12 @@ technical_pillars:
 </div>
 
 <!-- ===================================================================== -->
-<!-- 6. SELF-CONTAINED GITHUB TELEMETRY & LIVE PERFORMANCE                 -->
+<!-- 7. REAL-TIME SYSTEM TELEMETRY                                         -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-### `TELEMETRY` // REAL-TIME SYSTEM PERFORMANCE
-
-<p align="center"><i>Self-hosted telemetry engine running natively with zero external latency.</i></p>
+### `TELEMETRY` // HARDWARE RUNTIME PERFORMANCE
 
 <br/>
 
@@ -192,7 +192,7 @@ technical_pillars:
 
 <br/><br/>
 
-<!-- Contribution Activity Streak -->
+<!-- Activity Streak -->
 <a href="https://github.com/utkarsh-manoj-pandey">
   <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=false&background=07090e&border=1e293b&ring=38bdf8&fire=818cf8&currStreakLabel=38bdf8&sideNums=f8fafc&sideLabels=94a3b8&dates=64748b&border_radius=8" width="600" alt="Contribution Streak" />
 </a>
@@ -206,7 +206,7 @@ technical_pillars:
 </div>
 
 <!-- ===================================================================== -->
-<!-- 7. CONTRIBUTION CONSUMPTION SNAKE                                     -->
+<!-- 8. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
 
 <div align="center">
@@ -228,14 +228,14 @@ technical_pillars:
 </div>
 
 <!-- ===================================================================== -->
-<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 9. DIRECT TRANSMISSION CHANNELS                                       -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
 
-<p align="center"><i>Available for high-impact AI/ML engineering roles, quantitative analytics initiatives, and advanced open-source collaboration.</i></p>
+<p align="center"><i>Available for cutting-edge AI systems development, embedded intelligence architectures, and advanced engineering initiatives.</i></p>
 
 <br/>
 
@@ -244,12 +244,12 @@ technical_pillars:
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter/X-Follow-000000?style=flat&logo=x&logoColor=white" alt="Twitter" />
-  </a>
-  &nbsp;&nbsp;
   <a href="mailto:utkarsh.manoj.pandey@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-Direct_Contact-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter/X-Follow-000000?style=flat&logo=x&logoColor=white" alt="Twitter" />
   </a>
   &nbsp;&nbsp;
   <a href="https://utkarshmanojpandey.blogspot.com/" target="_blank">
@@ -260,7 +260,7 @@ technical_pillars:
 <br/>
 
 <p align="center">
-  <code>[ 2026 // UTKARSH MANOJ PANDEY // ALL SYSTEMS OPERATIONAL ]</code>
+  <code>[ 2026 // UTKARSH MANOJ PANDEY // PROMETHEUS OS ACTIVE // ALL SYSTEMS OPERATIONAL ]</code>
 </p>
 
 </div>
