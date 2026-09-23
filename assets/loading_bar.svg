@@ -1,0 +1,139 @@
+<svg width="850" height="96" viewBox="0 0 850 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#070a12" stop-opacity="0.98" />
+    </linearGradient>
+
+    <!-- Neon Cyan-Violet Gradient for Progress Bar -->
+    <linearGradient id="neonBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4">
+        <animate attributeName="stop-color" values="#00f5d4; #7928ca; #ff007f; #00f5d4" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#7928ca">
+        <animate attributeName="stop-color" values="#7928ca; #ff007f; #00f5d4; #7928ca" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ff007f">
+        <animate attributeName="stop-color" values="#ff007f; #00f5d4; #7928ca; #ff007f" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Diagonal Pattern for Progress Bar -->
+    <pattern id="stripes" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="20" fill="rgba(255, 255, 255, 0.15)" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes progressAnim {
+      0% { width: 0%; opacity: 0.8; }
+      50% { width: 98%; opacity: 1; }
+      85% { width: 99.4%; opacity: 1; }
+      100% { width: 100%; opacity: 0.95; }
+    }
+    @keyframes pulseLed {
+      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 4px #00f5d4); }
+      50% { opacity: 0.3; transform: scale(0.85); filter: none; }
+    }
+    @keyframes scanline {
+      0% { transform: translateX(-80px); }
+      100% { transform: translateX(850px); }
+    }
+    @keyframes glitchText {
+      0%, 92%, 100% { opacity: 1; }
+      93% { opacity: 0.4; transform: translateX(1px); }
+      95% { opacity: 1; transform: translateX(-1px); }
+      97% { opacity: 0.7; }
+    }
+    .hud-title {
+      font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      fill: #00f5d4;
+      animation: glitchText 6s infinite;
+    }
+    .hud-meta {
+      font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      fill: #8b949e;
+    }
+    .hud-highlight {
+      fill: #ff007f;
+      font-weight: 700;
+    }
+    .bar-fill {
+      animation: progressAnim 4s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+    }
+    .status-dot {
+      transform-origin: 32px 23px;
+      animation: pulseLed 2s infinite ease-in-out;
+    }
+    .scanner-beam {
+      animation: scanline 3s linear infinite;
+    }
+  </style>
+
+  <!-- Card Background with Neon Border -->
+  <rect x="1" y="1" width="848" height="94" rx="8" fill="url(#bgGrad)" stroke="#1f293d" stroke-width="1.5" />
+  
+  <!-- Outer Corner Accents (Cyberpunk HUD markers) -->
+  <path d="M 4 14 L 4 4 L 14 4" stroke="#00f5d4" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 846 14 L 846 4 L 836 4" stroke="#00f5d4" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 4 82 L 4 92 L 14 92" stroke="#7928ca" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 846 82 L 846 92 L 836 92" stroke="#ff007f" stroke-width="2" fill="none" opacity="0.8" />
+
+  <!-- Top Status Header -->
+  <circle cx="32" cy="23" r="4" fill="#00f5d4" class="status-dot" />
+  <text x="46" y="27" class="hud-title">SYSTEM_INIT :: UTKARSH_DEV_RUNTIME</text>
+  <text x="470" y="27" class="hud-meta">STATUS: <tspan class="hud-highlight">[ ONLINE - OPTIMAL LOAD ]</tspan></text>
+  <text x="750" y="27" class="hud-meta" text-anchor="end">LOC: HYPERSPACE // 2026</text>
+
+  <!-- Progress Bar Outer Track -->
+  <rect x="30" y="40" width="790" height="20" rx="4" fill="#0d1424" stroke="#25324d" stroke-width="1" />
+  
+  <!-- Active Progress Fill -->
+  <g clip-path="url(#barClip)">
+    <clipPath id="barClip">
+      <rect x="30" y="40" width="790" height="20" rx="4" />
+    </clipPath>
+    
+    <!-- Animated Bar Rectangle -->
+    <rect x="30" y="40" height="20" fill="url(#neonBar)" class="bar-fill" filter="url(#glow)">
+      <!-- Animated width from 20% to 100% -->
+      <animate attributeName="width" values="120; 790; 770; 790" keyTimes="0; 0.7; 0.85; 1" dur="5s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Stripe Overlay -->
+    <rect x="30" y="40" width="790" height="20" fill="url(#stripes)" opacity="0.4" />
+    
+    <!-- Laser Scan Glow Beam -->
+    <rect x="0" y="40" width="60" height="20" fill="#ffffff" opacity="0.6" filter="url(#intenseGlow)" class="scanner-beam" />
+  </g>
+
+  <!-- Bottom Telemetry Info -->
+  <text x="32" y="78" class="hud-meta">NEURAL ENGINE: <tspan fill="#00f5d4">ACTIVE</tspan></text>
+  <text x="210" y="78" class="hud-meta">PYTHON 3.x: <tspan fill="#7928ca">OPTIMIZED</tspan></text>
+  <text x="380" y="78" class="hud-meta">COGNITIVE LATENCY: <tspan fill="#00f5d4">0.12ms</tspan></text>
+  <text x="590" y="78" class="hud-meta">COFFEE BUFFER: <tspan fill="#ff007f">98.4% [███████░]</tspan></text>
+  <text x="820" y="78" class="hud-meta" text-anchor="end" fill="#00f5d4">INIT_STAGE: 99.9%</text>
+</svg>
