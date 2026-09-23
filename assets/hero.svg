@@ -1,119 +1,120 @@
-<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="280" viewBox="0 0 900 280" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07090e" />
-      <stop offset="50%" stop-color="#0b0f17" />
-      <stop offset="100%" stop-color="#04060a" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06070a" />
+      <stop offset="50%" stop-color="#0a0d14" />
+      <stop offset="100%" stop-color="#040508" />
     </linearGradient>
 
-    <!-- Subtle Border Stroke Gradient -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.4" />
-      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="70%" stop-color="#818cf8" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4" />
+    <!-- Border Glow Gradient -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="25%" stop-color="#1e293b" stop-opacity="0.4" />
+      <stop offset="75%" stop-color="#1e293b" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.8" />
     </linearGradient>
 
-    <!-- Ambient Glow behind text -->
-    <radialGradient id="ambientGlow" cx="50%" cy="40%" r="50%">
+    <!-- Ambient Center Flare -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="45%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
-      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.04" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Precision Dot Matrix Pattern -->
-    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r="0.8" fill="#1e293b" opacity="0.6" />
+    <!-- Grid Pattern -->
+    <pattern id="techGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#101726" stroke-width="0.8" />
     </pattern>
 
-    <!-- Text Gradient -->
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f8fafc" />
-      <stop offset="60%" stop-color="#f1f5f9" />
+    <!-- Linear Gradient for Name -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
       <stop offset="100%" stop-color="#cbd5e1" />
-    </linearGradient>
-
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#818cf8" />
     </linearGradient>
   </defs>
 
   <style>
-    @keyframes pulseLive {
-      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 6px #10b981); }
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 5px #10b981); }
       50% { opacity: 0.35; transform: scale(0.85); filter: none; }
     }
-    @keyframes scanline {
-      0% { transform: translateY(-10px); opacity: 0; }
-      50% { opacity: 0.6; }
-      100% { transform: translateY(220px); opacity: 0; }
+    @keyframes sweepLine {
+      0% { transform: translateX(-900px); }
+      100% { transform: translateX(900px); }
     }
-    .status-dot {
-      transform-origin: 32px 32px;
-      animation: pulseLive 2.2s infinite ease-in-out;
+    .live-dot {
+      transform-origin: 846px 24px;
+      animation: pulseGreen 2s infinite ease-in-out;
     }
-    .mono-sub {
-      font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
-      font-size: 11px;
-      letter-spacing: 2px;
-      fill: #64748b;
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     }
-    .main-title {
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      fill: url(#titleGrad);
-    }
-    .role-badge {
-      font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      fill: #38bdf8;
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
   </style>
 
-  <!-- Container Base -->
-  <rect x="1" y="1" width="898" height="218" rx="12" fill="url(#canvasGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
-  
-  <!-- Dot Matrix Overlay -->
-  <rect x="2" y="2" width="896" height="216" rx="11" fill="url(#dotGrid)" />
+  <!-- Outer Frame -->
+  <rect x="1" y="1" width="898" height="278" rx="12" fill="url(#bgGrad)" stroke="url(#cardBorder)" stroke-width="1.2" />
 
-  <!-- Ambient Light Center -->
-  <circle cx="450" cy="110" r="280" fill="url(#ambientGlow)" />
+  <!-- Technical Grid -->
+  <rect x="2" y="2" width="896" height="276" rx="11" fill="url(#techGrid)" opacity="0.9" />
 
-  <!-- Technical Corner Hairlines -->
-  <path d="M 12 24 L 12 12 L 24 12" stroke="#334155" stroke-width="1.5" fill="none" />
-  <path d="M 888 24 L 888 12 L 876 12" stroke="#334155" stroke-width="1.5" fill="none" />
-  <path d="M 12 196 L 12 208 L 24 208" stroke="#334155" stroke-width="1.5" fill="none" />
-  <path d="M 888 196 L 888 208 L 876 208" stroke="#334155" stroke-width="1.5" fill="none" />
+  <!-- Center Ambient Glow -->
+  <circle cx="450" cy="130" r="300" fill="url(#centerGlow)" />
 
-  <!-- Header Metadata Strip -->
-  <g transform="translate(32, 28)">
-    <circle cx="0" cy="4" r="3.5" fill="#10b981" class="status-dot" />
-    <text x="14" y="8" class="mono-sub">CORE_STATUS :: <tspan fill="#f1f5f9" font-weight="600">ONLINE</tspan> // LATENCY: <tspan fill="#38bdf8">0.03ms</tspan></text>
-    <text x="836" y="8" class="mono-sub" text-anchor="end">SYS_ARCH: <tspan fill="#94a3b8">x86_64-LINUX</tspan> // V4.8</text>
+  <!-- Terminal Window Chrome Bar -->
+  <rect x="1" y="1" width="898" height="42" rx="12" fill="#0c1017" fill-opacity="0.8" />
+  <line x1="1" y1="43" x2="899" y2="43" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Mac Window Dots -->
+  <circle cx="28" cy="22" r="5" fill="#ef4444" />
+  <circle cx="46" cy="22" r="5" fill="#f59e0b" />
+  <circle cx="64" cy="22" r="5" fill="#10b981" />
+
+  <!-- Terminal Title -->
+  <text x="92" y="26" class="font-mono" font-size="11" fill="#64748b" letter-spacing="1">utkarsh-manoj-pandey@workstation: ~/neural-core</text>
+
+  <!-- Top Right Status -->
+  <g>
+    <circle cx="846" cy="22" r="4" fill="#10b981" class="live-dot" />
+    <text x="834" y="26" class="font-mono" font-size="11" fill="#38bdf8" text-anchor="end" font-weight="600" letter-spacing="1.5">SYSTEM ACTIVE</text>
   </g>
 
-  <!-- Divider Line -->
-  <line x1="32" y1="46" x2="868" y2="46" stroke="#1e293b" stroke-width="0.8" />
+  <!-- Masthead Content (Centered) -->
+  <g transform="translate(450, 95)" text-anchor="middle">
+    <!-- Sub-badge -->
+    <rect x="-180" y="-18" width="360" height="24" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="-2" class="font-mono" font-size="10.5" fill="#38bdf8" font-weight="600" letter-spacing="2">AI &amp; DATA SYSTEMS ARCHITECT</text>
 
-  <!-- Main Identity Content -->
-  <g transform="translate(450, 106)" text-anchor="middle">
-    <text x="0" y="0" class="main-title">UTKARSH MANOJ PANDEY</text>
-    <text x="0" y="28" class="role-badge">DATA SCIENTIST &amp; ARTIFICIAL INTELLIGENCE ENGINEER</text>
-    <text x="0" y="48" class="mono-sub" fill="#94a3b8">SPECIALIZATION : <tspan fill="#cbd5e1">DEEP LEARNING • QUANTITATIVE FINANCE • NLP • ROBUST BACKENDS</tspan></text>
+    <!-- Main Name -->
+    <text x="0" y="44" class="font-sans" font-size="40" font-weight="800" fill="url(#nameGrad)" letter-spacing="-0.5">UTKARSH MANOJ PANDEY</text>
+
+    <!-- Tagline -->
+    <text x="0" y="74" class="font-mono" font-size="12" fill="#94a3b8" letter-spacing="1">Translating Stochastic Data into High-Precision Algorithmic Intelligence</text>
   </g>
 
-  <!-- Bottom Spec Chips -->
-  <g transform="translate(32, 185)">
-    <line x1="0" y1="0" x2="836" y2="0" stroke="#1e293b" stroke-width="0.8" />
-    <text x="0" y="16" class="mono-sub">CORE ENGINE : <tspan fill="#38bdf8">PYTHON 3.x</tspan></text>
-    <text x="230" y="16" class="mono-sub">DEEP LEARNING : <tspan fill="#818cf8">PYTORCH • TENSORFLOW</tspan></text>
-    <text x="540" y="16" class="mono-sub">METHODOLOGY : <tspan fill="#cbd5e1">PRODUCTION DATA SYSTEMS</tspan></text>
-    <text x="836" y="16" class="mono-sub" text-anchor="end" fill="#10b981">AVAILABLE FOR IMPACT</text>
+  <!-- Four Bottom Modular Pillars -->
+  <g transform="translate(25, 205)">
+    <!-- Pillar 1 -->
+    <rect x="0" y="0" width="202" height="52" rx="6" fill="#080c14" stroke="#1a2333" stroke-width="1" />
+    <text x="14" y="20" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">01 / DEEP LEARNING</text>
+    <text x="14" y="38" class="font-sans" font-size="11" fill="#e2e8f0" font-weight="500">PyTorch • LSTM • NLP</text>
+
+    <!-- Pillar 2 -->
+    <rect x="216" y="0" width="202" height="52" rx="6" fill="#080c14" stroke="#1a2333" stroke-width="1" />
+    <text x="230" y="20" class="font-mono" font-size="9.5" fill="#818cf8" font-weight="700" letter-spacing="1">02 / QUANT FINANCE</text>
+    <text x="230" y="38" class="font-sans" font-size="11" fill="#e2e8f0" font-weight="500">Risk Analytics • Series</text>
+
+    <!-- Pillar 3 -->
+    <rect x="432" y="0" width="202" height="52" rx="6" fill="#080c14" stroke="#1a2333" stroke-width="1" />
+    <text x="446" y="20" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">03 / DATA SYSTEMS</text>
+    <text x="446" y="38" class="font-sans" font-size="11" fill="#e2e8f0" font-weight="500">Automated Web Crawlers</text>
+
+    <!-- Pillar 4 -->
+    <rect x="648" y="0" width="202" height="52" rx="6" fill="#080c14" stroke="#1a2333" stroke-width="1" />
+    <text x="662" y="20" class="font-mono" font-size="9.5" fill="#34d399" font-weight="700" letter-spacing="1">04 / ARCHITECTURE</text>
+    <text x="662" y="38" class="font-sans" font-size="11" fill="#e2e8f0" font-weight="500">FastAPI • Production APIs</text>
   </g>
 </svg>

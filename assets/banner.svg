@@ -1,0 +1,143 @@
+<svg width="900" height="310" viewBox="0 0 900 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark Obsidian Canvas -->
+    <linearGradient id="obsidianBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070b" />
+      <stop offset="50%" stop-color="#0a0e17" />
+      <stop offset="100%" stop-color="#030407" />
+    </linearGradient>
+
+    <!-- Titanium Ice Glowing Border -->
+    <linearGradient id="titaniumBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7" />
+      <stop offset="30%" stop-color="#1e293b" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#1e293b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Ambient Center Flare -->
+    <radialGradient id="auroraGlow" cx="50%" cy="40%" r="48%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
+      <stop offset="45%" stop-color="#818cf8" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Technical Matrix Grid -->
+    <pattern id="matrixGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#111928" stroke-width="0.8" />
+      <circle cx="12" cy="12" r="0.7" fill="#1e293b" opacity="0.5" />
+    </pattern>
+
+    <!-- Name Metallic Gradient -->
+    <linearGradient id="titaniumText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Scanner Beam -->
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseBeacon {
+      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 6px #10b981); }
+      50% { opacity: 0.3; transform: scale(0.85); filter: none; }
+    }
+    @keyframes scanAcross {
+      0% { transform: translateX(-300px); }
+      100% { transform: translateX(950px); }
+    }
+    .beacon {
+      transform-origin: 844px 22px;
+      animation: pulseBeacon 2.2s infinite ease-in-out;
+    }
+    .laser-line {
+      animation: scanAcross 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+  </style>
+
+  <!-- Outer Frame -->
+  <rect x="1" y="1" width="898" height="308" rx="12" fill="url(#obsidianBg)" stroke="url(#titaniumBorder)" stroke-width="1.2" />
+
+  <!-- Background Grid -->
+  <rect x="2" y="2" width="896" height="306" rx="11" fill="url(#matrixGrid)" />
+
+  <!-- Center Ambient Flare -->
+  <circle cx="450" cy="140" r="320" fill="url(#auroraGlow)" />
+
+  <!-- Top Terminal Window Bar -->
+  <rect x="1" y="1" width="898" height="44" rx="12" fill="#090d15" fill-opacity="0.85" />
+  <line x1="1" y1="44" x2="899" y2="44" stroke="#1a2333" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="28" cy="22" r="5" fill="#ef4444" />
+  <circle cx="46" cy="22" r="5" fill="#f59e0b" />
+  <circle cx="64" cy="22" r="5" fill="#10b981" />
+
+  <!-- Terminal Breadcrumb -->
+  <text x="94" y="26" class="font-mono" font-size="11" fill="#64748b" letter-spacing="1">utkarsh-manoj-pandey@workstation: ~/neural-core [main]</text>
+
+  <!-- Top Right Status Beacon -->
+  <circle cx="844" cy="22" r="4" fill="#10b981" class="beacon" />
+  <text x="832" y="26" class="font-mono" font-size="10.5" fill="#38bdf8" text-anchor="end" font-weight="600" letter-spacing="1.5">SYSTEM OPERATIONAL</text>
+
+  <!-- Laser Scanline beneath header -->
+  <g clip-path="url(#laserClip)">
+    <clipPath id="laserClip">
+      <rect x="1" y="44" width="898" height="2" />
+    </clipPath>
+    <rect x="0" y="44" width="260" height="2" fill="url(#laserBeam)" class="laser-line" />
+  </g>
+
+  <!-- Hero Content Section (Strictly Centered) -->
+  <g transform="translate(450, 108)" text-anchor="middle">
+    <!-- Domain Badge -->
+    <rect x="-190" y="-20" width="380" height="26" rx="13" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="-3" class="font-mono" font-size="10.5" fill="#38bdf8" font-weight="600" letter-spacing="2">AI &amp; DATA SYSTEMS ARCHITECT</text>
+
+    <!-- Main Name Title -->
+    <text x="0" y="46" class="font-sans" font-size="42" font-weight="800" fill="url(#titaniumText)" letter-spacing="-0.5">UTKARSH MANOJ PANDEY</text>
+
+    <!-- Architectural Motto -->
+    <text x="0" y="78" class="font-mono" font-size="12" fill="#94a3b8" letter-spacing="1">Translating Stochastic Data into High-Precision Algorithmic Intelligence</text>
+  </g>
+
+  <!-- Bottom 4 Modular Architectural Pillars -->
+  <!-- Pillar 1 -->
+  <g transform="translate(24, 226)">
+    <rect x="0" y="0" width="204" height="60" rx="8" fill="#070b12" stroke="#162032" stroke-width="1" />
+    <text x="16" y="24" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">01 / DEEP LEARNING</text>
+    <text x="16" y="44" class="font-sans" font-size="11.5" fill="#e2e8f0" font-weight="500">PyTorch • LSTM • NLP</text>
+  </g>
+
+  <!-- Pillar 2 -->
+  <g transform="translate(240, 226)">
+    <rect x="0" y="0" width="204" height="60" rx="8" fill="#070b12" stroke="#162032" stroke-width="1" />
+    <text x="16" y="24" class="font-mono" font-size="9.5" fill="#818cf8" font-weight="700" letter-spacing="1">02 / QUANT FINANCE</text>
+    <text x="16" y="44" class="font-sans" font-size="11.5" fill="#e2e8f0" font-weight="500">Time-Series • Risk Analytics</text>
+  </g>
+
+  <!-- Pillar 3 -->
+  <g transform="translate(456, 226)">
+    <rect x="0" y="0" width="204" height="60" rx="8" fill="#070b12" stroke="#162032" stroke-width="1" />
+    <text x="16" y="24" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">03 / DATA SYSTEMS</text>
+    <text x="16" y="44" class="font-sans" font-size="11.5" fill="#e2e8f0" font-weight="500">High-Throughput Crawlers</text>
+  </g>
+
+  <!-- Pillar 4 -->
+  <g transform="translate(672, 226)">
+    <rect x="0" y="0" width="204" height="60" rx="8" fill="#070b12" stroke="#162032" stroke-width="1" />
+    <text x="16" y="24" class="font-mono" font-size="9.5" fill="#34d399" font-weight="700" letter-spacing="1">04 / ARCHITECTURE</text>
+    <text x="16" y="44" class="font-sans" font-size="11.5" fill="#e2e8f0" font-weight="500">FastAPI • Microservices</text>
+  </g>
+</svg>
