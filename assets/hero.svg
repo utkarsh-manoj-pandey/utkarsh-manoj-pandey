@@ -1,0 +1,119 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="50%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#04060a" />
+    </linearGradient>
+
+    <!-- Subtle Border Stroke Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.4" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Ambient Glow behind text -->
+    <radialGradient id="ambientGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Precision Dot Matrix Pattern -->
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.8" fill="#1e293b" opacity="0.6" />
+    </pattern>
+
+    <!-- Text Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseLive {
+      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 6px #10b981); }
+      50% { opacity: 0.35; transform: scale(0.85); filter: none; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-10px); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(220px); opacity: 0; }
+    }
+    .status-dot {
+      transform-origin: 32px 32px;
+      animation: pulseLive 2.2s infinite ease-in-out;
+    }
+    .mono-sub {
+      font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      fill: #64748b;
+    }
+    .main-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      fill: url(#titleGrad);
+    }
+    .role-badge {
+      font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      fill: #38bdf8;
+    }
+  </style>
+
+  <!-- Container Base -->
+  <rect x="1" y="1" width="898" height="218" rx="12" fill="url(#canvasGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
+  
+  <!-- Dot Matrix Overlay -->
+  <rect x="2" y="2" width="896" height="216" rx="11" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Center -->
+  <circle cx="450" cy="110" r="280" fill="url(#ambientGlow)" />
+
+  <!-- Technical Corner Hairlines -->
+  <path d="M 12 24 L 12 12 L 24 12" stroke="#334155" stroke-width="1.5" fill="none" />
+  <path d="M 888 24 L 888 12 L 876 12" stroke="#334155" stroke-width="1.5" fill="none" />
+  <path d="M 12 196 L 12 208 L 24 208" stroke="#334155" stroke-width="1.5" fill="none" />
+  <path d="M 888 196 L 888 208 L 876 208" stroke="#334155" stroke-width="1.5" fill="none" />
+
+  <!-- Header Metadata Strip -->
+  <g transform="translate(32, 28)">
+    <circle cx="0" cy="4" r="3.5" fill="#10b981" class="status-dot" />
+    <text x="14" y="8" class="mono-sub">CORE_STATUS :: <tspan fill="#f1f5f9" font-weight="600">ONLINE</tspan> // LATENCY: <tspan fill="#38bdf8">0.03ms</tspan></text>
+    <text x="836" y="8" class="mono-sub" text-anchor="end">SYS_ARCH: <tspan fill="#94a3b8">x86_64-LINUX</tspan> // V4.8</text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="32" y1="46" x2="868" y2="46" stroke="#1e293b" stroke-width="0.8" />
+
+  <!-- Main Identity Content -->
+  <g transform="translate(450, 106)" text-anchor="middle">
+    <text x="0" y="0" class="main-title">UTKARSH MANOJ PANDEY</text>
+    <text x="0" y="28" class="role-badge">DATA SCIENTIST &amp; ARTIFICIAL INTELLIGENCE ENGINEER</text>
+    <text x="0" y="48" class="mono-sub" fill="#94a3b8">SPECIALIZATION : <tspan fill="#cbd5e1">DEEP LEARNING • QUANTITATIVE FINANCE • NLP • ROBUST BACKENDS</tspan></text>
+  </g>
+
+  <!-- Bottom Spec Chips -->
+  <g transform="translate(32, 185)">
+    <line x1="0" y1="0" x2="836" y2="0" stroke="#1e293b" stroke-width="0.8" />
+    <text x="0" y="16" class="mono-sub">CORE ENGINE : <tspan fill="#38bdf8">PYTHON 3.x</tspan></text>
+    <text x="230" y="16" class="mono-sub">DEEP LEARNING : <tspan fill="#818cf8">PYTORCH • TENSORFLOW</tspan></text>
+    <text x="540" y="16" class="mono-sub">METHODOLOGY : <tspan fill="#cbd5e1">PRODUCTION DATA SYSTEMS</tspan></text>
+    <text x="836" y="16" class="mono-sub" text-anchor="end" fill="#10b981">AVAILABLE FOR IMPACT</text>
+  </g>
+</svg>

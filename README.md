@@ -1,114 +1,100 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. DYNAMIC ANIMATED HERO HEADER                                      -->
+<!-- 1. BESPOKE EXECUTIVE MASTHEAD / HERO                                  -->
 <!-- ===================================================================== -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:060913,25:0f172a,60:7928ca,100:00f5d4&height=240&section=header&text=UTKARSH%20MANOJ%20PANDEY&fontSize=40&fontAlignY=36&fontColor=ffffff&desc=DATA%20SCIENCE%20%E2%80%A2%20ARTIFICIAL%20INTELLIGENCE%20%E2%80%A2%20PYTHON%20ARCHITECT&descAlignY=58&descSize=15&descColor=00f5d4" width="100%" alt="Utkarsh Manoj Pandey Banner" />
+<img src="./assets/hero.svg" width="900" alt="Utkarsh Manoj Pandey — Executive Masthead" />
 
 <br/>
 
 <!-- ===================================================================== -->
-<!-- 2. ANIMATED MULTI-LINE TYPING TERMINAL SVG                            -->
+<!-- 2. HIGH-PRECISION RUNTIME & DIAGNOSTICS                               -->
 <!-- ===================================================================== -->
 
-<a href="https://github.com/utkarsh-manoj-pandey">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=00F5D4&center=true&vCenter=true&multiline=true&width=860&height=85&lines=%F0%9F%91%8B+Hello+World!+I'm+Utkarsh+Manoj+Pandey;%F0%9F%A4%96+Architecting+Intelligent+AI%2C+Deep+Learning+%26+NLP+Pipelines;%F0%9F%93%8A+Extracting+High-Impact+Insights+from+Complex+Data;%F0%9F%90%8D+3%2B+Years+of+Python+Engineering+%26+Open-Source+Building;%E2%9A%A1+Trying+To+Do+Better+--+One+Epoch+at+a+Time!" alt="Typing SVG" />
-</a>
+<img src="./assets/loading_bar.svg" width="900" alt="System Runtime Telemetry" />
 
-<br/>
+<br/><br/>
 
-<!-- ===================================================================== -->
-<!-- 3. ANIMATED CYBERPUNK INITIALIZATION / LOADING BAR                    -->
-<!-- ===================================================================== -->
-
+<!-- Minimalist Professional Status Indicators -->
 <p align="center">
-  <img src="./assets/loading_bar.svg" width="850" alt="System Loading Progress Bar" />
-</p>
-
-<!-- Quick Status Pills -->
-<p align="center">
-  <a href="https://linkedin.com/in/itsutkarshpandey/">
-    <img src="https://img.shields.io/badge/STATUS-OPEN_TO_OPPORTUNITIES-00f5d4?style=for-the-badge&logo=statuspage&logoColor=060913" alt="Status" />
-  </a>
-  <a href="#flagship-projects">
-    <img src="https://img.shields.io/badge/EXPERIENCE-3+_YEARS_PYTHON-7928ca?style=for-the-badge&logo=python&logoColor=white" alt="Experience" />
-  </a>
-  <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://img.shields.io/badge/FOCUS-AI%2FML_%26_DATA_SCIENCE-ff007f?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Focus" />
-  </a>
-  <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=PROFILE_VIEWS&color=00f5d4&style=for-the-badge" alt="Profile Views" />
-  </a>
+  <img src="https://img.shields.io/badge/ROLE-AI%20%26%20DATA%20ENGINEER-090d16?style=flat-square&logo=python&logoColor=38bdf8&labelColor=030712" alt="Role" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/EXPERIENCE-3%2B%20YEARS%20PRODUCTION-090d16?style=flat-square&logo=scikitlearn&logoColor=818cf8&labelColor=030712" alt="Experience" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/FOCUS-QUANT%20%26%20DEEP%20LEARNING-090d16?style=flat-square&logo=pytorch&logoColor=38bdf8&labelColor=030712" alt="Focus" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20OPPORTUNITIES-090d16?style=flat-square&logo=statuspage&logoColor=34d399&labelColor=030712" alt="Status" />
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=TELEMETRY%20HITS&color=1e293b&style=flat-square" alt="Telemetry" />
 </p>
 
 </div>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 4. SYSTEM TELEMETRY HUD & AUDIO EQUALIZER                             -->
+<!-- 3. LIVE CONVERGENCE HUD & SYSTEM DIAGNOSTICS                         -->
 <!-- ===================================================================== -->
 
 <div align="center">
-  <img src="./assets/cyber_hud.svg" width="850" alt="Cyberpunk HUD Telemetry" />
-  <br/><br/>
-  <img src="./assets/soundwave.svg" width="450" alt="Audio Visualizer" />
+  <img src="./assets/metrics_hud.svg" width="900" alt="Active Pipeline Telemetry" />
 </div>
 
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 5. ABOUT ME // TERMINAL SIMULATION                                    -->
+<!-- 4. EXECUTIVE PROFILE & ARCHITECTURE SPECS                             -->
 <!-- ===================================================================== -->
 
-### 🛰️ `SYSTEM://WHOAMI.zsh`
-
-```bash
-utkarsh@neuro-core:~$ neofetch --profile utkarsh-manoj-pandey
-```
+### `SYSTEM_OVERVIEW` // CORE ARCHITECTURE
 
 ```yaml
-  ██████╗  ███████╗██╗   ██╗     NAME      : Utkarsh Manoj Pandey
-  ██╔══██╗ ██╔════╝██║   ██║     IDENTITY  : Data Scientist & AI/ML Engineer
-  ██████╔╝ █████╗  ██║   ██║     LOCATION  : India 🇮🇳 (Global Remote Ready)
-  ██╔═══╝  ██╔══╝  ██║   ██║     ALUM      : Meta Scifor Technologies
-  ██║      ███████╗╚██████╔╝     PASSION   : Translating raw data into algorithmic intelligence
-  ╚═╝      ╚══════╝ ╚═════╝      MOTTO     : "Trying To Do Better !!"
+architect:
+  name: "Utkarsh Manoj Pandey"
+  designation: "Data Scientist & Artificial Intelligence Engineer"
+  alumnus: "Meta Scifor Technologies"
+  location: "India (Global Remote Capable)"
+  runtime_status: "Active // Developing Next-Gen Intelligent Pipelines"
 
-  [+] PRIMARY STACK    : Python 3.x • PyTorch • Scikit-Learn • Pandas • Flask
-  [+] SPECIALIZATION   : Natural Language Processing (LSTM), Quantitative Finance, Predictive Modeling
-  [+] INFRASTRUCTURE   : Docker • Git/GitHub CI/CD • Linux • RESTful APIs
-  [+] RUNTIME STATUS   : ☕ 100% Caffeinated • 🎧 Lo-Fi Neural Flow State Active
+engineering_ethos:
+  philosophy: "Transforming raw stochastic data into high-precision algorithmic value."
+  discipline: "Clean, modular code with mathematical rigor and production resilience."
+
+technical_pillars:
+  deep_learning: ["Recurrent Neural Networks (LSTM)", "Transformers", "NLP Classification"]
+  quantitative_finance: ["Multi-Asset Risk Modeling", "Time-Series Econometrics", "Volatility Analytics"]
+  data_engineering: ["High-Throughput Crawlers", "ETL Optimization", "Feature Extraction Pipelines"]
+  backend_systems: ["FastAPI Microservices", "Flask REST APIs", "Relational & NoSQL Stores"]
 ```
 
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 6. TECH STACK ARSENAL (ANIMATED & CATEGORIZED)                        -->
+<!-- 5. TECHNICAL ARSENAL (CURATED BENTO GRID)                             -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-## ⚡ TECH ARSENAL & WEAPONS OF CHOICE
+### `TECH_ARSENAL` // WEAPONS & INFRASTRUCTURE
 
-<p align="center"><i>Constantly evolving my neural weights across data intelligence, modern backend architectures, and machine learning.</i></p>
+<p align="center"><i>Curated tools and frameworks deployed across machine learning, analytical modeling, and distributed backend systems.</i></p>
 
 <br/>
 
-<!-- Interactive Skills Icons -->
+<!-- Sleek Dark Icons Strip -->
 <a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,pandas,numpy,flask,django,fastapi,postgres,mysql,mongodb,docker,git,github,linux,vscode,postman&perline=9&theme=dark" alt="Tech Stack Icons" />
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,pandas,numpy,fastapi,flask,django,postgres,mysql,mongodb,docker,git,github,linux,vscode,postman&perline=9&theme=dark" alt="Technical Arsenal" />
 </a>
 
 <br/><br/>
@@ -118,39 +104,36 @@ utkarsh@neuro-core:~$ neofetch --profile utkarsh-manoj-pandey
 <table>
   <thead>
     <tr>
-      <th width="33%" align="left">🧠 Machine Learning & Data</th>
-      <th width="33%" align="left">🌐 Backend, APIs & Data Eng</th>
-      <th width="34%" align="left">🛠️ Tools, Cloud & Environments</th>
+      <th width="33%" align="left"><b>01 / MACHINE LEARNING &amp; DATA</b></th>
+      <th width="33%" align="left"><b>02 / BACKEND &amp; DATA ENGINEERING</b></th>
+      <th width="34%" align="left"><b>03 / INFRASTRUCTURE &amp; ENVIRONMENT</b></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td valign="top">
-        • <b>PyTorch & TensorFlow</b><br/>
-        • <b>Scikit-Learn & SciPy</b><br/>
-        • <b>NLP & LSTM Recurrent Nets</b><br/>
-        • <b>Pandas & NumPy</b><br/>
-        • <b>Matplotlib & Seaborn</b><br/>
-        • <b>OpenCV Computer Vision</b><br/>
-        • <b>Power BI Analytics</b>
+        • <b>PyTorch &amp; TensorFlow</b> — Deep Neural Nets<br/>
+        • <b>Scikit-Learn</b> — Predictive Classifiers<br/>
+        • <b>NLP &amp; LSTM</b> — Sequential Text Modeling<br/>
+        • <b>Pandas &amp; NumPy</b> — Vectorized Operations<br/>
+        • <b>SciPy &amp; Matplotlib</b> — Scientific Analysis<br/>
+        • <b>Power BI &amp; Seaborn</b> — Visual Intelligence
       </td>
       <td valign="top">
-        • <b>Python (3+ Years Advanced)</b><br/>
-        • <b>Flask & Django</b><br/>
-        • <b>FastAPI REST Architectures</b><br/>
-        • <b>PostgreSQL & MySQL</b><br/>
-        • <b>MongoDB & SQLite</b><br/>
-        • <b>Web Scraping (BS4 / Selenium)</b><br/>
-        • <b>JSON / Microservice APIs</b>
+        • <b>Python (CPython)</b> — High-Performance Scripts<br/>
+        • <b>FastAPI &amp; Flask</b> — Asynchronous Microservices<br/>
+        • <b>Django</b> — Robust Application Backends<br/>
+        • <b>PostgreSQL &amp; MySQL</b> — Structured Relational<br/>
+        • <b>MongoDB &amp; SQLite</b> — Document &amp; Edge Stores<br/>
+        • <b>Scrapy &amp; Selenium</b> — Distributed Web Scrapers
       </td>
       <td valign="top">
-        • <b>Docker & Containerization</b><br/>
-        • <b>Git & GitHub Actions</b><br/>
-        • <b>Linux / Unix Shell Scripting</b><br/>
-        • <b>Postman API Testing</b><br/>
-        • <b>Jupyter & Google Colab</b><br/>
-        • <b>VS Code & Neovim</b><br/>
-        • <b>Yahoo Finance / REST Endpoints</b>
+        • <b>Docker</b> — Containerization &amp; Images<br/>
+        • <b>Git &amp; GitHub Actions</b> — CI/CD Automation<br/>
+        • <b>Linux (Ubuntu/Debian)</b> — System Architecture<br/>
+        • <b>JupyterLab &amp; Colab</b> — Exploratory Research<br/>
+        • <b>Postman</b> — API Protocol Verification<br/>
+        • <b>VS Code &amp; Unix Shell</b> — Ergonomic Tooling
       </td>
     </tr>
   </tbody>
@@ -159,115 +142,78 @@ utkarsh@neuro-core:~$ neofetch --profile utkarsh-manoj-pandey
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 7. FLAGSHIP PROJECTS SHOWCASE                                         -->
+<!-- 6. FLAGSHIP ENGINEERING PROJECTS (CASE STUDIES)                       -->
 <!-- ===================================================================== -->
 
-<div align="center">
-
-<a id="flagship-projects"></a>
-## 🚀 FLAGSHIP PROJECTS & INNOVATIONS
-
-<p align="center"><i>A curated selection of real-world machine learning systems, financial quantitative analyzers, and scalable tools.</i></p>
-
-</div>
-
-<br/>
+### `CASE_STUDIES` // FLAGSHIP SYSTEMS & REPOSITORIES
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🔬 01. SciFor Data Science Suite</h3>
-      <p>Cutting-edge data science research and analytical modeling engineered during my tenure at <b>Meta Scifor Technologies</b>. Bridges the gap between experimental data exploration and production-ready machine learning solutions.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
-        <img src="https://img.shields.io/badge/EDA-00f5d4?style=flat-square&logoColor=black" />
-      </p>
+      <h4><code>01</code> // SCIFOR DATA SCIENCE PLATFORM</h4>
+      <p>Enterprise data science and exploratory machine learning infrastructure developed during tenure at <b>Meta Scifor Technologies</b>. Bridges the gap between experimental data exploration and production-grade analytical pipelines.</p>
+      <p><code>Python</code> • <code>Scikit-Learn</code> • <code>Pandas</code> • <code>EDA</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/SciFor">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="SciFor Repo" />
         </a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">📊 02. Stock Market Quantitative Analyzer</h3>
-      <p>High-dimensional quantitative analysis modeling historical price movements, returns, volatility, and risk metrics for industry giants: <b>Apple, Google, Microsoft, and Amazon</b> sourced directly via Yahoo Finance APIs.</p>
-      <p>
-        <img src="https://img.shields.io/badge/FinTech-00f5d4?style=flat-square" />
-        <img src="https://img.shields.io/badge/Yahoo_Finance-720e9e?style=flat-square&logo=yahoo&logoColor=white" />
-        <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-        <img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat-square" />
-      </p>
+      <h4><code>02</code> // MULTI-ASSET QUANTITATIVE FINANCIAL ANALYZER</h4>
+      <p>Algorithmic time-series analysis framework evaluating historical risk, beta, volatility, and return distributions for <b>Apple, Google, Microsoft, and Amazon</b> using streaming Yahoo Finance APIs.</p>
+      <p><code>Quantitative Finance</code> • <code>NumPy</code> • <code>Time-Series</code> • <code>APIs</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/Stock-Market-Analysis-Using-Python--">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="Stock Market Repo" />
         </a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🛒 03. Amazon Product Insight Miner</h3>
-      <p>High-throughput automated web scraping framework for Amazon search results. Extracts real-time product metrics, pricing trends, customer ratings, review volume, and competitive market data.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Web_Scraping-ff007f?style=flat-square" />
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/Automation-7928ca?style=flat-square" />
-        <img src="https://img.shields.io/badge/Data_Mining-00f5d4?style=flat-square" />
-      </p>
+      <h4><code>03</code> // DISTRIBUTED AMAZON PRODUCT MINER</h4>
+      <p>High-throughput automated web data extraction engine engineered to crawl, parse, and normalize Amazon search catalog data (pricing elasticity, rating distributions, and review velocity).</p>
+      <p><code>Web Scraping</code> • <code>ETL Pipeline</code> • <code>Data Mining</code> • <code>Automation</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/-Amazon-Product-Insight-Miner-">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="Amazon Miner Repo" />
         </a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">🧠 04. Twitter Sentiment Engine (NLP & LSTM)</h3>
-      <p>Deep learning recurrent neural network classifier leveraging <b>Natural Language Processing</b> and <b>Long Short-Term Memory (LSTM)</b> networks to predict granular emotional sentiments within live microblog streams.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Deep_Learning-7928ca?style=flat-square" />
-        <img src="https://img.shields.io/badge/NLP-00f5d4?style=flat-square" />
-        <img src="https://img.shields.io/badge/LSTM-ff007f?style=flat-square" />
-        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-      </p>
+      <h4><code>04</code> // REAL-TIME TWITTER NLP &amp; LSTM ENGINE</h4>
+      <p>Deep learning recurrent neural network classifier utilizing <b>Natural Language Processing</b> and <b>Long Short-Term Memory (LSTM)</b> architectures to predict sentiment vectors across dynamic microblog streams.</p>
+      <p><code>Deep Learning</code> • <code>LSTM</code> • <code>NLP</code> • <code>TensorFlow</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/Twitter-Sentiment-Analysis-with-NLP-and-LSTM">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="Twitter NLP Repo" />
         </a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">📈 05. Awesome Consumer Complaints Analysis</h3>
-      <p>Enterprise exploratory data analytics pipeline uncovering hidden patterns and service bottlenecks from vast consumer complaint datasets to optimize enterprise customer retention and SLA adherence.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Data_Intelligence-00f5d4?style=flat-square" />
-        <img src="https://img.shields.io/badge/Seaborn-43B02A?style=flat-square" />
-        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-      </p>
+      <h4><code>05</code> // ENTERPRISE CONSUMER COMPLAINT INTELLIGENCE</h4>
+      <p>Exploratory data analytics and statistical modeling suite analyzing large-scale consumer complaint corpora to isolate operational bottlenecks and predict resolution turnaround.</p>
+      <p><code>Data Intelligence</code> • <code>Seaborn</code> • <code>Statistical Modeling</code> • <code>Pandas</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/-Consumer-Insight-Explorer-">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="Consumer Insights Repo" />
         </a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">🎬 06. Intelligent Movie Recommendation Engine</h3>
-      <p>Hybrid recommendation architecture blending content-based filtering and popularity heuristics. Deployed with a responsive <b>Flask</b> backend and powered by <b>scikit-learn</b> cosine distance algorithms.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
-        <img src="https://img.shields.io/badge/Recommender-7928ca?style=flat-square" />
-        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
-      </p>
+      <h4><code>06</code> // HYBRID RECOMMENDATION ENGINE</h4>
+      <p>Dual-model recommendation architecture harmonizing cosine-similarity content filtering with popularity heuristics, deployed through a low-latency <b>Flask</b> REST microservice.</p>
+      <p><code>Recommendation Systems</code> • <code>Scikit-Learn</code> • <code>Flask</code> • <code>Cosine Distance</code></p>
       <p>
         <a href="https://github.com/utkarsh-manoj-pandey/-Movie-Recommendation-System-">
-          <img src="https://img.shields.io/badge/EXPLORE_REPO-00f5d4?style=for-the-badge&logo=github&logoColor=060913" />
+          <img src="https://img.shields.io/badge/REPOSITORY-VIEW_SOURCE_↗-090d16?style=flat-square&logo=github&logoColor=38bdf8&labelColor=030712" alt="Movie Recommender Repo" />
         </a>
       </p>
     </td>
@@ -277,65 +223,62 @@ utkarsh@neuro-core:~$ neofetch --profile utkarsh-manoj-pandey
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 8. GITHUB TELEMETRY & STATS MATRIX                                   -->
+<!-- 7. REAL-TIME GITHUB TELEMETRY MATRIX                                 -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-## 📊 GITHUB REAL-TIME TELEMETRY
+### `TELEMETRY` // REAL-TIME GITHUB ANALYTICS
 
-<p align="center"><i>Live real-time analytics syncing directly with the GitHub API.</i></p>
+<p align="center"><i>Live telemetry synchronized continuously via the GitHub API.</i></p>
 
 <br/>
 
-<!-- Stats Grid -->
 <table border="0">
   <tr>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=utkarsh-manoj-pandey&show_icons=true&theme=tokyonight&hide_border=true&bg_color=060913&title_color=00f5d4&text_color=94a3b8&icon_color=ff007f&border_radius=10" width="100%" alt="Utkarsh's GitHub Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=utkarsh-manoj-pandey&show_icons=true&theme=tokyonight&hide_border=false&bg_color=07090e&border_color=1e293b&title_color=f8fafc&text_color=94a3b8&icon_color=38bdf8&border_radius=8" width="100%" alt="GitHub Overview" />
     </td>
     <td align="center" width="50%">
-      <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=060913&ring=00f5d4&fire=ff007f&currStreakLabel=00f5d4&border_radius=10" width="100%" alt="Utkarsh's GitHub Streak" />
+      <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=false&background=07090e&border=1e293b&ring=38bdf8&fire=818cf8&currStreakLabel=38bdf8&sideNums=f8fafc&sideLabels=94a3b8&dates=64748b&border_radius=8" width="100%" alt="Contribution Streak" />
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=utkarsh-manoj-pandey&layout=compact&theme=tokyonight&hide_border=true&bg_color=060913&title_color=00f5d4&text_color=94a3b8&border_radius=10" width="70%" alt="Top Languages" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=utkarsh-manoj-pandey&layout=compact&theme=tokyonight&hide_border=false&bg_color=07090e&border_color=1e293b&title_color=f8fafc&text_color=94a3b8&border_radius=8" width="65%" alt="Language Breakdown" />
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- Interactive Contribution Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=utkarsh-manoj-pandey&theme=tokyo-night&bg_color=060913&color=00f5d4&line=7928ca&point=ffffff&hide_border=true&area=true" width="100%" alt="Contribution Graph" />
+<!-- Real-time Contribution Graph (Monochrome / Indigo Accent) -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=utkarsh-manoj-pandey&theme=tokyo-night&bg_color=07090e&color=38bdf8&line=818cf8&point=f8fafc&hide_border=false&border_color=1e293b&area=true" width="100%" alt="Activity Graph" />
 
 </div>
 
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 9. CONTRIBUTION SNAKE EATING CODE GRAPH                               -->
+<!-- 8. CONTRIBUTION GRID CONSUMPTION SNAKE                               -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-### 🐍 CODE CONSUMPTION ENGINE
-
-<p align="center"><i>A playful animated snake consuming commit contributions on the GitHub grid!</i></p>
+### `ACTIVITY_STREAM` // CODE CONSUMPTION ENGINE
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" />
-  <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" width="100%" />
+  <img alt="Contribution Snake" src="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" width="100%" />
 </picture>
 
 </div>
@@ -343,69 +286,45 @@ utkarsh@neuro-core:~$ neofetch --profile utkarsh-manoj-pandey
 <br/>
 
 <p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
 </p>
 
 <!-- ===================================================================== -->
-<!-- 10. ACHIEVEMENTS & TROPHIES                                           -->
+<!-- 9. SECURE UPLINK // CONNECT & ENGAGE                                 -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-### 🏆 GITHUB HALL OF ACHIEVEMENTS
+### `SECURE_UPLINK` // DIRECT TRANSMISSION
 
-<a href="https://github.com/utkarsh-manoj-pandey">
-  <img src="https://github-profile-trophy.vercel.app/?username=utkarsh-manoj-pandey&theme=tokyonight&no-frame=true&no-bg=true&margin_w=10&margin_h=10" width="100%" alt="GitHub Profile Trophies" />
-</a>
-
-</div>
-
-<br/>
-
-<p align="center">
-  <img src="./assets/divider.svg" width="850" alt="Divider" />
-</p>
-
-<!-- ===================================================================== -->
-<!-- 11. CONNECT & TRANSMIT                                                -->
-<!-- ===================================================================== -->
-
-<div align="center">
-
-## 🌐 TRANSMIT & CONNECT
-
-<p align="center"><i>Got an ambitious project, an AI/ML role, or want to discuss quantitative finance & deep learning? Let's connect!</i></p>
+<p align="center"><i>Available for high-impact AI/ML engineering roles, quantitative analytics initiatives, and advanced open-source collaboration.</i></p>
 
 <br/>
 
 <p align="center">
   <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=030712" alt="LinkedIn" />
   </a>
   &nbsp;&nbsp;
   <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" />
+    <img src="https://img.shields.io/badge/TWITTER_/_X-000000?style=flat-square&logo=x&logoColor=white&labelColor=030712" alt="Twitter" />
   </a>
   &nbsp;&nbsp;
   <a href="mailto:utkarsh.manoj.pandey@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/EMAIL-D14836?style=flat-square&logo=gmail&logoColor=white&labelColor=030712" alt="Email" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/utkarsh-manoj-pandey" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GITHUB-181717?style=flat-square&logo=github&logoColor=white&labelColor=030712" alt="GitHub" />
   </a>
 </p>
 
 <br/>
 
-<!-- Quote / Sign-off -->
 <p align="center">
-  <i>"Any sufficiently advanced technology is indistinguishable from magic. Keep building."</i>
+  <font color="#64748b" size="2">
+    <code>[ 2026 // UTKARSH MANOJ PANDEY // ALL SYSTEMS OPERATIONAL ]</code>
+  </font>
 </p>
-
-<br/>
-
-<!-- Animated Footer Wave -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:00f5d4,40:7928ca,80:0f172a,100:060913&height=130&section=footer" width="100%" alt="Footer Wave" />
 
 </div>
