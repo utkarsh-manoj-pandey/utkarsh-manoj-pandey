@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en" class="dark h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROMETHEUS-OS v6.12 // Utkarsh Manoj Pandey</title>
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#05070c',
+            void: '#020306',
+            panel: '#090e18',
+            glass: 'rgba(11, 17, 29, 0.85)',
+            borderMuted: '#172236',
+            neonCyan: '#38bdf8',
+            neonIndigo: '#818cf8',
+            neonEmerald: '#10b981',
+            neonAmber: '#f59e0b',
+            neonRose: '#f43f5e'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"Fira Code"', '"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #060911; }
+    ::-webkit-scrollbar-thumb { background: #1a273e; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+    /* CRT & Scanline effect */
+    .scanlines {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+    }
+
+    /* Glow utilities */
+    .glow-cyan { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5)); }
+    .glow-emerald { filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5)); }
+    .glow-indigo { filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.5)); }
+
+    /* Glassmorphism */
+    .frosted-glass {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(8, 13, 23, 0.88);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    /* Waveform Animation */
+    @keyframes waveBar {
+      0%, 100% { height: 6px; }
+      50% { height: 28px; }
+    }
+    .wave-bar { animation: waveBar 1.2s infinite ease-in-out; }
+
+    /* Window transitions */
+    .os-window {
+      transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease;
+    }
+    .os-window.minimized {
+      transform: scale(0.6) translateY(200px);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Cursor typing */
+    .terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background: #38bdf8;
+      animation: blink 1s infinite;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+    /* Dock magnification */
+    .dock-item {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), margin 0.2s ease;
+    }
+    .dock-item:hover {
+      transform: translateY(-10px) scale(1.18);
+    }
+  </style>
+</head>
+
+<body class="bg-obsidian text-slate-100 font-sans h-full overflow-hidden select-none">
+
+  <!-- ===================================================================== -->
+  <!-- 1. OS BOOT SEQUENCE SCREEN (PROMETHEUS OS v6.12)                      -->
+  <!-- ===================================================================== -->
+  <div id="boot-screen" class="fixed inset-0 z-50 bg-black flex flex-col justify-between p-8 font-mono text-sm leading-relaxed overflow-hidden">
+    <!-- Top BIOS Spec Header -->
+    <div class="space-y-1 text-slate-400">
+      <div class="flex justify-between items-center text-xs text-slate-500 border-b border-borderMuted pb-2">
+        <span>PROMETHEUS UEFI BIOS v6.12-ARM64 (BUILD 2026.09)</span>
+        <button id="skip-boot-btn" class="px-3 py-1 bg-borderMuted hover:bg-neonCyan hover:text-black text-slate-300 text-xs rounded transition font-bold uppercase tracking-wider flex items-center gap-1.5">
+          <span>FAST BOOT (ESC)</span>
+          <span class="text-[10px]">⏩</span>
+        </button>
+      </div>
+      <p class="text-neonCyan pt-2">PROCESSOR: Broadcom BCM2712 Quad-Core ARM Cortex-A76 @ 2.40 GHz</p>
+      <p>MEMORY: 8192 MB LPDDR4X-4267 MHz [TEST PASSED]</p>
+      <p>STORAGE: M.2 NVMe PCIe Gen 3.0 SSD (512 GB) [MOUNTED /dev/nvme0n1p2]</p>
+      <p class="text-neonIndigo">MICROARCHITECTURE: RISC-V Co-Processor Simulation Interface [READY]</p>
+      <p class="text-neonEmerald">PERIPHERALS: OV5647 Camera Sensor (Face Auth) &amp; I2S ASR Mic Array [INITIALIZED]</p>
+    </div>
+
+    <!-- Live Kernel Boot Log Output Container -->
+    <div id="boot-log" class="my-4 h-64 overflow-y-auto space-y-1 font-mono text-xs text-slate-300">
+      <!-- Injected dynamically via JS -->
+    </div>
+
+    <!-- Bottom Boot Progress Bar -->
+    <div class="space-y-2">
+      <div class="flex justify-between text-xs text-slate-400">
+        <span id="boot-status-text">INITIALIZING KERNEL MODULES...</span>
+        <span id="boot-percentage" class="text-neonCyan font-bold">0%</span>
+      </div>
+      <div class="w-full bg-slate-900 h-2 rounded overflow-hidden border border-borderMuted">
+        <div id="boot-progress-bar" class="h-full bg-gradient-to-r from-neonCyan via-neonIndigo to-neonEmerald w-0 transition-all duration-100"></div>
+      </div>
+      <div class="text-[10px] text-slate-500 text-center tracking-widest uppercase">
+        ARCH LINUX DERIVATIVE // DEVELOPED BY UTKARSH MANOJ PANDEY
+      </div>
+    </div>
+
+    <!-- CRT Scanline overlay -->
+    <div class="scanlines absolute inset-0"></div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 2. DESKTOP WORKSPACE (PROMETHEUS OS GUI)                             -->
+  <!-- ===================================================================== -->
+  <div id="desktop" class="relative w-full h-full flex flex-col justify-between overflow-hidden opacity-0 transition-opacity duration-700">
+    
+    <!-- Three.js 3D Interactive Cyber Background Canvas -->
+    <canvas id="three-canvas" class="absolute inset-0 w-full h-full pointer-events-auto -z-10"></canvas>
+
+    <!-- Top System Menu Bar (macOS / Cyberdeck style) -->
+    <header class="h-8 bg-black/60 backdrop-blur-md border-b border-white/10 px-4 flex justify-between items-center text-xs font-mono text-slate-300 z-30 select-none">
+      <!-- Left: Logo & Menus -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1.5 font-bold text-slate-100 hover:text-neonCyan cursor-pointer">
+          <span class="w-3 h-3 rounded-full bg-neonCyan inline-block animate-pulse"></span>
+          <span>PROMETHEUS-OS</span>
+        </div>
+        <span class="text-slate-600">|</span>
+        <button onclick="openWindow('about-win')" class="hover:text-white transition">About</button>
+        <button onclick="openWindow('terminal-win')" class="hover:text-white transition">Terminal</button>
+        <button onclick="openWindow('sifra-win')" class="hover:text-white transition text-neonCyan font-semibold">SIFRA AI</button>
+        <button onclick="openWindow('resume-win')" class="hover:text-white transition">Dossier</button>
+        <button onclick="openWindow('hardware-win')" class="hover:text-white transition">Hardware</button>
+        <button onclick="openWindow('contact-win')" class="hover:text-white transition">Uplink</button>
+      </div>
+
+      <!-- Right: Realtime System Telemetry -->
+      <div class="flex items-center gap-4 text-[11px]">
+        <div class="hidden md:flex items-center gap-2 text-slate-400">
+          <span>CPU: <strong id="top-cpu" class="text-neonCyan font-mono">12%</strong></span>
+          <span>RAM: <strong id="top-ram" class="text-neonEmerald font-mono">3.2/8.0 GB</strong></span>
+        </div>
+        <span class="text-slate-600 hidden md:inline">|</span>
+        <!-- Sound Toggle -->
+        <button id="audio-toggle" class="hover:text-neonCyan transition flex items-center gap-1" title="Toggle Synthesizer Sound FX">
+          <span id="audio-icon">🔊</span>
+          <span class="hidden sm:inline">SFX</span>
+        </button>
+        <!-- Realtime Clock -->
+        <div id="desktop-clock" class="text-slate-200 font-semibold tracking-wider font-mono">
+          00:00:00 IST
+        </div>
+      </div>
+    </header>
+
+    <!-- Desktop Workspace Canvas Area (Icons & Windows) -->
+    <main id="workspace" class="relative flex-1 p-6 overflow-hidden">
+      
+      <!-- Desktop Icons Grid (Left column) -->
+      <div class="grid grid-flow-row auto-rows-max gap-6 w-28 text-center text-xs z-10">
+        
+        <!-- Icon 1: SIFRA AI -->
+        <div onclick="openWindow('sifra-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-neonCyan/30 to-neonIndigo/40 border border-neonCyan/50 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:glow-cyan transition duration-200">
+            🤖
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonCyan tracking-wide drop-shadow">SIFRA_AI</span>
+        </div>
+
+        <!-- Icon 2: Terminal -->
+        <div onclick="openWindow('terminal-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-800 to-black border border-slate-600 flex items-center justify-center text-xl text-neonEmerald group-hover:scale-110 group-hover:glow-emerald transition duration-200">
+            &gt;_
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonEmerald tracking-wide drop-shadow">Terminal.zsh</span>
+        </div>
+
+        <!-- Icon 3: Hardware Schematic -->
+        <div onclick="openWindow('hardware-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-neonIndigo/30 to-purple-900/40 border border-neonIndigo/50 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:glow-indigo transition duration-200">
+            ⚡
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonIndigo tracking-wide drop-shadow">Hardware.rig</span>
+        </div>
+
+        <!-- Icon 4: Resume Dossier -->
+        <div onclick="openWindow('resume-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-slate-900 border border-amber-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-200">
+            📜
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonAmber tracking-wide drop-shadow">Dossier.pdf</span>
+        </div>
+
+        <!-- Icon 5: System Telemetry Monitor -->
+        <div onclick="openWindow('sysmon-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-slate-900 border border-emerald-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-200">
+            📊
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonEmerald tracking-wide drop-shadow">Telemetry.app</span>
+        </div>
+
+        <!-- Icon 6: Uplink / Contact -->
+        <div onclick="openWindow('contact-win')" class="group cursor-pointer flex flex-col items-center gap-1.5 p-2 rounded-lg hover:bg-white/10 transition">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500/20 to-slate-900 border border-rose-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-200">
+            📡
+          </div>
+          <span class="font-mono text-[11px] text-slate-200 group-hover:text-neonRose tracking-wide drop-shadow">Uplink.net</span>
+        </div>
+
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- WINDOWS STACK CONTAINER                                           -->
+      <!-- ================================================================= -->
+      <div id="windows-layer" class="absolute inset-0 pointer-events-none p-4">
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 1: SIFRA AI AUTONOMOUS ASSISTANT                         -->
+        <!-- =============================================================== -->
+        <div id="sifra-win" class="os-window pointer-events-auto absolute top-12 left-1/2 -translate-x-1/2 w-11/12 max-w-4xl h-[560px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-20">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/50 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer hover:opacity-80" onclick="closeWindow('sifra-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer hover:opacity-80" onclick="minimizeWindow('sifra-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer hover:opacity-80" onclick="maximizeWindow('sifra-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold tracking-wider">SIFRA // AUTONOMOUS MULTIMODAL INTELLIGENCE</span>
+            </div>
+            <div class="flex items-center gap-3 text-[11px] font-mono text-slate-400">
+              <span class="text-neonCyan flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
+                LLM: LLAMA 3.3 + DEEPSEEK R1 (FINE-TUNED)
+              </span>
+              <span>EDGE RIG: RPi 5 + M.2 NVMe</span>
+            </div>
+          </div>
+
+          <!-- SIFRA Body: Split Layout (Chat + Telemetry & Biometrics) -->
+          <div class="flex-1 flex overflow-hidden">
+            <!-- Left: Conversation Stream -->
+            <div class="flex-1 flex flex-col justify-between border-r border-borderMuted/60 bg-black/40">
+              <div id="sifra-chat-stream" class="flex-1 p-4 overflow-y-auto space-y-3 font-mono text-xs">
+                <!-- Welcome Assistant Message -->
+                <div class="flex items-start gap-2.5">
+                  <div class="w-7 h-7 rounded-lg bg-neonCyan/20 border border-neonCyan/50 flex items-center justify-center text-sm shrink-0">🤖</div>
+                  <div class="bg-slate-900/90 border border-borderMuted rounded-xl p-3 max-w-[85%] text-slate-200">
+                    <p class="font-bold text-neonCyan mb-1 text-[11px]">SIFRA COGNITIVE CORE v4.2 [ONLINE]</p>
+                    <p>Greetings. I am SIFRA, Utkarsh Manoj Pandey's autonomous edge intelligence system hosted on a Raspberry Pi 5 with M.2 NVMe storage.</p>
+                    <p class="text-slate-400 mt-2">Ask me anything about Utkarsh's engineering background, Prometheus OS, LLM fine-tuning, RISC-V research, or professional history at the National Stock Exchange of India.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Prompt Pills -->
+              <div class="px-4 py-1.5 bg-black/60 border-t border-borderMuted/40 flex items-center gap-2 overflow-x-auto text-[11px] font-mono">
+                <span class="text-slate-500 text-[10px]">PROMPTS:</span>
+                <button onclick="askSifra('Tell me about your edge architecture and hardware')" class="px-2.5 py-0.5 rounded bg-slate-800/80 hover:bg-neonCyan/20 hover:text-neonCyan border border-borderMuted text-slate-300 transition whitespace-nowrap">Hardware Architecture</button>
+                <button onclick="askSifra('What is Prometheus Operating System?')" class="px-2.5 py-0.5 rounded bg-slate-800/80 hover:bg-neonIndigo/20 hover:text-neonIndigo border border-borderMuted text-slate-300 transition whitespace-nowrap">Prometheus OS</button>
+                <button onclick="askSifra('What did Utkarsh do at National Stock Exchange of India?')" class="px-2.5 py-0.5 rounded bg-slate-800/80 hover:bg-neonEmerald/20 hover:text-neonEmerald border border-borderMuted text-slate-300 transition whitespace-nowrap">NSE Experience</button>
+                <button onclick="askSifra('Show me his degrees and accreditations')" class="px-2.5 py-0.5 rounded bg-slate-800/80 hover:bg-neonAmber/20 hover:text-neonAmber border border-borderMuted text-slate-300 transition whitespace-nowrap">Credentials &amp; Grants</button>
+              </div>
+
+              <!-- Input Area -->
+              <form onsubmit="handleSifraSubmit(event)" class="p-3 bg-black/80 border-t border-borderMuted flex items-center gap-2">
+                <input id="sifra-input" type="text" placeholder="Transmit instruction or inquiry to SIFRA neural core..." class="flex-1 bg-slate-900 border border-borderMuted rounded-lg px-3 py-2 text-xs font-mono text-slate-100 focus:outline-none focus:border-neonCyan transition">
+                <button type="submit" class="px-4 py-2 bg-neonCyan hover:bg-sky-400 text-black font-bold font-mono text-xs rounded-lg transition flex items-center gap-1">
+                  <span>SEND</span>
+                  <span>↳</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: Biometrics, Voice Waveform & Telemetry Sidecar -->
+            <div class="w-80 bg-black/60 p-4 flex flex-col justify-between overflow-y-auto space-y-4 font-mono text-xs">
+              <!-- Facial Biometric Auth Simulation Widget -->
+              <div class="border border-borderMuted rounded-xl p-3 bg-slate-950/80 space-y-2">
+                <div class="flex justify-between items-center text-[10px] text-slate-400">
+                  <span>BIOMETRIC SENSOR // OPENCV</span>
+                  <span class="text-neonEmerald font-bold">AUTHENTICATED</span>
+                </div>
+                <div class="relative h-28 bg-slate-900 rounded-lg overflow-hidden flex items-center justify-center border border-borderMuted">
+                  <!-- Wireframe Face Hologram -->
+                  <div class="absolute inset-0 flex items-center justify-center opacity-40">
+                    <div class="w-20 h-24 border border-neonCyan rounded-[40%] flex items-center justify-center">
+                      <div class="w-12 h-14 border border-neonIndigo rounded-full"></div>
+                    </div>
+                  </div>
+                  <!-- Scanner Target Crosshairs -->
+                  <div class="absolute inset-2 border border-neonCyan/30 flex items-center justify-center">
+                    <div class="w-full h-0.5 bg-neonCyan/40 animate-pulse"></div>
+                  </div>
+                  <span class="z-10 text-[10px] bg-black/70 px-2 py-0.5 rounded text-neonCyan border border-neonCyan/40">USER: UTKARSH [VERIFIED]</span>
+                </div>
+                <p class="text-[10px] text-slate-400">Dual-factor auth: Facial embeddings match + voiceprint ASR stream validated.</p>
+              </div>
+
+              <!-- Voice Audio Visualizer -->
+              <div class="border border-borderMuted rounded-xl p-3 bg-slate-950/80 space-y-2">
+                <div class="flex justify-between items-center text-[10px] text-slate-400">
+                  <span>REALTIME ASR STREAM</span>
+                  <span class="text-neonCyan">44.1 kHz I2S</span>
+                </div>
+                <div class="h-10 bg-slate-900 rounded flex items-center justify-center gap-1.5 px-3">
+                  <div class="w-1 bg-neonCyan wave-bar" style="animation-delay: 0.1s;"></div>
+                  <div class="w-1 bg-neonCyan wave-bar" style="animation-delay: 0.3s;"></div>
+                  <div class="w-1 bg-neonIndigo wave-bar" style="animation-delay: 0.15s;"></div>
+                  <div class="w-1 bg-neonIndigo wave-bar" style="animation-delay: 0.4s;"></div>
+                  <div class="w-1 bg-neonEmerald wave-bar" style="animation-delay: 0.2s;"></div>
+                  <div class="w-1 bg-neonEmerald wave-bar" style="animation-delay: 0.05s;"></div>
+                  <div class="w-1 bg-neonCyan wave-bar" style="animation-delay: 0.25s;"></div>
+                  <div class="w-1 bg-neonIndigo wave-bar" style="animation-delay: 0.35s;"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-slate-500">
+                  <span>LATENCY: 12ms</span>
+                  <span>WEBSOCKET: ACTIVE</span>
+                </div>
+              </div>
+
+              <!-- Edge Hardware Specs Specs -->
+              <div class="text-[11px] space-y-1 text-slate-400 border-t border-borderMuted pt-2">
+                <div class="text-slate-200 font-bold text-xs mb-1">EDGE RIG HARDWARE SPEC</div>
+                <div class="flex justify-between"><span>SOC:</span> <span class="text-slate-200">BCM2712 Quad Cortex-A76</span></div>
+                <div class="flex justify-between"><span>STORAGE:</span> <span class="text-neonCyan">M.2 NVMe PCIe Gen3</span></div>
+                <div class="flex justify-between"><span>MODELS:</span> <span class="text-neonIndigo">Llama 3.3 + DeepSeek R1</span></div>
+                <div class="flex justify-between"><span>OS:</span> <span class="text-neonEmerald">Prometheus (Arch Linux)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 2: INTERACTIVE ZSH TERMINAL                              -->
+        <!-- =============================================================== -->
+        <div id="terminal-win" class="os-window pointer-events-auto absolute top-16 left-1/4 w-11/12 max-w-3xl h-[500px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-10 hidden">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/60 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer" onclick="closeWindow('terminal-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer" onclick="minimizeWindow('terminal-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer" onclick="maximizeWindow('terminal-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold">utkarsh@prometheus-os: ~ (zsh)</span>
+            </div>
+            <span class="font-mono text-xs text-slate-500">x86_64 / arm64</span>
+          </div>
+
+          <!-- Terminal Output Screen -->
+          <div id="terminal-body" class="flex-1 p-4 bg-black/90 font-mono text-xs overflow-y-auto space-y-2 text-slate-200">
+            <div>
+              <p class="text-neonCyan font-bold">PROMETHEUS OS (KERNEL 6.12.4-ARCH-ARM64) 🚀</p>
+              <p class="text-slate-400">Type <span class="text-neonEmerald font-bold">'help'</span> to view available system commands, or <span class="text-neonIndigo font-bold">'neofetch'</span> for executive hardware telemetry.</p>
+            </div>
+            <!-- Injected CLI History -->
+            <div id="cli-output" class="space-y-2"></div>
+            <!-- Prompt Line -->
+            <div class="flex items-center text-xs">
+              <span class="text-neonEmerald font-bold">utkarsh@prometheus</span><span class="text-slate-500">:</span><span class="text-neonCyan font-bold">~</span><span class="text-slate-400 mr-2">$</span>
+              <input id="cli-input" type="text" autofocus class="flex-1 bg-transparent border-none outline-none font-mono text-xs text-slate-100" autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 3: HARDWARE & OS ARCHITECTURE BLUEPRINT                  -->
+        <!-- =============================================================== -->
+        <div id="hardware-win" class="os-window pointer-events-auto absolute top-20 left-1/3 w-11/12 max-w-4xl h-[540px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-10 hidden">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/60 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer" onclick="closeWindow('hardware-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer" onclick="minimizeWindow('hardware-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer" onclick="maximizeWindow('hardware-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold">SCHEMATIC // HARDWARE RIG, OS KERNEL &amp; RISC-V</span>
+            </div>
+            <span class="font-mono text-xs text-neonIndigo font-bold">ARM64 + RISC-V ARCH</span>
+          </div>
+
+          <!-- Architecture Content -->
+          <div class="flex-1 p-6 overflow-y-auto space-y-6 bg-black/80 font-mono text-xs">
+            <!-- Diagram Section -->
+            <div class="border border-borderMuted rounded-xl p-5 bg-slate-950/90 space-y-4">
+              <div class="flex justify-between items-center border-b border-borderMuted pb-2">
+                <span class="text-neonCyan font-bold text-sm">PROMETHEUS &amp; SIFRA END-TO-END PIPELINE</span>
+                <span class="text-slate-400 text-[11px]">BARE METAL TO NEURAL WEIGHTS</span>
+              </div>
+              
+              <!-- 3 Interactive Architecture Cards -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <!-- Card 1 -->
+                <div class="border border-neonCyan/30 rounded-lg p-3.5 bg-slate-900/60 space-y-1.5">
+                  <div class="text-neonCyan font-bold text-[11px]">LAYER 01 : EDGE HARDWARE</div>
+                  <p class="text-slate-200 font-semibold">Raspberry Pi 5 + M.2 NVMe</p>
+                  <p class="text-slate-400 text-[10.5px]">Quad-Core ARM Cortex-A76 @ 2.4GHz. PCIe Gen3 interface mounting high IOPS M.2 NVMe SSD for fast LLM weight retrieval.</p>
+                  <p class="text-neonEmerald text-[10px] pt-1">Sensors: Camera + Mic Array</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="border border-neonIndigo/30 rounded-lg p-3.5 bg-slate-900/60 space-y-1.5">
+                  <div class="text-neonIndigo font-bold text-[11px]">LAYER 02 : KERNEL &amp; OS</div>
+                  <p class="text-slate-200 font-semibold">Prometheus Operating System</p>
+                  <p class="text-slate-400 text-[10.5px]">Custom Arch Linux derivative engineered for ARM64 &amp; x86_64 with external SSD bootloader, minimal kernel, and tuned systemd daemons.</p>
+                  <p class="text-neonIndigo text-[10px] pt-1">RISC-V ISA &amp; Pipelining Core</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="border border-neonEmerald/30 rounded-lg p-3.5 bg-slate-900/60 space-y-1.5">
+                  <div class="text-neonEmerald font-bold text-[11px]">LAYER 03 : NEURAL INFERENCE</div>
+                  <p class="text-slate-200 font-semibold">SIFRA Multimodal Agent</p>
+                  <p class="text-slate-400 text-[10.5px]">Fine-tuned open-source LLMs (Llama 3.3 / DeepSeek R1). Continuous ASR voice streaming, facial verification, and Playwright automation.</p>
+                  <p class="text-neonCyan text-[10px] pt-1">Autonomous Web Execution</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RISC-V Fundamentals & Microarchitecture Card -->
+            <div class="border border-borderMuted rounded-xl p-5 bg-slate-950/90 space-y-3">
+              <span class="text-neonIndigo font-bold text-sm">RISC-V MICROARCHITECTURE &amp; HARDWARE CONCEPTS</span>
+              <p class="text-slate-300 leading-relaxed text-xs">
+                Deep architectural mastery of modern processor design: <strong>Instruction Set Architecture (ISA)</strong> principles, 5-stage CPU instruction pipelining (Fetch, Decode, Execute, Memory, Write-back), hazard detection/forwarding units, branch prediction, and cache hierarchy tuning.
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-[11px] pt-2">
+                <div class="p-2 bg-slate-900 rounded border border-borderMuted">ISA Decoding</div>
+                <div class="p-2 bg-slate-900 rounded border border-borderMuted">Pipeline Hazards</div>
+                <div class="p-2 bg-slate-900 rounded border border-borderMuted">ARM64 vs RISC-V</div>
+                <div class="p-2 bg-slate-900 rounded border border-borderMuted">NVMe PCIe DMA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 4: RESUME DOSSIER & VERIFIED ACCREDITATIONS              -->
+        <!-- =============================================================== -->
+        <div id="resume-win" class="os-window pointer-events-auto absolute top-10 left-1/3 w-11/12 max-w-4xl h-[560px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-10 hidden">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/60 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer" onclick="closeWindow('resume-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer" onclick="minimizeWindow('resume-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer" onclick="maximizeWindow('resume-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold">DOSSIER // RESUME &amp; VERIFIED ACCREDITATIONS</span>
+            </div>
+            <button onclick="window.print()" class="text-xs text-neonCyan hover:underline">Print / Save PDF</button>
+          </div>
+
+          <!-- Resume Body -->
+          <div class="flex-1 p-6 overflow-y-auto space-y-6 bg-slate-950/95 font-sans text-xs text-slate-300">
+            <!-- Header Summary -->
+            <div class="border-b border-borderMuted pb-4 flex justify-between items-start">
+              <div>
+                <h1 class="text-xl font-extrabold text-white">UTKARSH MANOJ PANDEY</h1>
+                <p class="text-neonCyan font-mono text-xs mt-1">AI &amp; INTELLIGENT SYSTEMS DEVELOPER // EMBEDDED LINUX ARCHITECT</p>
+                <p class="text-slate-400 text-xs mt-0.5">Mumbai : 400079, Maharashtra, India • +91 9326625053 • utkarsh.manoj.pandey@gmail.com</p>
+              </div>
+              <div class="text-right font-mono text-[11px]">
+                <span class="px-2.5 py-1 bg-neonEmerald/20 text-neonEmerald border border-neonEmerald/40 rounded-full font-bold">M.Sc. IT (CGPA 8.7)</span>
+              </div>
+            </div>
+
+            <!-- Professional Experience Section -->
+            <div class="space-y-4">
+              <h2 class="text-sm font-bold text-neonIndigo font-mono uppercase tracking-wider border-b border-borderMuted pb-1">Professional Experience</h2>
+
+              <!-- Experience 1: NSE -->
+              <div class="space-y-1">
+                <div class="flex justify-between font-bold text-white text-xs">
+                  <span>National Stock Exchange of India (NSE)</span>
+                  <span class="text-neonCyan font-mono">Dec 2024 - Present</span>
+                </div>
+                <p class="text-neonAmber font-mono text-[11px]">Data Operations Manager</p>
+                <ul class="list-disc list-inside text-slate-300 space-y-1 text-[11.5px] leading-relaxed">
+                  <li>Developed complete <strong>Complaint Allocation Automation System</strong> from scratch with interactive dashboards for tracking officer performance.</li>
+                  <li>Conducted UAT (User Acceptance Testing) for NSE's <strong>Nice Plus</strong> website, identifying &amp; resolving usability/functionality bottlenecks.</li>
+                  <li>Managed and analyzed massive trade data flows across <strong>NSE, BSE, NSDL, and CDSL</strong>, guaranteeing consistency and audit reliability.</li>
+                  <li>Handled conciliation and arbitration case tracking with stringent enterprise confidentiality.</li>
+                </ul>
+              </div>
+
+              <!-- Experience 2: Meta Scifor -->
+              <div class="space-y-1 pt-2">
+                <div class="flex justify-between font-bold text-white text-xs">
+                  <span>Meta Scifor Technologies</span>
+                  <span class="text-neonCyan font-mono">Jan 2024 - Dec 2024</span>
+                </div>
+                <p class="text-neonIndigo font-mono text-[11px]">Data Scientist</p>
+                <ul class="list-disc list-inside text-slate-300 space-y-1 text-[11.5px] leading-relaxed">
+                  <li>Delivered actionable analytical intelligence to the Board of Directors, directly driving strategic decision-making.</li>
+                  <li>Engineered high-performance frontend and backend functionalities for production ML pipelines.</li>
+                  <li>Trained and deployed predictive algorithms with Python, optimizing operational efficiency.</li>
+                </ul>
+              </div>
+
+              <!-- Experience 3: Edureka -->
+              <div class="space-y-1 pt-2">
+                <div class="flex justify-between font-bold text-white text-xs">
+                  <span>Edureka</span>
+                  <span class="text-neonCyan font-mono">Jul 2023 - Dec 2023</span>
+                </div>
+                <p class="text-neonEmerald font-mono text-[11px]">Data Scientist</p>
+                <ul class="list-disc list-inside text-slate-300 space-y-1 text-[11.5px]">
+                  <li>End-to-end data preprocessing, modeling, visualization (Tableau, SQL, Python, Deep Learning, NLP).</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Education & Grants -->
+            <div class="space-y-3 pt-2">
+              <h2 class="text-sm font-bold text-neonEmerald font-mono uppercase tracking-wider border-b border-borderMuted pb-1">Education &amp; Project Grants</h2>
+              <div class="space-y-1">
+                <div class="flex justify-between font-bold text-white text-xs">
+                  <span>Master’s Of Science In Information Technology (M.Sc. IT)</span>
+                  <span class="text-neonCyan font-mono">CGPA : 8.7</span>
+                </div>
+                <p class="text-slate-400">Mumbai University • <strong>Achievement:</strong> Passed the inter-collegiate competitive test for <strong>Final Year Project Grant</strong></p>
+                <p class="text-slate-300"><strong>Final Year Project:</strong> <em>Prometheus Operating System &amp; SIFRA Voice Assistant built on Raspberry Pi 5</em></p>
+              </div>
+
+              <div class="space-y-1 pt-1">
+                <div class="flex justify-between font-bold text-white text-xs">
+                  <span>Bachelor’s Of Science In Information Technology (B.Sc. IT)</span>
+                  <span class="text-neonCyan font-mono">CGPA : 8.3</span>
+                </div>
+                <p class="text-slate-400">Mumbai University • <strong>Achievement:</strong> Event Lead of Inter-Collegiate Tech Summit</p>
+                <p class="text-slate-300"><strong>Final Year Project:</strong> <em>EDITH (Personal Voice Assistant Built for x86_64 Machine)</em></p>
+              </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="space-y-2 pt-2">
+              <h2 class="text-sm font-bold text-neonAmber font-mono uppercase tracking-wider border-b border-borderMuted pb-1">Verified Certifications &amp; Research</h2>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 font-mono text-[11px]">
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-neonAmber">ISRO:</strong> GIS Certification</div>
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-neonCyan">IIT Madras:</strong> Data Science For Engineers</div>
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-neonIndigo">AWS:</strong> Cloud Fundamentals</div>
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-neonEmerald">Google:</strong> Crash Course On Python</div>
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-slate-200">Edureka:</strong> Machine Learning &amp; DL</div>
+                <div class="p-2 bg-slate-900 border border-borderMuted rounded"><strong class="text-slate-200">Edureka:</strong> SQL &amp; Data Science</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 5: REAL-TIME SYSTEM MONITOR & TELEMETRY                  -->
+        <!-- =============================================================== -->
+        <div id="sysmon-win" class="os-window pointer-events-auto absolute top-24 left-1/4 w-11/12 max-w-2xl h-[460px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-10 hidden">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/60 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer" onclick="closeWindow('sysmon-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer" onclick="minimizeWindow('sysmon-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer" onclick="maximizeWindow('sysmon-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold">PROMETHEUS TELEMETRY // REAL-TIME SYSTEM MONITOR</span>
+            </div>
+            <span class="font-mono text-xs text-neonEmerald">POLL: 1000ms</span>
+          </div>
+
+          <!-- Monitor Charts -->
+          <div class="flex-1 p-5 bg-black/90 font-mono text-xs space-y-4 overflow-y-auto">
+            <!-- CPU Load Real-Time Canvas -->
+            <div class="border border-borderMuted rounded-xl p-3 bg-slate-950 space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-neonCyan font-bold">ARM64 CPU LOAD (QUAD CORTEX-A76 @ 2.4GHz)</span>
+                <span id="canvas-cpu-label" class="text-neonCyan font-bold">14%</span>
+              </div>
+              <canvas id="cpu-chart" class="w-full h-24 bg-slate-900/80 rounded border border-borderMuted"></canvas>
+            </div>
+
+            <!-- Memory Allocation -->
+            <div class="border border-borderMuted rounded-xl p-3 bg-slate-950 space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-neonIndigo font-bold">MEMORY ALLOCATION (8GB LPDDR4X)</span>
+                <span class="text-neonIndigo font-bold">3.2 GB / 8.0 GB (40%)</span>
+              </div>
+              <div class="w-full bg-slate-900 h-3 rounded overflow-hidden border border-borderMuted flex">
+                <div class="bg-neonCyan h-full w-[24%]" title="Prometheus Kernel (1.9 GB)"></div>
+                <div class="bg-neonIndigo h-full w-[16%]" title="SIFRA LLM Weights (1.3 GB)"></div>
+                <div class="bg-slate-800 h-full flex-1"></div>
+              </div>
+              <div class="flex justify-between text-[10px] text-slate-500 pt-1">
+                <span>Kernel: 1.9 GB</span>
+                <span>Llama 3.3 / DeepSeek R1 Q4_K_M: 1.3 GB</span>
+                <span>Available: 4.8 GB</span>
+              </div>
+            </div>
+
+            <!-- NVMe IOPS Telemetry -->
+            <div class="grid grid-cols-2 gap-3 text-[11px]">
+              <div class="p-3 bg-slate-950 border border-borderMuted rounded-lg">
+                <span class="text-slate-400 block text-[10px]">M.2 NVMe READ SPEED</span>
+                <span class="text-neonEmerald text-sm font-bold">3,450 MB/s</span>
+              </div>
+              <div class="p-3 bg-slate-950 border border-borderMuted rounded-lg">
+                <span class="text-slate-400 block text-[10px]">ASR INFERENCE LATENCY</span>
+                <span class="text-neonCyan text-sm font-bold">11.8 ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- WINDOW 6: UPLINK / DIRECT CONTACT MODAL                         -->
+        <!-- =============================================================== -->
+        <div id="contact-win" class="os-window pointer-events-auto absolute top-28 left-1/3 w-11/12 max-w-lg h-[460px] frosted-glass rounded-xl flex flex-col overflow-hidden shadow-2xl z-10 hidden">
+          <!-- Window Titlebar -->
+          <div class="window-titlebar h-9 bg-black/60 border-b border-borderMuted px-4 flex justify-between items-center cursor-move select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block cursor-pointer" onclick="closeWindow('contact-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block cursor-pointer" onclick="minimizeWindow('contact-win')"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block cursor-pointer" onclick="maximizeWindow('contact-win')"></span>
+              <span class="ml-2 font-mono text-xs text-slate-300 font-semibold">SECURE UPLINK // DIRECT COMMUNICATION</span>
+            </div>
+          </div>
+
+          <!-- Contact Content -->
+          <div class="flex-1 p-6 bg-black/80 font-mono text-xs space-y-4 overflow-y-auto">
+            <div>
+              <h3 class="text-base font-bold text-white font-sans">Establish Secure Channel</h3>
+              <p class="text-slate-400 text-xs mt-1">Direct inquiries for AI systems engineering, edge intelligence architectures, or high-impact technical initiatives.</p>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="space-y-2 pt-2">
+              <a href="mailto:utkarsh.manoj.pandey@gmail.com" class="flex items-center justify-between p-3 bg-slate-900 border border-borderMuted hover:border-neonCyan rounded-lg text-slate-200 transition">
+                <span class="flex items-center gap-2"><span>📧</span> <span>utkarsh.manoj.pandey@gmail.com</span></span>
+                <span class="text-neonCyan">Email ↗</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/itsutkarshpandey/" target="_blank" class="flex items-center justify-between p-3 bg-slate-900 border border-borderMuted hover:border-neonIndigo rounded-lg text-slate-200 transition">
+                <span class="flex items-center gap-2"><span>💼</span> <span>linkedin.com/in/itsutkarshpandey</span></span>
+                <span class="text-neonIndigo">Connect ↗</span>
+              </a>
+
+              <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank" class="flex items-center justify-between p-3 bg-slate-900 border border-borderMuted hover:border-sky-400 rounded-lg text-slate-200 transition">
+                <span class="flex items-center gap-2"><span>🐦</span> <span>@_Pandey_Utkarsh</span></span>
+                <span class="text-sky-400">Twitter/X ↗</span>
+              </a>
+
+              <a href="https://utkarshmanojpandey.blogspot.com/" target="_blank" class="flex items-center justify-between p-3 bg-slate-900 border border-borderMuted hover:border-amber-400 rounded-lg text-slate-200 transition">
+                <span class="flex items-center gap-2"><span>📝</span> <span>utkarshmanojpandey.blogspot.com</span></span>
+                <span class="text-amber-400">Tech Blog ↗</span>
+              </a>
+            </div>
+
+            <div class="pt-2 text-center text-slate-500 text-[10px]">
+              LOCATION: MUMBAI, MAHARASHTRA, INDIA • GLOBAL REMOTE READY
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- FLOATING GLASSMORPHIC DOCK (Bottom Menu)                            -->
+    <!-- =================================================================== -->
+    <footer class="h-16 flex items-center justify-center pb-3 z-30 pointer-events-none">
+      <div id="dock" class="pointer-events-auto h-14 bg-black/60 backdrop-blur-xl border border-white/15 rounded-2xl px-3 flex items-center gap-3 shadow-2xl">
+        <!-- Dock 1: SIFRA AI -->
+        <button onclick="openWindow('sifra-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonCyan/20 border border-white/10 hover:border-neonCyan text-xl group" title="SIFRA AI Assistant">
+          🤖
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonCyan text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">SIFRA AI</span>
+        </button>
+
+        <!-- Dock 2: Terminal -->
+        <button onclick="openWindow('terminal-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonEmerald/20 border border-white/10 hover:border-neonEmerald text-xl text-neonEmerald group" title="Terminal">
+          &gt;_
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonEmerald text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Terminal</span>
+        </button>
+
+        <!-- Dock 3: Hardware Schematic -->
+        <button onclick="openWindow('hardware-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonIndigo/20 border border-white/10 hover:border-neonIndigo text-xl group" title="Hardware Blueprint">
+          ⚡
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonIndigo text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Hardware Rig</span>
+        </button>
+
+        <!-- Dock 4: Resume Dossier -->
+        <button onclick="openWindow('resume-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonAmber/20 border border-white/10 hover:border-neonAmber text-xl group" title="Resume Dossier">
+          📜
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonAmber text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Resume Dossier</span>
+        </button>
+
+        <!-- Dock 5: Telemetry Monitor -->
+        <button onclick="openWindow('sysmon-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonEmerald/20 border border-white/10 hover:border-neonEmerald text-xl group" title="System Monitor">
+          📊
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonEmerald text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Telemetry</span>
+        </button>
+
+        <!-- Dock 6: Uplink / Contact -->
+        <button onclick="openWindow('contact-win')" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-neonRose/20 border border-white/10 hover:border-neonRose text-xl group" title="Contact Uplink">
+          📡
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-neonRose text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Uplink</span>
+        </button>
+
+        <!-- Dock Divider -->
+        <div class="h-8 w-px bg-white/15 my-auto"></div>
+
+        <!-- Dock 7: Reboot OS -->
+        <button onclick="rebootOS()" class="dock-item relative p-2 rounded-xl bg-slate-900/80 hover:bg-rose-500/20 border border-white/10 hover:border-rose-500 text-xl group" title="Reboot Prometheus OS">
+          🔄
+          <span class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/90 text-rose-400 text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none border border-borderMuted">Reboot OS</span>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 3. JAVASCRIPT STATE ENGINE & AUDIO SYNTHESIZER                        -->
+  <!-- ===================================================================== -->
+  <script>
+    /* =================================================================== */
+    /* WEB AUDIO API RETRO SOUND SYNTHESIZER (0 External Audio Files!)    */
+    /* =================================================================== */
+    class RetroAudio {
+      constructor() {
+        this.ctx = null;
+        this.muted = false;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+      }
+      playTone(freq, type = 'sine', duration = 0.08, gainVal = 0.05) {
+        if (this.muted) return;
+        this.init();
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+          gain.gain.setValueAtTime(gainVal, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + duration);
+        } catch(e) {}
+      }
+      bootChime() {
+        this.playTone(440, 'triangle', 0.2, 0.08);
+        setTimeout(() => this.playTone(659.25, 'triangle', 0.25, 0.08), 120);
+        setTimeout(() => this.playTone(880, 'triangle', 0.5, 0.1), 240);
+      }
+      click() { this.playTone(900, 'sine', 0.02, 0.02); }
+      openWin() { this.playTone(520, 'sine', 0.06, 0.04); setTimeout(() => this.playTone(780, 'sine', 0.08, 0.04), 40); }
+      closeWin() { this.playTone(700, 'sine', 0.05, 0.04); setTimeout(() => this.playTone(400, 'sine', 0.08, 0.04), 40); }
+    }
+    const audio = new RetroAudio();
+
+    document.getElementById('audio-toggle').addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      document.getElementById('audio-icon').textContent = audio.muted ? '🔇' : '🔊';
+    });
+
+    /* =================================================================== */
+    /* REALISTIC OS BOOT SEQUENCE SIMULATOR                                */
+    /* =================================================================== */
+    const bootLogs = [
+      "Loading Linux 6.12.4-prometheus-arm64 ...",
+      "Loading initial ramdisk ...",
+      "[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd083]",
+      "[    0.000000] Linux version 6.12.4-prometheus (utkarsh@neuro-core)",
+      "[    0.124501] CPU: BCM2712 Quad Cortex-A76 @ 2.40GHz",
+      "[    0.245892] Memory: 8192MB LPDDR4X (8044MB free)",
+      "[    0.398201] pci 0000:01:00.0: M.2 NVMe PCIe SSD detected [Samsung 980 Pro]",
+      "[    0.410291] nvme0n1: p1 (EFI), p2 (Prometheus rootfs - ext4)",
+      "[    0.589102] RISC-V ISA Microarchitecture Co-Processor [LINKED]",
+      "[    0.720194] Systemd 256.4-1-arch running in system mode",
+      "[  OK  ] Started D-Bus System Message Bus",
+      "[  OK  ] Mounted /dev/nvme0n1p2 on /sysroot (NVMe PCIe Gen3)",
+      "[  OK  ] Started Biometric OpenCV Facial Recognition Daemon",
+      "[  OK  ] Started SIFRA Autonomous Voice Agent (Llama 3.3 / DeepSeek R1)",
+      "[  OK  ] Initialized Continuous I2S ASR Audio Streaming Loop",
+      "[  OK  ] Started Wayland Hardware Compositor",
+      "Prometheus Operating System Initialized. Launching Desktop Environment..."
+    ];
+
+    let bootIndex = 0;
+    const bootLogContainer = document.getElementById('boot-log');
+    const bootProgressBar = document.getElementById('boot-progress-bar');
+    const bootPercentage = document.getElementById('boot-percentage');
+    let bootInterval = null;
+
+    function runBootStep() {
+      if (bootIndex < bootLogs.length) {
+        const line = document.createElement('div');
+        line.textContent = bootLogs[bootIndex];
+        if (bootLogs[bootIndex].includes('[  OK  ]')) {
+          line.innerHTML = `<span class="text-neonEmerald font-bold">[  OK  ]</span> ` + bootLogs[bootIndex].replace('[  OK  ]', '');
+        } else if (bootLogs[bootIndex].includes('NVMe')) {
+          line.classList.add('text-neonCyan');
+        }
+        bootLogContainer.appendChild(line);
+        bootLogContainer.scrollTop = bootLogContainer.scrollHeight;
+        
+        bootIndex++;
+        const pct = Math.round((bootIndex / bootLogs.length) * 100);
+        bootProgressBar.style.width = pct + '%';
+        bootPercentage.textContent = pct + '%';
+        audio.playTone(300 + (bootIndex * 35), 'sine', 0.015, 0.01);
+      } else {
+        clearInterval(bootInterval);
+        setTimeout(finishBoot, 400);
+      }
+    }
+
+    function finishBoot() {
+      audio.bootChime();
+      const bootScreen = document.getElementById('boot-screen');
+      const desktop = document.getElementById('desktop');
+      bootScreen.style.transition = 'opacity 0.6s ease';
+      bootScreen.style.opacity = '0';
+      setTimeout(() => {
+        bootScreen.style.display = 'none';
+        desktop.style.opacity = '1';
+        initThreeCanvas();
+        startTelemetryLoop();
+      }, 600);
+    }
+
+    // Launch boot sequence
+    bootInterval = setInterval(runBootStep, 95);
+
+    // Fast Boot Skip
+    document.getElementById('skip-boot-btn').addEventListener('click', () => {
+      clearInterval(bootInterval);
+      finishBoot();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.getElementById('boot-screen').style.display !== 'none') {
+        clearInterval(bootInterval);
+        finishBoot();
+      }
+    });
+
+    function rebootOS() {
+      location.reload();
+    }
+
+    /* =================================================================== */
+    /* REALTIME CLOCK & DESKTOP TELEMETRY                                  */
+    /* =================================================================== */
+    function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+      const dateStr = now.toLocaleDateString('en-US', { day: '2-digit', month: 'short' });
+      document.getElementById('desktop-clock').textContent = `${dateStr}  ${timeStr} IST`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    /* =================================================================== */
+    /* THREE.JS INTERACTIVE 3D NEURAL CORE BACKGROUND                      */
+    /* =================================================================== */
+    let scene, camera, renderer, particles, wireGlobe;
+
+    function initThreeCanvas() {
+      const canvas = document.getElementById('three-canvas');
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+      camera.position.z = 240;
+
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      // Particle Field
+      const particleCount = 700;
+      const geometry = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+      for (let i = 0; i < particleCount * 3; i += 3) {
+        positions[i] = (Math.random() - 0.5) * 600;
+        positions[i+1] = (Math.random() - 0.5) * 450;
+        positions[i+2] = (Math.random() - 0.5) * 400;
+      }
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const material = new THREE.PointsMaterial({
+        color: 0x38bdf8,
+        size: 2.2,
+        transparent: true,
+        opacity: 0.55
+      });
+      particles = new THREE.Points(geometry, material);
+      scene.add(particles);
+
+      // Rotating Wireframe Icosahedron Core
+      const coreGeo = new THREE.IcosahedronGeometry(70, 2);
+      const coreMat = new THREE.MeshBasicMaterial({
+        color: 0x818cf8,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.18
+      });
+      wireGlobe = new THREE.Mesh(coreGeo, coreMat);
+      scene.add(wireGlobe);
+
+      // Mouse Parallax
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - width / 2) * 0.05;
+        mouseY = (e.clientY - height / 2) * 0.05;
+      });
+
+      window.addEventListener('resize', () => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        particles.rotation.y += 0.0006;
+        wireGlobe.rotation.x += 0.0015;
+        wireGlobe.rotation.y += 0.002;
+        
+        camera.position.x += (mouseX - camera.position.x) * 0.05;
+        camera.position.y += (-mouseY - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    /* =================================================================== */
+    /* WINDOW MANAGEMENT SYSTEM (DRAG, Z-INDEX, MINIMIZE, MAXIMIZE)       */
+    /* =================================================================== */
+    let topZIndex = 100;
+
+    function bringToFront(win) {
+      topZIndex++;
+      win.style.zIndex = topZIndex;
+      audio.click();
+    }
+
+    function openWindow(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      win.classList.remove('hidden', 'minimized');
+      bringToFront(win);
+      audio.openWin();
+    }
+
+    function closeWindow(winId) {
+      const win = document.getElementById(winId);
+      if (win) {
+        win.classList.add('hidden');
+        audio.closeWin();
+      }
+    }
+
+    function minimizeWindow(winId) {
+      const win = document.getElementById(winId);
+      if (win) {
+        win.classList.add('minimized');
+        audio.closeWin();
+      }
+    }
+
+    function maximizeWindow(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      if (win.dataset.maximized === 'true') {
+        win.style.top = win.dataset.origTop;
+        win.style.left = win.dataset.origLeft;
+        win.style.width = win.dataset.origWidth;
+        win.style.height = win.dataset.origHeight;
+        win.style.transform = '';
+        win.dataset.maximized = 'false';
+      } else {
+        win.dataset.origTop = win.style.top || '10%';
+        win.dataset.origLeft = win.style.left || '10%';
+        win.dataset.origWidth = win.style.width || '80%';
+        win.dataset.origHeight = win.style.height || '70%';
+        win.style.top = '36px';
+        win.style.left = '8px';
+        win.style.width = 'calc(100vw - 16px)';
+        win.style.height = 'calc(100vh - 100px)';
+        win.style.transform = 'none';
+        win.dataset.maximized = 'true';
+      }
+      audio.click();
+    }
+
+    // Draggable Window Headers
+    document.querySelectorAll('.os-window').forEach(win => {
+      win.addEventListener('mousedown', () => bringToFront(win));
+      const titlebar = win.querySelector('.window-titlebar');
+      if (!titlebar) return;
+
+      let isDragging = false, startX, startY, initLeft, initTop;
+
+      titlebar.addEventListener('mousedown', (e) => {
+        if (e.target.tagName.toLowerCase() === 'button' || e.target.classList.contains('cursor-pointer')) return;
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        const rect = win.getBoundingClientRect();
+        initLeft = rect.left;
+        initTop = rect.top;
+        win.style.transform = 'none';
+        win.style.left = initLeft + 'px';
+        win.style.top = initTop + 'px';
+        bringToFront(win);
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        win.style.left = Math.max(0, initLeft + dx) + 'px';
+        win.style.top = Math.max(32, initTop + dy) + 'px';
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+    });
+
+    /* =================================================================== */
+    /* SIFRA AI AUTONOMOUS CONVERSATION ENGINE SIMULATOR                   */
+    /* =================================================================== */
+    const knowledgeBase = {
+      hardware: "The edge hardware configuration is a Raspberry Pi 5 equipped with a Broadcom BCM2712 Quad Cortex-A76 @ 2.40 GHz. Utkarsh has mounted an external M.2 NVMe PCIe Gen3 SSD on the board to provide high-speed IOPS for fine-tuned weights and fast model paging.",
+      prometheus: "Prometheus Operating System is Utkarsh's custom-engineered Arch Linux derivative built specifically for ARM64 and x86_64 machines. It features an external M.2 NVMe SSD boot pipeline, customized minimal kernel configuration, and systemd automation scripts.",
+      nse: "At the National Stock Exchange of India (Dec 2024 - Present), Utkarsh serves as Data Operations Manager. He built the complete Complaint Allocation Automation System from scratch with performance dashboards, conducted UAT on the Nice Plus platform, and audited cross-exchange trade streams (NSE, BSE, NSDL, CDSL).",
+      credentials: "Utkarsh holds an M.Sc. in Information Technology with an 8.7 CGPA from Mumbai University, where he won the competitive Final Year Project Grant for Prometheus OS & SIFRA. He is certified by ISRO (Geographical Information Systems) and IIT Madras (Data Science for Engineers).",
+      languages: "Utkarsh is a polyglot systems engineer fluent in low-level and high-performance languages: C, C++, Rust, Go, Python, Julia, R, Scala, Java, Bash/Shell, and SQL/Pro*C."
+    };
+
+    function askSifra(promptText) {
+      document.getElementById('sifra-input').value = promptText;
+      handleSifraSubmit(new Event('submit'));
+    }
+
+    function handleSifraSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('sifra-input');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+
+      const chatStream = document.getElementById('sifra-chat-stream');
+
+      // User Message
+      const userBubble = document.createElement('div');
+      userBubble.className = 'flex items-start justify-end gap-2';
+      userBubble.innerHTML = `
+        <div class="bg-neonCyan/20 border border-neonCyan/40 rounded-xl p-3 max-w-[85%] text-slate-100">
+          <p class="font-bold text-neonCyan mb-1 text-[10px]">OPERATOR</p>
+          <p>${escapeHtml(text)}</p>
+        </div>
+        <div class="w-7 h-7 rounded-lg bg-slate-800 border border-borderMuted flex items-center justify-center text-xs shrink-0">👤</div>
+      `;
+      chatStream.appendChild(userBubble);
+      chatStream.scrollTop = chatStream.scrollHeight;
+      audio.click();
+
+      // Assistant Response Generator
+      setTimeout(() => {
+        let answer = "Instruction processed. Utkarsh Manoj Pandey specializes in building end-to-end intelligent systems: from bare-metal ARM64 kernel configs on Raspberry Pi 5 to fine-tuning Llama 3.3 and DeepSeek R1 for edge voice assistants.";
+        const lower = text.toLowerCase();
+        if (lower.includes('hardware') || lower.includes('rpi') || lower.includes('raspberry') || lower.includes('nvme')) {
+          answer = knowledgeBase.hardware;
+        } else if (lower.includes('prometheus') || lower.includes('os') || lower.includes('kernel') || lower.includes('arch')) {
+          answer = knowledgeBase.prometheus;
+        } else if (lower.includes('nse') || lower.includes('stock exchange') || lower.includes('work') || lower.includes('job')) {
+          answer = knowledgeBase.nse;
+        } else if (lower.includes('degree') || lower.includes('education') || lower.includes('grant') || lower.includes('isro') || lower.includes('iit')) {
+          answer = knowledgeBase.credentials;
+        } else if (lower.includes('languages') || lower.includes('stack') || lower.includes('skills')) {
+          answer = knowledgeBase.languages;
+        }
+
+        const sifraBubble = document.createElement('div');
+        sifraBubble.className = 'flex items-start gap-2.5';
+        sifraBubble.innerHTML = `
+          <div class="w-7 h-7 rounded-lg bg-neonCyan/20 border border-neonCyan/50 flex items-center justify-center text-sm shrink-0">🤖</div>
+          <div class="bg-slate-900/90 border border-borderMuted rounded-xl p-3 max-w-[85%] text-slate-200">
+            <p class="font-bold text-neonCyan mb-1 text-[10px]">SIFRA NEURAL INFERENCE</p>
+            <p>${answer}</p>
+          </div>
+        `;
+        chatStream.appendChild(sifraBubble);
+        chatStream.scrollTop = chatStream.scrollHeight;
+        audio.playTone(750, 'sine', 0.08, 0.04);
+      }, 400);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    /* =================================================================== */
+    /* INTERACTIVE ZSH CLI INTERPRETER                                     */
+    /* =================================================================== */
+    const cliInput = document.getElementById('cli-input');
+    const cliOutput = document.getElementById('cli-output');
+
+    const cliCommands = {
+      help: `AVAILABLE COMMANDS:
+  neofetch       - Display system telemetry & hardware architecture
+  whoami         - Operator identity & engineering background
+  skills         - Polyglot languages, systems & databases
+  experience     - Professional enterprise positions (NSE, Meta Scifor, Edureka)
+  education      - Academic master's degree, CGPA, and project grants
+  certifications - ISRO, IIT Madras, AWS, Google accreditations
+  clear          - Clear terminal screen
+  matrix         - Trigger falling green cipher rain
+  reboot         - Re-initialize Prometheus OS bootloader`,
+      
+      whoami: `UTKARSH MANOJ PANDEY
+AI & Intelligent Systems Developer // Embedded Linux Architect
+Location : Mumbai : 400079, Maharashtra, India
+Phone    : +91 9326625053
+Email    : utkarsh.manoj.pandey@gmail.com
+Status   : Available for high-impact AI/ML & Systems Engineering roles`,
+
+      skills: `POLYGLOT SYSTEMS & FRAMEWORKS:
+• Systems & Low-Level : C, C++, Rust, Go, Pro*C, RISC-V ISA Fundamentals
+• AI & Scientific     : Python, Julia, R, Scala, Java, PyTorch, Scikit-Learn
+• Automation & Web    : Playwright, Selenium, PyQt GUIs, Continuous ASR
+• Databases           : SQLite (audio-visual datasets), PostgreSQL, OracleDB, MongoDB
+• Operating Systems   : Prometheus OS (Arch), Manjaro, Oracle Linux, Raspberry Pi OS`,
+
+      experience: `ENTERPRISE EXPERIENCE:
+1. National Stock Exchange of India (Dec 2024 - Present)
+   Role: Data Operations Manager
+   - Built Complaint Allocation Automation System with executive dashboards.
+   - UAT Lead for Nice Plus portal. Trade data analysis across NSE, BSE, CDSL.
+2. Meta Scifor Technologies (Jan 2024 - Dec 2024)
+   Role: Data Scientist
+   - Boardroom intelligence, predictive modeling with Python & ML algorithms.
+3. Edureka (Jul 2023 - Dec 2023)
+   Role: Data Scientist
+   - End-to-end data preprocessing, deep learning, NLP, and Tableau analytics.`,
+
+      education: `ACADEMIC PEDIGREE:
+• Master's of Science in Information Technology (M.Sc. IT)
+  Mumbai University | CGPA: 8.7
+  Achievement: Passed inter-collegiate test for Final Year Project Grant!
+  Project: Prometheus OS & SIFRA Voice Assistant on Raspberry Pi 5
+• Bachelor's of Science in Information Technology (B.Sc. IT)
+  Mumbai University | CGPA: 8.3
+  Achievement: Event Lead for Inter-Collegiate Summit
+  Project: EDITH (x86_64 Machine Intelligence)`,
+
+      certifications: `ACCREDITATIONS:
+• ISRO (Indian Space Research Organisation) : Geographical Information Systems (GIS)
+• IIT Madras : Data Science For Engineers
+• AWS : AWS Cloud Fundamentals
+• Google : Python Crash Course
+• Edureka : Machine Learning, Deep Learning, SQL, Python`,
+
+      neofetch: `
+   .---.           utkarsh@prometheus-os
+  /     \\          ---------------------
+ | () () |         OS: Prometheus OS v6.12 (Arch Linux ARM64 derivative)
+  \\  _  /          Host: Raspberry Pi 5 Model B Rev 1.0 + M.2 NVMe PCIe Gen3
+   \`---\`           Kernel: 6.12.4-prometheus-arm64
+                   Uptime: 42 days, 13 hours, 37 mins
+                   Shell: zsh 5.9
+                   DE: Wayland Glassmorphic Compositor
+                   CPU: Broadcom BCM2712 Quad Cortex-A76 @ 2.40 GHz
+                   Co-Processor: RISC-V ISA Microarchitecture Module
+                   Memory: 3276MB / 8192MB (40%)
+                   Neural Models: Llama 3.3 • DeepSeek R1 (Fine-Tuned)
+                   Storage: 512GB Samsung 980 Pro M.2 NVMe (3,450 MB/s)`
+    };
+
+    cliInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const cmd = cliInput.value.trim().toLowerCase();
+        cliInput.value = '';
+
+        const entry = document.createElement('div');
+        entry.innerHTML = `<span class="text-neonEmerald font-bold">utkarsh@prometheus</span><span class="text-slate-500">:</span><span class="text-neonCyan font-bold">~</span><span class="text-slate-400 mr-2">$</span> <span class="text-white">${escapeHtml(cmd)}</span>`;
+        cliOutput.appendChild(entry);
+
+        if (cmd === 'clear') {
+          cliOutput.innerHTML = '';
+          return;
+        } else if (cmd === 'reboot') {
+          rebootOS();
+          return;
+        } else if (cliCommands[cmd]) {
+          const resp = document.createElement('pre');
+          resp.className = 'text-slate-300 text-[11px] leading-relaxed pl-2';
+          resp.textContent = cliCommands[cmd];
+          cliOutput.appendChild(resp);
+        } else if (cmd) {
+          const err = document.createElement('div');
+          err.className = 'text-rose-400 pl-2';
+          err.textContent = `zsh: command not found: ${cmd}. Type 'help' for valid commands.`;
+          cliOutput.appendChild(err);
+        }
+
+        document.getElementById('terminal-body').scrollTop = document.getElementById('terminal-body').scrollHeight;
+        audio.click();
+      }
+    });
+
+    /* =================================================================== */
+    /* REALTIME CPU CHART TELEMETRY CANVAS                                 */
+    /* =================================================================== */
+    const cpuCanvas = document.getElementById('cpu-chart');
+    const cpuCtx = cpuCanvas ? cpuCanvas.getContext('2d') : null;
+    const cpuHistory = new Array(40).fill(12);
+
+    function startTelemetryLoop() {
+      if (!cpuCtx) return;
+      cpuCanvas.width = cpuCanvas.offsetWidth;
+      cpuCanvas.height = cpuCanvas.offsetHeight;
+
+      setInterval(() => {
+        // Random natural variance around 12% - 28%
+        const newVal = Math.min(95, Math.max(8, Math.round(cpuHistory[cpuHistory.length - 1] + (Math.random() * 12 - 6))));
+        cpuHistory.shift();
+        cpuHistory.push(newVal);
+
+        document.getElementById('top-cpu').textContent = newVal + '%';
+        document.getElementById('canvas-cpu-label').textContent = newVal + '%';
+
+        // Draw graph
+        const w = cpuCanvas.width;
+        const h = cpuCanvas.height;
+        cpuCtx.clearRect(0, 0, w, h);
+
+        cpuCtx.strokeStyle = '#1e293b';
+        cpuCtx.lineWidth = 1;
+        cpuCtx.setLineDash([2, 4]);
+        cpuCtx.beginPath();
+        cpuCtx.moveTo(0, h * 0.5); cpuCtx.lineTo(w, h * 0.5);
+        cpuCtx.stroke();
+        cpuCtx.setLineDash([]);
+
+        cpuCtx.beginPath();
+        cpuCtx.strokeStyle = '#38bdf8';
+        cpuCtx.lineWidth = 2;
+        const step = w / (cpuHistory.length - 1);
+        cpuHistory.forEach((val, idx) => {
+          const x = idx * step;
+          const y = h - (val / 100 * h);
+          if (idx === 0) cpuCtx.moveTo(x, y);
+          else cpuCtx.lineTo(x, y);
+        });
+        cpuCtx.stroke();
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

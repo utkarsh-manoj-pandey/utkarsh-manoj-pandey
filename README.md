@@ -13,6 +13,15 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&multiline=true&width=860&height=50&lines=%E2%9A%A1+Fine-Tuning+Llama+3.3+%26+DeepSeek+R1+on+Raspberry+Pi+5+%2B+M.2+NVMe;%F0%9F%9A%80+Architecting+Prometheus+OS%3A+Custom+Arch+Linux+Kernel+for+ARM64+%26+x86_64;%F0%9F%A7%A0+Integrating+Multimodal+Biometrics+(Facial+Recognition+%2B+Voiceprint+Auth);%F0%9F%9B%A0%EF%B8%8F+Mastering+Polyglot+Systems%3A+C%2C+C%2B%2B%2C+Rust%2C+Go%2C+Python%2C+Julia%2C+RISC-V" alt="Typing Telemetry" />
 </a>
 
+<br/><br/>
+
+<!-- Interactive Web OS Launch Button -->
+<p align="center">
+  <a href="https://utkarsh-manoj-pandey.github.io/utkarsh-manoj-pandey/" target="_blank">
+    <img src="https://img.shields.io/badge/PROMETHEUS_OS-LAUNCH_INTERACTIVE_WEB_DESKTOP_↗-38bdf8?style=for-the-badge&logo=linux&logoColor=05070c" alt="Launch Prometheus OS Web Desktop" />
+  </a>
+</p>
+
 <br/>
 
 <!-- ===================================================================== -->
