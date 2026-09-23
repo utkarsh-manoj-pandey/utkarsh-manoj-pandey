@@ -1,15 +1,22 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. MASTER COMMAND DECK & HARDWARE TELEMETRY CONSOLE                   -->
+<!-- 1. SEAMLESS HERO COMMAND DECK                                         -->
 <!-- ===================================================================== -->
 
-<img src="./assets/master_console.svg" width="900" alt="Utkarsh Manoj Pandey — Master Command Console" />
+<img src="./assets/hero_terminal.svg" width="900" alt="Utkarsh Manoj Pandey — Terminal Deck" />
 
 <br/><br/>
 
+<!-- Dynamic Typing Telemetry -->
+<a href="https://github.com/utkarsh-manoj-pandey">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&multiline=true&width=860&height=50&lines=%E2%9A%A1+Fine-Tuning+Llama+3.3+%26+DeepSeek+R1+on+Raspberry+Pi+5+%2B+M.2+NVMe;%F0%9F%9A%80+Architecting+Prometheus+OS%3A+Custom+Arch+Linux+Kernel+for+ARM64+%26+x86_64;%F0%9F%A7%A0+Integrating+Multimodal+Biometrics+(Facial+Recognition+%2B+Voiceprint+Auth);%F0%9F%9B%A0%EF%B8%8F+Mastering+Polyglot+Systems%3A+C%2C+C%2B%2B%2C+Rust%2C+Go%2C+Python%2C+Julia%2C+RISC-V" alt="Typing Telemetry" />
+</a>
+
+<br/>
+
 <!-- ===================================================================== -->
-<!-- 2. HARDWARE & OPERATING SYSTEM ARCHITECTURAL SCHEMATIC                -->
+<!-- 2. SYSTEM ARCHITECTURAL BLUEPRINT (RPi 5 -> OS -> LLM AGENT)          -->
 <!-- ===================================================================== -->
 
 <img src="./assets/hardware_architecture.svg" width="900" alt="Hardware &amp; Operating System Architecture Blueprint" />
@@ -24,11 +31,11 @@
 <!-- 3. IN-DEPTH TECHNICAL CAPABILITIES DOSSIER                           -->
 <!-- ===================================================================== -->
 
-### `TECHNICAL_DOSSIER` // ADVANCED SYSTEMS CAPABILITIES
+### `TECHNICAL_DOSSIER` // ADVANCED DOMAIN ARCHITECTURE
 
 <br/>
 
-> #### 🧠 01 / Edge AI & Autonomous Multimodal Voice Agents
+> #### 🧠 01 / Autonomous AI Agents & Edge-Hosted LLMs
 > - **Fine-Tuning State-of-the-Art Open LLMs**: Specialized in parameter-efficient fine-tuning and quantization of modern open-source LLMs (**Llama 3.3** and **DeepSeek R1**) for edge-device deployment.
 > - **SIFRA Personal Voice Assistant**: Built an edge-hosted intelligent voice assistant directly on a **Raspberry Pi 5 equipped with an M.2 NVMe PCIe Gen3 SSD** for low-latency weight loading and rapid inference.
 > - **Dual-Factor Biometric Hardware Pipeline**: Integrated **facial biometric authentication (OpenCV)** and **voiceprint recognition**, ensuring multi-tiered biometric access before agent execution.
@@ -50,25 +57,43 @@
 
 <br/>
 
-> #### 🔬 04 / Polyglot Systems & Multi-Paradigm Languages
-> - **Low-Level & Bare-Metal**: `C` • `C++` • `Rust` • `Go` • `Pro*C`
-> - **AI, Mathematical & Scientific Runtimes**: `Python 3.11+` • `Julia` • `R` • `Scala` • `Java`
-> - **Shell & Automation Scripting**: `Bash / Shell Scripting` • `PowerShell`
-> - **Databases & Enterprise Query Engines**: `SQLite` • `PostgreSQL` • `OracleDB` • `SQL Server` • `MongoDB (NoSQL)`
+<div align="center">
+
+<!-- ===================================================================== -->
+<!-- 4. POLYGLOT SYSTEMS MATRIX (C, C++, Rust, Go, Python, Julia, Shell)   -->
+<!-- ===================================================================== -->
+
+### `POLYGLOT_MATRIX` // SYSTEMS, AI &amp; DATABASE STACK
 
 <br/>
 
-<div align="center">
-  <img src="./assets/divider.svg" width="900" alt="Divider" />
-</div>
+<img src="./assets/polyglot_matrix.svg" width="900" alt="Polyglot Systems Matrix" />
+
+<br/>
+
+<p align="center">
+  <code>C</code> &nbsp;•&nbsp;
+  <code>C++</code> &nbsp;•&nbsp;
+  <code>Rust</code> &nbsp;•&nbsp;
+  <code>Go</code> &nbsp;•&nbsp;
+  <code>Python</code> &nbsp;•&nbsp;
+  <code>Julia</code> &nbsp;•&nbsp;
+  <code>R</code> &nbsp;•&nbsp;
+  <code>Scala</code> &nbsp;•&nbsp;
+  <code>Java</code> &nbsp;•&nbsp;
+  <code>Bash / Shell</code> &nbsp;•&nbsp;
+  <code>PowerShell</code> &nbsp;•&nbsp;
+  <code>SQL</code> &nbsp;•&nbsp;
+  <code>Pro*C</code>
+</p>
+
+<img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 4. RESEARCH CREDENTIALS & ACADEMIC PEDIGREE                           -->
+<!-- 5. VERIFIED CREDENTIALS & ACADEMIC PEDIGREE                           -->
 <!-- ===================================================================== -->
 
-<div align="center">
-
-### `CREDENTIALS` // RESEARCH & ACADEMIC ACCREDITATIONS
+### `CREDENTIALS` // RESEARCH &amp; ACADEMIC ACCREDITATIONS
 
 <br/>
 
@@ -83,19 +108,11 @@
   <i>Event Lead for Inter-Collegiate Tech Summit • Final Year Project: EDITH (x86_64 Voice Intelligence)</i>
 </p>
 
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./assets/divider.svg" width="900" alt="Divider" />
-</div>
+<img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 5. CONTRIBUTION ACTIVITY STREAM                                       -->
+<!-- 6. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
-
-<div align="center">
 
 ### `ACTIVITY_STREAM` // CONTINUOUS CODE CONSUMPTION
 
@@ -105,19 +122,11 @@
   <img alt="Contribution Snake" src="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" width="100%" />
 </picture>
 
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./assets/divider.svg" width="900" alt="Divider" />
-</div>
+<img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 6. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 7. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
-
-<div align="center">
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
 
