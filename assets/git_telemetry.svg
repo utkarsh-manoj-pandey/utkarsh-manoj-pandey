@@ -1,0 +1,72 @@
+<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient matching GitHub Dark / Streak Card -->
+    <linearGradient id="telemetryBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b111e" />
+      <stop offset="100%" stop-color="#04060c" />
+    </linearGradient>
+
+    <linearGradient id="neonBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseLed { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .led-live { animation: pulseLed 1.8s infinite ease-in-out; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Card Frame -->
+  <rect x="1" y="1" width="438" height="193" rx="10" fill="url(#telemetryBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Top Header Strip -->
+  <rect x="1" y="1" width="438" height="32" rx="10" fill="#070c17" />
+  <line x1="1" y1="32" x2="439" y2="32" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Mac Control Dots -->
+  <circle cx="16" cy="16" r="3.5" fill="#ef4444" />
+  <circle cx="28" cy="16" r="3.5" fill="#f59e0b" />
+  <circle cx="40" cy="16" r="3.5" fill="#10b981" />
+
+  <text x="56" y="20" class="font-mono" font-size="10" fill="#64748b" font-weight="600">SYSTEMS_TELEMETRY // GIT REPO OPS</text>
+  <circle cx="418" cy="16" r="3.5" fill="#10b981" class="led-live" />
+  <text x="408" y="20" class="font-mono" font-size="9" fill="#10b981" text-anchor="end" font-weight="600">MONITOR ACTIVE</text>
+
+  <!-- Metrics Grid -->
+  <g transform="translate(18, 48)">
+    <!-- Row 1: Active Focus -->
+    <g transform="translate(0, 0)">
+      <text y="14" class="font-mono" font-size="9.5" fill="#64748b">ARCHITECTURE SCOPE:</text>
+      <text x="160" y="14" class="font-mono" font-size="10" fill="#f1f5f9" font-weight="600">5 Flagship Systems</text>
+    </g>
+
+    <!-- Row 2: Silicon Layer -->
+    <g transform="translate(0, 26)">
+      <text y="14" class="font-mono" font-size="9.5" fill="#64748b">HARDWARE TRACK:</text>
+      <text x="160" y="14" class="font-mono" font-size="10" fill="#f59e0b" font-weight="600">32-Bit RV32I Core &amp; RTL</text>
+    </g>
+
+    <!-- Row 3: Runtimes -->
+    <g transform="translate(0, 52)">
+      <text y="14" class="font-mono" font-size="9.5" fill="#64748b">SYSTEMS RUNTIMES:</text>
+      <text x="160" y="14" class="font-mono" font-size="10" fill="#38bdf8" font-weight="600">Rust, Modern C++20, Python</text>
+    </g>
+
+    <!-- Row 4: Workspace Security -->
+    <g transform="translate(0, 78)">
+      <text y="14" class="font-mono" font-size="9.5" fill="#64748b">DATA INTEGRITY:</text>
+      <text x="160" y="14" class="font-mono" font-size="10" fill="#10b981" font-weight="600">Local-First • Zero Telemetry</text>
+    </g>
+
+    <!-- Bottom Metric Highlight Box -->
+    <g transform="translate(0, 102)">
+      <rect width="404" height="30" rx="6" fill="#080e1b" stroke="#1e293b" stroke-width="0.8" />
+      <text x="12" y="19" class="font-mono" font-size="9.5" fill="#94a3b8">
+        <tspan fill="#38bdf8">CI/CD: GitHub Actions</tspan> • <tspan fill="#cbd5e1">POSIX Linux</tspan> • <tspan fill="#a78bfa">Daily Sync</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

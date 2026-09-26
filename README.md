@@ -9,14 +9,12 @@
 <br/>
 
 <!-- ===================================================================== -->
-<!-- 2. PROMETHEUS OS INTERACTIVE WEB DESKTOP LAUNCH DECK                  -->
+<!-- 2. SYSTEMS MISSION // FIRST-PRINCIPLES ENGINEERING DIRECTIVES         -->
 <!-- ===================================================================== -->
 
-<a href="https://utkarsh-manoj-pandey.github.io/utkarsh-manoj-pandey/" target="_blank">
-  <img src="./assets/prometheus_launcher.svg" width="900" alt="Launch Prometheus OS Web Desktop" />
-</a>
+<img src="./assets/systems_directive.svg" width="900" alt="First-Principles Systems Engineering Directives" />
 
-<br/><br/>
+<br/>
 
 <!-- ===================================================================== -->
 <!-- 3. GITHUB ACTIVITY & LIVE TELEMETRY DECK                              -->
@@ -24,13 +22,19 @@
 
 <img src="./assets/activity_header.svg" width="900" alt="GitHub Activity &amp; Telemetry" />
 
-<br/>
+<p align="center">
+  <a href="https://github.com/utkarsh-manoj-pandey" target="_blank">
+    <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=04060c&ring=38bdf8&fire=f59e0b&currStreakNum=f8fafc&sideNums=cbd5e1&currStreakLabel=38bdf8&sideLabels=94a3b8" width="445" alt="GitHub Daily Streak Live Tracker" />
+  </a>
+  &nbsp;
+  <img src="./assets/git_telemetry.svg" width="445" alt="Repo Telemetry Ops" />
+</p>
 
-<a href="https://github.com/utkarsh-manoj-pandey" target="_blank">
-  <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=04060c&ring=38bdf8&fire=f59e0b&currStreakNum=f8fafc&sideNums=cbd5e1&currStreakLabel=38bdf8&sideLabels=94a3b8" alt="GitHub Daily Streak Live Tracker" />
-</a>
+<!-- ===================================================================== -->
+<!-- 4. RETRO COMMIT STREAM ARCADE CONSOLE (CONTRIBUTION GRID SNAKE)       -->
+<!-- ===================================================================== -->
 
-<br/>
+<img src="./assets/snake_frame_top.svg" width="900" alt="Contribution Grid Snake Eater Frame" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake-dark.svg" />
@@ -38,15 +42,15 @@
   <img alt="Contribution Snake" src="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" width="900" />
 </picture>
 
-<br/><br/>
+<img src="./assets/snake_frame_bottom.svg" width="900" alt="Contribution Grid Snake Eater Footer" />
+
+<br/>
 
 <!-- ===================================================================== -->
-<!-- 4. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 5. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 <img src="./assets/uplink_header.svg" width="900" alt="Secure Uplink Channels" />
-
-<br/>
 
 <p align="center">
   <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank">
