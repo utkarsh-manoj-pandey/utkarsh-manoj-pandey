@@ -6,35 +6,26 @@
 
 <img src="./assets/master_command_deck.svg" width="900" alt="Utkarsh Manoj Pandey — Master Command Console" />
 
-<br/>
+<br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 2. SYSTEMS MISSION // FIRST-PRINCIPLES ENGINEERING DIRECTIVES         -->
-<!-- ===================================================================== -->
-
-<img src="./assets/systems_directive.svg" width="900" alt="First-Principles Systems Engineering Directives" />
-
-<br/>
-
-<!-- ===================================================================== -->
-<!-- 3. GITHUB ACTIVITY & LIVE TELEMETRY DECK                              -->
+<!-- 2. GITHUB TELEMETRY // LIVE DAILY STREAK & COMMIT STREAM              -->
 <!-- ===================================================================== -->
 
 <img src="./assets/activity_header.svg" width="900" alt="GitHub Activity &amp; Telemetry" />
 
-<p align="center">
-  <a href="https://github.com/utkarsh-manoj-pandey" target="_blank">
-    <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=04060c&ring=38bdf8&fire=f59e0b&currStreakNum=f8fafc&sideNums=cbd5e1&currStreakLabel=38bdf8&sideLabels=94a3b8" width="445" alt="GitHub Daily Streak Live Tracker" />
-  </a>
-  &nbsp;
-  <img src="./assets/git_telemetry.svg" width="445" alt="Repo Telemetry Ops" />
-</p>
-
-<!-- ===================================================================== -->
-<!-- 4. RETRO COMMIT STREAM ARCADE CONSOLE (CONTRIBUTION GRID SNAKE)       -->
-<!-- ===================================================================== -->
-
-<img src="./assets/snake_frame_top.svg" width="900" alt="Contribution Grid Snake Eater Frame" />
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: none;">
+  <tr align="center" valign="middle" style="border: none;">
+    <td align="center" style="border: none; padding: 4px;">
+      <a href="https://github.com/utkarsh-manoj-pandey" target="_blank">
+        <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=04060c&ring=38bdf8&fire=f59e0b&currStreakNum=f8fafc&sideNums=cbd5e1&currStreakLabel=38bdf8&sideLabels=94a3b8" width="435" alt="GitHub Daily Streak Live Tracker" />
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 4px;">
+      <img src="./assets/git_telemetry.svg" width="435" alt="GitHub Repo Telemetry" />
+    </td>
+  </tr>
+</table>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake-dark.svg" />
@@ -42,12 +33,10 @@
   <img alt="Contribution Snake" src="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake.svg" width="900" />
 </picture>
 
-<img src="./assets/snake_frame_bottom.svg" width="900" alt="Contribution Grid Snake Eater Footer" />
-
-<br/>
+<br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 5. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 3. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 <img src="./assets/uplink_header.svg" width="900" alt="Secure Uplink Channels" />
