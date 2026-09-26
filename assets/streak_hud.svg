@@ -1,0 +1,147 @@
+<svg width="900" height="170" viewBox="0 0 900 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="streakBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d16" />
+      <stop offset="100%" stop-color="#04070c" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="streakGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#121e30" stroke-width="0.5" />
+    </pattern>
+
+    <!-- Flame Glow -->
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Sparkline Gradient -->
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes flamePulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px #f59e0b); }
+      50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #ef4444); }
+    }
+    @keyframes sparkScan {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .hud-title {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    .kpi-num {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      fill: #f8fafc;
+      letter-spacing: -0.5px;
+    }
+    .kpi-lbl {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .kpi-sub {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9.5px;
+      fill: #94a3b8;
+    }
+    .anim-flame {
+      transform-origin: 35px 35px;
+      animation: flamePulse 2s infinite ease-in-out;
+    }
+    .spark-line {
+      stroke-dasharray: 600;
+      animation: sparkScan 4s linear infinite;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="898" height="168" rx="8" fill="url(#streakBg)" stroke="#1a2538" stroke-width="1.2" />
+  <rect x="2" y="2" width="896" height="166" rx="7" fill="url(#streakGrid)" />
+
+  <!-- Top Titlebar Strip -->
+  <rect x="1" y="1" width="898" height="28" rx="8" fill="#0b101a" />
+  <line x1="1" y1="28" x2="899" y2="28" stroke="#1a2538" stroke-width="1" />
+  <text x="24" y="18" class="hud-title" fill="#38bdf8">GITHUB TELEMETRY // DAILY STREAK &amp; COMMIT VELOCITY</text>
+  <text x="876" y="18" class="hud-title" fill="#64748b" text-anchor="end">YEAR-TO-DATE MONITOR</text>
+
+  <!-- ===================================================================== -->
+  <!-- CARD 1: DAILY STREAK                                                  -->
+  <!-- ===================================================================== -->
+  <g transform="translate(24, 40)">
+    <rect x="0" y="0" width="268" height="78" rx="6" fill="#090f1a" stroke="#2a1f0a" stroke-width="1" />
+    <circle cx="38" cy="39" r="26" fill="url(#flameGlow)" />
+    <!-- Flame Emoji Icon SVG -->
+    <g transform="translate(26, 26)" class="anim-flame">
+      <path d="M12 0C12 0 16 6 16 11C16 14.3 13.3 17 10 17C6.7 17 4 14.3 4 11C4 8.5 6 6 7 4C7 6.5 9 8 10 8C10 5 12 0 12 0Z" fill="#f59e0b" />
+      <path d="M10 6C10 6 13 9.5 13 12C13 13.7 11.7 15 10 15C8.3 15 7 13.7 7 12C7 10.5 8.5 9 9 7.5C9 9 10 9.5 10 6Z" fill="#ef4444" />
+    </g>
+
+    <g transform="translate(68, 14)">
+      <text y="10" class="kpi-lbl" fill="#f59e0b">CURRENT DAILY STREAK</text>
+      <text y="36" class="kpi-num">134 <tspan font-size="14" fill="#f59e0b" font-weight="600">DAYS</tspan></text>
+      <text y="54" class="kpi-sub">🔥 Streak Active • Zero Breaks</text>
+    </g>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- CARD 2: TOTAL COMMITS & VELOCITY                                      -->
+  <!-- ===================================================================== -->
+  <g transform="translate(306, 40)">
+    <rect x="0" y="0" width="288" height="78" rx="6" fill="#090f1a" stroke="#0e2438" stroke-width="1" />
+    
+    <!-- Bolt Icon -->
+    <g transform="translate(18, 22)">
+      <circle cx="16" cy="16" r="18" fill="#0f1f33" />
+      <path d="M18 6L9 18H15L13 26L23 14H17L18 6Z" fill="#38bdf8" />
+    </g>
+
+    <g transform="translate(68, 14)">
+      <text y="10" class="kpi-lbl" fill="#38bdf8">ANNUAL COMMIT VELOCITY</text>
+      <text y="36" class="kpi-num">2,840+ <tspan font-size="14" fill="#38bdf8" font-weight="600">COMMITS</tspan></text>
+      <text y="54" class="kpi-sub">⚡ 42.6 Avg Commits / Week</text>
+    </g>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- CARD 3: LONGEST STREAK & CONSISTENCY                                  -->
+  <!-- ===================================================================== -->
+  <g transform="translate(608, 40)">
+    <rect x="0" y="0" width="268" height="78" rx="6" fill="#090f1a" stroke="#102a1e" stroke-width="1" />
+    
+    <!-- Trophy Icon -->
+    <g transform="translate(18, 22)">
+      <circle cx="16" cy="16" r="18" fill="#0c2419" />
+      <path d="M10 8H22V12C22 15.3 19.3 18 16 18C12.7 18 10 15.3 10 12V8ZM7 10H10V13C10 14 9 15 8 15H7V10ZM25 10H22V13C22 14 23 15 24 15H25V10ZM14 20H18V24H14V20Z" fill="#34d399" />
+    </g>
+
+    <g transform="translate(68, 14)">
+      <text y="10" class="kpi-lbl" fill="#34d399">CONSISTENCY INDEX</text>
+      <text y="36" class="kpi-num">99.4% <tspan font-size="14" fill="#34d399" font-weight="600">UPTIME</tspan></text>
+      <text y="54" class="kpi-sub">🏆 Longest Streak: 248 Days</text>
+    </g>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- BOTTOM COMMIT SPARKLINE WAVEFORM                                      -->
+  <!-- ===================================================================== -->
+  <g transform="translate(24, 128)">
+    <text x="0" y="20" class="hud-title" fill="#64748b">VELOCITY_SPARKLINE</text>
+    
+    <!-- Sparkline Path -->
+    <path d="M 130 18 L 150 14 L 170 19 L 190 8 L 210 16 L 230 5 L 250 14 L 270 9 L 290 18 L 310 4 L 330 12 L 350 16 L 370 7 L 390 14 L 410 3 L 430 11 L 450 15 L 470 6 L 490 13 L 510 2 L 530 10 L 550 14 L 570 5 L 590 12 L 610 3 L 630 11 L 650 15 L 670 6 L 690 12 L 710 2 L 730 8 L 750 14 L 770 4 L 790 10 L 810 15 L 830 5 L 850 11" fill="none" stroke="url(#sparkGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="spark-line" />
+  </g>
+</svg>

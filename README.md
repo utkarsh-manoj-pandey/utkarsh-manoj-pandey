@@ -9,7 +9,7 @@
 <br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 2. ANIMATED LIVE TERMINAL DIAGNOSTICS CONSOLE                         -->
+<!-- 2. ANIMATED LIVE TERMINAL DIAGNOSTICS CONSOLE (FIXED // ZERO OVERLAP) -->
 <!-- ===================================================================== -->
 
 <img src="./assets/live_terminal.svg" width="900" alt="Live Systems Diagnostics Terminal" />
@@ -22,6 +22,20 @@
 
 <img src="./assets/pipeline_radar.svg" width="900" alt="RV32I 5-Stage Hardware Execution Pipeline &amp; Systems Radar" />
 
+<br/><br/>
+
+<!-- ===================================================================== -->
+<!-- 4. GITHUB DAILY STREAK & COMMIT VELOCITY HUD                          -->
+<!-- ===================================================================== -->
+
+<img src="./assets/streak_hud.svg" width="900" alt="GitHub Daily Streak &amp; Commit Velocity HUD" />
+
+<br/>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=utkarsh-manoj-pandey&theme=tokyonight&hide_border=true&background=080d16&ring=38bdf8&fire=f59e0b&currStreakNum=f8fafc&sideNums=cbd5e1&currStreakLabel=38bdf8&sideLabels=94a3b8" alt="GitHub Streak Stats Live" />
+</p>
+
 <br/>
 
 <img src="./assets/divider.svg" width="900" alt="Divider" />
@@ -29,23 +43,58 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 4. FLAGSHIP SYSTEMS // PRODUCTION ENGINEERING ROADMAP                 -->
+<!-- 5. FLAGSHIP SYSTEMS // PRODUCTION ARCHITECTURAL ROADMAP               -->
 <!-- ===================================================================== -->
 
 ### `FLAGSHIP_SYSTEMS` // PRODUCTION ROADMAP
 
-An intentional, vertically integrated engineering portfolio spanning from local-first desktop environments down to custom 32-bit RISC-V silicon.
+A vertically integrated engineering portfolio spanning from local-first desktop environments down to custom 32-bit RISC-V silicon.
+
+<br/>
+
+<div align="center">
+  <img src="./assets/flagship_deck.svg" width="900" alt="Flagship Systems Architectural Specification Deck" />
+</div>
+
+<br/>
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ [01] PRIVACY-FIRST PERSONAL SPACE (Python 3.11+ • PySide • SQLite)     │
+│ └── Local Desktop Suite: Browser • Encrypted Notes • Media • Shredder  │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ Interprocess Local Bridge
+┌───────────────────────────────────┴────────────────────────────────────┐
+│ [02] NØRVA (Rust • WebKit/Engine • Tokio)                              │
+│ └── Privacy Web Browser: AST Tracker Interception • Ephemeral Storage  │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ IPC / Sandboxed Protocol
+┌───────────────────────────────────┴────────────────────────────────────┐
+│ [03] KODAI (Rust • Tree-Sitter • Local/Remote LLM APIs)                │
+│ └── Autonomous Coding Agent: Model-Agnostic Core • Sandboxed AST Diffs │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ High-Throughput Batch Pipe
+┌───────────────────────────────────┴────────────────────────────────────┐
+│ [04] VECTRA (Modern C++20 • SIMD AVX2/NEON • FFmpeg APIs)              │
+│ └── Media Computing Suite: Hardware Transcoding • VMAF • Subtitle OCR  │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ Bare-Metal Driver / Memory Map
+┌───────────────────────────────────┴────────────────────────────────────┐
+│ [05] VERA-32 (VHDL • RISC-V RV32I • Bare-Metal C • FPGA Deployment)    │
+│ └── 32-Bit Microcontroller SoC: CPU Core • Bus Interconnect • Periphs  │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
 <br/>
 
 > ### `01` / Privacy-First Personal Space
 > **Stack**: `Python 3.11+` • `PySide/Qt` • `Encrypted SQLite`  
-> **Domain**: Local-First Desktop Workspace &amp; Offline Productivity  
+> **Architecture Layer**: Local-First Desktop Workspace &amp; Offline Productivity  
 > **Telemetry Protocol**: `Zero External Calls // 100% Client-Side Local`
 >
 > A complete local-first desktop application engineered as a unified offline personal operating hub with zero cloud dependencies and complete user data sovereignty.
 >
-> - **Local-First Core**: Embedded private web browser, client-side encrypted markdown knowledge base, offline calendar, agenda scheduling, and document management.
+> - **Local-First Productivity**: Embedded private web browser, client-side encrypted markdown knowledge base, offline calendar, agenda scheduling, and document management.
 > - **Media &amp; Streaming Hub**: Integrated offline media player, streaming internet radio tuner with zero telemetry headers, offline-cached weather forecasting, and RSS feed aggregators.
 > - **Privacy &amp; File Utilities**: Local cryptographic hashing (SHA-256, BLAKE3), multi-pass secure file shredder, EXIF and document metadata scrubber, and batch file renaming.
 > - **Data Persistence**: 100% offline data integrity backed by local encrypted SQLite storage without third-party cloud synchronization or background telemetry.
@@ -54,7 +103,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 
 > ### `02` / NØRVA
 > **Stack**: `Rust` • `WebKit/Custom Engine` • `Tokio`  
-> **Domain**: Privacy-Hardened Secure Web Browser  
+> **Architecture Layer**: Privacy-Hardened Secure Web Browser  
 > **Telemetry Protocol**: `Zero-Telemetry Browsing &amp; Ephemeral State Isolation`
 >
 > A lightweight, privacy-focused web browser engineered with zero telemetry and uncompromising user privacy at the core.
@@ -68,7 +117,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 
 > ### `03` / KODAI
 > **Stack**: `Rust` • `Tree-Sitter` • `Local/Remote LLM APIs`  
-> **Domain**: Autonomous Agentic Code Intelligence  
+> **Architecture Layer**: Autonomous Agentic Code Intelligence  
 > **Target Footprint**: `Low-RAM Constraints (<4GB) // Zero Garbage Collection`
 >
 > A low-RAM, model-agnostic coding AI agent that can connect to local coding LLMs or external LLM APIs and operate on real codebases through controlled tools.
@@ -81,8 +130,8 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 <br/>
 
 > ### `04` / VECTRA
-> **Stack**: `C++20` • `SIMD (AVX2/NEON)` • `FFmpeg / Multimedia APIs`  
-> **Domain**: High-Performance Media Processing &amp; Structural Inspection  
+> **Stack**: `Modern C++20` • `SIMD (AVX2/NEON)` • `FFmpeg / Multimedia APIs`  
+> **Architecture Layer**: High-Performance Media Processing &amp; Structural Inspection  
 > **Optimization**: `Multi-Threaded Batch Throughput &amp; Vectorized Execution`
 >
 > A high-performance media processing/analysis suite for video/audio conversion, compression, metadata, subtitles, batch processing, media inspection, etc.
@@ -95,8 +144,8 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 <br/>
 
 > ### `05` / VERA-32
-> **Stack**: `VHDL` • `RISC-V Assembly` • `Bare-Metal C`  
-> **Domain**: Microcontroller SoC &amp; Hardware RTL Microarchitecture  
+> **Stack**: `VHDL` • `RISC-V Assembly (RV32I)` • `Bare-Metal C`  
+> **Architecture Layer**: Microcontroller SoC &amp; Hardware RTL Microarchitecture  
 > **Synthesis Target**: `Synthesizable FPGA Core // Cycle-Accurate Simulation`
 >
 > Our own 32-bit RISC-V microcontroller SoC: CPU core, ROM, SRAM, bus, GPIO, UART, SPI, I²C, timers, interrupts, firmware support, simulation and FPGA deployment.
@@ -117,7 +166,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 </div>
 
 <!-- ===================================================================== -->
-<!-- 5. ENGINEERING ARSENAL // HARDWARE, RUNTIMES & PRODUCTION STACK       -->
+<!-- 6. ENGINEERING ARSENAL // HARDWARE, RUNTIMES & PRODUCTION STACK       -->
 <!-- ===================================================================== -->
 
 <div align="center">
@@ -143,7 +192,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 6. VERIFIED RESEARCH CREDENTIALS & ACADEMIC PEDIGREE                 -->
+<!-- 7. VERIFIED RESEARCH CREDENTIALS & ACADEMIC PEDIGREE                 -->
 <!-- ===================================================================== -->
 
 ### `ACCREDITATIONS` // RESEARCH &amp; ACADEMIC EXCELLENCE
@@ -164,7 +213,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 7. CONTRIBUTION ACTIVITY STREAM                                       -->
+<!-- 8. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
 
 ### `ACTIVITY_STREAM` // CONTINUOUS CODE COMMITS
@@ -178,7 +227,7 @@ An intentional, vertically integrated engineering portfolio spanning from local-
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 9. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
