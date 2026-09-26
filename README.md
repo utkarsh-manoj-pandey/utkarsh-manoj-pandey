@@ -1,34 +1,18 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. SEAMLESS HERO COMMAND DECK                                         -->
+<!-- 1. HERO SYSTEMS MASTHEAD                                              -->
 <!-- ===================================================================== -->
 
-<img src="./assets/hero_terminal.svg" width="900" alt="Utkarsh Manoj Pandey — Terminal Deck" />
+<img src="./assets/hero_header.svg" width="900" alt="Utkarsh Manoj Pandey — Systems &amp; Silicon Lab" />
 
 <br/><br/>
 
-<!-- Dynamic Typing Telemetry -->
-<a href="https://github.com/utkarsh-manoj-pandey">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&multiline=true&width=860&height=50&lines=%E2%9A%A1+Fine-Tuning+Llama+3.3+%26+DeepSeek+R1+on+Raspberry+Pi+5+%2B+M.2+NVMe;%F0%9F%9A%80+Architecting+Prometheus+OS%3A+Custom+Arch+Linux+Kernel+for+ARM64+%26+x86_64;%F0%9F%A7%A0+Integrating+Multimodal+Biometrics+(Facial+Recognition+%2B+Voiceprint+Auth);%F0%9F%9B%A0%EF%B8%8F+Mastering+Polyglot+Systems%3A+C%2C+C%2B%2B%2C+Rust%2C+Go%2C+Python%2C+Julia%2C+RISC-V" alt="Typing Telemetry" />
-</a>
-
-<br/><br/>
-
-<!-- Interactive Web OS Launch Button -->
-<p align="center">
-  <a href="https://utkarsh-manoj-pandey.github.io/utkarsh-manoj-pandey/" target="_blank">
-    <img src="https://img.shields.io/badge/PROMETHEUS_OS-LAUNCH_INTERACTIVE_WEB_DESKTOP_↗-38bdf8?style=for-the-badge&logo=linux&logoColor=05070c" alt="Launch Prometheus OS Web Desktop" />
-  </a>
-</p>
-
-<br/>
-
 <!-- ===================================================================== -->
-<!-- 2. SYSTEM ARCHITECTURAL BLUEPRINT (RPi 5 -> OS -> LLM AGENT)          -->
+<!-- 2. FULL-STACK SYSTEMS ARCHITECTURAL BLUEPRINT                         -->
 <!-- ===================================================================== -->
 
-<img src="./assets/hardware_architecture.svg" width="900" alt="Hardware &amp; Operating System Architecture Blueprint" />
+<img src="./assets/projects_stack.svg" width="900" alt="Full-Stack Systems Blueprint — Application Runtime to Silicon RTL" />
 
 <br/>
 
@@ -37,72 +21,152 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 3. IN-DEPTH TECHNICAL CAPABILITIES DOSSIER                           -->
+<!-- 3. FLAGSHIP SYSTEMS ROADMAP // WHAT WE'RE BUILDING                    -->
 <!-- ===================================================================== -->
 
-### `TECHNICAL_DOSSIER` // ADVANCED DOMAIN ARCHITECTURE
+### `SYSTEMS_ROADMAP` // WHAT WE'RE BUILDING
+
+A focused technical roadmap of 5 production-grade flagship systems spanning from local-first desktop environments down to custom 32-bit RISC-V silicon.
 
 <br/>
 
-> #### 🧠 01 / Autonomous AI Agents & Edge-Hosted LLMs
-> - **Fine-Tuning State-of-the-Art Open LLMs**: Specialized in parameter-efficient fine-tuning and quantization of modern open-source LLMs (**Llama 3.3** and **DeepSeek R1**) for edge-device deployment.
-> - **SIFRA Personal Voice Assistant**: Built an edge-hosted intelligent voice assistant directly on a **Raspberry Pi 5 equipped with an M.2 NVMe PCIe Gen3 SSD** for low-latency weight loading and rapid inference.
-> - **Dual-Factor Biometric Hardware Pipeline**: Integrated **facial biometric authentication (OpenCV)** and **voiceprint recognition**, ensuring multi-tiered biometric access before agent execution.
-> - **Continuous ASR Automation**: Low-latency speech recognition streaming pipelines driving automated desktop actions, browser workflows, and hands-free computer control (**EDITH & SIFRA**).
+| # | Project | Stack | Layer | What We’re Building |
+| :-: | :--- | :--- | :--- | :--- |
+| **01** | **Privacy-First Personal Space** | `Python` | Local-First Workspace | Complete local-first desktop application with browser, notes, calendar, media, documents, radio, weather, news, file utilities, privacy features, etc. |
+| **02** | **NØRVA** | `Rust` | Privacy Browser Engine | Lightweight, privacy-focused web browser with tracker protection, isolated sessions, permission controls, privacy dashboard, downloads, history, etc. |
+| **03** | **KODAI** | `Rust` | Autonomous AI Agent | Low-RAM, model-agnostic coding AI agent that can connect to local coding LLMs or external LLM APIs and operate on real codebases through controlled tools. |
+| **04** | **VECTRA** | `C++` | High-Throughput Media | High-performance media processing/analysis suite for video/audio conversion, compression, metadata, subtitles, batch processing, media inspection, etc. |
+| **05** | **VERA-32** | `VHDL` • `RISC-V` | Microcontroller SoC | Our own 32-bit RISC-V microcontroller SoC: CPU core, ROM, SRAM, bus, GPIO, UART, SPI, I²C, timers, interrupts, firmware support, simulation and FPGA deployment. |
 
 <br/>
 
-> #### ⚡ 02 / Custom Operating Systems & Kernel Engineering
-> - **Prometheus Operating System**: Architected a custom **Arch Linux-based Operating System** optimized to boot from high-speed external M.2 NVMe SSDs across **ARM64 (Raspberry Pi 5)** and **x86_64** hardware.
-> - **Embedded Linux Runtime Optimization**: Advanced kernel parameter tuning, custom systemd daemon services, and shell automation scripts on **Manjaro Linux, Oracle Linux, Raspberry Pi OS, and Arch Linux**.
-> - **RISC-V Microarchitecture**: Deep architectural comprehension of **Instruction Set Architecture (ISA)**, multi-stage instruction pipelining, hazard resolution, and processor microarchitecture fundamentals.
+<!-- ===================================================================== -->
+<!-- 4. IN-DEPTH TECHNICAL SPECIFICATIONS & ARCHITECTURE                   -->
+<!-- ===================================================================== -->
+
+### `TECHNICAL_DOSSIER` // FLAGSHIP SYSTEMS SPECIFICATIONS
 
 <br/>
 
-> #### 🤖 03 / Advanced Web Automation & Desktop Engineering
-> - **Autonomous Web Execution**: Programmatic browser automation with **Playwright & Selenium** to orchestrate complex, headless multi-step workflows (autonomous YouTube navigation, automated Amazon search catalog mining).
-> - **Native Graphical Interfaces**: Architecting multi-threaded desktop GUI applications using **PyQt** integrated with asynchronous Python event loops and local databases.
-> - **Multimodal Storage Pipelines**: Structuring high-speed local data stores (**SQLite / NoSQL**) optimized for audio-visual datasets, biometric embeddings, and telemetry logs.
+> ### `01` / Privacy-First Personal Space
+> **Architecture Layer**: Local-First Desktop Workspace &amp; Offline Productivity  
+> **Primary Language**: `Python 3.11+` • **Storage Engine**: `Encrypted SQLite` • **Telemetry**: `Zero External Telemetry`
+>
+> A complete, local-first offline desktop application engineered as a unified private computing hub with zero cloud dependencies.
+>
+> - **Offline Productivity Suite**: Embedded private browser, client-side encrypted markdown knowledge base, offline calendar, agenda scheduling, and document management.
+> - **Media &amp; Streaming Hub**: Integrated offline audio/video playback engine, low-overhead streaming internet radio tuner with zero tracking headers, offline-cached weather forecasts, and RSS feed readers.
+> - **Privacy &amp; File Utilities**: Local cryptographic checksum generation (SHA-256, BLAKE3), multi-pass secure file shredding, EXIF and document metadata scrubbing, and batch renaming utilities.
+> - **Local Data Persistence**: 100% offline data integrity backed by local encrypted SQLite storage without third-party cloud synchronization or background telemetry.
+
+<br/>
+
+> ### `02` / NØRVA
+> **Architecture Layer**: Privacy-Hardened Secure Web Browser  
+> **Primary Language**: `Rust` • **Focus**: `Zero-Telemetry Browsing &amp; Ephemeral State Isolation`
+>
+> A lightweight, memory-safe, privacy-focused web browser engineered from the ground up to prevent user tracking, telemetry collection, and fingerprinting vectors.
+>
+> - **Network-Level Tracker Neutralization**: Native request interception blocking analytics trackers, telemetry beacons, and canvas/audio fingerprinting vectors before execution.
+> - **Isolated Session Compartmentalization**: Ephemeral browsing containers ensuring isolated cookie jars, cache partitions, and local storage instances per tab or profile to defeat cross-site state tracking.
+> - **Fine-Grained Permission Controls**: Strict hardware and web API permission controllers (camera, microphone, geolocation, clipboard access) with automatic revocation upon tab backgrounding.
+> - **Real-Time Privacy Dashboard**: Live inspection console displaying blocked scripts, network request payloads, TLS certificate details, and origin security ratings.
+
+<br/>
+
+> ### `03` / KODAI
+> **Architecture Layer**: Autonomous Agentic Code Intelligence  
+> **Primary Language**: `Rust` • **Runtimes**: `Local LLMs (Ollama / llama.cpp / vLLM) &amp; Frontier APIs`
+>
+> A low-RAM, model-agnostic coding AI agent engineered in Rust to operate autonomously on real-world production codebases through controlled, sandboxed tooling.
+>
+> - **Model-Agnostic LLM Connectivity**: Native bindings for local self-hosted inference runtimes (Ollama, llama.cpp, vLLM) or external frontier provider APIs (Anthropic Claude, OpenAI, DeepSeek) through unified streaming clients.
+> - **Sandboxed Tool Execution Layer**: Controlled execution environment for AST-aware code navigation, semantic codebase search, unified diff generation, lint verification, and automated test suite execution.
+> - **Minimal Memory Footprint**: Leverages Rust's zero-cost abstractions, deterministic memory management, and async concurrency to operate smoothly within constrained RAM environments (<4GB).
+> - **Context &amp; Token Optimization**: Tree-sitter AST pruning and intelligent prompt compression to maximize token utility and reduce inference latency.
+
+<br/>
+
+> ### `04` / VECTRA
+> **Architecture Layer**: High-Performance Media Processing &amp; Structural Inspection  
+> **Primary Language**: `C++` (Modern C++20) • **Acceleration**: `SIMD (AVX2/NEON) &amp; Multi-Threading`
+>
+> A high-throughput multimedia processing, conversion, and structural inspection suite engineered in modern C++ for massive parallel batch workflows.
+>
+> - **SIMD-Accelerated Transcoding**: High-speed video and audio format conversion leveraging multi-threaded pipeline execution and SIMD vector instructions (AVX2/NEON).
+> - **Bitrate-Optimized Compression**: Lossless and perceptually tuned compression algorithms (SSIM/VMAF) delivering maximum quality retention at minimized file footprints.
+> - **Deep Structural Stream Inspection**: Low-level parsing of container formats (MP4, MKV, WebM, TS); extracts container headers, stream codecs, color primaries, HDR metadata, GOP structures, and timestamp drifts.
+> - **Automated Subtitle Pipeline**: Extraction of embedded subtitle tracks, OCR synchronization of bitmap subtitles, timestamp alignment, and batch conversion to WebVTT/SRT.
+
+<br/>
+
+> ### `05` / VERA-32
+> **Architecture Layer**: Hardware RTL &amp; Silicon Microcontroller SoC  
+> **Primary Language**: `VHDL` • `RISC-V Assembly` • `Bare-Metal C` • **Target**: `FPGA Deployment &amp; Synthesis`
+>
+> A custom-engineered 32-bit RISC-V microcontroller System-on-Chip (SoC) designed from the RTL level up for embedded control, real-time sensing, and FPGA synthesis.
+>
+> - **Custom RV32I Processor Core**: Fully synthesizable single-issue instruction execution pipeline implementing the base RV32I integer instruction set with hazard detection and forwarding.
+> - **Integrated Memory Architecture**: On-chip Boot ROM (firmware &amp; bootloader store) and low-latency internal SRAM data memory linked via a custom synchronous interconnect bus.
+> - **Hardware Peripheral Matrix**:
+>   - **UART**: Full-duplex asynchronous serial transceiver with configurable baud-rate generation and hardware FIFO buffers.
+>   - **SPI &amp; I²C Masters**: Synchronous serial controllers for interfacing external sensors, EEPROMs, and display drivers.
+>   - **GPIO &amp; Timers**: Configurable general-purpose I/O with edge interrupts and 32-bit periodic countdown timers.
+>   - **Vectored Interrupt Controller (VIC)**: Low-latency deterministic hardware interrupt dispatcher.
+> - **Simulation &amp; Toolchain**: Bare-metal C/Assembly firmware toolchain support, cycle-accurate VHDL testbench simulations (GHDL/ModelSim), and FPGA deployment.
 
 <br/>
 
 <div align="center">
+  <img src="./assets/divider.svg" width="900" alt="Divider" />
+</div>
 
 <!-- ===================================================================== -->
-<!-- 4. POLYGLOT SYSTEMS MATRIX (C, C++, Rust, Go, Python, Julia, Shell)   -->
+<!-- 5. ENGINEERING ARSENAL // LANGUAGES, HARDWARE & RUNTIMES             -->
 <!-- ===================================================================== -->
 
-### `POLYGLOT_MATRIX` // SYSTEMS, AI &amp; DATABASE STACK
+<div align="center">
 
-<br/>
-
-<img src="./assets/polyglot_matrix.svg" width="900" alt="Polyglot Systems Matrix" />
+### `ENGINEERING_ARSENAL` // SYSTEMS, HARDWARE &amp; RUNTIMES
 
 <br/>
 
 <p align="center">
-  <code>C</code> &nbsp;•&nbsp;
-  <code>C++</code> &nbsp;•&nbsp;
-  <code>Rust</code> &nbsp;•&nbsp;
-  <code>Go</code> &nbsp;•&nbsp;
+  <img src="https://img.shields.io/badge/Python-Local_First_Workspace-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Rust-Systems_&_Agents-000000?style=flat&logo=rust&logoColor=white" alt="Rust" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/C++-High_Throughput-00599C?style=flat&logo=cplusplus&logoColor=white" alt="C++" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/VHDL-RTL_Synthesis-0A5C36?style=flat&logo=microchip&logoColor=white" alt="VHDL" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/RISC--V-32_bit_SoC-DE3121?style=flat&logo=riscv&logoColor=white" alt="RISC-V" />
+</p>
+
+<br/>
+
+<p align="center">
   <code>Python</code> &nbsp;•&nbsp;
-  <code>Julia</code> &nbsp;•&nbsp;
-  <code>R</code> &nbsp;•&nbsp;
-  <code>Scala</code> &nbsp;•&nbsp;
-  <code>Java</code> &nbsp;•&nbsp;
+  <code>Rust</code> &nbsp;•&nbsp;
+  <code>C++</code> &nbsp;•&nbsp;
+  <code>VHDL</code> &nbsp;•&nbsp;
+  <code>RISC-V Assembly</code> &nbsp;•&nbsp;
+  <code>C</code> &nbsp;•&nbsp;
   <code>Bash / Shell</code> &nbsp;•&nbsp;
-  <code>PowerShell</code> &nbsp;•&nbsp;
-  <code>SQL</code> &nbsp;•&nbsp;
-  <code>Pro*C</code>
+  <code>RV32I ISA</code> &nbsp;•&nbsp;
+  <code>FPGA Synthesis</code> &nbsp;•&nbsp;
+  <code>SIMD (AVX2/NEON)</code> &nbsp;•&nbsp;
+  <code>SQLite</code> &nbsp;•&nbsp;
+  <code>Linux Internals</code>
 </p>
 
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 5. VERIFIED CREDENTIALS & ACADEMIC PEDIGREE                           -->
+<!-- 6. VERIFIED RESEARCH CREDENTIALS & ACADEMIC PEDIGREE                 -->
 <!-- ===================================================================== -->
 
-### `CREDENTIALS` // RESEARCH &amp; ACADEMIC ACCREDITATIONS
+### `ACCREDITATIONS` // RESEARCH &amp; ACADEMIC EXCELLENCE
 
 <br/>
 
@@ -112,18 +176,18 @@
 
 <p align="center">
   🎓 <b>Master of Science in Information Technology (M.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.7</b>)<br/>
-  <i>Passed Inter-Collegiate Test for Final Year Project Grant (Prometheus OS &amp; SIFRA Voice Assistant)</i><br/><br/>
+  <i>Passed Inter-Collegiate Test for Final Year Project Grant</i><br/><br/>
   🎓 <b>Bachelor of Science in Information Technology (B.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.3</b>)<br/>
-  <i>Event Lead for Inter-Collegiate Tech Summit • Final Year Project: EDITH (x86_64 Voice Intelligence)</i>
+  <i>Event Lead for Inter-Collegiate Tech Summit</i>
 </p>
 
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 6. CONTRIBUTION ACTIVITY STREAM                                       -->
+<!-- 7. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
 
-### `ACTIVITY_STREAM` // CONTINUOUS CODE CONSUMPTION
+### `ACTIVITY_STREAM` // CONTINUOUS CODE COMMITS
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake-dark.svg" />
@@ -134,12 +198,12 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 7. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
 
-<p align="center"><i>Available for cutting-edge AI systems development, embedded intelligence architectures, and advanced engineering initiatives.</i></p>
+<p align="center"><i>Open to discussions on silicon microarchitecture, systems engineering in Rust/C++, and autonomous agent architectures.</i></p>
 
 <br/>
 
@@ -164,7 +228,7 @@
 <br/>
 
 <p align="center">
-  <code>[ 2026 // UTKARSH MANOJ PANDEY // PROMETHEUS OS ACTIVE // ALL SYSTEMS OPERATIONAL ]</code>
+  <code>[ 2026 // UTKARSH MANOJ PANDEY // SYSTEMS &amp; SILICON LAB // ACTIVE ]</code>
 </p>
 
 </div>

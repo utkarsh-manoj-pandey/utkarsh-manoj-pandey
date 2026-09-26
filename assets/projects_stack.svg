@@ -1,0 +1,121 @@
+<svg width="900" height="340" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="stackBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="100%" stop-color="#04060b" />
+    </linearGradient>
+
+    <!-- Schematic Pattern -->
+    <pattern id="schematicGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#131e30" />
+    </pattern>
+
+    <!-- Bus Gradient -->
+    <linearGradient id="busGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="25%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="75%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono-hdr {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    .title-font {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      fill: #f8fafc;
+    }
+    .desc-font {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9.5px;
+      fill: #94a3b8;
+    }
+    .tag-font {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Base Container Frame -->
+  <rect x="1" y="1" width="898" height="338" rx="10" fill="url(#stackBg)" stroke="#1a2538" stroke-width="1.2" />
+  <rect x="2" y="2" width="896" height="336" rx="9" fill="url(#schematicGrid)" />
+
+  <!-- Top Titlebar Strip -->
+  <rect x="1" y="1" width="898" height="32" rx="10" fill="#080e1a" fill-opacity="0.9" />
+  <line x1="1" y1="32" x2="899" y2="32" stroke="#1a2538" stroke-width="1" />
+  <text x="24" y="21" class="mono-hdr" fill="#38bdf8">FULL-STACK SYSTEMS BLUEPRINT // APPLICATION RUNTIME TO SILICON RTL</text>
+  <text x="876" y="21" class="mono-hdr" fill="#64748b" text-anchor="end">5-TIER VERTICAL ARCHITECTURE</text>
+
+  <!-- Left Vertical Bus Spine -->
+  <line x1="38" y1="50" x2="38" y2="305" stroke="url(#busGrad)" stroke-width="2" stroke-dasharray="4 4" />
+
+  <!-- ===================================================================== -->
+  <!-- TIER 01: PERSONAL SPACE (PYTHON)                                      -->
+  <!-- ===================================================================== -->
+  <g transform="translate(56, 42)">
+    <circle cx="-18" cy="24" r="4" fill="#34d399" />
+    <rect x="0" y="0" width="820" height="48" rx="6" fill="#080e15" stroke="#0e2a1e" stroke-width="1" />
+    <text x="14" y="17" class="mono-hdr" fill="#34d399">LAYER 01 : LOCAL-FIRST DESKTOP RUNTIME &amp; UTILITIES</text>
+    <text x="14" y="36" class="title-font">Personal Space</text>
+    <text x="124" y="36" class="tag-font" fill="#34d399">[Python]</text>
+    <text x="186" y="36" class="desc-font">Offline browser, encrypted notes, calendar, media, radio, weather, news, file utilities &amp; zero telemetry</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 02: NØRVA (RUST)                                                 -->
+  <!-- ===================================================================== -->
+  <g transform="translate(56, 98)">
+    <circle cx="-18" cy="24" r="4" fill="#38bdf8" />
+    <rect x="0" y="0" width="820" height="48" rx="6" fill="#080e15" stroke="#0e2438" stroke-width="1" />
+    <text x="14" y="17" class="mono-hdr" fill="#38bdf8">LAYER 02 : PRIVACY-HARDENED SECURE BROWSER ENGINE</text>
+    <text x="14" y="36" class="title-font">NØRVA</text>
+    <text x="70" y="36" class="tag-font" fill="#38bdf8">[Rust]</text>
+    <text x="120" y="36" class="desc-font">Lightweight privacy browser: tracker protection, isolated session containers &amp; permission gatekeeper</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 03: KODAI (RUST)                                                 -->
+  <!-- ===================================================================== -->
+  <g transform="translate(56, 154)">
+    <circle cx="-18" cy="24" r="4" fill="#818cf8" />
+    <rect x="0" y="0" width="820" height="48" rx="6" fill="#080e15" stroke="#1c1938" stroke-width="1" />
+    <text x="14" y="17" class="mono-hdr" fill="#818cf8">LAYER 03 : AUTONOMOUS AGENTIC CODE INTELLIGENCE</text>
+    <text x="14" y="36" class="title-font">KODAI</text>
+    <text x="68" y="36" class="tag-font" fill="#818cf8">[Rust]</text>
+    <text x="118" y="36" class="desc-font">Low-RAM model-agnostic coding agent: local/remote LLM support (Ollama/vLLM), AST search &amp; safe tool execution</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 04: VECTRA (C++)                                                 -->
+  <!-- ===================================================================== -->
+  <g transform="translate(56, 210)">
+    <circle cx="-18" cy="24" r="4" fill="#60a5fa" />
+    <rect x="0" y="0" width="820" height="48" rx="6" fill="#080e15" stroke="#0f2642" stroke-width="1" />
+    <text x="14" y="17" class="mono-hdr" fill="#60a5fa">LAYER 04 : HIGH-PERFORMANCE MULTIMEDIA COMPUTING &amp; INSPECTION</text>
+    <text x="14" y="36" class="title-font">VECTRA</text>
+    <text x="76" y="36" class="tag-font" fill="#60a5fa">[C++]</text>
+    <text x="118" y="36" class="desc-font">High-throughput media engine: AV conversion, bitrate-optimized compression, deep metadata &amp; batch subtitles</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 05: VERA-32 (VHDL + RISC-V)                                      -->
+  <!-- ===================================================================== -->
+  <g transform="translate(56, 266)">
+    <circle cx="-18" cy="24" r="4" fill="#f59e0b" />
+    <rect x="0" y="0" width="820" height="48" rx="6" fill="#080e15" stroke="#281e0a" stroke-width="1" />
+    <text x="14" y="17" class="mono-hdr" fill="#f59e0b">LAYER 05 : HARDWARE RTL &amp; SILICON MICROCONTROLLER SOC</text>
+    <text x="14" y="36" class="title-font">VERA-32</text>
+    <text x="82" y="36" class="tag-font" fill="#f59e0b">[VHDL + RISC-V]</text>
+    <text x="195" y="36" class="desc-font">32-bit RISC-V SoC: RV32I core, ROM, SRAM, bus interconnect, GPIO, UART, SPI, I²C, timers &amp; FPGA synthesis</text>
+  </g>
+</svg>
