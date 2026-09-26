@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. LIVE SOLAR SYSTEM ANIMATED COMMAND DECK HERO                       -->
+<!-- 1. UNIFIED MASTER COMMAND DECK (ALL SYSTEMS, SOLAR SYSTEM & TERMINAL) -->
 <!-- ===================================================================== -->
 
-<img src="./assets/solar_system_command.svg" width="900" alt="Utkarsh Manoj Pandey — Live Solar System Command Deck" />
+<img src="./assets/master_command_deck.svg" width="900" alt="Utkarsh Manoj Pandey — Master Command Console" />
 
 <br/><br/>
 
@@ -17,16 +17,12 @@
 
 <br/>
 
-<!-- ===================================================================== -->
-<!-- 2. ANIMATED LIVE TERMINAL CONSOLE (ZERO TEXT OVERLAP)                 -->
-<!-- ===================================================================== -->
-
-<img src="./assets/terminal_console.svg" width="900" alt="Live Systems Terminal Console" />
+<img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 3. REAL LIVE GITHUB DAILY STREAK TRACKER                              -->
+<!-- 2. REAL LIVE GITHUB DAILY STREAK TRACKER                              -->
 <!-- ===================================================================== -->
 
 <p align="center">
@@ -39,80 +35,11 @@
 
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
-<!-- ===================================================================== -->
-<!-- 4. FLAGSHIP SYSTEMS // INDIVIDUAL ENGINEERING MODULE CARDS            -->
-<!-- (Pure Visual Architecture Deck — Zero Redundant Text Underneath)       -->
-<!-- ===================================================================== -->
-
-<br/>
-
-<img src="./assets/flagship_modules.svg" width="900" alt="Flagship Systems Engineering Specification Cards" />
-
 <br/><br/>
 
-<img src="./assets/divider.svg" width="900" alt="Divider" />
-
 <!-- ===================================================================== -->
-<!-- 5. CORE ENGINEERING ARSENAL // LANGUAGES, SILICON & RUNTIMES          -->
+<!-- 3. CONTRIBUTION ACTIVITY STREAM (SNAKE GAME)                          -->
 <!-- ===================================================================== -->
-
-<br/>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Rust-Systems_&_Agents-000000?style=flat&logo=rust&logoColor=white" alt="Rust" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/C++20-High_Performance-00599C?style=flat&logo=cplusplus&logoColor=white" alt="C++" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Python_3.11-Local_First_Workspace-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/VHDL-RTL_Silicon-0A5C36?style=flat&logo=microchip&logoColor=white" alt="VHDL" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/RISC--V-32_bit_SoC-DE3121?style=flat&logo=riscv&logoColor=white" alt="RISC-V" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Linux-Arch_/_POSIX-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
-</p>
-
-<br/>
-
-<p align="center">
-  <code>Rust</code> &nbsp;•&nbsp;
-  <code>Modern C++20</code> &nbsp;•&nbsp;
-  <code>Python 3.11+</code> &nbsp;•&nbsp;
-  <code>VHDL</code> &nbsp;•&nbsp;
-  <code>RISC-V Assembly (RV32I)</code> &nbsp;•&nbsp;
-  <code>Bare-Metal C</code> &nbsp;•&nbsp;
-  <code>FPGA Synthesis</code> &nbsp;•&nbsp;
-  <code>SIMD (AVX2/NEON)</code> &nbsp;•&nbsp;
-  <code>Encrypted SQLite</code> &nbsp;•&nbsp;
-  <code>Linux Internals</code>
-</p>
-
-<br/>
-
-<img src="./assets/divider.svg" width="900" alt="Divider" />
-
-<!-- ===================================================================== -->
-<!-- 6. VERIFIED ACADEMIC PEDIGREE // RESEARCH EXCELLENCE                 -->
-<!-- ===================================================================== -->
-
-<br/>
-
-<p align="center">
-  🎓 <b>Master of Science in Information Technology (M.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.7</b>)<br/>
-  <i>Passed Inter-Collegiate Test for Final Year Project Grant</i><br/><br/>
-  🎓 <b>Bachelor of Science in Information Technology (B.Sc. IT)</b> — Mumbai University (<b>CGPA: 8.3</b>)<br/>
-  <i>Event Lead for Inter-Collegiate Tech Summit</i>
-</p>
-
-<br/>
-
-<img src="./assets/divider.svg" width="900" alt="Divider" />
-
-<!-- ===================================================================== -->
-<!-- 7. CONTRIBUTION ACTIVITY STREAM                                       -->
-<!-- ===================================================================== -->
-
-<br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/utkarsh-manoj-pandey/utkarsh-manoj-pandey/output/github-contribution-grid-snake-dark.svg" />
@@ -124,11 +51,11 @@
 
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
-<!-- ===================================================================== -->
-<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
-<!-- ===================================================================== -->
+<br/><br/>
 
-<br/>
+<!-- ===================================================================== -->
+<!-- 4. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- ===================================================================== -->
 
 <p align="center">
   <i>Open to technical discussions on silicon microarchitecture, systems engineering in Rust/C++, and autonomous agent runtimes.</i>
@@ -157,7 +84,7 @@
 <br/>
 
 <p align="center">
-  <code>[ 2026 // UTKARSH MANOJ PANDEY // SYSTEMS &amp; SILICON LAB // ACTIVE ]</code>
+  <code>[ 2026 // UTKARSH MANOJ PANDEY // SYSTEMS &amp; SILICON LAB // ALL SYSTEMS OPERATIONAL ]</code>
 </p>
 
 </div>
