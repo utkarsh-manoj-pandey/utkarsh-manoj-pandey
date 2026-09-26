@@ -1,0 +1,30 @@
+<svg width="900" height="38" viewBox="0 0 900 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="upBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080e1b" />
+      <stop offset="50%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#080e1b" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseCyan { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .pulse-cyan { animation: pulseCyan 2s infinite ease-in-out; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="898" height="36" rx="8" fill="url(#upBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Mac Dots -->
+  <circle cx="22" cy="19" r="4.5" fill="#ef4444" />
+  <circle cx="38" cy="19" r="4.5" fill="#f59e0b" />
+  <circle cx="54" cy="19" r="4.5" fill="#10b981" />
+
+  <!-- Title -->
+  <text x="80" y="23" class="font-mono" font-size="11" fill="#818cf8" font-weight="700" letter-spacing="1">SECURE_UPLINK // DIRECT COMMUNICATION CHANNELS</text>
+
+  <!-- Right Status -->
+  <circle cx="850" cy="19" r="3.5" fill="#38bdf8" class="pulse-cyan" />
+  <text x="838" y="23" class="font-mono" font-size="9.5" fill="#38bdf8" text-anchor="end" font-weight="600">COLLABORATION: OPEN</text>
+</svg>
