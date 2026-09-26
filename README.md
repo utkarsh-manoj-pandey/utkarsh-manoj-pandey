@@ -1,23 +1,24 @@
 <div align="center">
 
 <!-- ===================================================================== -->
-<!-- 1. CINEMATIC HERO SYSTEMS MASTHEAD                                    -->
+<!-- 1. LIVE SOLAR SYSTEM ANIMATED HERO MASTHEAD                           -->
 <!-- ===================================================================== -->
 
-<img src="./assets/hero_masthead.svg" width="900" alt="Utkarsh Manoj Pandey — Systems &amp; Silicon Lab" />
+<img src="./assets/solar_system_header.svg" width="900" alt="Utkarsh Manoj Pandey — Live Solar System Background" />
 
 <br/><br/>
 
-<!-- ===================================================================== -->
-<!-- 2. ROCK-SOLID TERMINAL CONSOLE (ZERO TEXT OVERLAP // 100% STATIC)     -->
-<!-- ===================================================================== -->
+<!-- Interactive Web Desktop Launch Button -->
+<p align="center">
+  <a href="https://utkarsh-manoj-pandey.github.io/utkarsh-manoj-pandey/" target="_blank">
+    <img src="https://img.shields.io/badge/PROMETHEUS_OS-LAUNCH_INTERACTIVE_WEB_DESKTOP_↗-38bdf8?style=for-the-badge&logo=linux&logoColor=05070c" alt="Launch Prometheus OS Web Desktop" />
+  </a>
+</p>
 
-<img src="./assets/terminal_console.svg" width="900" alt="Terminal Console Diagnostics" />
-
-<br/><br/>
+<br/>
 
 <!-- ===================================================================== -->
-<!-- 3. REAL LIVE GITHUB DAILY STREAK TRACKER                              -->
+<!-- 2. REAL LIVE GITHUB DAILY STREAK TRACKER                              -->
 <!-- ===================================================================== -->
 
 <p align="center">
@@ -33,16 +34,22 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 4. FLAGSHIP SYSTEMS // PRODUCTION ROADMAP (PURE VISUAL DECK)          -->
+<!-- 3. FLAGSHIP SYSTEMS // PRODUCTION ROADMAP (CLEAN ARCHITECTURE TABLE)  -->
 <!-- ===================================================================== -->
 
 ### `FLAGSHIP_SYSTEMS` // PRODUCTION ROADMAP
 
+A focused engineering portfolio spanning from local-first desktop environments down to custom 32-bit RISC-V silicon.
+
 <br/>
 
-<div align="center">
-  <img src="./assets/flagship_roadmap.svg" width="900" alt="Flagship Systems Production Roadmap — 5 Planned Repositories" />
-</div>
+| # | System | Stack | Architecture Layer | Status | What We’re Building |
+| :-: | :--- | :--- | :--- | :-: | :--- |
+| **01** | **Privacy-First Personal Space** | `Python 3.11+` | Local-First Workspace | `Planned` | A complete local-first desktop application with browser, notes, calendar, media, documents, radio, weather, news, file utilities, privacy features, etc. |
+| **02** | **NØRVA** | `Rust` | Privacy Browser Engine | `Planned` | A lightweight, privacy-focused web browser with tracker protection, isolated sessions, permission controls, privacy dashboard, downloads, history, etc. |
+| **03** | **KODAI** | `Rust` | Autonomous AI Agent | `Planned` | A low-RAM, model-agnostic coding AI agent that can connect to local coding LLMs or external LLM APIs and operate on real codebases through controlled tools. |
+| **04** | **VECTRA** | `Modern C++20` | Media Processing Suite | `Planned` | A high-performance media processing/analysis suite for video/audio conversion, compression, metadata, subtitles, batch processing, media inspection, etc. |
+| **05** | **VERA-32** | `VHDL` • `RISC-V` | Microcontroller SoC &amp; Silicon | `Planned` | Our own 32-bit RISC-V microcontroller SoC: CPU core, ROM, SRAM, bus, GPIO, UART, SPI, I²C, timers, interrupts, firmware support, simulation and FPGA deployment. |
 
 <br/>
 
@@ -51,18 +58,30 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 5. ENGINEERING ARSENAL // HARDWARE, RUNTIMES & SYSTEMS                -->
+<!-- 4. CORE ENGINEERING ARSENAL // LANGUAGES, SILICON & RUNTIMES          -->
 <!-- ===================================================================== -->
 
 <div align="center">
 
-### `ENGINEERING_ARSENAL` // HARDWARE, RUNTIMES &amp; SYSTEMS
+### `ENGINEERING_ARSENAL` // SYSTEMS, HARDWARE &amp; RUNTIMES
 
 <br/>
 
-<img src="./assets/polyglot_arsenal.svg" width="900" alt="Engineering Arsenal — Hardware, Runtimes &amp; Languages" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Rust-Systems_&_Agents-000000?style=flat&logo=rust&logoColor=white" alt="Rust" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/C++20-High_Performance-00599C?style=flat&logo=cplusplus&logoColor=white" alt="C++" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Python_3.11-Local_First_Workspace-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/VHDL-RTL_Silicon-0A5C36?style=flat&logo=microchip&logoColor=white" alt="VHDL" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/RISC--V-32_bit_SoC-DE3121?style=flat&logo=riscv&logoColor=white" alt="RISC-V" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Linux-Arch_/_POSIX-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
+</p>
 
-<br/><br/>
+<br/>
 
 <p align="center">
   <code>Rust</code> &nbsp;•&nbsp;
@@ -81,7 +100,7 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 6. ACADEMIC PEDIGREE // RESEARCH EXCELLENCE                          -->
+<!-- 5. VERIFIED ACADEMIC PEDIGREE // RESEARCH EXCELLENCE                 -->
 <!-- ===================================================================== -->
 
 ### `ACADEMIC_PEDIGREE` // RESEARCH EXCELLENCE
@@ -98,7 +117,7 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 7. CONTRIBUTION ACTIVITY STREAM                                       -->
+<!-- 6. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
 
 ### `ACTIVITY_STREAM` // CONTINUOUS CODE COMMITS
@@ -112,12 +131,12 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 7. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
 
-<p align="center"><i>Open to technical discussions on silicon microarchitecture, systems engineering in Rust/C++, and autonomous agent architectures.</i></p>
+<p align="center"><i>Open to discussions on silicon microarchitecture, systems engineering in Rust/C++, and autonomous agent architectures.</i></p>
 
 <br/>
 
