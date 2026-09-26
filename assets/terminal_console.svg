@@ -1,13 +1,13 @@
 <svg width="900" height="295" viewBox="0 0 900 295" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="termDarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#080c14" />
       <stop offset="100%" stop-color="#04060b" />
     </linearGradient>
 
     <!-- Scanline Pattern -->
-    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+    <pattern id="termGridPattern" width="100%" height="4" patternUnits="userSpaceOnUse">
       <line x1="0" y1="0" x2="100%" y2="0" stroke="#162032" stroke-width="0.5" opacity="0.3" />
     </pattern>
   </defs>
@@ -17,6 +17,10 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
+    @keyframes pulseShellDot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
     .term-font {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
       font-size: 11.5px;
@@ -24,11 +28,14 @@
     .cursor-active {
       animation: cursorBlink 0.9s infinite;
     }
+    .shell-beacon {
+      animation: pulseShellDot 2s infinite ease-in-out;
+    }
   </style>
 
   <!-- Container Box -->
-  <rect x="1" y="1" width="898" height="293" rx="8" fill="url(#termBg)" stroke="#1a2538" stroke-width="1.2" />
-  <rect x="2" y="2" width="896" height="291" rx="7" fill="url(#scanlines)" />
+  <rect x="1" y="1" width="898" height="293" rx="8" fill="url(#termDarkBg)" stroke="#1a2538" stroke-width="1.2" />
+  <rect x="2" y="2" width="896" height="291" rx="7" fill="url(#termGridPattern)" />
 
   <!-- Window Titlebar -->
   <rect x="1" y="1" width="898" height="32" rx="8" fill="#0b101a" />
@@ -40,54 +47,55 @@
   <circle cx="52" cy="16" r="4.5" fill="#10b981" />
 
   <text x="80" y="20" class="term-font" font-size="10" fill="#64748b">utkarsh@devbox: ~ (zsh 5.9)</text>
-  <text x="876" y="20" class="term-font" font-size="9.5" fill="#38bdf8" text-anchor="end">SYS-DIAGNOSTICS // ACTIVE SESSION</text>
+  <circle cx="720" cy="16" r="3.5" fill="#10b981" class="shell-beacon" />
+  <text x="730" y="20" class="term-font" font-size="9.5" fill="#38bdf8">ACTIVE SHELL SESSION</text>
 
   <!-- Line 1: whoami -->
   <text x="24" y="58" class="term-font">
     <tspan fill="#34d399">utkarsh@devbox</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#64748b">$ </tspan>
     <tspan fill="#f8fafc" font-weight="600">whoami</tspan>
   </text>
-  <text x="24" y="82" class="term-font">
+  <text x="24" y="84" class="term-font">
     <tspan fill="#f59e0b">➜</tspan> <tspan fill="#e2e8f0" font-weight="600">Utkarsh Manoj Pandey</tspan>
-    <tspan fill="#64748b"> │ </tspan><tspan fill="#38bdf8">Systems &amp; Silicon Engineer</tspan>
-    <tspan fill="#64748b"> │ </tspan><tspan fill="#10b981">M.Sc. IT (CGPA: 8.7, Grant Winner)</tspan>
+    <tspan fill="#64748b"> │ </tspan><tspan fill="#38bdf8">Systems &amp; Silicon Architecture</tspan>
+    <tspan fill="#64748b"> │ </tspan><tspan fill="#10b981">M.Sc. IT (CGPA: 8.7)</tspan>
   </text>
 
   <!-- Line 2: uname -srm -->
-  <text x="24" y="112" class="term-font">
+  <text x="24" y="116" class="term-font">
     <tspan fill="#34d399">utkarsh@devbox</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#64748b">$ </tspan>
     <tspan fill="#f8fafc" font-weight="600">uname -srm</tspan>
   </text>
-  <text x="24" y="136" class="term-font">
+  <text x="24" y="142" class="term-font">
     <tspan fill="#38bdf8">➜</tspan> <tspan fill="#cbd5e1">Linux 6.12.0-arch1-1 x86_64</tspan>
   </text>
 
-  <!-- Line 3: echo $CORE_DISCIPLINES -->
-  <text x="24" y="166" class="term-font">
+  <!-- Line 3: echo $CORE_STACK -->
+  <text x="24" y="174" class="term-font">
     <tspan fill="#34d399">utkarsh@devbox</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#64748b">$ </tspan>
-    <tspan fill="#f8fafc" font-weight="600">echo $CORE_DISCIPLINES</tspan>
+    <tspan fill="#f8fafc" font-weight="600">echo $CORE_STACK</tspan>
   </text>
-  <text x="24" y="190" class="term-font">
-    <tspan fill="#818cf8">➜</tspan> <tspan fill="#cbd5e1">Silicon RTL (VHDL) </tspan><tspan fill="#64748b">•</tspan><tspan fill="#cbd5e1"> Systems Software (Rust, C++) </tspan><tspan fill="#64748b">•</tspan><tspan fill="#cbd5e1"> Local-First Desktop (Python)</tspan>
+  <text x="24" y="200" class="term-font">
+    <tspan fill="#818cf8">➜</tspan> <tspan fill="#cbd5e1">Systems (Rust, C++) </tspan><tspan fill="#64748b">│</tspan><tspan fill="#cbd5e1"> Silicon RTL (VHDL, RISC-V) </tspan><tspan fill="#64748b">│</tspan><tspan fill="#cbd5e1"> Local-First (Python)</tspan>
   </text>
 
-  <!-- Line 4: git status (short format) -->
-  <text x="24" y="220" class="term-font">
+  <!-- Line 4: git status (short) -->
+  <text x="24" y="232" class="term-font">
     <tspan fill="#34d399">utkarsh@devbox</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#64748b">$ </tspan>
     <tspan fill="#f8fafc" font-weight="600">git status --short</tspan>
   </text>
-  <text x="24" y="244" class="term-font">
+  <text x="24" y="258" class="term-font">
     <tspan fill="#34d399">??</tspan> <tspan fill="#94a3b8">personal-space/  </tspan>
     <tspan fill="#38bdf8">??</tspan> <tspan fill="#94a3b8">norva/  </tspan>
     <tspan fill="#818cf8">??</tspan> <tspan fill="#94a3b8">kodai/  </tspan>
     <tspan fill="#60a5fa">??</tspan> <tspan fill="#94a3b8">vectra/  </tspan>
-    <tspan fill="#f59e0b">??</tspan> <tspan fill="#94a3b8">vera-32/  [5 flagship systems planned]</tspan>
+    <tspan fill="#f59e0b">??</tspan> <tspan fill="#94a3b8">vera-32/  [5 flagship repositories planned]</tspan>
   </text>
 
   <!-- Line 5: Active Prompt with Blinking Cursor -->
-  <text x="24" y="274" class="term-font">
+  <text x="24" y="284" class="term-font">
     <tspan fill="#34d399">utkarsh@devbox</tspan><tspan fill="#64748b">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#64748b">$ </tspan>
-    <tspan fill="#38bdf8">cargo check --workspace</tspan>
+    <tspan fill="#38bdf8">cargo check</tspan>
   </text>
-  <rect x="290" y="263" width="8" height="14" fill="#38bdf8" class="cursor-active" />
+  <rect x="200" y="273" width="8" height="14" fill="#38bdf8" class="cursor-active" />
 </svg>

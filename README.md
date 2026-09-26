@@ -9,23 +9,15 @@
 <br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 2. ANIMATED LIVE TERMINAL DIAGNOSTICS CONSOLE (FIXED // ZERO OVERLAP) -->
+<!-- 2. ROCK-SOLID TERMINAL CONSOLE (ZERO TEXT OVERLAP // 100% STATIC)     -->
 <!-- ===================================================================== -->
 
-<img src="./assets/live_terminal.svg" width="900" alt="Live Systems Diagnostics Terminal" />
+<img src="./assets/terminal_console.svg" width="900" alt="Terminal Console Diagnostics" />
 
 <br/><br/>
 
 <!-- ===================================================================== -->
-<!-- 3. REAL-TIME SIGNAL EQUALIZER & DSP SPECTRUM ANALYZER                 -->
-<!-- ===================================================================== -->
-
-<img src="./assets/frequency_spectrum.svg" width="900" alt="Digital Frequency Equalizer Spectrum" />
-
-<br/><br/>
-
-<!-- ===================================================================== -->
-<!-- 4. GITHUB DAILY STREAK MONITOR (REAL LIVE DATA)                       -->
+<!-- 3. REAL LIVE GITHUB DAILY STREAK TRACKER                              -->
 <!-- ===================================================================== -->
 
 <p align="center">
@@ -41,7 +33,7 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 5. FLAGSHIP SYSTEMS // PRODUCTION ROADMAP (VISUAL SPECIFICATION DECK) -->
+<!-- 4. FLAGSHIP SYSTEMS // PRODUCTION ROADMAP (PURE VISUAL DECK)          -->
 <!-- ===================================================================== -->
 
 ### `FLAGSHIP_SYSTEMS` // PRODUCTION ROADMAP
@@ -59,7 +51,7 @@
 </div>
 
 <!-- ===================================================================== -->
-<!-- 6. ENGINEERING ARSENAL // HARDWARE, RUNTIMES & PRODUCTION STACK       -->
+<!-- 5. ENGINEERING ARSENAL // HARDWARE, RUNTIMES & SYSTEMS                -->
 <!-- ===================================================================== -->
 
 <div align="center">
@@ -89,14 +81,10 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 7. VERIFIED RESEARCH CREDENTIALS & ACADEMIC PEDIGREE                 -->
+<!-- 6. ACADEMIC PEDIGREE // RESEARCH EXCELLENCE                          -->
 <!-- ===================================================================== -->
 
-### `ACCREDITATIONS` // RESEARCH &amp; ACADEMIC EXCELLENCE
-
-<br/>
-
-<img src="./assets/credentials_bar.svg" width="900" alt="Verified Credentials &amp; Accreditations" />
+### `ACADEMIC_PEDIGREE` // RESEARCH EXCELLENCE
 
 <br/>
 
@@ -110,7 +98,7 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 8. CONTRIBUTION ACTIVITY STREAM                                       -->
+<!-- 7. CONTRIBUTION ACTIVITY STREAM                                       -->
 <!-- ===================================================================== -->
 
 ### `ACTIVITY_STREAM` // CONTINUOUS CODE COMMITS
@@ -124,7 +112,7 @@
 <img src="./assets/divider.svg" width="900" alt="Divider" />
 
 <!-- ===================================================================== -->
-<!-- 9. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
+<!-- 8. SECURE UPLINK // DIRECT COMMUNICATION CHANNELS                     -->
 <!-- ===================================================================== -->
 
 ### `SECURE_UPLINK` // DIRECT TRANSMISSION
