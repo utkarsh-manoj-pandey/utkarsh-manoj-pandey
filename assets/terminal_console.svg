@@ -1,0 +1,107 @@
+<svg width="900" height="250" viewBox="0 0 900 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark Glass Terminal Background -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b101b" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+
+    <!-- Scanline Subtle Texture -->
+    <pattern id="termScan" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="100" y2="2" stroke="#ffffff" stroke-opacity="0.015" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .cursor { animation: cursorBlink 1s infinite; fill: #38bdf8; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; }
+  </style>
+
+  <!-- Terminal Window Outer Frame -->
+  <rect x="1" y="1" width="898" height="248" rx="10" fill="url(#termBg)" stroke="#1e293b" stroke-width="1.2" />
+  <rect x="2" y="2" width="896" height="246" rx="9" fill="url(#termScan)" />
+
+  <!-- Terminal Header / Titlebar -->
+  <rect x="1" y="1" width="898" height="34" rx="10" fill="#060911" fill-opacity="0.95" />
+  <line x1="1" y1="34" x2="899" y2="34" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Mac / Unix Window Controls -->
+  <circle cx="22" cy="17" r="4.5" fill="#ef4444" />
+  <circle cx="38" cy="17" r="4.5" fill="#f59e0b" />
+  <circle cx="54" cy="17" r="4.5" fill="#10b981" />
+
+  <!-- Window Title -->
+  <text x="80" y="21" class="font-mono" font-size="11" fill="#64748b" font-weight="500">utkarsh@sol-command: ~/systems-lab (zsh)</text>
+  <text x="875" y="21" class="font-mono" font-size="10" fill="#38bdf8" text-anchor="end" font-weight="600">LIVE SHELL // ARCH-LINUX</text>
+
+  <!-- Discrete, Non-Overlapping Terminal Lines (Calculated Exact Vertical Offsets) -->
+  
+  <!-- Line 1: Command Invocation (y = 66) -->
+  <g transform="translate(24, 66)">
+    <text class="font-mono" font-size="12">
+      <tspan fill="#10b981" font-weight="700">utkarsh@sol-command</tspan>
+      <tspan fill="#64748b">:</tspan>
+      <tspan fill="#38bdf8">~/systems-lab</tspan>
+      <tspan fill="#f1f5f9">$ sys-init --target=rv32i --runtime=low-latency</tspan>
+    </text>
+  </g>
+
+  <!-- Line 2: Toolchains Diagnostic (y = 98) -->
+  <g transform="translate(24, 98)">
+    <text class="font-mono" font-size="11.5">
+      <tspan fill="#10b981" font-weight="700">[  OK  ]</tspan>
+      <tspan fill="#94a3b8"> Toolchains: </tspan>
+      <tspan fill="#f1f5f9" font-weight="600">Rust (rustc 1.81-nightly)</tspan>
+      <tspan fill="#64748b"> • </tspan>
+      <tspan fill="#f1f5f9" font-weight="600">Clang/LLVM Modern C++20</tspan>
+      <tspan fill="#64748b"> • </tspan>
+      <tspan fill="#f1f5f9" font-weight="600">Python 3.11</tspan>
+      <tspan fill="#64748b"> • </tspan>
+      <tspan fill="#f1f5f9" font-weight="600">VHDL RTL</tspan>
+    </text>
+  </g>
+
+  <!-- Line 3: Silicon & Microarchitecture Diagnostic (y = 128) -->
+  <g transform="translate(24, 128)">
+    <text class="font-mono" font-size="11.5">
+      <tspan fill="#10b981" font-weight="700">[  OK  ]</tspan>
+      <tspan fill="#94a3b8"> Microarchitecture: </tspan>
+      <tspan fill="#38bdf8">VERA-32 (RV32I Core)</tspan>
+      <tspan fill="#94a3b8"> custom bus, timers, GPIO &amp; UART verified on GHDL</tspan>
+    </text>
+  </g>
+
+  <!-- Line 4: Runtimes & OS Diagnostic (y = 158) -->
+  <g transform="translate(24, 158)">
+    <text class="font-mono" font-size="11.5">
+      <tspan fill="#10b981" font-weight="700">[  OK  ]</tspan>
+      <tspan fill="#94a3b8"> Core Environments: </tspan>
+      <tspan fill="#cbd5e1">Arch Linux POSIX</tspan>
+      <tspan fill="#64748b"> | </tspan>
+      <tspan fill="#cbd5e1">SIMD Vector Pipelines (AVX2)</tspan>
+      <tspan fill="#64748b"> | </tspan>
+      <tspan fill="#cbd5e1">Local-First Sandboxing</tspan>
+    </text>
+  </g>
+
+  <!-- Line 5: Second Command & Status (y = 192) -->
+  <g transform="translate(24, 192)">
+    <text class="font-mono" font-size="12">
+      <tspan fill="#10b981" font-weight="700">utkarsh@sol-command</tspan>
+      <tspan fill="#64748b">:</tspan>
+      <tspan fill="#38bdf8">~/systems-lab</tspan>
+      <tspan fill="#f1f5f9">$ status --active-systems</tspan>
+    </text>
+  </g>
+
+  <!-- Line 6: Output & Blinking Prompt (y = 224) -->
+  <g transform="translate(24, 224)">
+    <text class="font-mono" font-size="11.5">
+      <tspan fill="#38bdf8" font-weight="600">&gt;&gt; Systems Lab Active:</tspan>
+      <tspan fill="#94a3b8"> Engineering 5 flagship systems across silicon, privacy browser &amp; AI agents.</tspan>
+    </text>
+    <!-- Blinking Cursor -->
+    <rect x="670" y="-12" width="7" height="15" class="cursor" />
+  </g>
+</svg>
