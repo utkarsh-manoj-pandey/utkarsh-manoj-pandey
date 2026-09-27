@@ -1,30 +1,33 @@
-<svg width="900" height="38" viewBox="0 0 900 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="36" viewBox="0 0 900 36" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="upBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#080e1b" />
-      <stop offset="50%" stop-color="#0e172a" />
-      <stop offset="100%" stop-color="#080e1b" />
+    <linearGradient id="uBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#060c18" />
+      <stop offset="50%" stop-color="#0c1628" />
+      <stop offset="100%" stop-color="#060c18" />
+    </linearGradient>
+    <linearGradient id="uAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
     </linearGradient>
   </defs>
 
   <style>
-    @keyframes pulseCyan { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .pulse-cyan { animation: pulseCyan 2s infinite ease-in-out; }
-    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+    .live { animation: pulse 2s infinite ease-in-out; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
   </style>
 
-  <!-- Frame -->
-  <rect x="1" y="1" width="898" height="36" rx="8" fill="url(#upBg)" stroke="#1e293b" stroke-width="1.2" />
+  <rect x="0" y="0" width="900" height="36" rx="7" fill="url(#uBg)" stroke="#1e293b" stroke-width="0.8" />
+  <line x1="0" y1="35" x2="900" y2="35" stroke="url(#uAccent)" stroke-width="1" />
 
-  <!-- Mac Dots -->
-  <circle cx="22" cy="19" r="4.5" fill="#ef4444" />
-  <circle cx="38" cy="19" r="4.5" fill="#f59e0b" />
-  <circle cx="54" cy="19" r="4.5" fill="#10b981" />
+  <!-- Traffic Lights -->
+  <circle cx="18" cy="18" r="3.5" fill="#ef4444" />
+  <circle cx="32" cy="18" r="3.5" fill="#f59e0b" />
+  <circle cx="46" cy="18" r="3.5" fill="#10b981" />
 
-  <!-- Title -->
-  <text x="80" y="23" class="font-mono" font-size="11" fill="#818cf8" font-weight="700" letter-spacing="1">SECURE_UPLINK // DIRECT COMMUNICATION CHANNELS</text>
+  <text x="64" y="22" class="mono" font-size="10.5" fill="#818cf8" font-weight="700" letter-spacing="1.2">SECURE_UPLINK // DIRECT COMMUNICATION CHANNELS</text>
 
-  <!-- Right Status -->
-  <circle cx="850" cy="19" r="3.5" fill="#38bdf8" class="pulse-cyan" />
-  <text x="838" y="23" class="font-mono" font-size="9.5" fill="#38bdf8" text-anchor="end" font-weight="600">COLLABORATION: OPEN</text>
+  <circle cx="858" cy="18" r="3" fill="#38bdf8" class="live" />
+  <text x="846" y="22" class="mono" font-size="8.5" fill="#38bdf8" text-anchor="end" font-weight="600">OPEN</text>
 </svg>

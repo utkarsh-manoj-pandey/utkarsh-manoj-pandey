@@ -1,607 +1,640 @@
-<svg width="920" height="1685" viewBox="0 0 920 1685" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="920" height="1720" viewBox="0 0 920 1720" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Master Background Void Gradient -->
-    <linearGradient id="masterVoidBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#04060c" />
-      <stop offset="25%" stop-color="#080e1b" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="75%" stop-color="#090f1e" />
-      <stop offset="100%" stop-color="#030509" />
+    <!-- Deep Space Background -->
+    <linearGradient id="voidBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020408" />
+      <stop offset="20%" stop-color="#060c18" />
+      <stop offset="40%" stop-color="#040814" />
+      <stop offset="60%" stop-color="#070d1a" />
+      <stop offset="80%" stop-color="#050a12" />
+      <stop offset="100%" stop-color="#020406" />
     </linearGradient>
 
-    <!-- Glowing Sun Corona Gradient -->
+    <!-- Sun Corona -->
     <radialGradient id="sunCorona" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="20%" stop-color="#fffbeb" />
-      <stop offset="45%" stop-color="#f59e0b" />
-      <stop offset="75%" stop-color="#ea580c" stop-opacity="0.85" />
+      <stop offset="15%" stop-color="#fffbeb" />
+      <stop offset="40%" stop-color="#f59e0b" />
+      <stop offset="70%" stop-color="#ea580c" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Solar Ambient Atmosphere -->
-    <radialGradient id="solarAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22" />
-      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.08" />
+    <!-- Solar Glow Haze -->
+    <radialGradient id="solarHaze" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.06" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Metallic Typography Gradient -->
-    <linearGradient id="silverType" x1="0%" y1="0%" x2="0%" y2="100%">
+    <!-- Title Metallic -->
+    <linearGradient id="metalType" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="60%" stop-color="#f1f5f9" />
-      <stop offset="100%" stop-color="#cbd5e1" />
+      <stop offset="40%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#94a3b8" />
     </linearGradient>
 
-    <!-- Terminal Glass Background -->
+    <!-- Terminal BG -->
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0b101c" />
-      <stop offset="100%" stop-color="#05070d" />
+      <stop offset="0%" stop-color="#0a0f1c" />
+      <stop offset="100%" stop-color="#04070d" />
     </linearGradient>
 
-    <!-- Card Background Gradient -->
-    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1527" />
-      <stop offset="100%" stop-color="#070b14" />
+    <!-- Card BG -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1324" />
+      <stop offset="100%" stop-color="#060a14" />
     </linearGradient>
 
-    <!-- Modular Top Accent Gradients -->
-    <linearGradient id="emeraldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Accent Bars -->
+    <linearGradient id="barEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
     </linearGradient>
-    <linearGradient id="cyanBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.1" />
-    </linearGradient>
-    <linearGradient id="indigoBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.1" />
-    </linearGradient>
-    <linearGradient id="roseBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f43f5e" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.1" />
-    </linearGradient>
-    <linearGradient id="amberBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.1" />
-    </linearGradient>
-
-    <!-- Star Pattern -->
-    <pattern id="starPattern" width="50" height="50" patternUnits="userSpaceOnUse">
-      <circle cx="25" cy="25" r="0.45" fill="#334155" opacity="0.6" />
-    </pattern>
-
-    <!-- Hairline Section Divider Gradient -->
-    <linearGradient id="hairlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#05070b" stop-opacity="0" />
-      <stop offset="20%" stop-color="#1e293b" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9" />
-      <stop offset="80%" stop-color="#818cf8" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#05070b" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Data Bus Moving Packet Gradient -->
-    <linearGradient id="packetGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
     </linearGradient>
+    <linearGradient id="barIndigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="barRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="barAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </linearGradient>
 
-    <!-- Non-Overlapping Typing Reveal ClipPaths -->
+    <!-- Scan Line Divider -->
+    <linearGradient id="scanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="15%" stop-color="#1e293b" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="85%" stop-color="#818cf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Data Packet -->
+    <linearGradient id="dataPacket" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Typing ClipPaths (12s cycle, non-overlapping) -->
     <clipPath id="cmd1Clip">
       <rect x="0" y="-18" width="0" height="30">
-        <animate attributeName="width" values="0; 0; 260; 260; 260; 0" keyTimes="0; 0.03; 0.16; 0.93; 0.97; 1" dur="12s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 280; 280; 280; 0" keyTimes="0; 0.04; 0.18; 0.92; 0.96; 1" dur="13s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="cmd2Clip">
+      <rect x="0" y="-18" width="0" height="30">
+        <animate attributeName="width" values="0; 0; 0; 300; 300; 0" keyTimes="0; 0.32; 0.36; 0.50; 0.94; 1" dur="13s" repeatCount="indefinite" />
       </rect>
     </clipPath>
 
-    <clipPath id="cmd2Clip">
-      <rect x="0" y="-18" width="0" height="30">
-        <animate attributeName="width" values="0; 0; 0; 280; 280; 0" keyTimes="0; 0.30; 0.34; 0.46; 0.95; 1" dur="12s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
+    <!-- Star Pattern -->
+    <pattern id="stars" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="8" r="0.35" fill="#475569" opacity="0.5" />
+      <circle cx="56" cy="22" r="0.3" fill="#475569" opacity="0.4" />
+      <circle cx="34" cy="55" r="0.4" fill="#475569" opacity="0.45" />
+      <circle cx="70" cy="68" r="0.3" fill="#475569" opacity="0.35" />
+      <circle cx="8" cy="42" r="0.25" fill="#475569" opacity="0.3" />
+      <circle cx="48" cy="75" r="0.3" fill="#475569" opacity="0.4" />
+    </pattern>
   </defs>
 
   <style>
-    @keyframes starPulse1 { 0%, 100% { opacity: 0.95; } 50% { opacity: 0.2; } }
-    @keyframes starPulse2 { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.85; } }
-    @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-    @keyframes beaconPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-    
-    .tw-1 { animation: starPulse1 3s infinite ease-in-out; }
-    .tw-2 { animation: starPulse2 4.5s infinite ease-in-out 1s; }
-    .term-cursor { animation: cursorBlink 1s infinite; fill: #38bdf8; }
-    .card-beacon { animation: beaconPulse 2s infinite ease-in-out; }
-    
-    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    @keyframes tw1 { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.15; } }
+    @keyframes tw2 { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.95; } }
+    @keyframes tw3 { 0%, 100% { opacity: 0.6; } 30% { opacity: 0.1; } 70% { opacity: 1; } }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes beacon { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    @keyframes scanPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    .s1 { animation: tw1 2.8s infinite ease-in-out; }
+    .s2 { animation: tw2 4s infinite ease-in-out; }
+    .s3 { animation: tw3 3.5s infinite ease-in-out 0.5s; }
+    .cursor { animation: blink 1s infinite; fill: #38bdf8; }
+    .led { animation: beacon 2s infinite ease-in-out; }
+    .scan { animation: scanPulse 3s infinite ease-in-out; }
+
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
   </style>
 
-  <!-- ===================================================================== -->
-  <!-- 0. MASTER CANVAS FRAME & DEEP SPACE BACKGROUND                        -->
-  <!-- ===================================================================== -->
-  <rect x="1" y="1" width="918" height="1683" rx="14" fill="url(#masterVoidBg)" stroke="#1e293b" stroke-width="1.2" />
-  <rect x="2" y="2" width="916" height="1681" rx="13" fill="url(#starPattern)" />
+  <!-- ================================================================= -->
+  <!-- CANVAS + DEEP SPACE                                               -->
+  <!-- ================================================================= -->
+  <rect x="1" y="1" width="918" height="1718" rx="12" fill="url(#voidBg)" stroke="#1e293b" stroke-width="1" />
+  <rect x="2" y="2" width="916" height="1716" rx="11" fill="url(#stars)" />
 
-  <!-- Twinkling Stellar Beacons -->
-  <circle cx="65" cy="70" r="1.2" fill="#ffffff" class="tw-1" />
-  <circle cx="160" cy="110" r="0.8" fill="#38bdf8" class="tw-2" />
-  <circle cx="230" cy="50" r="1.1" fill="#ffffff" class="tw-1" />
-  <circle cx="820" cy="80" r="1.2" fill="#ffffff" class="tw-1" />
-  <circle cx="740" cy="115" r="0.8" fill="#38bdf8" class="tw-2" />
-  <circle cx="860" cy="420" r="1.1" fill="#ffffff" class="tw-2" />
-  <circle cx="70" cy="430" r="0.9" fill="#38bdf8" class="tw-1" />
-  <circle cx="840" cy="720" r="1.2" fill="#ffffff" class="tw-1" />
-  <circle cx="80" cy="980" r="1.1" fill="#818cf8" class="tw-2" />
-  <circle cx="850" cy="1200" r="0.9" fill="#ffffff" class="tw-1" />
-  <circle cx="60" cy="1420" r="1.2" fill="#ffffff" class="tw-2" />
-  <circle cx="860" cy="1580" r="1.1" fill="#38bdf8" class="tw-1" />
+  <!-- Dense Star Field (30+ twinkling stars for depth) -->
+  <circle cx="45" cy="55" r="1.1" fill="#fff" class="s1" />
+  <circle cx="142" cy="88" r="0.7" fill="#38bdf8" class="s2" />
+  <circle cx="248" cy="42" r="1.0" fill="#fff" class="s3" />
+  <circle cx="340" cy="105" r="0.6" fill="#818cf8" class="s1" />
+  <circle cx="580" cy="65" r="0.9" fill="#fff" class="s2" />
+  <circle cx="680" cy="48" r="1.1" fill="#fff" class="s3" />
+  <circle cx="790" cy="92" r="0.7" fill="#38bdf8" class="s1" />
+  <circle cx="870" cy="60" r="0.9" fill="#fff" class="s2" />
+  <circle cx="85" cy="350" r="0.8" fill="#38bdf8" class="s3" />
+  <circle cx="830" cy="280" r="1.0" fill="#fff" class="s1" />
+  <circle cx="50" cy="520" r="0.7" fill="#818cf8" class="s2" />
+  <circle cx="870" cy="480" r="0.9" fill="#fff" class="s3" />
+  <circle cx="75" cy="780" r="1.1" fill="#fff" class="s1" />
+  <circle cx="855" cy="740" r="0.8" fill="#38bdf8" class="s2" />
+  <circle cx="60" cy="1020" r="0.9" fill="#fff" class="s3" />
+  <circle cx="865" cy="950" r="0.7" fill="#818cf8" class="s1" />
+  <circle cx="45" cy="1250" r="1.0" fill="#fff" class="s2" />
+  <circle cx="870" cy="1180" r="0.8" fill="#fff" class="s3" />
+  <circle cx="55" cy="1450" r="0.9" fill="#38bdf8" class="s1" />
+  <circle cx="860" cy="1380" r="1.1" fill="#fff" class="s2" />
+  <circle cx="75" cy="1620" r="0.7" fill="#818cf8" class="s3" />
+  <circle cx="850" cy="1580" r="0.9" fill="#fff" class="s1" />
+  <circle cx="420" cy="38" r="0.5" fill="#fff" class="s2" />
+  <circle cx="510" cy="52" r="0.6" fill="#38bdf8" class="s3" />
+  <circle cx="140" cy="200" r="0.5" fill="#fff" class="s1" />
+  <circle cx="770" cy="180" r="0.6" fill="#818cf8" class="s2" />
+  <circle cx="320" cy="420" r="0.5" fill="#fff" class="s3" />
+  <circle cx="620" cy="450" r="0.6" fill="#38bdf8" class="s1" />
 
-  <!-- Top Aerospace Status Header Bar (Clean - Removed highlighted LIVE SOLAR SYSTEM BG) -->
-  <rect x="1" y="1" width="918" height="34" rx="14" fill="#070b13" fill-opacity="0.95" />
-  <line x1="1" y1="34" x2="919" y2="34" stroke="#1e293b" stroke-width="1" />
+  <!-- ================================================================= -->
+  <!-- TOP STATUS BAR                                                    -->
+  <!-- ================================================================= -->
+  <rect x="1" y="1" width="918" height="34" rx="12" fill="#050911" fill-opacity="0.97" />
+  <line x1="1" y1="34" x2="919" y2="34" stroke="#1e293b" stroke-width="0.8" />
 
-  <!-- Command Dots -->
-  <circle cx="22" cy="17" r="4.5" fill="#ef4444" />
-  <circle cx="38" cy="17" r="4.5" fill="#f59e0b" />
-  <circle cx="54" cy="17" r="4.5" fill="#10b981" />
+  <!-- Traffic Lights -->
+  <circle cx="22" cy="17" r="4" fill="#ef4444" />
+  <circle cx="36" cy="17" r="4" fill="#f59e0b" />
+  <circle cx="50" cy="17" r="4" fill="#10b981" />
 
-  <text x="80" y="21" class="font-mono" font-size="10.5" fill="#64748b">utkarsh-manoj-pandey // master-command-console</text>
-  <text x="890" y="21" class="font-mono" font-size="10" fill="#38bdf8" text-anchor="end" font-weight="600">ACTIVE LAB</text>
+  <text x="68" y="21" class="mono" font-size="10" fill="#475569">utkarsh-manoj-pandey // master-command-console</text>
+  <text x="896" y="21" class="mono" font-size="9.5" fill="#38bdf8" text-anchor="end" font-weight="600">
+    <tspan class="led">●</tspan> ACTIVE
+  </text>
 
-  <!-- ===================================================================== -->
-  <!-- 1. HERO IDENTITY & LIVE SOLAR SYSTEM (y: 35 to 440)                   -->
-  <!-- ===================================================================== -->
+  <!-- ================================================================= -->
+  <!-- 1. HERO + SOLAR SYSTEM (y: 35–445)                               -->
+  <!-- ================================================================= -->
 
-  <!-- Solar Ambient Aura (Centered at Sun: 460, 310) -->
-  <circle cx="460" cy="310" r="300" fill="url(#solarAura)" />
+  <!-- Solar Ambient Haze -->
+  <circle cx="460" cy="300" r="290" fill="url(#solarHaze)" />
 
-  <!-- Rotating Keplerian Sweep Radar (Center: 460, 310) -->
+  <!-- Keplerian Sweep Radar -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 460 310" to="360 460 310" dur="18s" repeatCount="indefinite" />
-    <line x1="460" y1="310" x2="460" y2="120" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="3 4" />
-    <circle cx="460" cy="120" r="2.5" fill="#38bdf8" opacity="0.6" />
+    <animateTransform attributeName="transform" type="rotate" from="0 460 300" to="360 460 300" dur="20s" repeatCount="indefinite" />
+    <line x1="460" y1="300" x2="460" y2="115" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.2" stroke-dasharray="3 5" />
+    <circle cx="460" cy="115" r="2" fill="#38bdf8" opacity="0.5" />
   </g>
 
-  <!-- HERO IDENTITY HEADER (Spacious, centered comfortably) -->
-  <g transform="translate(460, 60)" text-anchor="middle">
-    <!-- Domain Tag Pill -->
-    <rect x="-210" y="0" width="420" height="24" rx="12" fill="#0b111e" stroke="#1e293b" stroke-width="1.1" />
-    <text x="0" y="16" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1.5">SYSTEMS ARCHITECT • SILICON MICROARCHITECTURE</text>
+  <!-- HERO TEXT -->
+  <g transform="translate(460, 55)" text-anchor="middle">
+    <!-- Domain Pill -->
+    <rect x="-185" y="0" width="370" height="22" rx="11" fill="#080e1b" stroke="#1e293b" stroke-width="0.8" />
+    <text x="0" y="15" class="mono" font-size="9" fill="#38bdf8" font-weight="700" letter-spacing="1.8">SYSTEMS ARCHITECT · SILICON MICROARCH</text>
 
-    <!-- Main Title -->
-    <text x="0" y="56" class="font-sans" font-size="36" font-weight="800" fill="url(#silverType)" letter-spacing="-0.5">UTKARSH MANOJ PANDEY</text>
+    <!-- Name -->
+    <text x="0" y="52" class="sans" font-size="34" font-weight="800" fill="url(#metalType)" letter-spacing="-0.3">UTKARSH MANOJ PANDEY</text>
 
-    <!-- Mission Subtitle -->
-    <text x="0" y="80" class="font-mono" font-size="11" fill="#94a3b8" letter-spacing="0.4">Designing zero-compromise systems from 32-bit RISC-V silicon to low-latency runtimes.</text>
+    <!-- Subtitle -->
+    <text x="0" y="75" class="mono" font-size="10.5" fill="#64748b" letter-spacing="0.3">Designing zero-compromise systems from 32-bit RISC-V silicon to low-latency runtimes.</text>
   </g>
 
-  <!-- Concentric Keplerian Orbital Trajectories (Center: 460, 310) -->
-  <circle cx="460" cy="310" r="36" stroke="#162235" stroke-width="0.8" stroke-dasharray="2 3" fill="none" />
-  <circle cx="460" cy="310" r="60" stroke="#162235" stroke-width="0.8" stroke-dasharray="2 3" fill="none" />
-  <circle cx="460" cy="310" r="90" stroke="#162235" stroke-width="0.8" stroke-dasharray="3 4" fill="none" />
-  <circle cx="460" cy="310" r="126" stroke="#162235" stroke-width="0.8" stroke-dasharray="3 4" fill="none" />
-  <circle cx="460" cy="310" r="166" stroke="#162235" stroke-width="0.6" stroke-dasharray="1 5" fill="none" /> <!-- Asteroid Belt -->
-  <circle cx="460" cy="310" r="215" stroke="#162235" stroke-width="0.8" stroke-dasharray="4 4" fill="none" />
-  <circle cx="460" cy="310" r="275" stroke="#162235" stroke-width="0.8" stroke-dasharray="4 5" fill="none" />
-  <circle cx="460" cy="310" r="340" stroke="#162235" stroke-width="0.8" stroke-dasharray="4 6" fill="none" />
-  <circle cx="460" cy="310" r="405" stroke="#162235" stroke-width="0.8" stroke-dasharray="5 7" fill="none" />
+  <!-- Orbital Paths (Center: 460, 300) -->
+  <circle cx="460" cy="300" r="34"  stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="2 3" fill="none" />
+  <circle cx="460" cy="300" r="58"  stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="2 3" fill="none" />
+  <circle cx="460" cy="300" r="86"  stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="2 4" fill="none" />
+  <circle cx="460" cy="300" r="120" stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="3 4" fill="none" />
+  <circle cx="460" cy="300" r="158" stroke="#0f1d32" stroke-width="0.5" stroke-dasharray="1 5" fill="none" /> <!-- asteroid belt -->
+  <circle cx="460" cy="300" r="200" stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="3 5" fill="none" />
+  <circle cx="460" cy="300" r="250" stroke="#0f1d32" stroke-width="0.7" stroke-dasharray="4 5" fill="none" />
+  <circle cx="460" cy="300" r="305" stroke="#0f1d32" stroke-width="0.6" stroke-dasharray="4 6" fill="none" />
+  <circle cx="460" cy="300" r="370" stroke="#0f1d32" stroke-width="0.6" stroke-dasharray="5 7" fill="none" />
 
-  <!-- 1. Mercury (Period: 4.5s) -->
+  <!-- Mercury -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 460 310" to="360 460 310" dur="4.5s" repeatCount="indefinite" />
-    <circle cx="496" cy="310" r="2.4" fill="#cbd5e1" />
+    <animateTransform attributeName="transform" type="rotate" from="0 460 300" to="360 460 300" dur="4.5s" repeatCount="indefinite" />
+    <circle cx="494" cy="300" r="2.2" fill="#cbd5e1" />
   </g>
 
-  <!-- 2. Venus (Period: 7.5s) -->
+  <!-- Venus -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="40 460 310" to="400 460 310" dur="7.5s" repeatCount="indefinite" />
-    <circle cx="520" cy="310" r="3.4" fill="#fde68a" />
+    <animateTransform attributeName="transform" type="rotate" from="45 460 300" to="405 460 300" dur="7.5s" repeatCount="indefinite" />
+    <circle cx="518" cy="300" r="3.2" fill="#fde68a" />
   </g>
 
-  <!-- 3. Earth & Moon (Period: 11s) -->
+  <!-- Earth + Moon -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="180 460 310" to="540 460 310" dur="11s" repeatCount="indefinite" />
-    <circle cx="550" cy="310" r="4.4" fill="#38bdf8" />
-    <!-- Orbiting Moon around Earth -->
+    <animateTransform attributeName="transform" type="rotate" from="180 460 300" to="540 460 300" dur="11s" repeatCount="indefinite" />
+    <circle cx="546" cy="300" r="4" fill="#38bdf8" />
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="0 550 310" to="360 550 310" dur="2.2s" repeatCount="indefinite" />
-      <circle cx="558" cy="310" r="1.3" fill="#f8fafc" />
+      <animateTransform attributeName="transform" type="rotate" from="0 546 300" to="360 546 300" dur="2s" repeatCount="indefinite" />
+      <circle cx="554" cy="300" r="1.2" fill="#f1f5f9" />
     </g>
   </g>
 
-  <!-- 4. Mars (Period: 16s) -->
+  <!-- Mars -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="90 460 310" to="450 460 310" dur="16s" repeatCount="indefinite" />
-    <circle cx="586" cy="310" r="3.2" fill="#ef4444" />
+    <animateTransform attributeName="transform" type="rotate" from="90 460 300" to="450 460 300" dur="16s" repeatCount="indefinite" />
+    <circle cx="580" cy="300" r="3" fill="#ef4444" />
   </g>
 
-  <!-- 5. Drifting Asteroid Belt -->
+  <!-- Asteroid Belt -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="360 460 310" to="0 460 310" dur="90s" repeatCount="indefinite" />
-    <circle cx="626" cy="310" r="0.8" fill="#64748b" opacity="0.7" />
-    <circle cx="294" cy="310" r="0.8" fill="#64748b" opacity="0.7" />
-    <circle cx="460" cy="144" r="0.8" fill="#64748b" opacity="0.7" />
-    <circle cx="460" cy="476" r="0.8" fill="#64748b" opacity="0.7" />
-    <circle cx="577" cy="193" r="0.7" fill="#64748b" opacity="0.6" />
-    <circle cx="343" cy="427" r="0.7" fill="#64748b" opacity="0.6" />
+    <animateTransform attributeName="transform" type="rotate" from="360 460 300" to="0 460 300" dur="80s" repeatCount="indefinite" />
+    <circle cx="618" cy="300" r="0.7" fill="#64748b" opacity="0.6" />
+    <circle cx="302" cy="300" r="0.7" fill="#64748b" opacity="0.6" />
+    <circle cx="460" cy="142" r="0.7" fill="#64748b" opacity="0.5" />
+    <circle cx="460" cy="458" r="0.7" fill="#64748b" opacity="0.5" />
+    <circle cx="572" cy="195" r="0.6" fill="#64748b" opacity="0.5" />
+    <circle cx="348" cy="405" r="0.6" fill="#64748b" opacity="0.5" />
+    <circle cx="556" cy="415" r="0.6" fill="#64748b" opacity="0.4" />
+    <circle cx="364" cy="185" r="0.6" fill="#64748b" opacity="0.4" />
   </g>
 
-  <!-- 6. Jupiter & Great Red Spot (Period: 26s) -->
+  <!-- Jupiter -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="270 460 310" to="630 460 310" dur="26s" repeatCount="indefinite" />
-    <circle cx="675" cy="310" r="8" fill="#f59e0b" />
-    <ellipse cx="675" cy="310" rx="8" ry="2.4" fill="#b45309" opacity="0.7" />
-    <circle cx="678" cy="311" r="1.6" fill="#ef4444" />
+    <animateTransform attributeName="transform" type="rotate" from="270 460 300" to="630 460 300" dur="26s" repeatCount="indefinite" />
+    <circle cx="660" cy="300" r="7.5" fill="#f59e0b" />
+    <ellipse cx="660" cy="300" rx="7.5" ry="2.2" fill="#b45309" opacity="0.6" />
+    <circle cx="663" cy="301" r="1.5" fill="#ef4444" opacity="0.8" />
   </g>
 
-  <!-- 7. Saturn & Ring System (Period: 38s) -->
+  <!-- Saturn + Rings -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="310 460 310" to="670 460 310" dur="38s" repeatCount="indefinite" />
-    <ellipse cx="735" cy="310" rx="13" ry="4.5" fill="none" stroke="#fde047" stroke-width="1.8" transform="rotate(-20 735 310)" opacity="0.9" />
-    <circle cx="735" cy="310" r="6" fill="#fef08a" />
+    <animateTransform attributeName="transform" type="rotate" from="310 460 300" to="670 460 300" dur="38s" repeatCount="indefinite" />
+    <ellipse cx="710" cy="300" rx="12" ry="4" fill="none" stroke="#fde047" stroke-width="1.6" transform="rotate(-22 710 300)" opacity="0.8" />
+    <ellipse cx="710" cy="300" rx="9" ry="2.8" fill="none" stroke="#fef08a" stroke-width="0.8" transform="rotate(-22 710 300)" opacity="0.5" />
+    <circle cx="710" cy="300" r="5.5" fill="#fef08a" />
   </g>
 
-  <!-- 8. Uranus (Period: 52s) -->
+  <!-- Uranus -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="120 460 310" to="480 460 310" dur="52s" repeatCount="indefinite" />
-    <circle cx="800" cy="310" r="4.5" fill="#67e8f9" />
+    <animateTransform attributeName="transform" type="rotate" from="120 460 300" to="480 460 300" dur="52s" repeatCount="indefinite" />
+    <circle cx="765" cy="300" r="4.2" fill="#67e8f9" />
+    <!-- Vertical ring -->
+    <ellipse cx="765" cy="300" rx="1.5" ry="6.5" fill="none" stroke="#a5f3fc" stroke-width="0.8" opacity="0.5" />
   </g>
 
-  <!-- 9. Neptune (Period: 70s) -->
+  <!-- Neptune -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" from="210 460 310" to="570 460 310" dur="70s" repeatCount="indefinite" />
-    <circle cx="865" cy="310" r="4.2" fill="#3b82f6" />
+    <animateTransform attributeName="transform" type="rotate" from="210 460 300" to="570 460 300" dur="70s" repeatCount="indefinite" />
+    <circle cx="830" cy="300" r="4" fill="#3b82f6" />
   </g>
 
-  <!-- Radiant Central Sun with Breathing Corona Pulse -->
-  <circle cx="460" cy="310" r="20" fill="url(#sunCorona)">
-    <animate attributeName="r" values="18; 22; 18" dur="4s" repeatCount="indefinite" />
+  <!-- SUN (Central) -->
+  <circle cx="460" cy="300" r="18" fill="url(#sunCorona)">
+    <animate attributeName="r" values="16; 20; 16" dur="4s" repeatCount="indefinite" />
     <animate attributeName="opacity" values="0.85; 1; 0.85" dur="4s" repeatCount="indefinite" />
   </circle>
-  <circle cx="460" cy="310" r="8.5" fill="#ffffff" opacity="0.95" />
+  <circle cx="460" cy="300" r="7.5" fill="#ffffff" opacity="0.95" />
 
-  <!-- Clean Hairline Transition (Removed highlighted orbital telemetry strip) -->
-  <line x1="20" y1="440" x2="900" y2="440" stroke="url(#hairlineGrad)" stroke-width="1" />
-  <rect x="456" y="436" width="8" height="8" transform="rotate(45 460 440)" fill="#050811" stroke="#38bdf8" stroke-width="1.2" />
+  <!-- Section Divider -->
+  <line x1="30" y1="445" x2="890" y2="445" stroke="url(#scanLine)" stroke-width="0.8" />
+  <rect x="456" y="441" width="8" height="8" transform="rotate(45 460 445)" fill="#040814" stroke="#38bdf8" stroke-width="1" />
 
-  <!-- ===================================================================== -->
-  <!-- 2. LIVE TERMINAL CONSOLE — ABOUT ME (y: 450 to 690, h: 240)           -->
-  <!-- Zero text overlap, displays clear biographical profile information     -->
-  <!-- ===================================================================== -->
-  <g transform="translate(20, 450)">
-    <!-- Terminal Outer Frame -->
-    <rect width="880" height="240" rx="10" fill="url(#termBg)" stroke="#1e293b" stroke-width="1.2" />
+  <!-- Animated Data Packet on divider -->
+  <rect y="444" width="60" height="2" rx="1" fill="url(#dataPacket)">
+    <animate attributeName="x" values="30; 890" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.1; 0.9; 1" dur="4s" repeatCount="indefinite" />
+  </rect>
 
-    <!-- Terminal Header / Titlebar -->
-    <rect width="880" height="34" rx="10" fill="#060911" fill-opacity="0.95" />
-    <line x1="0" y1="34" x2="880" y2="34" stroke="#1e293b" stroke-width="1" />
+  <!-- ================================================================= -->
+  <!-- 2. LIVE TERMINAL — ABOUT ME (y: 458–700)                         -->
+  <!-- ================================================================= -->
+  <g transform="translate(20, 458)">
+    <rect width="880" height="242" rx="10" fill="url(#termBg)" stroke="#1e293b" stroke-width="1" />
 
-    <!-- Mac Controls -->
-    <circle cx="20" cy="17" r="4.5" fill="#ef4444" />
-    <circle cx="36" cy="17" r="4.5" fill="#f59e0b" />
-    <circle cx="52" cy="17" r="4.5" fill="#10b981" />
+    <!-- Terminal Header -->
+    <rect width="880" height="32" rx="10" fill="#050911" fill-opacity="0.97" />
+    <line x1="0" y1="32" x2="880" y2="32" stroke="#1e293b" stroke-width="0.8" />
 
-    <text x="76" y="21" class="font-mono" font-size="11" fill="#64748b" font-weight="500">utkarsh@sol-terminal: ~ (zsh)</text>
-    <text x="860" y="21" class="font-mono" font-size="10" fill="#38bdf8" text-anchor="end" font-weight="600">INTERACTIVE SHELL</text>
+    <circle cx="18" cy="16" r="3.8" fill="#ef4444" />
+    <circle cx="32" cy="16" r="3.8" fill="#f59e0b" />
+    <circle cx="46" cy="16" r="3.8" fill="#10b981" />
 
-    <!-- Line 1: Typing Command 'whoami' (y = 66) -->
-    <g transform="translate(20, 66)">
+    <text x="64" y="20" class="mono" font-size="10.5" fill="#475569" font-weight="500">utkarsh@sol-terminal: ~ (zsh)</text>
+    <text x="862" y="20" class="mono" font-size="9" fill="#10b981" text-anchor="end" font-weight="600">
+      <tspan class="led">●</tspan> SHELL ACTIVE
+    </text>
+
+    <!-- Line 1: whoami command (typed) -->
+    <g transform="translate(18, 62)">
       <g clip-path="url(#cmd1Clip)">
-        <text class="font-mono" font-size="12">
-          <tspan fill="#10b981" font-weight="700">utkarsh@sol-terminal</tspan><tspan fill="#64748b">:~$ </tspan><tspan fill="#38bdf8">whoami</tspan>
+        <text class="mono" font-size="12">
+          <tspan fill="#10b981" font-weight="700">utkarsh@sol</tspan><tspan fill="#475569">:~$ </tspan><tspan fill="#38bdf8">whoami</tspan>
         </text>
       </g>
     </g>
 
-    <!-- Line 2: Response 'Utkarsh Manoj Pandey — Systems Architect & Silicon Researcher' (y = 96) -->
-    <g transform="translate(20, 96)">
-      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.17; 0.20; 0.94; 1" dur="12s" repeatCount="indefinite" />
-      <text class="font-mono" font-size="11.5">
+    <!-- Line 2: Response -->
+    <g transform="translate(18, 90)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.19; 0.22; 0.93; 1" dur="13s" repeatCount="indefinite" />
+      <text class="mono" font-size="11.5">
         <tspan fill="#38bdf8" font-weight="700">&gt;&gt; </tspan>
         <tspan fill="#f1f5f9" font-weight="700">Utkarsh Manoj Pandey</tspan>
-        <tspan fill="#94a3b8"> — Systems Architect &amp; Silicon Microarchitecture Researcher</tspan>
+        <tspan fill="#64748b"> — Systems Architect &amp; Silicon Microarchitecture Researcher</tspan>
       </text>
     </g>
 
-    <!-- Line 3: Typing Command 'cat about.txt' (y = 126) -->
-    <g transform="translate(20, 126)">
+    <!-- Line 3: cat about.txt (typed) -->
+    <g transform="translate(18, 122)">
       <g clip-path="url(#cmd2Clip)">
-        <text class="font-mono" font-size="12">
-          <tspan fill="#10b981" font-weight="700">utkarsh@sol-terminal</tspan><tspan fill="#64748b">:~$ </tspan><tspan fill="#38bdf8">cat about.txt</tspan>
+        <text class="mono" font-size="12">
+          <tspan fill="#10b981" font-weight="700">utkarsh@sol</tspan><tspan fill="#475569">:~$ </tspan><tspan fill="#38bdf8">cat about.txt</tspan>
         </text>
       </g>
     </g>
 
-    <!-- Line 4: Info Bullet 1 (y = 156) -->
-    <g transform="translate(20, 156)">
-      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.45; 0.48; 0.94; 1" dur="12s" repeatCount="indefinite" />
-      <text class="font-mono" font-size="11.5">
-        <tspan fill="#10b981">• </tspan>
-        <tspan fill="#f1f5f9">Engineering 32-bit RISC-V SoC silicon (RV32I RTL), FPGA synthesis &amp; memory-safe runtimes.</tspan>
+    <!-- Line 4: Bullet 1 -->
+    <g transform="translate(18, 152)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.51; 0.54; 0.93; 1" dur="13s" repeatCount="indefinite" />
+      <text class="mono" font-size="11">
+        <tspan fill="#10b981">▸ </tspan>
+        <tspan fill="#e2e8f0">Engineering 32-bit RISC-V SoC silicon (RV32I RTL), FPGA synthesis &amp; memory-safe runtimes.</tspan>
       </text>
     </g>
 
-    <!-- Line 5: Info Bullet 2 (y = 186) -->
-    <g transform="translate(20, 186)">
-      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.50; 0.53; 0.94; 1" dur="12s" repeatCount="indefinite" />
-      <text class="font-mono" font-size="11.5">
-        <tspan fill="#10b981">• </tspan>
-        <tspan fill="#f1f5f9">Building sovereign local-first desktop spaces, privacy browsers in Rust &amp; autonomous coding AI.</tspan>
+    <!-- Line 5: Bullet 2 -->
+    <g transform="translate(18, 180)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.56; 0.59; 0.93; 1" dur="13s" repeatCount="indefinite" />
+      <text class="mono" font-size="11">
+        <tspan fill="#10b981">▸ </tspan>
+        <tspan fill="#e2e8f0">Building sovereign local-first desktop spaces, privacy browsers &amp; autonomous coding AI.</tspan>
       </text>
     </g>
 
-    <!-- Line 6: Status & Blinking Prompt (y = 216) -->
-    <g transform="translate(20, 216)">
-      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.55; 0.58; 0.94; 1" dur="12s" repeatCount="indefinite" />
-      <text class="font-mono" font-size="11.5">
-        <tspan fill="#10b981" font-weight="700">utkarsh@sol-terminal</tspan><tspan fill="#64748b">:~$ </tspan>
-        <tspan fill="#94a3b8">status --active  </tspan>
+    <!-- Line 6: Status line + cursor -->
+    <g transform="translate(18, 212)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.61; 0.64; 0.93; 1" dur="13s" repeatCount="indefinite" />
+      <text class="mono" font-size="11">
+        <tspan fill="#10b981" font-weight="700">utkarsh@sol</tspan><tspan fill="#475569">:~$ </tspan>
+        <tspan fill="#64748b">status --active  </tspan>
         <tspan fill="#34d399" font-weight="700">&gt;&gt; LAB: ACTIVE</tspan>
-        <tspan fill="#64748b"> [Mumbai, IN • UTC +05:30]</tspan>
+        <tspan fill="#475569">  [Mumbai, IN • UTC+05:30]</tspan>
       </text>
-      <!-- Continuously Blinking Active Cursor -->
-      <rect x="530" y="-12" width="7" height="15" class="term-cursor" />
+      <rect x="520" y="-12" width="7" height="14" rx="1" class="cursor" />
     </g>
   </g>
 
-  <!-- Hairline Divider -->
-  <line x1="20" y1="702" x2="900" y2="702" stroke="url(#hairlineGrad)" stroke-width="1" />
-  <rect x="456" y="698" width="8" height="8" transform="rotate(45 460 702)" fill="#050811" stroke="#38bdf8" stroke-width="1.2" />
+  <!-- Section Divider -->
+  <line x1="30" y1="712" x2="890" y2="712" stroke="url(#scanLine)" stroke-width="0.8" />
+  <rect x="456" y="708" width="8" height="8" transform="rotate(45 460 712)" fill="#040814" stroke="#818cf8" stroke-width="1" />
+  <rect y="711" width="50" height="2" rx="1" fill="url(#dataPacket)">
+    <animate attributeName="x" values="890; 30" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.1; 0.9; 1" dur="5s" repeatCount="indefinite" />
+  </rect>
 
-  <!-- ===================================================================== -->
-  <!-- 3. FLAGSHIP SYSTEMS // PRODUCTION ARCHITECTURE SPEC (y: 714 to 1350)  -->
-  <!-- ===================================================================== -->
+  <!-- ================================================================= -->
+  <!-- 3. FLAGSHIP SYSTEMS (y: 724–1370)                                 -->
+  <!-- ================================================================= -->
 
-  <!-- Section Titlebar -->
-  <g transform="translate(20, 714)">
-    <rect width="880" height="34" rx="8" fill="#080e1b" stroke="#1e293b" stroke-width="1" />
-    <circle cx="18" cy="17" r="3.5" fill="#38bdf8" class="card-beacon" />
-    <text x="32" y="21" class="font-mono" font-size="11" fill="#38bdf8" font-weight="700" letter-spacing="1">FLAGSHIP_SYSTEMS // PRODUCTION ARCHITECTURE SPECIFICATION</text>
-    <text x="862" y="21" class="font-mono" font-size="10" fill="#64748b" text-anchor="end">5 ACTIVE REPOSITORIES</text>
+  <!-- Section Header -->
+  <g transform="translate(20, 724)">
+    <rect width="880" height="32" rx="7" fill="#060c18" stroke="#1e293b" stroke-width="0.8" />
+    <circle cx="16" cy="16" r="3" fill="#38bdf8" class="led" />
+    <text x="28" y="20" class="mono" font-size="10.5" fill="#38bdf8" font-weight="700" letter-spacing="1.2">FLAGSHIP_SYSTEMS // PRODUCTION ARCHITECTURE</text>
+    <text x="864" y="20" class="mono" font-size="9" fill="#475569" text-anchor="end">5 ACTIVE REPOS</text>
   </g>
 
-  <!-- MODULE CARD 01: PRIVACY-FIRST PERSONAL SPACE (y = 758, h = 110) -->
-  <g transform="translate(20, 758)">
-    <rect width="880" height="110" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="260" y2="0" stroke="url(#emeraldBar)" stroke-width="2.5" />
+  <!-- CARD 01: Privacy-First Personal Space -->
+  <g transform="translate(20, 766)">
+    <rect width="880" height="108" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="108" rx="1.5" fill="#10b981" />
 
-    <!-- Left Column: Identity & Stack -->
-    <circle cx="12" cy="23" r="3" fill="#10b981" class="card-beacon" />
-    <text x="22" y="26" class="font-mono" font-size="9.5" fill="#10b981" font-weight="700" letter-spacing="1">01 // LOCAL-FIRST WORKSPACE</text>
-    <text x="20" y="48" class="font-sans" font-size="15" fill="#ffffff" font-weight="800">Privacy-First Personal Space</text>
-    
-    <rect x="20" y="62" width="85" height="20" rx="4" fill="#0b1b13" stroke="#10b981" stroke-width="0.8" />
-    <text x="62" y="76" class="font-mono" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">Python 3.11+</text>
+    <circle cx="22" cy="22" r="2.5" fill="#10b981" class="led" />
+    <text x="32" y="25" class="mono" font-size="9" fill="#10b981" font-weight="700" letter-spacing="1">01 // LOCAL-FIRST WORKSPACE</text>
+    <text x="22" y="47" class="sans" font-size="14.5" fill="#f8fafc" font-weight="800">Privacy-First Personal Space</text>
 
-    <rect x="112" y="62" width="95" height="20" rx="4" fill="#111928" stroke="#334155" stroke-width="0.8" />
-    <text x="159" y="76" class="font-mono" font-size="9" fill="#94a3b8" text-anchor="middle" font-weight="500">STATUS: PLANNED</text>
+    <rect x="22" y="58" width="78" height="18" rx="4" fill="#071510" stroke="#10b981" stroke-width="0.7" />
+    <text x="61" y="71" class="mono" font-size="9" fill="#34d399" text-anchor="middle" font-weight="600">Python 3.11+</text>
+    <rect x="106" y="58" width="72" height="18" rx="4" fill="#0c1220" stroke="#334155" stroke-width="0.7" />
+    <text x="142" y="71" class="mono" font-size="8.5" fill="#64748b" text-anchor="middle">PLANNED</text>
 
-    <line x1="250" y1="14" x2="250" y2="96" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <line x1="240" y1="12" x2="240" y2="96" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Right Column: Architecture & Scope -->
-    <text x="272" y="28" class="font-sans" font-size="12.5" fill="#e2e8f0" font-weight="600">Complete Offline-First Desktop Environment &amp; Application Suite</text>
-    <text x="272" y="50" class="font-sans" font-size="11" fill="#94a3b8">
-      A complete local-first desktop application with integrated browser, encrypted notes, local calendar, media player,
-    </text>
-    <text x="272" y="68" class="font-sans" font-size="11" fill="#94a3b8">
-      documents vault, internet radio, weather, curated news feeds, file utilities, and zero-leak privacy controls.
-    </text>
-    <text x="272" y="94" class="font-mono" font-size="9.5" fill="#64748b">
-      <tspan fill="#34d399">#EncryptedStorage</tspan>   <tspan fill="#38bdf8">#LocalFirst</tspan>   <tspan fill="#a78bfa">#DesktopSuite</tspan>   <tspan fill="#cbd5e1">#ZeroTelemetry</tspan>
+    <text x="260" y="26" class="sans" font-size="12" fill="#e2e8f0" font-weight="600">Complete Offline-First Desktop Environment &amp; Application Suite</text>
+    <text x="260" y="48" class="sans" font-size="10.5" fill="#64748b">A local-first desktop with integrated browser, encrypted notes, calendar, media player,</text>
+    <text x="260" y="64" class="sans" font-size="10.5" fill="#64748b">documents vault, radio, weather, news feeds, file utilities &amp; zero-leak privacy controls.</text>
+    <text x="260" y="92" class="mono" font-size="9" fill="#475569">
+      <tspan fill="#34d399">#Encrypted</tspan>   <tspan fill="#38bdf8">#LocalFirst</tspan>   <tspan fill="#a78bfa">#DesktopSuite</tspan>   <tspan fill="#94a3b8">#ZeroTelemetry</tspan>
     </text>
   </g>
 
-  <!-- MODULE CARD 02: NØRVA (y = 876, h = 110) -->
-  <g transform="translate(20, 876)">
-    <rect width="880" height="110" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="260" y2="0" stroke="url(#cyanBar)" stroke-width="2.5" />
+  <!-- CARD 02: NØRVA -->
+  <g transform="translate(20, 882)">
+    <rect width="880" height="108" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="108" rx="1.5" fill="#38bdf8" />
 
-    <!-- Left Column: Identity & Stack -->
-    <circle cx="12" cy="23" r="3" fill="#38bdf8" class="card-beacon" />
-    <text x="22" y="26" class="font-mono" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">02 // PRIVACY BROWSER ENGINE</text>
-    <text x="20" y="48" class="font-sans" font-size="15" fill="#ffffff" font-weight="800">NØRVA</text>
-    
-    <rect x="20" y="62" width="60" height="20" rx="4" fill="#081827" stroke="#38bdf8" stroke-width="0.8" />
-    <text x="50" y="76" class="font-mono" font-size="10" fill="#38bdf8" text-anchor="middle" font-weight="600">Rust</text>
+    <circle cx="22" cy="22" r="2.5" fill="#38bdf8" class="led" />
+    <text x="32" y="25" class="mono" font-size="9" fill="#38bdf8" font-weight="700" letter-spacing="1">02 // PRIVACY BROWSER ENGINE</text>
+    <text x="22" y="47" class="sans" font-size="14.5" fill="#f8fafc" font-weight="800">NØRVA</text>
 
-    <rect x="88" y="62" width="95" height="20" rx="4" fill="#111928" stroke="#334155" stroke-width="0.8" />
-    <text x="135" y="76" class="font-mono" font-size="9" fill="#94a3b8" text-anchor="middle" font-weight="500">STATUS: PLANNED</text>
+    <rect x="22" y="58" width="52" height="18" rx="4" fill="#061420" stroke="#38bdf8" stroke-width="0.7" />
+    <text x="48" y="71" class="mono" font-size="9" fill="#38bdf8" text-anchor="middle" font-weight="600">Rust</text>
+    <rect x="80" y="58" width="72" height="18" rx="4" fill="#0c1220" stroke="#334155" stroke-width="0.7" />
+    <text x="116" y="71" class="mono" font-size="8.5" fill="#64748b" text-anchor="middle">PLANNED</text>
 
-    <line x1="250" y1="14" x2="250" y2="96" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <line x1="240" y1="12" x2="240" y2="96" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Right Column: Architecture & Scope -->
-    <text x="272" y="28" class="font-sans" font-size="12.5" fill="#e2e8f0" font-weight="600">Lightweight, Memory-Safe Privacy Browser Engine</text>
-    <text x="272" y="50" class="font-sans" font-size="11" fill="#94a3b8">
-      Engineered for uncompromising privacy: native tracker protection, isolated session containers, fine-grained
-    </text>
-    <text x="272" y="68" class="font-sans" font-size="11" fill="#94a3b8">
-      permission controls, real-time privacy dashboard, secure download manager, and localized encrypted browsing history.
-    </text>
-    <text x="272" y="94" class="font-mono" font-size="9.5" fill="#64748b">
-      <tspan fill="#38bdf8">#RustEngine</tspan>   <tspan fill="#34d399">#TrackerShield</tspan>   <tspan fill="#a78bfa">#SessionIsolation</tspan>   <tspan fill="#cbd5e1">#MemorySafety</tspan>
+    <text x="260" y="26" class="sans" font-size="12" fill="#e2e8f0" font-weight="600">Lightweight, Memory-Safe Privacy Browser Engine</text>
+    <text x="260" y="48" class="sans" font-size="10.5" fill="#64748b">Native tracker protection, isolated session containers, fine-grained permission controls,</text>
+    <text x="260" y="64" class="sans" font-size="10.5" fill="#64748b">real-time privacy dashboard, secure downloads &amp; localized encrypted browsing history.</text>
+    <text x="260" y="92" class="mono" font-size="9" fill="#475569">
+      <tspan fill="#38bdf8">#RustEngine</tspan>   <tspan fill="#34d399">#TrackerShield</tspan>   <tspan fill="#a78bfa">#SessionIsolation</tspan>   <tspan fill="#94a3b8">#MemSafe</tspan>
     </text>
   </g>
 
-  <!-- MODULE CARD 03: KODAI (y = 994, h = 110) -->
-  <g transform="translate(20, 994)">
-    <rect width="880" height="110" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="260" y2="0" stroke="url(#indigoBar)" stroke-width="2.5" />
+  <!-- CARD 03: KODAI -->
+  <g transform="translate(20, 998)">
+    <rect width="880" height="108" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="108" rx="1.5" fill="#818cf8" />
 
-    <!-- Left Column: Identity & Stack -->
-    <circle cx="12" cy="23" r="3" fill="#818cf8" class="card-beacon" />
-    <text x="22" y="26" class="font-mono" font-size="9.5" fill="#818cf8" font-weight="700" letter-spacing="1">03 // AUTONOMOUS AI AGENT</text>
-    <text x="20" y="48" class="font-sans" font-size="15" fill="#ffffff" font-weight="800">KODAI</text>
-    
-    <rect x="20" y="62" width="60" height="20" rx="4" fill="#131433" stroke="#818cf8" stroke-width="0.8" />
-    <text x="50" y="76" class="font-mono" font-size="10" fill="#818cf8" text-anchor="middle" font-weight="600">Rust</text>
+    <circle cx="22" cy="22" r="2.5" fill="#818cf8" class="led" />
+    <text x="32" y="25" class="mono" font-size="9" fill="#818cf8" font-weight="700" letter-spacing="1">03 // AUTONOMOUS AI AGENT</text>
+    <text x="22" y="47" class="sans" font-size="14.5" fill="#f8fafc" font-weight="800">KODAI</text>
 
-    <rect x="88" y="62" width="95" height="20" rx="4" fill="#111928" stroke="#334155" stroke-width="0.8" />
-    <text x="135" y="76" class="font-mono" font-size="9" fill="#94a3b8" text-anchor="middle" font-weight="500">STATUS: PLANNED</text>
+    <rect x="22" y="58" width="52" height="18" rx="4" fill="#0e0e28" stroke="#818cf8" stroke-width="0.7" />
+    <text x="48" y="71" class="mono" font-size="9" fill="#818cf8" text-anchor="middle" font-weight="600">Rust</text>
+    <rect x="80" y="58" width="72" height="18" rx="4" fill="#0c1220" stroke="#334155" stroke-width="0.7" />
+    <text x="116" y="71" class="mono" font-size="8.5" fill="#64748b" text-anchor="middle">PLANNED</text>
 
-    <line x1="250" y1="14" x2="250" y2="96" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <line x1="240" y1="12" x2="240" y2="96" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Right Column: Architecture & Scope -->
-    <text x="272" y="28" class="font-sans" font-size="12.5" fill="#e2e8f0" font-weight="600">Low-RAM, Model-Agnostic Autonomous Coding Agent</text>
-    <text x="272" y="50" class="font-sans" font-size="11" fill="#94a3b8">
-      A lightweight coding AI runtime built to connect to local coding LLMs or external inference APIs. Operates directly
-    </text>
-    <text x="272" y="68" class="font-sans" font-size="11" fill="#94a3b8">
-      on real codebases with sandboxed tool execution, deterministic workspace mutation, and strict RAM footprints.
-    </text>
-    <text x="272" y="94" class="font-mono" font-size="9.5" fill="#64748b">
-      <tspan fill="#818cf8">#AutonomousAgent</tspan>   <tspan fill="#38bdf8">#ModelAgnostic</tspan>   <tspan fill="#34d399">#SandboxedTools</tspan>   <tspan fill="#cbd5e1">#LowRAM</tspan>
+    <text x="260" y="26" class="sans" font-size="12" fill="#e2e8f0" font-weight="600">Low-RAM, Model-Agnostic Autonomous Coding Agent</text>
+    <text x="260" y="48" class="sans" font-size="10.5" fill="#64748b">A lightweight coding AI runtime connecting to local LLMs or external APIs. Operates</text>
+    <text x="260" y="64" class="sans" font-size="10.5" fill="#64748b">on real codebases with sandboxed tool execution &amp; deterministic workspace mutation.</text>
+    <text x="260" y="92" class="mono" font-size="9" fill="#475569">
+      <tspan fill="#818cf8">#Autonomous</tspan>   <tspan fill="#38bdf8">#ModelAgnostic</tspan>   <tspan fill="#34d399">#Sandboxed</tspan>   <tspan fill="#94a3b8">#LowRAM</tspan>
     </text>
   </g>
 
-  <!-- MODULE CARD 04: VECTRA (y = 1112, h = 110) -->
-  <g transform="translate(20, 1112)">
-    <rect width="880" height="110" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="260" y2="0" stroke="url(#roseBar)" stroke-width="2.5" />
+  <!-- CARD 04: VECTRA -->
+  <g transform="translate(20, 1114)">
+    <rect width="880" height="108" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="108" rx="1.5" fill="#f43f5e" />
 
-    <!-- Left Column: Identity & Stack -->
-    <circle cx="12" cy="23" r="3" fill="#f43f5e" class="card-beacon" />
-    <text x="22" y="26" class="font-mono" font-size="9.5" fill="#f43f5e" font-weight="700" letter-spacing="1">04 // HIGH-PERFORMANCE MEDIA SUITE</text>
-    <text x="20" y="48" class="font-sans" font-size="15" fill="#ffffff" font-weight="800">VECTRA</text>
-    
-    <rect x="20" y="62" width="95" height="20" rx="4" fill="#250d18" stroke="#f43f5e" stroke-width="0.8" />
-    <text x="67" y="76" class="font-mono" font-size="9.5" fill="#fb7185" text-anchor="middle" font-weight="600">Modern C++20</text>
+    <circle cx="22" cy="22" r="2.5" fill="#f43f5e" class="led" />
+    <text x="32" y="25" class="mono" font-size="9" fill="#f43f5e" font-weight="700" letter-spacing="1">04 // HIGH-PERF MEDIA SUITE</text>
+    <text x="22" y="47" class="sans" font-size="14.5" fill="#f8fafc" font-weight="800">VECTRA</text>
 
-    <rect x="122" y="62" width="95" height="20" rx="4" fill="#111928" stroke="#334155" stroke-width="0.8" />
-    <text x="169" y="76" class="font-mono" font-size="9" fill="#94a3b8" text-anchor="middle" font-weight="500">STATUS: PLANNED</text>
+    <rect x="22" y="58" width="82" height="18" rx="4" fill="#1c0810" stroke="#f43f5e" stroke-width="0.7" />
+    <text x="63" y="71" class="mono" font-size="9" fill="#fb7185" text-anchor="middle" font-weight="600">Modern C++20</text>
+    <rect x="110" y="58" width="72" height="18" rx="4" fill="#0c1220" stroke="#334155" stroke-width="0.7" />
+    <text x="146" y="71" class="mono" font-size="8.5" fill="#64748b" text-anchor="middle">PLANNED</text>
 
-    <line x1="250" y1="14" x2="250" y2="96" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <line x1="240" y1="12" x2="240" y2="96" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Right Column: Architecture & Scope -->
-    <text x="272" y="28" class="font-sans" font-size="12.5" fill="#e2e8f0" font-weight="600">Hardware-Accelerated Audio/Video Analysis &amp; Transcoding</text>
-    <text x="272" y="50" class="font-sans" font-size="11" fill="#94a3b8">
-      A high-performance media processing engine: lightning-fast video/audio conversion, modern compression algorithms,
-    </text>
-    <text x="272" y="68" class="font-sans" font-size="11" fill="#94a3b8">
-      deep metadata extraction, subtitle demuxing/generation, batch pipeline execution, and forensic container inspection.
-    </text>
-    <text x="272" y="94" class="font-mono" font-size="9.5" fill="#64748b">
-      <tspan fill="#f43f5e">#ModernCpp20</tspan>   <tspan fill="#38bdf8">#SIMDParallel</tspan>   <tspan fill="#34d399">#MediaInspection</tspan>   <tspan fill="#cbd5e1">#BatchPipeline</tspan>
+    <text x="260" y="26" class="sans" font-size="12" fill="#e2e8f0" font-weight="600">Hardware-Accelerated Audio/Video Analysis &amp; Transcoding</text>
+    <text x="260" y="48" class="sans" font-size="10.5" fill="#64748b">Lightning-fast video/audio conversion, modern compression, deep metadata extraction,</text>
+    <text x="260" y="64" class="sans" font-size="10.5" fill="#64748b">subtitle demuxing/generation, batch pipeline execution &amp; forensic container inspection.</text>
+    <text x="260" y="92" class="mono" font-size="9" fill="#475569">
+      <tspan fill="#f43f5e">#C++20</tspan>   <tspan fill="#38bdf8">#SIMDParallel</tspan>   <tspan fill="#34d399">#MediaInspect</tspan>   <tspan fill="#94a3b8">#BatchPipeline</tspan>
     </text>
   </g>
 
-  <!-- MODULE CARD 05: VERA-32 (y = 1230, h = 110) -->
+  <!-- CARD 05: VERA-32 -->
   <g transform="translate(20, 1230)">
-    <rect width="880" height="110" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="260" y2="0" stroke="url(#amberBar)" stroke-width="2.5" />
+    <rect width="880" height="108" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="108" rx="1.5" fill="#f59e0b" />
 
-    <!-- Left Column: Identity & Stack -->
-    <circle cx="12" cy="23" r="3" fill="#f59e0b" class="card-beacon" />
-    <text x="22" y="26" class="font-mono" font-size="9.5" fill="#f59e0b" font-weight="700" letter-spacing="1">05 // MICROCONTROLLER SOC &amp; SILICON</text>
-    <text x="20" y="48" class="font-sans" font-size="15" fill="#ffffff" font-weight="800">VERA-32</text>
-    
-    <rect x="20" y="62" width="105" height="20" rx="4" fill="#241808" stroke="#f59e0b" stroke-width="0.8" />
-    <text x="72" y="76" class="font-mono" font-size="9.5" fill="#fbbf24" text-anchor="middle" font-weight="600">VHDL • RISC-V</text>
+    <circle cx="22" cy="22" r="2.5" fill="#f59e0b" class="led" />
+    <text x="32" y="25" class="mono" font-size="9" fill="#f59e0b" font-weight="700" letter-spacing="1">05 // MICROCONTROLLER SoC &amp; SILICON</text>
+    <text x="22" y="47" class="sans" font-size="14.5" fill="#f8fafc" font-weight="800">VERA-32</text>
 
-    <rect x="132" y="62" width="95" height="20" rx="4" fill="#111928" stroke="#334155" stroke-width="0.8" />
-    <text x="179" y="76" class="font-mono" font-size="9" fill="#94a3b8" text-anchor="middle" font-weight="500">STATUS: PLANNED</text>
+    <rect x="22" y="58" width="92" height="18" rx="4" fill="#1a1206" stroke="#f59e0b" stroke-width="0.7" />
+    <text x="68" y="71" class="mono" font-size="9" fill="#fbbf24" text-anchor="middle" font-weight="600">VHDL · RISC-V</text>
+    <rect x="120" y="58" width="72" height="18" rx="4" fill="#0c1220" stroke="#334155" stroke-width="0.7" />
+    <text x="156" y="71" class="mono" font-size="8.5" fill="#64748b" text-anchor="middle">PLANNED</text>
 
-    <line x1="250" y1="14" x2="250" y2="96" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <line x1="240" y1="12" x2="240" y2="96" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Right Column: Architecture & Scope -->
-    <text x="272" y="28" class="font-sans" font-size="12.5" fill="#e2e8f0" font-weight="600">Custom 32-Bit RISC-V Microcontroller SoC &amp; RTL Subsystems</text>
-    <text x="272" y="50" class="font-sans" font-size="11" fill="#94a3b8">
-      Complete custom 32-bit RISC-V microcontroller SoC: RV32I CPU core, boot ROM, SRAM controller, system bus, GPIO,
-    </text>
-    <text x="272" y="68" class="font-sans" font-size="11" fill="#94a3b8">
-      UART, SPI, I²C, hardware timers, nested interrupts, bare-metal C firmware support, GHDL simulation, and FPGA target.
-    </text>
-    <text x="272" y="94" class="font-mono" font-size="9.5" fill="#64748b">
-      <tspan fill="#f59e0b">#RV32I</tspan>   <tspan fill="#38bdf8">#VHDL_RTL</tspan>   <tspan fill="#34d399">#SoCPeripherals</tspan>   <tspan fill="#cbd5e1">#FPGASynthesis</tspan>
+    <text x="260" y="26" class="sans" font-size="12" fill="#e2e8f0" font-weight="600">Custom 32-Bit RISC-V Microcontroller SoC &amp; RTL Subsystems</text>
+    <text x="260" y="48" class="sans" font-size="10.5" fill="#64748b">RV32I CPU core, boot ROM, SRAM controller, system bus, GPIO, UART, SPI, I²C,</text>
+    <text x="260" y="64" class="sans" font-size="10.5" fill="#64748b">hardware timers, nested interrupts, bare-metal firmware, GHDL sim &amp; FPGA target.</text>
+    <text x="260" y="92" class="mono" font-size="9" fill="#475569">
+      <tspan fill="#f59e0b">#RV32I</tspan>   <tspan fill="#38bdf8">#VHDL_RTL</tspan>   <tspan fill="#34d399">#SoCPeripherals</tspan>   <tspan fill="#94a3b8">#FPGASynth</tspan>
     </text>
   </g>
 
-  <!-- Hairline Divider -->
-  <line x1="20" y1="1352" x2="900" y2="1352" stroke="url(#hairlineGrad)" stroke-width="1" />
-  <rect x="456" y="1348" width="8" height="8" transform="rotate(45 460 1352)" fill="#050811" stroke="#38bdf8" stroke-width="1.2" />
+  <!-- Section Divider -->
+  <line x1="30" y1="1350" x2="890" y2="1350" stroke="url(#scanLine)" stroke-width="0.8" />
+  <rect x="456" y="1346" width="8" height="8" transform="rotate(45 460 1350)" fill="#040814" stroke="#38bdf8" stroke-width="1" />
+  <rect y="1349" width="45" height="2" rx="1" fill="url(#dataPacket)">
+    <animate attributeName="x" values="30; 890" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.1; 0.9; 1" dur="6s" repeatCount="indefinite" />
+  </rect>
 
-  <!-- ===================================================================== -->
-  <!-- 4. CORE ENGINEERING ARSENAL & RUNTIMES (y: 1364 to 1464, h: 100)      -->
-  <!-- Clean - Removed highlighted bottom tokens strip                        -->
-  <!-- ===================================================================== -->
-  <g transform="translate(20, 1364)">
-    <!-- Section Title -->
-    <rect width="880" height="30" rx="6" fill="#080e1b" stroke="#1e293b" stroke-width="1" />
-    <circle cx="16" cy="15" r="3" fill="#38bdf8" class="card-beacon" />
-    <text x="28" y="19" class="font-mono" font-size="10.5" fill="#38bdf8" font-weight="700" letter-spacing="1">ENGINEERING_ARSENAL // LANGUAGES, SILICON &amp; HARDWARE RUNTIMES</text>
-    
-    <!-- 6 Stack Badges in a Row (Clean, no tokens strip below) -->
-    <g transform="translate(0, 42)">
+  <!-- ================================================================= -->
+  <!-- 4. ENGINEERING ARSENAL (y: 1362–1462)                             -->
+  <!-- ================================================================= -->
+  <g transform="translate(20, 1362)">
+    <rect width="880" height="28" rx="6" fill="#060c18" stroke="#1e293b" stroke-width="0.8" />
+    <circle cx="14" cy="14" r="2.5" fill="#38bdf8" class="led" />
+    <text x="24" y="18" class="mono" font-size="10" fill="#38bdf8" font-weight="700" letter-spacing="1.2">ENGINEERING_ARSENAL // LANGUAGES · SILICON · RUNTIMES</text>
+
+    <!-- 6 Badges -->
+    <g transform="translate(0, 38)">
       <!-- Rust -->
-      <rect x="0" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="14" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">Rust</text>
-      <text x="14" y="32" class="font-mono" font-size="9" fill="#38bdf8">Systems &amp; Agents</text>
+      <rect x="0" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="0" y="0" width="3" height="40" rx="1.5" fill="#38bdf8" />
+      <text x="16" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">Rust</text>
+      <text x="16" y="31" class="mono" font-size="8.5" fill="#38bdf8">Systems &amp; Agents</text>
 
-      <!-- Modern C++20 -->
-      <rect x="148" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="162" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">Modern C++20</text>
-      <text x="162" y="32" class="font-mono" font-size="9" fill="#60a5fa">High Performance</text>
+      <!-- C++20 -->
+      <rect x="148" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="148" y="0" width="3" height="40" rx="1.5" fill="#60a5fa" />
+      <text x="164" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">Modern C++20</text>
+      <text x="164" y="31" class="mono" font-size="8.5" fill="#60a5fa">High Performance</text>
 
-      <!-- Python 3.11 -->
-      <rect x="296" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="310" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">Python 3.11+</text>
-      <text x="310" y="32" class="font-mono" font-size="9" fill="#34d399">Local Workspace</text>
+      <!-- Python -->
+      <rect x="296" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="296" y="0" width="3" height="40" rx="1.5" fill="#34d399" />
+      <text x="312" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">Python 3.11+</text>
+      <text x="312" y="31" class="mono" font-size="8.5" fill="#34d399">Local Workspace</text>
 
-      <!-- VHDL RTL -->
-      <rect x="444" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="458" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">VHDL RTL</text>
-      <text x="458" y="32" class="font-mono" font-size="9" fill="#fbbf24">Silicon Core</text>
+      <!-- VHDL -->
+      <rect x="444" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="444" y="0" width="3" height="40" rx="1.5" fill="#fbbf24" />
+      <text x="460" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">VHDL RTL</text>
+      <text x="460" y="31" class="mono" font-size="8.5" fill="#fbbf24">Silicon Core</text>
 
       <!-- RISC-V -->
-      <rect x="592" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="606" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">RISC-V (RV32I)</text>
-      <text x="606" y="32" class="font-mono" font-size="9" fill="#f87171">Microcontroller SoC</text>
+      <rect x="592" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="592" y="0" width="3" height="40" rx="1.5" fill="#f87171" />
+      <text x="608" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">RISC-V (RV32I)</text>
+      <text x="608" y="31" class="mono" font-size="8.5" fill="#f87171">Microcontroller SoC</text>
 
-      <!-- Linux POSIX -->
-      <rect x="740" y="0" width="140" height="42" rx="6" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
-      <text x="754" y="18" class="font-mono" font-size="11" fill="#f8fafc" font-weight="700">Linux POSIX</text>
-      <text x="754" y="32" class="font-mono" font-size="9" fill="#a78bfa">Arch / Kernels</text>
+      <!-- Linux -->
+      <rect x="740" y="0" width="140" height="40" rx="6" fill="#080e1a" stroke="#1e293b" stroke-width="0.8" />
+      <rect x="740" y="0" width="3" height="40" rx="1.5" fill="#a78bfa" />
+      <text x="756" y="17" class="mono" font-size="11" fill="#f1f5f9" font-weight="700">Linux POSIX</text>
+      <text x="756" y="31" class="mono" font-size="8.5" fill="#a78bfa">Arch / Kernels</text>
     </g>
   </g>
 
-  <!-- Hairline Divider -->
-  <line x1="20" y1="1468" x2="900" y2="1468" stroke="url(#hairlineGrad)" stroke-width="1" />
-  <rect x="456" y="1464" width="8" height="8" transform="rotate(45 460 1468)" fill="#050811" stroke="#38bdf8" stroke-width="1.2" />
+  <!-- Section Divider -->
+  <line x1="30" y1="1470" x2="890" y2="1470" stroke="url(#scanLine)" stroke-width="0.8" />
+  <rect x="456" y="1466" width="8" height="8" transform="rotate(45 460 1470)" fill="#040814" stroke="#818cf8" stroke-width="1" />
 
-  <!-- ===================================================================== -->
-  <!-- 5. ACADEMIC PEDIGREE // EXPANDED FULL WIDTH (y: 1480 to 1640, h: 160) -->
-  <!-- Removed highlighted systems telemetry box; expanded across full 880px -->
-  <!-- ===================================================================== -->
-  <g transform="translate(20, 1480)">
-    <!-- Full-Width 880px Academic Pedigree Container -->
-    <rect width="880" height="152" rx="8" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1" />
-    <line x1="0" y1="0" x2="280" y2="0" stroke="url(#cyanBar)" stroke-width="2.5" />
-    
-    <circle cx="16" cy="21" r="3" fill="#38bdf8" class="card-beacon" />
-    <text x="28" y="25" class="font-mono" font-size="11" fill="#38bdf8" font-weight="700" letter-spacing="1">ACADEMIC_PEDIGREE // RESEARCH EXCELLENCE</text>
-    
-    <!-- Degree 1 (Left 420px Column) -->
-    <g transform="translate(24, 50)">
-      <text class="font-sans" font-size="14" fill="#f8fafc" font-weight="700">Master of Science in Information Technology (M.Sc. IT)</text>
-      <text y="24" class="font-sans" font-size="12" fill="#94a3b8">Mumbai University • <tspan fill="#38bdf8" font-weight="700">CGPA: 8.7</tspan></text>
-      <text y="44" class="font-mono" font-size="10" fill="#10b981">Passed Inter-Collegiate Test for Final Year Project Grant</text>
-      <text y="66" class="font-mono" font-size="9" fill="#64748b">#ProjectGrantWinner  #InformationTechnology  #MumbaiUniversity</text>
+  <!-- ================================================================= -->
+  <!-- 5. ACADEMIC PEDIGREE (y: 1482–1650)                               -->
+  <!-- ================================================================= -->
+  <g transform="translate(20, 1482)">
+    <rect width="880" height="155" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="0" y="0" width="3" height="155" rx="1.5" fill="#38bdf8" />
+
+    <circle cx="22" cy="20" r="2.5" fill="#38bdf8" class="led" />
+    <text x="34" y="24" class="mono" font-size="10" fill="#38bdf8" font-weight="700" letter-spacing="1.2">ACADEMIC_PEDIGREE // RESEARCH EXCELLENCE</text>
+
+    <!-- M.Sc. Column -->
+    <g transform="translate(24, 48)">
+      <text class="sans" font-size="13.5" fill="#f1f5f9" font-weight="700">M.Sc. Information Technology</text>
+      <text y="22" class="sans" font-size="11.5" fill="#64748b">Mumbai University · <tspan fill="#38bdf8" font-weight="700">CGPA: 8.7</tspan></text>
+      <text y="42" class="mono" font-size="9.5" fill="#10b981">Passed Inter-Collegiate Test for Final Year Project Grant</text>
+      <text y="64" class="mono" font-size="8.5" fill="#475569">#ProjectGrantWinner  #InformationTechnology  #Mumbai</text>
     </g>
 
-    <!-- Vertical Column Divider -->
-    <line x1="450" y1="44" x2="450" y2="132" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 3" />
+    <!-- Vertical Divider -->
+    <line x1="442" y1="42" x2="442" y2="142" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="2 3" />
 
-    <!-- Degree 2 (Right 420px Column) -->
-    <g transform="translate(474, 50)">
-      <text class="font-sans" font-size="14" fill="#f8fafc" font-weight="700">Bachelor of Science in Information Technology (B.Sc. IT)</text>
-      <text y="24" class="font-sans" font-size="12" fill="#94a3b8">Mumbai University • <tspan fill="#38bdf8" font-weight="700">CGPA: 8.3</tspan></text>
-      <text y="44" class="font-mono" font-size="10" fill="#38bdf8">Event Lead for Inter-Collegiate Tech Summit</text>
-      <text y="66" class="font-mono" font-size="9" fill="#64748b">#TechSummitLead  #SystemsFoundations  #MumbaiUniversity</text>
+    <!-- B.Sc. Column -->
+    <g transform="translate(464, 48)">
+      <text class="sans" font-size="13.5" fill="#f1f5f9" font-weight="700">B.Sc. Information Technology</text>
+      <text y="22" class="sans" font-size="11.5" fill="#64748b">Mumbai University · <tspan fill="#38bdf8" font-weight="700">CGPA: 8.3</tspan></text>
+      <text y="42" class="mono" font-size="9.5" fill="#38bdf8">Event Lead for Inter-Collegiate Tech Summit</text>
+      <text y="64" class="mono" font-size="8.5" fill="#475569">#TechSummitLead  #SystemsFoundations  #Mumbai</text>
     </g>
   </g>
 
-  <!-- Master Bottom Telemetry Bar -->
-  <line x1="20" y1="1650" x2="900" y2="1650" stroke="#162235" stroke-width="1" />
-  <text x="460" y="1666" class="font-mono" font-size="9.5" fill="#64748b" text-anchor="middle" letter-spacing="1">
+  <!-- ================================================================= -->
+  <!-- BOTTOM TELEMETRY BAR                                              -->
+  <!-- ================================================================= -->
+  <line x1="30" y1="1655" x2="890" y2="1655" stroke="#0f1d32" stroke-width="0.8" />
+
+  <!-- Animated bottom scan -->
+  <rect y="1654" width="40" height="2" rx="1" fill="url(#dataPacket)">
+    <animate attributeName="x" values="890; 30" dur="7s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.7; 0.7; 0" keyTimes="0; 0.1; 0.9; 1" dur="7s" repeatCount="indefinite" />
+  </rect>
+
+  <text x="460" y="1680" class="mono" font-size="9" fill="#334155" text-anchor="middle" letter-spacing="1.5">
     [ 2026 // UTKARSH MANOJ PANDEY // SYSTEMS &amp; SILICON LAB // ALL SYSTEMS OPERATIONAL ]
   </text>
+
+  <!-- Status dots at bottom -->
+  <circle cx="200" y="1693" cy="1693" r="2" fill="#10b981" class="led" />
+  <text x="210" y="1696" class="mono" font-size="8" fill="#334155">UPTIME: 99.9%</text>
+  <circle cx="380" cy="1693" r="2" fill="#38bdf8" class="scan" />
+  <text x="390" y="1696" class="mono" font-size="8" fill="#334155">SCAN: NOMINAL</text>
+  <circle cx="560" cy="1693" r="2" fill="#818cf8" class="led" />
+  <text x="570" y="1696" class="mono" font-size="8" fill="#334155">BUILD: STABLE</text>
+  <circle cx="720" cy="1693" r="2" fill="#f59e0b" class="scan" />
+  <text x="730" y="1696" class="mono" font-size="8" fill="#334155">SILICON: ACTIVE</text>
+
 </svg>
