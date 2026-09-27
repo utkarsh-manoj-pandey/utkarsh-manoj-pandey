@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utkarsh Manoj Pandey — AI &amp; Intelligent Systems Architect</title>
+  <title>UTKARSH MANOJ PANDEY // MASTER COMMAND CONSOLE &bull; SYSTEMS ARCHITECT</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Portfolio of Utkarsh Manoj Pandey. AI & Intelligent Systems Architect specializing in autonomous edge voice assistants (SIFRA), custom operating systems (Prometheus OS), LLMs (Llama 3.3, DeepSeek R1), and high-frequency exchange data operations.">
+  <meta name="description" content="Master Command Console of Utkarsh Manoj Pandey — Systems Architect & AI Engineer. Creator of SIFRA Sovereign Intelligence (RPi5 & NVMe) and Prometheus OS. Specialist in RISC-V microarchitecture, LLM reasoning, and exchange-grade data operations.">
   <meta name="author" content="Utkarsh Manoj Pandey">
-  <meta name="keywords" content="Utkarsh Manoj Pandey, AI Architect, Systems Engineer, SIFRA Voice Assistant, Prometheus OS, Raspberry Pi 5, LLM, DeepSeek R1, Llama 3.3, NSE India, Arch Linux, RISC-V, Python, C++">
+  <meta name="keywords" content="Utkarsh Manoj Pandey, Systems Architect, SIFRA Sovereign AI, Prometheus OS, Raspberry Pi 5, RISC-V, Arch Linux, NSE India, DeepSeek R1, Llama 3.3, Python, C++, Mumbai">
   
-  <meta property="og:title" content="Utkarsh Manoj Pandey — AI &amp; Intelligent Systems Architect">
-  <meta property="og:description" content="Architectural showcase of SIFRA Edge AI, Prometheus OS, National Stock Exchange data operations, and microarchitecture research.">
+  <meta property="og:title" content="UTKARSH MANOJ PANDEY // SYSTEMS ARCHITECT">
+  <meta property="og:description" content="Sovereign AI Systems, Custom Linux Kernels, and Silicon Microarchitecture by Utkarsh Manoj Pandey.">
   <meta property="og:type" content="website">
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- High-Tech Aerospace & Systems Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN with Custom Design Tokens -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -27,34 +27,29 @@
       theme: {
         extend: {
           colors: {
-            surface: {
-              950: '#050608',
-              900: '#090b10',
-              850: '#0e1117',
-              800: '#141822',
-              750: '#1b202e',
-              700: '#262d3d',
-              600: '#384256'
-            },
-            accent: {
-              cyan: '#38bdf8',
-              sky: '#0284c7',
-              blue: '#2563eb',
-              indigo: '#6366f1',
+            void: '#020408',
+            space: '#060c18',
+            deepSpace: '#040814',
+            panel: '#0a0f1c',
+            panelAlt: '#0c1324',
+            cardBg: '#080e1a',
+            borderSubtle: '#1e293b',
+            borderGlow: 'rgba(56, 189, 248, 0.35)',
+            hud: {
+              cyan: '#00f0ff',
+              sky: '#38bdf8',
               emerald: '#10b981',
               amber: '#f59e0b',
-              violet: '#8b5cf6'
+              rose: '#f43f5e',
+              indigo: '#818cf8',
+              violet: '#a855f7'
             }
           },
           fontFamily: {
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-          },
-          letterSpacing: {
-            tightest: '-0.035em',
-            tighter: '-0.025em',
-            tight: '-0.015em',
-            widest: '0.15em',
+            orbitron: ['Orbitron', 'sans-serif'],
+            rajdhani: ['Rajdhani', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'sans-serif'],
           }
         }
       }
@@ -65,244 +60,277 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <style>
-    /* Custom Scrollbar - Sleek & Minimal */
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #050608; }
-    ::-webkit-scrollbar-thumb { background: #1b202e; border-radius: 3px; }
+    /* Custom Scrollbar - Cyber HUD Spec */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #020408; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
     ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
-    /* Glass Panels with Linear/Vercel Aesthetic */
-    .glass-panel {
-      background: rgba(14, 17, 23, 0.72);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-    
-    .glass-panel-subtle {
-      background: rgba(14, 17, 23, 0.45);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Deep Space Background Canvas */
+    body {
+      background: radial-gradient(ellipse at 50% -20%, #061126 0%, #020408 65%, #000000 100%);
+      color: #e2e8f0;
     }
 
-    .glass-card-hover {
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Master HUD Card */
+    .hud-card {
+      background: linear-gradient(135deg, rgba(12, 19, 36, 0.85) 0%, rgba(6, 10, 20, 0.95) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid #1e293b;
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      transition: all 0.25s ease-out;
     }
-    .glass-card-hover:hover {
-      border-color: rgba(56, 189, 248, 0.35);
-      background: rgba(20, 24, 34, 0.85);
+    .hud-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9), 0 0 25px -5px rgba(56, 189, 248, 0.25);
       transform: translateY(-2px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px -3px rgba(56, 189, 248, 0.15);
     }
 
-    /* Ambient Spotlight Background */
-    .spotlight-radial {
-      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, rgba(99, 102, 241, 0.03) 40%, transparent 70%);
+    /* Corner HUD Accents */
+    .corner-bracket::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #38bdf8;
+      border-left: 2px solid #38bdf8;
+      pointer-events: none;
+    }
+    .corner-bracket::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid #38bdf8;
+      border-right: 2px solid #38bdf8;
+      pointer-events: none;
     }
 
-    /* Text Gradients */
-    .heading-gradient {
-      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+    /* Metallic Title Styling */
+    .metal-title {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 45%, #94a3b8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .accent-gradient {
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
-    /* Typing Cursor */
-    .cursor-blink {
+    /* Blinking Cyber Cursor */
+    .cyber-cursor {
       display: inline-block;
-      width: 2px;
+      width: 9px;
       height: 1.1em;
       background: #38bdf8;
       vertical-align: text-bottom;
-      margin-left: 2px;
-      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+      animation: cursorBlink 0.9s step-end infinite;
     }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-    /* Code/Terminal Tab Active */
-    .tab-active {
-      color: #38bdf8 !important;
-      border-bottom-color: #38bdf8 !important;
-      background: rgba(56, 189, 248, 0.05);
-    }
+    /* Live LED Pulse */
+    @keyframes liveLed { 0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #10b981); } 50% { opacity: 0.35; filter: none; } }
+    .led-live { animation: liveLed 1.8s infinite ease-in-out; }
 
-    /* Print View Clean-up */
+    /* Print Clean-up */
     @media print {
       body { background: #ffffff !important; color: #000000 !important; }
-      #three-canvas, nav, footer, #quick-actions, #sifra-chat-section, #terminal-section { display: none !important; }
-      #resume-modal { display: block !important; position: static !important; width: 100% !important; background: #ffffff !important; color: #000000 !important; }
+      #three-canvas, header, footer, #mission-terminal, #sifra-neural-console { display: none !important; }
+      #dossier-modal { display: block !important; position: static !important; width: 100% !important; background: #ffffff !important; color: #000000 !important; }
     }
   </style>
 </head>
 
-<body class="bg-surface-950 text-slate-200 font-sans min-h-screen selection:bg-accent-cyan/20 selection:text-white relative overflow-x-hidden antialiased">
+<body class="font-rajdhani min-h-screen relative selection:bg-hud-cyan/25 selection:text-white antialiased overflow-x-hidden">
 
   <!-- ===================================================================== -->
-  <!-- 3D INTERACTIVE THREE.JS NEURAL MESH (BACKGROUND)                      -->
+  <!-- 3D KEPLERIAN ORBITAL MECHANICS (THREE.JS CANVAS)                      -->
   <!-- ===================================================================== -->
-  <div class="fixed inset-0 pointer-events-auto z-0 overflow-hidden" id="canvas-wrapper">
-    <canvas id="three-canvas" class="w-full h-full block opacity-60 transition-opacity duration-1000"></canvas>
-    <div class="absolute inset-0 bg-gradient-to-b from-surface-950/20 via-surface-950/75 to-surface-950 pointer-events-none"></div>
-    <div class="absolute inset-0 spotlight-radial pointer-events-none"></div>
+  <div class="fixed inset-0 pointer-events-auto z-0 overflow-hidden" id="canvas-deck">
+    <canvas id="three-canvas" class="w-full h-full block opacity-75"></canvas>
+    <div class="absolute inset-0 bg-gradient-to-b from-void/40 via-void/70 to-void pointer-events-none"></div>
   </div>
 
   <!-- ===================================================================== -->
-  <!-- TOP STICKY NAVIGATION BAR                                             -->
+  <!-- TOP TELEMETRY MASTHEAD & NAVIGATION                                   -->
   <!-- ===================================================================== -->
-  <header class="sticky top-0 z-50 w-full backdrop-blur-2xl bg-surface-950/80 border-b border-surface-800/80">
+  <header class="sticky top-0 z-50 w-full bg-void/90 backdrop-blur-xl border-b border-borderSubtle">
+    <!-- Top Micro Telemetry Ribbon -->
+    <div class="bg-black/60 border-b border-borderSubtle/60 px-4 py-1 text-[11px] font-mono flex items-center justify-between text-slate-400">
+      <div class="flex items-center gap-3">
+        <span class="inline-block w-2 h-2 rounded-full bg-hud-emerald led-live"></span>
+        <span class="text-slate-300 font-semibold tracking-wider">SYSTEMS &amp; SILICON LAB // MUMBAI [400079]</span>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="text-hud-cyan hidden sm:inline">HOST: BROADCOM BCM2712 (ARM64)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="hidden md:inline text-slate-400">CLOCK: <strong id="top-clock" class="text-white font-mono">--:--:-- IST</strong></span>
+        <span class="text-slate-600 hidden md:inline">|</span>
+        <span class="text-hud-emerald font-semibold">ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
-      <!-- Brand & Status -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="w-8 h-8 rounded-lg bg-surface-850 border border-surface-700 flex items-center justify-center font-mono font-semibold text-accent-cyan text-sm group-hover:border-accent-cyan/50 transition">
-          UP
+      <!-- Brand Console Identifier -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded bg-panel border border-borderSubtle flex items-center justify-center font-orbitron font-bold text-hud-cyan text-sm group-hover:border-hud-cyan/60 transition shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+          &Delta;
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-sm tracking-tight text-white group-hover:text-accent-cyan transition">
-            Utkarsh Manoj Pandey
+          <span class="font-orbitron font-bold text-sm tracking-wide text-white group-hover:text-hud-cyan transition">
+            UTKARSH MANOJ PANDEY
           </span>
-          <span class="text-[11px] font-mono text-slate-400 tracking-normal">
-            AI &amp; Intelligent Systems Architect
+          <span class="text-[10px] font-mono text-slate-400 tracking-widest uppercase">
+            MASTER COMMAND CONSOLE
           </span>
         </div>
       </a>
 
-      <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs font-medium text-slate-300">
-        <a href="#about" class="hover:text-white transition">Overview</a>
-        <a href="#architectures" class="hover:text-white transition">Flagship Architectures</a>
-        <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#terminal-section" class="hover:text-white transition">Terminal</a>
-        <a href="#sifra-section" class="hover:text-white transition flex items-center gap-1.5 text-accent-cyan">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span>
-          SIFRA AI
+      <!-- Desktop Console Routes -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-mono tracking-wider text-slate-300">
+        <a href="#hero" class="hover:text-hud-cyan transition">00 // OVERVIEW</a>
+        <a href="#flagship" class="hover:text-hud-cyan transition">01 // FLAGSHIP SYSTEMS</a>
+        <a href="#telemetry" class="hover:text-hud-cyan transition">02 // TELEMETRY</a>
+        <a href="#terminal" class="hover:text-hud-cyan transition">03 // SHELL</a>
+        <a href="#sifra-core" class="hover:text-hud-cyan transition text-hud-cyan flex items-center gap-1.5 font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-hud-cyan animate-pulse"></span>
+          04 // SIFRA AI
         </a>
-        <a href="#skills" class="hover:text-white transition">Technical Stack</a>
-        <a href="#credentials" class="hover:text-white transition">Credentials</a>
+        <a href="#experience" class="hover:text-hud-cyan transition">05 // EXPERIENCE</a>
+        <a href="#arsenal" class="hover:text-hud-cyan transition">06 // ARSENAL</a>
+        <a href="#credentials" class="hover:text-hud-cyan transition">07 // CREDENTIALS</a>
       </nav>
 
-      <!-- Right CTAs -->
+      <!-- Action Hub -->
       <div class="flex items-center gap-3">
-        <!-- Resume Trigger -->
-        <button onclick="openResumeModal()" class="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface-850 border border-surface-700 hover:border-slate-500 text-slate-200 text-xs font-medium transition">
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <span>Curriculum Vitae</span>
+        <button onclick="openDossierModal()" class="flex items-center gap-2 px-3.5 py-1.5 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-200 text-xs font-mono transition">
+          <svg class="w-3.5 h-3.5 text-hud-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span class="hidden sm:inline">DOSSIER</span>
         </button>
 
-        <!-- Direct Uplink Trigger -->
-        <a href="#contact" class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white text-surface-950 hover:bg-slate-200 font-semibold text-xs transition shadow-sm">
-          <span>Contact</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <a href="#uplink" class="px-4 py-1.5 rounded bg-hud-cyan text-void font-orbitron font-bold text-xs hover:bg-sky-300 transition shadow-[0_0_15px_rgba(56,189,248,0.3)]">
+          UPLINK
         </a>
 
-        <!-- Mobile Drawer Button -->
-        <button onclick="toggleMobileNav()" class="lg:hidden w-8 h-8 rounded-lg bg-surface-850 border border-surface-700 flex items-center justify-center text-slate-300">
+        <!-- Mobile Drawer Toggle -->
+        <button onclick="toggleMobileNav()" class="lg:hidden w-8 h-8 rounded bg-panel border border-borderSubtle flex items-center justify-center text-slate-300">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
 
     </div>
 
-    <!-- Mobile Nav -->
-    <div id="mobile-nav" class="hidden lg:hidden border-b border-surface-800 bg-surface-950/95 backdrop-blur-xl px-6 py-4 space-y-3 text-xs font-medium">
-      <a href="#about" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Overview</a>
-      <a href="#architectures" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Flagship Architectures</a>
-      <a href="#experience" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Experience</a>
-      <a href="#terminal-section" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Terminal Shell</a>
-      <a href="#sifra-section" onclick="toggleMobileNav()" class="block py-1 text-accent-cyan">SIFRA AI Agent</a>
-      <a href="#skills" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Technical Stack</a>
-      <a href="#credentials" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Credentials &amp; Education</a>
-      <a href="#contact" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-white">Contact</a>
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden border-b border-borderSubtle bg-void/98 backdrop-blur-2xl px-6 py-4 space-y-2 font-mono text-xs">
+      <a href="#hero" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">00 // OVERVIEW</a>
+      <a href="#flagship" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">01 // FLAGSHIP SYSTEMS</a>
+      <a href="#telemetry" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">02 // TELEMETRY HUD</a>
+      <a href="#terminal" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">03 // SHELL TERMINAL</a>
+      <a href="#sifra-core" onclick="toggleMobileNav()" class="block py-1 text-hud-cyan">04 // SIFRA AI AGENT</a>
+      <a href="#experience" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">05 // EXPERIENCE</a>
+      <a href="#arsenal" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">06 // ARSENAL</a>
+      <a href="#credentials" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">07 // CREDENTIALS</a>
+      <a href="#uplink" onclick="toggleMobileNav()" class="block py-1 text-slate-300 hover:text-hud-cyan">08 // DIRECT UPLINK</a>
     </div>
   </header>
 
   <!-- ===================================================================== -->
-  <!-- MAIN CONTAINER                                                        -->
+  <!-- MAIN MASTER CONSOLE BODY                                              -->
   <!-- ===================================================================== -->
-  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28 pt-12 pb-24">
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
 
     <!-- =================================================================== -->
-    <!-- 1. HERO SECTION                                                     -->
+    <!-- 00. MASTER HERO & SOLAR HUD                                         -->
     <!-- =================================================================== -->
-    <section id="hero" class="pt-10 sm:pt-16 pb-12 flex flex-col items-start justify-center max-w-4xl space-y-8">
+    <section id="hero" class="space-y-8 pt-4">
       
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-surface-850/90 border border-surface-700/80 text-xs font-medium text-slate-300">
-        <span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
-        <span>Available for AI Engineering &amp; Systems Architecture</span>
-        <span class="text-slate-600">/</span>
-        <span class="text-slate-400 font-mono text-[11px]">Mumbai, India</span>
-      </div>
-
-      <!-- Main Heading -->
-      <div class="space-y-4">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tightest text-white leading-tight">
-          Engineering Autonomous AI &amp; <span class="accent-gradient">Edge Silicon Systems</span>.
-        </h1>
-        
-        <!-- Live Cycling Role Terminal Line -->
-        <div class="font-mono text-sm sm:text-base text-slate-300 flex items-center h-8">
-          <span class="text-accent-cyan mr-2">$</span>
-          <span id="typed-role" class="text-slate-100"></span>
-          <span class="cursor-blink"></span>
+      <!-- Command Deck Header Banner -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-4 rounded-xl bg-panel border border-borderSubtle">
+        <div class="flex items-center gap-3">
+          <div class="w-3 h-3 rounded-full bg-hud-cyan led-live"></div>
+          <span class="font-mono text-xs uppercase tracking-widest text-slate-300">
+            SYSTEMS DIRECTIVE // AUTONOMOUS EDGE SILICON &amp; REASONING RUNTIMES
+          </span>
+        </div>
+        <div class="font-mono text-xs text-slate-400 flex items-center gap-4">
+          <span>KERNEL: <strong class="text-hud-cyan">6.12.0-ARM64</strong></span>
+          <span class="text-slate-600">|</span>
+          <span>STORAGE: <strong class="text-hud-emerald">PCIe Gen3 NVMe</strong></span>
+          <span class="text-slate-600">|</span>
+          <span>LOCATION: <strong class="text-white">MUMBAI, IN</strong></span>
         </div>
       </div>
 
-      <!-- Executive Overview -->
-      <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl font-normal">
-        I bridge the boundary between <strong class="text-white font-semibold">frontier machine learning models</strong> (Llama 3.3, DeepSeek R1), 
-        <strong class="text-white font-semibold">embedded ARM / RISC-V hardware architectures</strong>, and 
-        <strong class="text-white font-semibold">mission-critical financial data operations</strong>. 
-        Creator of the autonomous <em>SIFRA</em> voice assistant (RPi5 &amp; PCIe NVMe) and architect of the <em>Prometheus Operating System</em>.
-      </p>
+      <!-- Main Identity Masthead -->
+      <div class="space-y-4">
+        <div class="inline-block px-3 py-1 rounded bg-panelAlt border border-borderSubtle text-xs font-mono text-hud-cyan uppercase tracking-widest">
+          SYSTEMS ARCHITECT &bull; SILICON MICROARCH &bull; DATA OPERATIONS
+        </div>
 
-      <!-- Action Row -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-orbitron font-extrabold tracking-tight leading-none metal-title">
+          UTKARSH MANOJ PANDEY
+        </h1>
+
+        <!-- Real-time Typing Subtitle Line -->
+        <div class="font-mono text-sm sm:text-lg text-slate-300 flex items-center h-8">
+          <span class="text-hud-cyan font-bold mr-2">&gt;</span>
+          <span id="masthead-typing"></span>
+          <span class="cyber-cursor"></span>
+        </div>
+
+        <p class="max-w-4xl text-slate-300 text-sm sm:text-base leading-relaxed font-sans font-normal pt-1">
+          Designing zero-compromise systems from <strong class="text-white">32-bit RISC-V silicon</strong> and <strong class="text-white">Broadcom ARM64 edge nodes</strong> to <strong class="text-white">high-throughput financial exchange platforms</strong>. Creator of the <em>SIFRA</em> autonomous voice engine and architect of <em>Prometheus OS</em>. Ex-Data Operations Manager at the <strong>National Stock Exchange of India (NSE)</strong>.
+        </p>
+      </div>
+
+      <!-- Quick Action Console Controls -->
       <div class="flex flex-wrap items-center gap-3 pt-2">
-        <a href="#architectures" class="px-5 py-2.5 rounded-lg bg-accent-cyan text-surface-950 font-semibold text-xs sm:text-sm hover:bg-sky-400 transition flex items-center gap-2">
-          <span>Explore Architectures</span>
+        <a href="#flagship" class="px-5 py-2.5 rounded bg-hud-cyan text-void font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-sky-300 transition shadow-[0_0_20px_rgba(56,189,248,0.35)] flex items-center gap-2">
+          <span>EXPLORE ARCHITECTURES</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
-        <a href="#sifra-section" class="px-5 py-2.5 rounded-lg bg-surface-850 border border-surface-700 hover:border-slate-500 text-slate-200 text-xs sm:text-sm font-medium transition flex items-center gap-2">
-          <span>Query SIFRA Agent</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
+        <a href="#sifra-core" class="px-5 py-2.5 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-200 font-mono text-xs uppercase tracking-wider transition flex items-center gap-2">
+          <span class="text-hud-cyan font-bold">&Delta;</span>
+          <span>LAUNCH SIFRA AGENT</span>
         </a>
-        <button onclick="openResumeModal()" class="px-5 py-2.5 rounded-lg bg-surface-850 border border-surface-700 hover:border-slate-500 text-slate-200 text-xs sm:text-sm font-medium transition">
-          View Technical Dossier
+        <a href="#terminal" class="px-5 py-2.5 rounded bg-panel border border-borderSubtle hover:border-slate-500 text-slate-300 font-mono text-xs uppercase tracking-wider transition">
+          EXECUTE CLI SHELL
+        </a>
+        <button onclick="openDossierModal()" class="px-5 py-2.5 rounded bg-panel border border-borderSubtle hover:border-slate-500 text-slate-300 font-mono text-xs uppercase tracking-wider transition">
+          VIEW RESUME DOSSIER
         </button>
       </div>
 
-      <!-- Key Performance Indicators (Clean Metric Grid) -->
-      <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 border-t border-surface-800/80">
+      <!-- Master KPI Metrics Deck (4 Nodes) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
         
-        <div class="glass-panel-subtle rounded-xl p-4">
-          <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">8.7<span class="text-xs text-slate-500 font-normal"> / 10.0</span></div>
-          <div class="text-xs text-slate-400 mt-1 font-medium">M.Sc. IT CGPA</div>
-          <div class="text-[11px] text-accent-cyan font-mono mt-0.5">Project Grant Winner</div>
+        <div class="hud-card corner-bracket p-5 rounded-xl">
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">ACADEMIC DISTINCTION</div>
+          <div class="text-3xl font-orbitron font-bold text-hud-cyan mt-1">8.7 <span class="text-xs font-mono text-slate-500 font-normal">/ 10.0</span></div>
+          <div class="text-xs font-mono text-hud-emerald mt-1">M.Sc. IT &bull; Project Grant Winner</div>
         </div>
 
-        <div class="glass-panel-subtle rounded-xl p-4">
-          <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">10M+</div>
-          <div class="text-xs text-slate-400 mt-1 font-medium">Daily Financial Records</div>
-          <div class="text-[11px] text-slate-400 font-mono mt-0.5">NSE, BSE, NSDL &amp; CDSL</div>
+        <div class="hud-card corner-bracket p-5 rounded-xl">
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">FINANCIAL DATA SCOPE</div>
+          <div class="text-3xl font-orbitron font-bold text-white mt-1">10M+</div>
+          <div class="text-xs font-mono text-slate-400 mt-1">Daily Records &bull; NSE, BSE, CDSL</div>
         </div>
 
-        <div class="glass-panel-subtle rounded-xl p-4">
-          <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">100%</div>
-          <div class="text-xs text-slate-400 mt-1 font-medium">Autonomous Edge AI</div>
-          <div class="text-[11px] text-slate-400 font-mono mt-0.5">RPi5 + NVMe Local Inference</div>
+        <div class="hud-card corner-bracket p-5 rounded-xl">
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">EDGE VOICE AUTONOMY</div>
+          <div class="text-3xl font-orbitron font-bold text-hud-indigo mt-1">100%</div>
+          <div class="text-xs font-mono text-slate-400 mt-1">RPi5 + NVMe Local Inference</div>
         </div>
 
-        <div class="glass-panel-subtle rounded-xl p-4">
-          <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">9+</div>
-          <div class="text-xs text-slate-400 mt-1 font-medium">Verified Credentials</div>
-          <div class="text-[11px] text-slate-400 font-mono mt-0.5">IIT Madras, ISRO, Google, AWS</div>
+        <div class="hud-card corner-bracket p-5 rounded-xl">
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">ACCREDITED PEDIGREE</div>
+          <div class="text-3xl font-orbitron font-bold text-hud-amber mt-1">9+</div>
+          <div class="text-xs font-mono text-slate-400 mt-1">IIT Madras, ISRO, Google, AWS</div>
         </div>
 
       </div>
@@ -310,347 +338,256 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 2. ARCHITECTURAL DOSSIER & PHILOSOPHY                               -->
+    <!-- 01. FLAGSHIP SYSTEMS & PRODUCTION ARCHITECTURES                     -->
     <!-- =================================================================== -->
-    <section id="about" class="space-y-8">
+    <section id="flagship" class="space-y-6">
       
-      <div class="space-y-2">
-        <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">01 // Architectural Overview</div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Full-Stack Systems Philosophy</h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <!-- Main Narrative Card (7 cols) -->
-        <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8 space-y-5">
-          <h3 class="text-lg font-semibold text-white">From Silicon Microarchitecture to Board-Level Operations</h3>
-          
-          <p class="text-slate-300 text-sm leading-relaxed">
-            My background combines formal computational education at Mumbai University with autonomous engineering on physical hardware and enterprise exchange systems. I earned my <strong>Master’s in Information Technology (CGPA 8.7)</strong>, where my capstone proposal received the competitive Inter-Collegiate Final Year Project Grant for developing a custom Linux distribution and an edge voice intelligence unit.
-          </p>
-
-          <p class="text-slate-300 text-sm leading-relaxed">
-            At the <strong>National Stock Exchange of India (NSE)</strong>, I operated as Data Operations Manager. My focus centered on end-to-end platform validation for the Nice Plus website, leading User Acceptance Testing (UAT), tracking systemic defect resolution, and architecting an automated Complaint Allocation Engine with real-time managerial telemetry that accelerated arbitration and conciliation processing.
-          </p>
-
-          <p class="text-slate-300 text-sm leading-relaxed">
-            On the research and prototyping frontier, I build dedicated hardware rigs: coupling <strong>Broadcom BCM2712 Quad Cortex-A76</strong> processors with direct PCIe Gen 3.0 M.2 NVMe solid-state storage, implementing real-time facial biometric authentication with hardware camera sensors, and deploying optimized quantization pipelines for frontier models like <strong>Llama 3.3</strong> and <strong>DeepSeek R1</strong>.
-          </p>
-
-          <div class="pt-4 border-t border-surface-700/60 flex flex-wrap gap-4 text-xs font-mono text-slate-400">
-            <span class="flex items-center gap-1.5">
-              <span class="text-slate-500">Location:</span> Mumbai (400079), MH, India
-            </span>
-            <span class="flex items-center gap-1.5">
-              <span class="text-slate-500">Phone:</span> +91 9326625053
-            </span>
-            <span class="flex items-center gap-1.5">
-              <span class="text-slate-500">Email:</span> utkarsh.manoj.pandey@gmail.com
-            </span>
-          </div>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">01 // PRODUCTION SUITE</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Flagship Systems &amp; R&amp;D Architectures</h2>
         </div>
-
-        <!-- System Architecture Specification (5 cols) -->
-        <div class="lg:col-span-5 glass-panel rounded-2xl p-6 sm:p-8 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-surface-700/60">
-            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold">Active Lab Rig Spec</span>
-            <span class="text-[11px] font-mono text-accent-emerald bg-accent-emerald/10 px-2 py-0.5 rounded border border-accent-emerald/20">Operational</span>
-          </div>
-
-          <div class="space-y-3 text-xs font-mono">
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">Host Compute:</span>
-              <span class="text-white font-medium">Raspberry Pi 5 (8GB LPDDR4X)</span>
-            </div>
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">Core Architecture:</span>
-              <span class="text-slate-200">Quad-Core ARM Cortex-A76 @ 2.4GHz</span>
-            </div>
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">High-Speed Bus:</span>
-              <span class="text-accent-cyan">PCIe Gen 3.0 via M.2 NVMe HAT</span>
-            </div>
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">Kernel Environment:</span>
-              <span class="text-slate-200">Prometheus OS (Arch Linux ARM64)</span>
-            </div>
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">Acoustic Input:</span>
-              <span class="text-slate-200">I2S Digital Microphones Array</span>
-            </div>
-            <div class="flex justify-between py-1 border-b border-surface-800">
-              <span class="text-slate-400">Biometric Auth:</span>
-              <span class="text-slate-200">OV5647 Camera Sensor (Continuous)</span>
-            </div>
-            <div class="flex justify-between py-1">
-              <span class="text-slate-400">LLM Inference:</span>
-              <span class="text-accent-violet">Llama 3.3 / DeepSeek R1 Local Weights</span>
-            </div>
-          </div>
-
-          <div class="mt-4 p-3 rounded-lg bg-surface-900 border border-surface-750 text-[11px] font-mono text-slate-400 leading-normal">
-            <strong>Architecture Goal:</strong> Zero-dependency autonomous edge intelligence capable of local speech synthesis, biometric authentication, and deterministic browser workflow control without third-party cloud round-trips.
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- =================================================================== -->
-    <!-- 3. FLAGSHIP ARCHITECTURES (CORE PROJECTS)                           -->
-    <!-- =================================================================== -->
-    <section id="architectures" class="space-y-8">
-      
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-        <div class="space-y-2">
-          <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">02 // Systems &amp; Deployments</div>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Flagship Engineering Projects</h2>
-        </div>
-        
-        <!-- Category Filters -->
-        <div class="flex items-center gap-1.5 p-1 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs">
-          <button onclick="filterArchitectures('all')" class="arch-filter-btn px-3 py-1 rounded bg-surface-800 text-white font-medium" data-filter="all">All</button>
-          <button onclick="filterArchitectures('ai')" class="arch-filter-btn px-3 py-1 rounded text-slate-400 hover:text-white" data-filter="ai">Edge &amp; AI</button>
-          <button onclick="filterArchitectures('systems')" class="arch-filter-btn px-3 py-1 rounded text-slate-400 hover:text-white" data-filter="systems">Systems &amp; OS</button>
-          <button onclick="filterArchitectures('enterprise')" class="arch-filter-btn px-3 py-1 rounded text-slate-400 hover:text-white" data-filter="enterprise">Enterprise</button>
+        <div class="font-mono text-xs text-slate-400">
+          5 ACTIVE ARCHITECTURES &bull; LOCAL-FIRST DESIGN
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="architectures-grid">
+      <!-- Systems Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- ARCHITECTURE 1: SIFRA -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="ai">
+        <!-- CARD 1: SIFRA -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-hud-cyan">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-accent-cyan font-semibold">Autonomous Edge AI</span>
-              <span class="text-[11px] font-mono text-slate-400">RPi5 &bull; NVMe</span>
+              <span class="font-mono text-xs uppercase tracking-wider text-hud-cyan font-bold">01 // SOVEREIGN VOICE AGENT</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-hud-emerald">OPERATIONAL</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white leading-snug">
-              SIFRA — Autonomous Voice &amp; Biometric Assistant
+            <h3 class="text-xl font-orbitron font-bold text-white">
+              SIFRA — Autonomous Edge AI Voice Assistant
             </h3>
 
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Personal voice intelligence unit engineered on Raspberry Pi 5 with an M.2 NVMe PCIe SSD. Integrates fine-tuned open-source weight LLMs, local continuous ASR audio processing, dual biometric authentication (OV5647 facial recognition + voiceprint verification), and automated browser navigation.
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
+              Personal voice intelligence unit engineered on physical Raspberry Pi 5 with an M.2 NVMe PCIe SSD. Integrates fine-tuned open-source weight LLMs, local continuous ASR audio processing, dual biometric authentication (OV5647 facial recognition + voice auth), and automated desktop workflow navigation.
             </p>
 
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Board:</span> <span>Raspberry Pi 5 (8GB)</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Storage:</span> <span>M.2 NVMe PCIe Gen3</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Biometrics:</span> <span>OV5647 Camera + ASR</span></div>
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Board Target:</span> <span>Broadcom BCM2712 Quad A76</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Fast Storage:</span> <span class="text-hud-cyan">M.2 NVMe PCIe Gen3 SSD</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Sensors:</span> <span>OV5647 Cam + I2S Mic Array</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Automation:</span> <span>Playwright / Selenium Engine</span></div>
             </div>
 
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">PyQt</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">OpenCV</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Selenium</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Edge LLM</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Python</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">LLM Quantization</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">PyQt</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">OpenCV</span>
             </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('sifra')" class="text-xs font-mono font-medium text-accent-cyan hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('sifra')" class="text-xs font-mono font-bold text-hud-cyan hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
             </button>
-            <a href="#sifra-section" class="text-xs font-mono text-slate-400 hover:text-white">Query Live</a>
+            <a href="#sifra-core" class="text-xs font-mono text-slate-400 hover:text-white">QUERY LIVE</a>
           </div>
         </div>
 
-        <!-- ARCHITECTURE 2: PROMETHEUS OS -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="systems">
+        <!-- CARD 2: PROMETHEUS OS -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-hud-indigo">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-accent-indigo font-semibold">Custom Kernel</span>
-              <span class="text-[11px] font-mono text-slate-400">Arch ARM64</span>
+              <span class="font-mono text-xs uppercase tracking-wider text-hud-indigo font-bold">02 // EMBEDDED KERNEL</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-hud-emerald">GRANT WINNER</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white leading-snug">
+            <h3 class="text-xl font-orbitron font-bold text-white">
               Prometheus Operating System
             </h3>
 
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Tailored Arch Linux derivative compiled specifically for ARM Cortex-A76 architectures. Stripped of consumer bloatware to allocate deterministic scheduler priority to voice telemetry daemons. Features direct external NVMe SSD boot and shell orchestration.
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
+              Custom Arch Linux derivative engineered specifically for Raspberry Pi 5 ARM Cortex-A76 microarchitectures. Eliminates consumer desktop overhead to preserve deterministic scheduler priorities for continuous audio threads. Features direct external NVMe SSD boot and shell orchestration.
             </p>
 
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Base:</span> <span>Arch Linux ARM64</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Boot:</span> <span>Direct PCIe SSD Boot</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Honors:</span> <span class="text-accent-emerald">M.Sc. Project Grant</span></div>
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Base Distro:</span> <span>Arch Linux ARM64</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Boot Medium:</span> <span class="text-hud-indigo">Direct NVMe PCIe Boot</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Award Honor:</span> <span>Inter-Collegiate Grant</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Sandbox:</span> <span>VMware Workstation Pro</span></div>
             </div>
 
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Linux Kernel</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Bash / POSIX</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Systemd</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">VMware</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Linux Kernel 6.12</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">POSIX Shell</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Systemd</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">ARM64</span>
             </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('prometheus')" class="text-xs font-mono font-medium text-accent-indigo hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('prometheus')" class="text-xs font-mono font-bold text-hud-indigo hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
             </button>
             <span class="text-xs font-mono text-slate-500">v6.12-ARM</span>
           </div>
         </div>
 
-        <!-- ARCHITECTURE 3: NSE COMPLAINT ALLOCATION SYSTEM -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="enterprise">
+        <!-- CARD 3: NSE ENGINE -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-hud-emerald">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-accent-emerald font-semibold">Financial Markets</span>
-              <span class="text-[11px] font-mono text-slate-400">NSE Nice Plus</span>
+              <span class="font-mono text-xs uppercase tracking-wider text-hud-emerald font-bold">03 // FINANCIAL EXCHANGE PLATFORM</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-hud-emerald">PRODUCTION</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white leading-snug">
+            <h3 class="text-xl font-orbitron font-bold text-white">
               NSE Complaint Allocation Automation Engine
             </h3>
 
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
               Enterprise workflow allocation platform engineered at the National Stock Exchange of India. Automated the ingestion, algorithmic routing, and SLA tracking of investor complaints, integrating executive dashboards for officer performance tracking and multi-tier auditability.
             </p>
 
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Scope:</span> <span>NSE, BSE, NSDL, CDSL</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Impact:</span> <span>Automated Grievance Routing</span></div>
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Environment:</span> <span>NSE Nice Plus Portal</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Trade Scope:</span> <span>NSE, BSE, NSDL, CDSL</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Impact:</span> <span class="text-hud-emerald">Automated Routing &amp; UAT</span></div>
               <div class="flex justify-between"><span class="text-slate-500">Role:</span> <span>Data Operations Manager</span></div>
             </div>
 
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">SQL Pipelines</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Tableau</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">UAT Testing</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Python</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">SQL Engine</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Tableau BI</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">UAT Testing</span>
             </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('nse')" class="text-xs font-mono font-medium text-accent-emerald hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('nse')" class="text-xs font-mono font-bold text-hud-emerald hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
             </button>
             <span class="text-xs font-mono text-slate-500">Dec 24 – Dec 25</span>
           </div>
         </div>
 
-        <!-- ARCHITECTURE 4: FRONTIER LLM & REASONING -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="ai">
+        <!-- CARD 4: LLM REASONING LAB -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-hud-violet">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-accent-violet font-semibold">Frontier Reasoning</span>
-              <span class="text-[11px] font-mono text-slate-400">Agentic Loops</span>
+              <span class="font-mono text-xs uppercase tracking-wider text-hud-violet font-bold">04 // FRONTIER REASONING</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-hud-cyan">ACTIVE LAB</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white leading-snug">
+            <h3 class="text-xl font-orbitron font-bold text-white">
               Multimodal LLM &amp; DeepSeek R1 Pipelines
             </h3>
 
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
               Integration of modern reasoning LLMs (Llama 3.3, DeepSeek R1) with deterministic automation frameworks. Employs vision-token processing, function calling, automated Playwright/Selenium scraping, and context-constrained decision engines.
             </p>
 
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Models:</span> <span>Llama 3.3 &bull; DeepSeek R1</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Execution:</span> <span>Local &amp; API Hybrid</span></div>
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Core Models:</span> <span>Llama 3.3 &bull; DeepSeek R1</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Execution:</span> <span class="text-hud-violet">Local &amp; API Hybrid</span></div>
               <div class="flex justify-between"><span class="text-slate-500">Tooling:</span> <span>Playwright, FastEmbed</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Architecture:</span> <span>Chain-of-Thought Agent</span></div>
             </div>
 
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">DeepSeek R1</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Llama 3.3</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Agent Tools</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">DeepSeek R1</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Llama 3.3</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Agent Tools</span>
             </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('llm')" class="text-xs font-mono font-medium text-accent-violet hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('llm')" class="text-xs font-mono font-bold text-hud-violet hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
             </button>
             <span class="text-xs font-mono text-slate-500">2025–2026</span>
           </div>
         </div>
 
-        <!-- ARCHITECTURE 5: EDITH -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="systems">
+        <!-- CARD 5: RISC-V SILICON LAB -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-hud-amber">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold">x86_64 Systems</span>
-              <span class="text-[11px] font-mono text-slate-400">B.Sc. IT Capstone</span>
+              <span class="font-mono text-xs uppercase tracking-wider text-hud-amber font-bold">05 // MICROARCHITECTURE</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-hud-amber">SIMULATION</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white leading-snug">
-              EDITH — Desktop Intelligence Unit
-            </h3>
-
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Utkarsh's foundational voice assistant engineered for x86_64 architectures. Implemented on a dedicated external SSD boot configuration with Python backend routines, offline keyword recognition, and multi-tier operating system control hooks.
-            </p>
-
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Platform:</span> <span>x86_64 Workstation</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Boot:</span> <span>External SSD Boot</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Core:</span> <span>Offline Python Speech Loop</span></div>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">ASR</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">TTS</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">OS Automation</span>
-            </div>
-          </div>
-
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('edith')" class="text-xs font-mono font-medium text-slate-300 hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </button>
-            <span class="text-xs font-mono text-slate-500">Mumbai Univ</span>
-          </div>
-        </div>
-
-        <!-- ARCHITECTURE 6: RISC-V SILICON LAB -->
-        <div class="arch-card glass-panel glass-card-hover rounded-2xl p-6 flex flex-col justify-between" data-category="systems">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-accent-amber font-semibold">Microarchitecture</span>
-              <span class="text-[11px] font-mono text-slate-400">RV32I / RV64GC</span>
-            </div>
-
-            <h3 class="text-lg font-bold text-white leading-snug">
+            <h3 class="text-xl font-orbitron font-bold text-white">
               RISC-V Pipelined Processor Simulation
             </h3>
 
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
               Cycle-accurate behavioral simulation of a 5-stage RISC-V pipelined core. Evaluates instruction decoding, data hazard detection, forwarding units, and coprocessor interface protocols designed to offload localized AI matrix multiplications.
             </p>
 
-            <div class="p-3 rounded-lg bg-surface-900 border border-surface-800 font-mono text-xs space-y-1 text-slate-300">
-              <div class="flex justify-between"><span class="text-slate-500">Pipeline:</span> <span>5-Stage (IF, ID, EX, MEM, WB)</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Focus:</span> <span>Hazard Resolution &amp; ALU</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">Coupling:</span> <span>ARM Host Co-processor</span></div>
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Instruction Set:</span> <span>RV32I / RV64GC Standard</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Pipeline Stages:</span> <span class="text-hud-amber">IF, ID, EX, MEM, WB</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Hazard Logic:</span> <span>Data Forwarding &amp; Stalls</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Implementation:</span> <span>C++, C, Assembly</span></div>
             </div>
 
             <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">C++</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">C</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">RISC-V ISA</span>
-              <span class="px-2 py-0.5 rounded bg-surface-800 text-[11px] font-mono text-slate-300">Assembly</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">RISC-V ISA</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">C++20</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">RTL Modeling</span>
             </div>
           </div>
 
-          <div class="pt-5 mt-5 border-t border-surface-800/80 flex items-center justify-between">
-            <button onclick="openTechModal('riscv')" class="text-xs font-mono font-medium text-accent-amber hover:underline flex items-center gap-1">
-              <span>Technical Specification</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('riscv')" class="text-xs font-mono font-bold text-hud-amber hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
             </button>
             <span class="text-xs font-mono text-slate-500">Silicon Lab</span>
+          </div>
+        </div>
+
+        <!-- CARD 6: EDITH -->
+        <div class="hud-card corner-bracket rounded-xl p-6 flex flex-col justify-between border-t-2 border-t-slate-500">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs uppercase tracking-wider text-slate-400 font-bold">06 // x86_64 SYSTEM</span>
+              <span class="px-2 py-0.5 rounded bg-panelAlt border border-borderSubtle font-mono text-[10px] text-slate-400">CAPSTONE</span>
+            </div>
+
+            <h3 class="text-xl font-orbitron font-bold text-white">
+              EDITH — Desktop Intelligence Unit
+            </h3>
+
+            <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
+              Utkarsh's foundational voice assistant engineered for x86_64 architectures. Implemented on a dedicated external SSD boot configuration with Python backend routines, offline keyword recognition, and multi-tier operating system control hooks.
+            </p>
+
+            <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-xs space-y-1 text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-500">Machine Target:</span> <span>x86_64 Workstation</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Boot Medium:</span> <span>External SSD Boot</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">Degree Focus:</span> <span>B.Sc. IT Final Year Capstone</span></div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Python</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">Offline ASR</span>
+              <span class="px-2 py-0.5 rounded bg-panel font-mono text-[11px] text-slate-300 border border-borderSubtle">OS Hooks</span>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-borderSubtle flex items-center justify-between">
+            <button onclick="inspectSystem('edith')" class="text-xs font-mono font-bold text-slate-300 hover:underline flex items-center gap-1">
+              <span>SYSTEM SPECIFICATION</span>
+              <span>&rarr;</span>
+            </button>
+            <span class="text-xs font-mono text-slate-500">Mumbai Univ</span>
           </div>
         </div>
 
@@ -659,65 +596,342 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 4. PROFESSIONAL CAREER TIMELINE                                     -->
+    <!-- 02. LIVE HARDWARE & TELEMETRY HUD                                   -->
     <!-- =================================================================== -->
-    <section id="experience" class="space-y-8">
+    <section id="telemetry" class="space-y-6">
       
-      <div class="space-y-2">
-        <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">03 // Track Record</div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Professional Experience</h2>
+      <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">02 // TELEMETRY STREAM</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Hardware &amp; Silicon Telemetry HUD</h2>
+        </div>
+        <div class="flex items-center gap-2 font-mono text-xs text-hud-emerald">
+          <span class="w-2 h-2 rounded-full bg-hud-emerald led-live"></span>
+          <span>LIVE BUS TELEMETRY</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Live Hardware Gauge Cluster (7 cols) -->
+        <div class="lg:col-span-7 hud-card corner-bracket rounded-xl p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-borderSubtle pb-3">
+            <span class="font-mono text-xs uppercase text-slate-400 font-bold">BROADCOM BCM2712 SILICON GAUGES</span>
+            <span class="font-mono text-xs text-hud-cyan">ARMv8-A (4x A76 @ 2.40 GHz)</span>
+          </div>
+
+          <!-- Gauge 1: CPU -->
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-slate-400">CPU Package Load:</span>
+              <span id="hud-cpu-val" class="text-hud-cyan font-bold">14.2%</span>
+            </div>
+            <div class="w-full bg-void h-2 rounded overflow-hidden border border-borderSubtle">
+              <div id="hud-cpu-bar" class="h-full bg-hud-cyan w-[14%] transition-all duration-300"></div>
+            </div>
+          </div>
+
+          <!-- Gauge 2: RAM -->
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-slate-400">LPDDR4X Memory Allocation:</span>
+              <span class="text-hud-emerald font-bold">3.42 GB / 8.00 GB (42.7%)</span>
+            </div>
+            <div class="w-full bg-void h-2 rounded overflow-hidden border border-borderSubtle">
+              <div class="h-full bg-hud-emerald w-[42.7%]"></div>
+            </div>
+          </div>
+
+          <!-- Gauge 3: NVMe Throughput -->
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-slate-400">M.2 NVMe PCIe Gen3 Bus I/O:</span>
+              <span id="hud-io-val" class="text-hud-amber font-bold">684 MB/s (Sequential Read)</span>
+            </div>
+            <div class="w-full bg-void h-2 rounded overflow-hidden border border-borderSubtle">
+              <div id="hud-io-bar" class="h-full bg-hud-amber w-[68%] transition-all duration-300"></div>
+            </div>
+          </div>
+
+          <!-- Gauge 4: Thermal Envelope -->
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Core Thermal Envelope:</span>
+              <span class="text-hud-cyan font-bold">48.2 &deg;C [Active PWM Cooling Nominal]</span>
+            </div>
+            <div class="w-full bg-void h-2 rounded overflow-hidden border border-borderSubtle">
+              <div class="h-full bg-gradient-to-r from-hud-cyan via-hud-emerald to-hud-amber w-[48%]"></div>
+            </div>
+          </div>
+
+          <div class="p-3 rounded bg-void border border-borderSubtle font-mono text-[11px] text-slate-400">
+            <code>[TELEMETRY_LOG] Continuous hardware ASR loop active on I2S pinouts. OV5647 camera sensor frame stream operating at 60 FPS biometric face vector extraction. Zero telemetry outbound.</code>
+          </div>
+        </div>
+
+        <!-- Git & Systems Telemetry Deck (5 cols) -->
+        <div class="lg:col-span-5 hud-card corner-bracket rounded-xl p-6 space-y-4 font-mono text-xs">
+          <div class="flex items-center justify-between border-b border-borderSubtle pb-3">
+            <span class="uppercase text-slate-400 font-bold">SYSTEMS_TELEMETRY // GIT OPS</span>
+            <span class="text-hud-emerald font-bold">ACTIVE</span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex justify-between border-b border-borderSubtle/60 py-1">
+              <span class="text-slate-500">ARCHITECTURE SCOPE:</span>
+              <span class="text-white font-semibold">5 Flagship Systems</span>
+            </div>
+            <div class="flex justify-between border-b border-borderSubtle/60 py-1">
+              <span class="text-slate-500">HARDWARE TRACK:</span>
+              <span class="text-hud-amber font-semibold">32-Bit RV32I Core &amp; RTL</span>
+            </div>
+            <div class="flex justify-between border-b border-borderSubtle/60 py-1">
+              <span class="text-slate-500">SYSTEMS RUNTIMES:</span>
+              <span class="text-hud-cyan font-semibold">Rust, Modern C++20, Python</span>
+            </div>
+            <div class="flex justify-between border-b border-borderSubtle/60 py-1">
+              <span class="text-slate-500">DATA INTEGRITY:</span>
+              <span class="text-hud-emerald font-semibold">Local-First &bull; Zero Telemetry</span>
+            </div>
+            <div class="flex justify-between border-b border-borderSubtle/60 py-1">
+              <span class="text-slate-500">CI/CD PIPELINE:</span>
+              <span class="text-hud-indigo font-semibold">GitHub Actions &bull; Pages</span>
+            </div>
+            <div class="flex justify-between py-1">
+              <span class="text-slate-500">BUILD STATUS:</span>
+              <span class="text-hud-emerald font-semibold">Passing (Automated Workflow)</span>
+            </div>
+          </div>
+
+          <div class="mt-4 p-3 rounded bg-void border border-borderSubtle text-[11px] text-slate-300">
+            <span class="text-hud-cyan font-bold">&Delta; Master Console:</span> Designed for instant operational visibility and rapid assessment by engineering leaders.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 03. MISSION TERMINAL CONSOLE (ZSH SHELL)                            -->
+    <!-- =================================================================== -->
+    <section id="terminal" class="space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">03 // DIRECT SHELL</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Prometheus Shell &amp; Systems Terminal</h2>
+        </div>
+        <div class="font-mono text-xs text-slate-400">
+          Type <code class="text-hud-cyan bg-panel px-2 py-0.5 rounded border border-borderSubtle">help</code> or trigger system routines
+        </div>
+      </div>
+
+      <!-- Authentic High-Tech Command Terminal -->
+      <div class="rounded-xl bg-void border border-borderSubtle shadow-2xl overflow-hidden font-mono text-xs">
+        
+        <!-- Terminal Header -->
+        <div class="h-9 bg-panel px-4 flex items-center justify-between border-b border-borderSubtle select-none">
+          <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+            </div>
+            <span class="text-slate-400 ml-2">utkarsh@sol-terminal: ~ (zsh)</span>
+          </div>
+          <div class="text-slate-500 text-[11px]">ARMv8-A // POSIX LINUX</div>
+        </div>
+
+        <!-- Terminal Output Viewport -->
+        <div id="cli-viewport" class="p-6 h-80 overflow-y-auto space-y-2 text-slate-300 leading-relaxed font-mono">
+          <div class="text-slate-500">PROMETHEUS OS v6.12.0-ARM64 (sol-terminal console)</div>
+          <div class="text-hud-cyan">Welcome to Utkarsh Manoj Pandey's operational shell. Type 'help' for inspection commands.</div>
+          <div class="text-slate-700">────────────────────────────────────────────────────────────────────────────────</div>
+        </div>
+
+        <!-- Terminal Input Line -->
+        <div class="px-6 py-3.5 bg-panel border-t border-borderSubtle flex items-center gap-3">
+          <span class="text-hud-emerald font-bold font-mono">utkarsh@arch:~$</span>
+          <input type="text" id="cli-cmd-input" class="flex-1 bg-transparent text-white focus:outline-none font-mono text-xs" autocomplete="off" spellcheck="false" placeholder="Enter routine (summary, skills, projects, exp, edu, bench, contact)...">
+          <button onclick="submitCliCommand()" class="px-3 py-1 rounded bg-panelAlt hover:bg-slate-800 text-hud-cyan border border-borderSubtle font-mono text-xs uppercase font-bold transition">
+            EXEC
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Terminal Fast-Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2 font-mono text-xs text-slate-400">
+        <span class="text-slate-500">Routines:</span>
+        <button onclick="runCliBtn('summary')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">summary</button>
+        <button onclick="runCliBtn('skills')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">skills</button>
+        <button onclick="runCliBtn('projects')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">projects</button>
+        <button onclick="runCliBtn('exp')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">exp</button>
+        <button onclick="runCliBtn('edu')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">edu</button>
+        <button onclick="runCliBtn('bench')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-hud-cyan font-bold">bench</button>
+        <button onclick="runCliBtn('contact')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-300">contact</button>
+        <button onclick="runCliBtn('clear')" class="px-2.5 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan text-slate-500">clear</button>
+      </div>
+
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 04. SIFRA SOVEREIGN INTELLIGENCE CONSOLE                            -->
+    <!-- =================================================================== -->
+    <section id="sifra-core" class="space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">04 // SOVEREIGN AGENT</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">SIFRA Autonomous Intelligence Console</h2>
+        </div>
+        <div class="font-mono text-xs text-slate-400 flex items-center gap-3">
+          <span class="text-hud-cyan font-semibold">CORE v3.4</span>
+          <span class="text-slate-600">|</span>
+          <span>CV &amp; SYSTEMS KNOWLEDGE ENGINE</span>
+        </div>
+      </div>
+
+      <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-6">
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-borderSubtle">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded bg-panel border border-hud-cyan/50 flex items-center justify-center font-orbitron font-bold text-hud-cyan text-base">
+              &Sigma;
+            </div>
+            <div>
+              <div class="text-base font-orbitron font-bold text-white">SIFRA SOVEREIGN NEURAL CORE</div>
+              <div class="text-xs font-mono text-slate-400">Autonomous Assistant to Utkarsh Manoj Pandey</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button id="sifra-voice-toggle" onclick="toggleSifraVoice()" class="px-3.5 py-1.5 rounded bg-panel border border-borderSubtle text-slate-300 hover:text-white text-xs font-mono transition flex items-center gap-2">
+              <span id="voice-dot" class="w-2 h-2 rounded-full bg-slate-600"></span>
+              <span id="voice-label">Voice Synthesis: Muted</span>
+            </button>
+            <button onclick="clearSifraConsole()" class="px-3 py-1.5 rounded bg-panel border border-borderSubtle text-slate-400 hover:text-white text-xs font-mono transition">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Conversation View -->
+        <div id="sifra-chat-viewport" class="h-80 overflow-y-auto space-y-4 pr-2 font-mono text-xs">
+          
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded bg-panel border border-hud-cyan/40 flex items-center justify-center font-orbitron text-xs text-hud-cyan font-bold flex-shrink-0">
+              S
+            </div>
+            <div class="bg-void border border-borderSubtle rounded-xl p-4 text-xs text-slate-200 leading-relaxed max-w-3xl">
+              <span class="text-hud-cyan font-bold uppercase tracking-wider block mb-1">SIFRA Core Online:</span>
+              Greetings. I am SIFRA, Utkarsh Manoj Pandey's autonomous assistant. You may query me about Utkarsh's operations at the National Stock Exchange of India, his custom Arch Linux OS for Raspberry Pi 5, his 8.7 CGPA master's grant, or his polyglot programming competencies.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Presets -->
+        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-borderSubtle text-xs font-mono text-slate-400">
+          <span class="text-slate-500">Query Presets:</span>
+          <button onclick="sendSifraPreset('What were Utkarsh’s responsibilities and impact at the National Stock Exchange (NSE)?')" class="px-3 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan hover:text-white transition">
+            NSE Exchange Experience &bull; Complaint Allocation
+          </button>
+          <button onclick="sendSifraPreset('Explain the physical hardware and architecture of the SIFRA voice assistant on Raspberry Pi 5.')" class="px-3 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan hover:text-white transition">
+            SIFRA Hardware &bull; NVMe &amp; Biometrics
+          </button>
+          <button onclick="sendSifraPreset('What is Prometheus Operating System and what grant was awarded for it?')" class="px-3 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan hover:text-white transition">
+            Prometheus OS &bull; Mumbai Univ Grant
+          </button>
+          <button onclick="sendSifraPreset('What is Utkarsh’s educational background, CGPA, and key certifications?')" class="px-3 py-1 rounded bg-panel border border-borderSubtle hover:border-hud-cyan hover:text-white transition">
+            Academic CGPA &bull; Certifications
+          </button>
+        </div>
+
+        <!-- Input Bar -->
+        <form onsubmit="handleSifraSubmit(event)" class="flex items-center gap-2 pt-2">
+          <input type="text" id="sifra-input-field" placeholder="Inquire about Utkarsh's engineering track record, architectures, or credentials..." class="flex-1 bg-void border border-borderSubtle rounded-lg px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-hud-cyan font-mono transition">
+          <button type="submit" class="px-6 py-3 rounded bg-hud-cyan text-void font-orbitron font-bold text-xs uppercase hover:bg-sky-300 transition">
+            TRANSMIT
+          </button>
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 05. PROFESSIONAL CAREER LOGBOOK                                     -->
+    <!-- =================================================================== -->
+    <section id="experience" class="space-y-6">
+      
+      <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">05 // INDUSTRY TRACK RECORD</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Professional Experience</h2>
+        </div>
+        <div class="font-mono text-xs text-slate-400">
+          ENTERPRISE &amp; PRODUCTION DEPLOYMENTS
+        </div>
       </div>
 
       <div class="space-y-6">
         
-        <!-- EXP 1: NSE -->
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-accent-cyan">
+        <!-- EXP 1: NATIONAL STOCK EXCHANGE -->
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-hud-cyan">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
             <div>
-              <h3 class="text-lg font-bold text-white">National Stock Exchange of India (NSE)</h3>
-              <div class="text-xs font-mono text-accent-cyan">Data Operations Manager</div>
+              <h3 class="text-xl font-orbitron font-bold text-white">National Stock Exchange of India (NSE)</h3>
+              <div class="text-xs font-mono text-hud-cyan font-semibold">Data Operations Manager</div>
             </div>
             <div class="text-xs font-mono text-slate-400">
               December 2024 – December 2025 &bull; Mumbai, India
             </div>
           </div>
 
-          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-outside pl-4">
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed list-disc list-outside pl-4">
             <li>
-              Led User Acceptance Testing (UAT) cycles for the NSE's <strong>Nice Plus platform</strong>, isolating high-severity functional, security, and interface bottlenecks prior to production sign-off.
+              Led User Acceptance Testing (UAT) cycles for the NSE's flagship <strong>Nice Plus website</strong>, identifying, isolating, and resolving critical functionality and UX bottlenecks prior to production release.
             </li>
             <li>
-              Architected the full <strong>Complaint Allocation Automation System</strong> from initial concept to live execution, integrating real-time dashboards to track grievance turnaround and officer SLA efficiency.
+              Coordinated UAT testing sprints directly with internal development teams and business units, systematically logging and tracking defect lifecycles to guarantee timely executive sign-off.
             </li>
             <li>
-              Managed and validated high-volume financial data streams spanning <strong>NSE, BSE, NSDL, and CDSL</strong>, preserving complete data integrity across multi-tier exchange infrastructures.
+              Validated end-to-end platform workflows during UAT against strict regulatory and exchange business specifications.
             </li>
             <li>
-              Maintained regulatory conciliation and arbitration case datasets; drafted executive Minutes of Meetings (MoM) for formal legal arbitration sessions with absolute confidentiality.
+              Architected and engineered the <strong>Complaint Allocation Automation System</strong> from scratch, incorporating interactive dashboards for grievance tracking and officer SLA turnaround analytics.
+            </li>
+            <li>
+              Managed and validated high-volume financial data streams spanning <strong>NSE, BSE, NSDL, and CDSL</strong>, preserving complete data consistency across multi-tier exchange infrastructures.
+            </li>
+            <li>
+              Structured, secured, and analyzed conciliation and arbitration legal caseloads; drafted formal <strong>Minutes of Meetings (MoM)</strong> for high-stakes arbitration hearings with strict compliance.
             </li>
           </ul>
 
           <div class="pt-2 flex flex-wrap gap-2 text-[11px] font-mono text-slate-400">
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">UAT &amp; Platform Testing</span>
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Financial Data Orchestration</span>
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Automation Engine</span>
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Arbitration Analytics</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">UAT &amp; Defect Triage</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Financial Data Orchestration</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Complaint Automation Engine</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Arbitration MoM</span>
           </div>
         </div>
 
         <!-- EXP 2: META SCIFOR -->
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-accent-indigo">
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-hud-indigo">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
             <div>
-              <h3 class="text-lg font-bold text-white">Meta Scifor Technologies</h3>
-              <div class="text-xs font-mono text-accent-indigo">Data Scientist</div>
+              <h3 class="text-xl font-orbitron font-bold text-white">Meta Scifor Technologies</h3>
+              <div class="text-xs font-mono text-hud-indigo font-semibold">Data Scientist</div>
             </div>
             <div class="text-xs font-mono text-slate-400">
               January 2024 – December 2024
             </div>
           </div>
 
-          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-outside pl-4">
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed list-disc list-outside pl-4">
             <li>
               Synthesized and presented strategic operational intelligence directly to the <strong>Board of Directors</strong> to steer quarterly roadmaps and enterprise investments.
             </li>
@@ -733,25 +947,25 @@
           </ul>
 
           <div class="pt-2 flex flex-wrap gap-2 text-[11px] font-mono text-slate-400">
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Predictive Analytics</span>
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Executive Reporting</span>
-            <span class="px-2 py-0.5 rounded bg-surface-900 border border-surface-800">Full-Stack Engineering</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Predictive Analytics</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Board-Level Reporting</span>
+            <span class="px-2 py-0.5 rounded bg-void border border-borderSubtle">Full-Stack Modules</span>
           </div>
         </div>
 
         <!-- EXP 3: EDUREKA -->
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-surface-700">
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-borderSubtle">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
             <div>
-              <h3 class="text-lg font-bold text-white">Edureka</h3>
-              <div class="text-xs font-mono text-slate-300">Data Scientist</div>
+              <h3 class="text-xl font-orbitron font-bold text-white">Edureka</h3>
+              <div class="text-xs font-mono text-slate-300 font-semibold">Data Scientist</div>
             </div>
             <div class="text-xs font-mono text-slate-400">
               July 2023 – December 2023
             </div>
           </div>
 
-          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-outside pl-4">
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed list-disc list-outside pl-4">
             <li>
               Executed end-to-end data science projects utilizing Python, SQL, Deep Learning, Natural Language Processing (NLP), and Tableau.
             </li>
@@ -762,18 +976,18 @@
         </div>
 
         <!-- EXP 4: JAYBEE STEEL -->
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-surface-700">
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-borderSubtle">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
             <div>
-              <h3 class="text-lg font-bold text-white">Jaybee Steel Treaters Pvt Ltd.</h3>
-              <div class="text-xs font-mono text-slate-300">Data Analyst</div>
+              <h3 class="text-xl font-orbitron font-bold text-white">Jaybee Steel Treaters Pvt Ltd.</h3>
+              <div class="text-xs font-mono text-slate-300 font-semibold">Data Analyst</div>
             </div>
             <div class="text-xs font-mono text-slate-400">
               January 2023 – July 2023
             </div>
           </div>
 
-          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-outside pl-4">
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed list-disc list-outside pl-4">
             <li>
               Conducted statistical evaluations on complex metallurgical datasets, identifying production anomalies and standardizing factory metrics.
             </li>
@@ -788,210 +1002,79 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 5. INTERACTIVE EXECUTIVE TERMINAL (ZSH)                              -->
+    <!-- 06. POLYGLOT ARSENAL & SKILL MATRIX                                 -->
     <!-- =================================================================== -->
-    <section id="terminal-section" class="space-y-6">
+    <section id="arsenal" class="space-y-6">
       
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-        <div class="space-y-1">
-          <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">04 // Command Shell</div>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Interactive Systems Terminal</h2>
+      <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">06 // ENGINEERING ARSENAL</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Polyglot &amp; Hardware Capabilities</h2>
         </div>
-        <div class="text-xs font-mono text-slate-400">
-          Type <code class="text-accent-cyan bg-surface-900 px-1.5 py-0.5 rounded border border-surface-800">help</code> or trigger command shortcuts below
+        <div class="font-mono text-xs text-slate-400">
+          SYSTEMS &bull; SILICON &bull; AI RUNTIMES
         </div>
-      </div>
-
-      <!-- Modern Terminal Frame -->
-      <div class="rounded-2xl bg-surface-950 border border-surface-800 shadow-2xl overflow-hidden font-mono text-xs">
-        
-        <!-- Tab & Window Bar -->
-        <div class="h-10 bg-surface-900/90 px-4 flex items-center justify-between border-b border-surface-800">
-          <div class="flex items-center gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="w-3 h-3 rounded-full bg-surface-700 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-surface-700 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-surface-700 inline-block"></span>
-            </div>
-            <span class="text-slate-400 text-xs pl-2">utkarsh@arch-arm64:~ (zsh)</span>
-          </div>
-          <div class="text-[11px] text-slate-500 font-mono">POSIX / Linux 6.12</div>
-        </div>
-
-        <!-- Terminal Output Window -->
-        <div id="term-output" class="p-6 h-80 overflow-y-auto space-y-2 text-slate-300 leading-relaxed font-mono">
-          <div class="text-slate-500">Prometheus Architecture Console v6.12.0-arm64</div>
-          <div class="text-accent-cyan">Type 'help' to view available system routines or select an inspection routine below.</div>
-          <div class="text-surface-700">────────────────────────────────────────────────────────────────────────────────</div>
-        </div>
-
-        <!-- Terminal Input Line -->
-        <div class="px-6 py-3.5 bg-surface-900/80 border-t border-surface-800 flex items-center gap-3">
-          <span class="text-accent-emerald font-semibold">utkarsh@arch:~$</span>
-          <input type="text" id="term-input" class="flex-1 bg-transparent text-white focus:outline-none font-mono text-xs" autocomplete="off" spellcheck="false" placeholder="Enter command (e.g. summary, skills, projects, exp, edu, bench)...">
-          <button onclick="handleTerminalInput()" class="px-3 py-1 rounded bg-surface-800 hover:bg-surface-700 text-slate-200 text-xs font-mono transition">Run</button>
-        </div>
-
-      </div>
-
-      <!-- Command Shortcuts -->
-      <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
-        <span class="text-slate-500">Shortcuts:</span>
-        <button onclick="triggerTerminalCmd('summary')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-300">summary</button>
-        <button onclick="triggerTerminalCmd('skills')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-300">skills</button>
-        <button onclick="triggerTerminalCmd('projects')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-300">projects</button>
-        <button onclick="triggerTerminalCmd('exp')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-300">exp</button>
-        <button onclick="triggerTerminalCmd('bench')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-accent-cyan">bench</button>
-        <button onclick="triggerTerminalCmd('contact')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-300">contact</button>
-        <button onclick="triggerTerminalCmd('clear')" class="px-2.5 py-1 rounded bg-surface-900 border border-surface-800 hover:border-slate-600 text-slate-500">clear</button>
-      </div>
-
-    </section>
-
-    <!-- =================================================================== -->
-    <!-- 6. SIFRA AI NEURAL ASSISTANT (CONVERSATIONAL CONSOLE)               -->
-    <!-- =================================================================== -->
-    <section id="sifra-section" class="space-y-6">
-      
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-        <div class="space-y-1">
-          <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">05 // Autonomous Agent</div>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">SIFRA Interactive Knowledge Base</h2>
-        </div>
-        <div class="text-xs font-mono text-slate-400">
-          Simulated Edge Neural Agent &bull; Continuous Query Engine
-        </div>
-      </div>
-
-      <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 border border-surface-700/80">
-        
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-surface-800">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-surface-900 border border-surface-700 flex items-center justify-center text-accent-cyan font-mono font-bold text-sm">
-              S
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white">SIFRA Agent v3.4</div>
-              <div class="text-[11px] font-mono text-slate-400">Curriculum Vitae &amp; Systems Architecture Persona</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <button id="tts-btn" onclick="toggleSpeech()" class="px-3 py-1.5 rounded-lg bg-surface-900 border border-surface-750 text-slate-300 hover:text-white text-xs font-mono transition flex items-center gap-2">
-              <span id="tts-indicator" class="w-2 h-2 rounded-full bg-slate-600"></span>
-              <span id="tts-text">Voice Audio: Muted</span>
-            </button>
-            <button onclick="clearSifraLog()" class="px-3 py-1.5 rounded-lg bg-surface-900 border border-surface-750 text-slate-400 hover:text-white text-xs font-mono transition">
-              Reset Session
-            </button>
-          </div>
-        </div>
-
-        <!-- Chat Log Window -->
-        <div id="sifra-chat-log" class="h-80 overflow-y-auto space-y-4 pr-2">
-          
-          <!-- System Welcome -->
-          <div class="flex items-start gap-3">
-            <div class="w-7 h-7 rounded bg-surface-850 border border-surface-750 flex items-center justify-center font-mono text-xs text-accent-cyan font-bold flex-shrink-0">
-              S
-            </div>
-            <div class="bg-surface-900/90 border border-surface-800 rounded-xl p-4 text-xs sm:text-sm text-slate-200 leading-relaxed max-w-2xl">
-              Hello. I am the technical twin of <strong>Utkarsh Manoj Pandey</strong>'s SIFRA voice assistant. You may query me about Utkarsh's work at the National Stock Exchange of India, his custom Arch Linux OS for Raspberry Pi 5, his 8.7 CGPA master's research, or his polyglot programming proficiencies.
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Prompt Pills -->
-        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-surface-800 text-xs font-mono text-slate-400">
-          <span class="text-slate-500">Inquire:</span>
-          <button onclick="sendQuickPrompt('What were Utkarsh’s responsibilities and impact at the National Stock Exchange (NSE)?')" class="px-3 py-1 rounded-lg bg-surface-900 border border-surface-800 hover:border-accent-cyan hover:text-white transition">
-            NSE Experience &bull; Complaint Engine
-          </button>
-          <button onclick="sendQuickPrompt('Explain the physical hardware and architecture of the SIFRA voice assistant on Raspberry Pi 5.')" class="px-3 py-1 rounded-lg bg-surface-900 border border-surface-800 hover:border-accent-cyan hover:text-white transition">
-            SIFRA Hardware &bull; NVMe &amp; Biometrics
-          </button>
-          <button onclick="sendQuickPrompt('What is Prometheus Operating System and what grant was awarded for it?')" class="px-3 py-1 rounded-lg bg-surface-900 border border-surface-800 hover:border-accent-cyan hover:text-white transition">
-            Prometheus OS &bull; Mumbai Univ Grant
-          </button>
-          <button onclick="sendQuickPrompt('What is Utkarsh’s educational background, CGPA, and key certifications?')" class="px-3 py-1 rounded-lg bg-surface-900 border border-surface-800 hover:border-accent-cyan hover:text-white transition">
-            Academic CGPA &bull; Certifications
-          </button>
-        </div>
-
-        <!-- Chat Input Form -->
-        <form onsubmit="handleSifraMessage(event)" class="flex items-center gap-2 pt-2">
-          <input type="text" id="sifra-text-input" placeholder="Type a technical inquiry regarding Utkarsh's experience or systems..." class="flex-1 bg-surface-900 border border-surface-750 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-accent-cyan font-mono transition">
-          <button type="submit" class="px-5 py-3 rounded-xl bg-white text-surface-950 font-semibold text-xs sm:text-sm hover:bg-slate-200 transition">
-            Transmit
-          </button>
-        </form>
-
-      </div>
-
-    </section>
-
-    <!-- =================================================================== -->
-    <!-- 7. TECHNICAL STACK & POLYGLOT ARSENAL                               -->
-    <!-- =================================================================== -->
-    <section id="skills" class="space-y-8">
-      
-      <div class="space-y-2">
-        <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">06 // Technical Capabilities</div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Engineering Arsenal &amp; Skill Matrix</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Category 1: Systems & Silicon -->
-        <div class="glass-panel rounded-2xl p-6 space-y-4">
-          <div class="text-xs font-mono uppercase tracking-wider text-accent-cyan font-semibold">Systems &amp; Silicon</div>
+        <div class="hud-card corner-bracket rounded-xl p-6 space-y-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-hud-cyan font-bold border-b border-borderSubtle pb-2">
+            SYSTEMS &amp; SILICON
+          </div>
           <div class="space-y-2 text-xs font-mono">
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Raspberry Pi 5</span> <span class="text-slate-400">Advanced</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Arch / Manjaro Linux</span> <span class="text-slate-400">Kernel Config</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">ARM Cortex-A76</span> <span class="text-slate-400">Microarchitecture</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">RISC-V Fundamentals</span> <span class="text-slate-400">5-Stage Pipeline</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">PCIe Gen 3.0 M.2</span> <span class="text-slate-400">High-Speed I/O</span></div>
-            <div class="flex justify-between py-1"><span class="text-white">Oracle Linux</span> <span class="text-slate-400">Enterprise</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Raspberry Pi 5</span> <span class="text-hud-cyan">Broadcom A76</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Arch / Manjaro Linux</span> <span class="text-hud-emerald">Kernel Config</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">RISC-V Fundamentals</span> <span class="text-hud-amber">5-Stage Core</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">PCIe Gen 3.0 M.2</span> <span class="text-hud-cyan">NVMe Storage</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Oracle Linux</span> <span class="text-slate-400">Enterprise</span></div>
+            <div class="flex justify-between py-1"><span class="text-white">VMware Workstation</span> <span class="text-slate-400">Prototyping</span></div>
           </div>
         </div>
 
         <!-- Category 2: Machine Learning & LLMs -->
-        <div class="glass-panel rounded-2xl p-6 space-y-4">
-          <div class="text-xs font-mono uppercase tracking-wider text-accent-indigo font-semibold">Machine Learning &amp; AI</div>
+        <div class="hud-card corner-bracket rounded-xl p-6 space-y-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-hud-indigo font-bold border-b border-borderSubtle pb-2">
+            AI &amp; MACHINE LEARNING
+          </div>
           <div class="space-y-2 text-xs font-mono">
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Llama 3.3 Integration</span> <span class="text-slate-400">Quantized</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">DeepSeek R1</span> <span class="text-slate-400">Reasoning Loops</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">PyTorch</span> <span class="text-slate-400">Fine-Tuning</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Computer Vision</span> <span class="text-slate-400">OpenCV Face Auth</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">ASR Voice Pipelines</span> <span class="text-slate-400">I2S Audio Capture</span></div>
-            <div class="flex justify-between py-1"><span class="text-white">NLP &amp; Tokenization</span> <span class="text-slate-400">End-to-End</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Llama 3.3 Integration</span> <span class="text-hud-indigo">Fine-Tuned</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">DeepSeek R1</span> <span class="text-hud-indigo">Reasoning</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">PyTorch</span> <span class="text-slate-400">Deep Learning</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Continuous ASR</span> <span class="text-hud-emerald">I2S Audio</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">OpenCV Biometrics</span> <span class="text-hud-cyan">Face Auth</span></div>
+            <div class="flex justify-between py-1"><span class="text-white">NLP &amp; Tokenizers</span> <span class="text-slate-400">Pipelines</span></div>
           </div>
         </div>
 
-        <!-- Category 3: Core Languages -->
-        <div class="glass-panel rounded-2xl p-6 space-y-4">
-          <div class="text-xs font-mono uppercase tracking-wider text-accent-emerald font-semibold">Polyglot Languages</div>
+        <!-- Category 3: Polyglot Languages -->
+        <div class="hud-card corner-bracket rounded-xl p-6 space-y-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-hud-emerald font-bold border-b border-borderSubtle pb-2">
+            PROGRAMMING LANGUAGES
+          </div>
           <div class="space-y-2 text-xs font-mono">
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Python</span> <span class="text-accent-emerald">Expert</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">C++ / C</span> <span class="text-slate-400">Systems</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Go</span> <span class="text-slate-400">Concurrency</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Rust</span> <span class="text-slate-400">Memory Safety</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Bash / Shell</span> <span class="text-slate-400">POSIX Scripting</span></div>
-            <div class="flex justify-between py-1"><span class="text-white">Java / Scala / R</span> <span class="text-slate-400">Analytics</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Python</span> <span class="text-hud-emerald">Expert</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">C++ / C</span> <span class="text-hud-cyan">Systems</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Go</span> <span class="text-slate-400">Concurrency</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Rust</span> <span class="text-hud-amber">Memory Safe</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Bash / Zsh</span> <span class="text-slate-400">POSIX Script</span></div>
+            <div class="flex justify-between py-1"><span class="text-white">Java / Scala / Julia / R</span> <span class="text-slate-400">Analytics</span></div>
           </div>
         </div>
 
-        <!-- Category 4: Data & Enterprise -->
-        <div class="glass-panel rounded-2xl p-6 space-y-4">
-          <div class="text-xs font-mono uppercase tracking-wider text-accent-amber font-semibold">Data &amp; Enterprise</div>
+        <!-- Category 4: Enterprise & Data Ops -->
+        <div class="hud-card corner-bracket rounded-xl p-6 space-y-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-hud-amber font-bold border-b border-borderSubtle pb-2">
+            ENTERPRISE &amp; DATA OPS
+          </div>
           <div class="space-y-2 text-xs font-mono">
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">SQL (Complex Queries)</span> <span class="text-accent-amber">Advanced</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Exchange Trade Feeds</span> <span class="text-slate-400">NSE / BSE / NSDL</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">Tableau / Power BI</span> <span class="text-slate-400">Dashboards</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">SQLite / OracleDB</span> <span class="text-slate-400">Relational</span></div>
-            <div class="flex justify-between py-1 border-b border-surface-800"><span class="text-white">UAT Engineering</span> <span class="text-slate-400">Production QA</span></div>
-            <div class="flex justify-between py-1"><span class="text-white">Selenium / Playwright</span> <span class="text-slate-400">Headless Nav</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">SQL (Complex Queries)</span> <span class="text-hud-amber">Advanced</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Trade Data Streams</span> <span class="text-hud-emerald">NSE / BSE</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">UAT Validation</span> <span class="text-hud-cyan">Production QA</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">Tableau / Power BI</span> <span class="text-slate-400">Dashboards</span></div>
+            <div class="flex justify-between py-1 border-b border-borderSubtle/60"><span class="text-white">SQLite / OracleDB</span> <span class="text-slate-400">Relational</span></div>
+            <div class="flex justify-between py-1"><span class="text-white">Playwright / Selenium</span> <span class="text-slate-400">Automation</span></div>
           </div>
         </div>
 
@@ -1000,49 +1083,54 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 8. EDUCATION & VERIFIED CREDENTIALS                                 -->
+    <!-- 07. PEDIGREE & ACCREDITATIONS                                       -->
     <!-- =================================================================== -->
-    <section id="credentials" class="space-y-8">
+    <section id="credentials" class="space-y-6">
       
-      <div class="space-y-2">
-        <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">07 // Pedigree</div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Academic Degrees &amp; Industry Credentials</h2>
+      <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">07 // PEDIGREE</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Academic Degrees &amp; Industry Credentials</h2>
+        </div>
+        <div class="font-mono text-xs text-slate-400">
+          MUMBAI UNIVERSITY &bull; IIT MADRAS &bull; ISRO
+        </div>
       </div>
 
-      <!-- Degrees Grid -->
+      <!-- Degrees -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-accent-cyan">
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-hud-cyan">
           <div class="flex justify-between items-start">
             <div>
-              <div class="text-xs font-mono text-accent-cyan font-semibold">Postgraduate Degree</div>
-              <h3 class="text-xl font-bold text-white mt-1">Master’s of Science in Information Technology</h3>
+              <div class="text-xs font-mono text-hud-cyan font-bold uppercase">POSTGRADUATE DEGREE</div>
+              <h3 class="text-xl font-orbitron font-bold text-white mt-1">Master’s of Science in Information Technology</h3>
               <div class="text-xs font-mono text-slate-400 mt-0.5">University of Mumbai</div>
             </div>
-            <div class="px-3 py-1 rounded bg-surface-900 border border-surface-750 font-mono text-sm font-bold text-accent-cyan">
+            <div class="px-3 py-1 rounded bg-void border border-borderSubtle font-orbitron text-sm font-bold text-hud-cyan">
               8.7 CGPA
             </div>
           </div>
 
-          <div class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+          <div class="text-xs sm:text-sm text-slate-300 font-sans space-y-2 leading-relaxed">
             <p><strong>Capstone Project:</strong> <em>Prometheus Operating System &amp; SIFRA Personal Voice Assistant Built on Raspberry Pi 5</em>.</p>
-            <p><strong>Honor:</strong> Awarded the inter-collegiate competitive grant for final year project research.</p>
+            <p><strong>Award Honor:</strong> Cleared competitive inter-collegiate test to earn the <strong>Final Year Project Grant</strong>.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border-l-2 border-l-accent-indigo">
+        <div class="hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4 border-l-4 border-l-hud-indigo">
           <div class="flex justify-between items-start">
             <div>
-              <div class="text-xs font-mono text-accent-indigo font-semibold">Undergraduate Degree</div>
-              <h3 class="text-xl font-bold text-white mt-1">Bachelor’s of Science in Information Technology</h3>
+              <div class="text-xs font-mono text-hud-indigo font-bold uppercase">UNDERGRADUATE DEGREE</div>
+              <h3 class="text-xl font-orbitron font-bold text-white mt-1">Bachelor’s of Science in Information Technology</h3>
               <div class="text-xs font-mono text-slate-400 mt-0.5">University of Mumbai</div>
             </div>
-            <div class="px-3 py-1 rounded bg-surface-900 border border-surface-750 font-mono text-sm font-bold text-accent-indigo">
+            <div class="px-3 py-1 rounded bg-void border border-borderSubtle font-orbitron text-sm font-bold text-hud-indigo">
               8.3 CGPA
             </div>
           </div>
 
-          <div class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+          <div class="text-xs sm:text-sm text-slate-300 font-sans space-y-2 leading-relaxed">
             <p><strong>Capstone Project:</strong> <em>EDITH — Personal Voice Assistant Built for x86_64 Architecture</em>.</p>
             <p><strong>Leadership:</strong> Appointed Event Lead for the University inter-collegiate technological festival.</p>
           </div>
@@ -1050,54 +1138,54 @@
 
       </div>
 
-      <!-- Industry Certifications Strip -->
-      <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-4">
-        <h3 class="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold">Verified Industry Accreditations</h3>
+      <!-- Industry Accreditations Strip -->
+      <div class="hud-card corner-bracket rounded-xl p-6 space-y-4">
+        <div class="text-xs font-mono text-slate-400 uppercase font-bold tracking-wider">VERIFIED INDUSTRY ACCREDITATIONS</div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs font-mono">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-mono">
           
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-accent-cyan font-semibold">IIT Madras (NPTEL)</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-hud-cyan font-bold">IIT Madras (NPTEL)</div>
             <div class="text-white font-medium">Data Science for Engineers</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-accent-indigo font-semibold">ISRO (IIRS)</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-hud-indigo font-bold">ISRO (IIRS)</div>
             <div class="text-white font-medium">Geographical Information Systems</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-accent-emerald font-semibold">Google</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-hud-emerald font-bold">Google Cloud</div>
             <div class="text-white font-medium">Crash Course on Python Automation</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-accent-amber font-semibold">Amazon Web Services (AWS)</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-hud-amber font-bold">AWS</div>
             <div class="text-white font-medium">AWS Cloud Fundamentals</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-slate-300 font-semibold">Edureka</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-slate-300 font-bold">Edureka</div>
             <div class="text-white font-medium">Deep Learning Specialization</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-slate-300 font-semibold">Edureka</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-slate-300 font-bold">Edureka</div>
             <div class="text-white font-medium">Machine Learning Engineer</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-slate-300 font-semibold">Edureka</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-slate-300 font-bold">Edureka</div>
             <div class="text-white font-medium">Data Science Master Certification</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-slate-300 font-semibold">Edureka</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-slate-300 font-bold">Edureka</div>
             <div class="text-white font-medium">SQL Database Administration</div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            <div class="text-slate-300 font-semibold">Edureka</div>
+          <div class="p-3.5 rounded bg-void border border-borderSubtle space-y-0.5">
+            <div class="text-slate-300 font-bold">Edureka</div>
             <div class="text-white font-medium">Python Programming Specialization</div>
           </div>
 
@@ -1107,91 +1195,98 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 9. DIRECT CONTACT UPLINK                                            -->
+    <!-- 08. SECURE TRANSMISSION UPLINK                                      -->
     <!-- =================================================================== -->
-    <section id="contact" class="space-y-8">
+    <section id="uplink" class="space-y-6">
       
-      <div class="space-y-2">
-        <div class="text-xs font-mono uppercase tracking-widest text-accent-cyan font-semibold">08 // Communication</div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Direct Transmission Coordinates</h2>
+      <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+        <div>
+          <div class="text-xs font-mono text-hud-cyan uppercase tracking-widest font-bold">08 // TRANSMISSION CHANNELS</div>
+          <h2 class="text-2xl sm:text-3xl font-orbitron font-bold text-white mt-0.5">Direct Communication Uplink</h2>
+        </div>
+        <div class="font-mono text-xs text-slate-400">
+          STRATEGIC ROLES &bull; SYSTEMS ADVISORY
+        </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
-        <!-- Channels (5 cols) -->
+        <!-- Verified Channel Nodes (5 cols) -->
         <div class="lg:col-span-5 space-y-3 font-mono text-xs">
           
-          <a href="mailto:utkarsh.manoj.pandey@gmail.com" class="glass-panel glass-card-hover rounded-xl p-4 flex items-center justify-between block">
+          <a href="mailto:utkarsh.manoj.pandey@gmail.com" class="hud-card corner-bracket rounded-xl p-4 flex items-center justify-between block">
             <div>
-              <div class="text-slate-500 uppercase text-[11px]">Electronic Mail</div>
-              <div class="text-white font-semibold text-sm mt-0.5 break-all">utkarsh.manoj.pandey@gmail.com</div>
+              <div class="text-slate-500 uppercase text-[10px]">ELECTRONIC MAIL</div>
+              <div class="text-white font-bold text-sm mt-0.5 break-all">utkarsh.manoj.pandey@gmail.com</div>
             </div>
-            <span class="text-accent-cyan">&rarr;</span>
+            <span class="text-hud-cyan text-sm">&rarr;</span>
           </a>
 
-          <a href="tel:+919326625053" class="glass-panel glass-card-hover rounded-xl p-4 flex items-center justify-between block">
+          <a href="tel:+919326625053" class="hud-card corner-bracket rounded-xl p-4 flex items-center justify-between block">
             <div>
-              <div class="text-slate-500 uppercase text-[11px]">Direct Telephone</div>
-              <div class="text-white font-semibold text-sm mt-0.5">+91 9326625053</div>
+              <div class="text-slate-500 uppercase text-[10px]">VOICE &bull; WHATSAPP</div>
+              <div class="text-white font-bold text-sm mt-0.5">+91 9326625053</div>
             </div>
-            <span class="text-accent-cyan">&rarr;</span>
+            <span class="text-hud-cyan text-sm">&rarr;</span>
           </a>
 
-          <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank" rel="noopener noreferrer" class="glass-panel glass-card-hover rounded-xl p-4 flex items-center justify-between block">
+          <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank" rel="noopener noreferrer" class="hud-card corner-bracket rounded-xl p-4 flex items-center justify-between block">
             <div>
-              <div class="text-slate-500 uppercase text-[11px]">LinkedIn Profile</div>
-              <div class="text-white font-semibold text-sm mt-0.5">linkedin.com/in/itsutkarshpandey</div>
+              <div class="text-slate-500 uppercase text-[10px]">LINKEDIN NETWORK</div>
+              <div class="text-white font-bold text-sm mt-0.5">linkedin.com/in/itsutkarshpandey</div>
             </div>
-            <span class="text-accent-cyan">&rarr;</span>
+            <span class="text-hud-cyan text-sm">&rarr;</span>
           </a>
 
-          <a href="https://github.com/utkarsh-manoj-pandey" target="_blank" rel="noopener noreferrer" class="glass-panel glass-card-hover rounded-xl p-4 flex items-center justify-between block">
+          <a href="https://github.com/utkarsh-manoj-pandey" target="_blank" rel="noopener noreferrer" class="hud-card corner-bracket rounded-xl p-4 flex items-center justify-between block">
             <div>
-              <div class="text-slate-500 uppercase text-[11px]">GitHub Repositories</div>
-              <div class="text-white font-semibold text-sm mt-0.5">github.com/utkarsh-manoj-pandey</div>
+              <div class="text-slate-500 uppercase text-[10px]">SOURCE REPOSITORIES</div>
+              <div class="text-white font-bold text-sm mt-0.5">github.com/utkarsh-manoj-pandey</div>
             </div>
-            <span class="text-accent-cyan">&rarr;</span>
+            <span class="text-hud-cyan text-sm">&rarr;</span>
           </a>
 
-          <div class="glass-panel rounded-xl p-4">
-            <div class="text-slate-500 uppercase text-[11px]">Physical Base</div>
+          <div class="hud-card corner-bracket rounded-xl p-4">
+            <div class="text-slate-500 uppercase text-[10px]">GEOGRAPHIC COORDINATES</div>
             <div class="text-slate-200 text-sm mt-0.5">Mumbai : 400079, Maharashtra, India</div>
           </div>
 
         </div>
 
-        <!-- Transmission Form (7 cols) -->
-        <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8 space-y-4">
-          <h3 class="text-base font-bold text-white">Send Direct Message</h3>
+        <!-- Encrypted Message Dispatch (7 cols) -->
+        <div class="lg:col-span-7 hud-card corner-bracket rounded-xl p-6 sm:p-8 space-y-4">
+          <div class="text-sm font-orbitron font-bold text-white uppercase tracking-wider">
+            Dispatch Secure Transmission
+          </div>
           
-          <form onsubmit="handleContactDispatch(event)" class="space-y-4 text-xs font-mono">
+          <form onsubmit="dispatchTransmission(event)" class="space-y-4 text-xs font-mono">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-slate-400 mb-1">Your Name *</label>
-                <input type="text" id="dispatch-name" required placeholder="e.g. Elena Rostova" class="w-full bg-surface-900 border border-surface-750 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent-cyan transition">
+                <label class="block text-slate-400 mb-1">CALLSIGN / NAME *</label>
+                <input type="text" id="disp-name" required placeholder="e.g. Lead Architect" class="w-full bg-void border border-borderSubtle rounded px-4 py-2.5 text-white focus:outline-none focus:border-hud-cyan transition">
               </div>
               <div>
-                <label class="block text-slate-400 mb-1">Email Address *</label>
-                <input type="email" id="dispatch-email" required placeholder="elena@enterprise.com" class="w-full bg-surface-900 border border-surface-750 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent-cyan transition">
+                <label class="block text-slate-400 mb-1">ELECTRONIC MAIL *</label>
+                <input type="email" id="disp-email" required placeholder="architect@organization.com" class="w-full bg-void border border-borderSubtle rounded px-4 py-2.5 text-white focus:outline-none focus:border-hud-cyan transition">
               </div>
             </div>
 
             <div>
-              <label class="block text-slate-400 mb-1">Subject</label>
-              <input type="text" id="dispatch-subject" placeholder="Role Inquiry / Systems Advisory" class="w-full bg-surface-900 border border-surface-750 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent-cyan transition">
+              <label class="block text-slate-400 mb-1">SUBJECT</label>
+              <input type="text" id="disp-subject" placeholder="Systems Advisory / Technical Leadership Proposition" class="w-full bg-void border border-borderSubtle rounded px-4 py-2.5 text-white focus:outline-none focus:border-hud-cyan transition">
             </div>
 
             <div>
-              <label class="block text-slate-400 mb-1">Message Body *</label>
-              <textarea id="dispatch-message" required rows="4" placeholder="Detail your proposition, architecture inquiry, or opportunity..." class="w-full bg-surface-900 border border-surface-750 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent-cyan transition"></textarea>
+              <label class="block text-slate-400 mb-1">PAYLOAD *</label>
+              <textarea id="disp-msg" required rows="4" placeholder="Detail your proposition, architecture inquiry, or initiative..." class="w-full bg-void border border-borderSubtle rounded px-4 py-2.5 text-white focus:outline-none focus:border-hud-cyan transition"></textarea>
             </div>
 
             <div class="flex items-center justify-between pt-2">
-              <button type="submit" class="px-6 py-2.5 rounded-xl bg-white text-surface-950 font-semibold text-xs hover:bg-slate-200 transition">
-                Dispatch via Mail Client
+              <button type="submit" class="px-6 py-2.5 rounded bg-hud-cyan text-void font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-sky-300 transition">
+                DISPATCH VIA MAIL CLIENT
               </button>
-              <span id="dispatch-status" class="text-accent-emerald text-[11px] hidden font-mono">
-                ✓ Preparing default transmission client...
+              <span id="disp-feedback" class="text-hud-emerald text-[11px] font-mono hidden">
+                ✓ Generating local mailto payload...
               </span>
             </div>
           </form>
@@ -1204,46 +1299,48 @@
   </main>
 
   <!-- ===================================================================== -->
-  <!-- FOOTER                                                                -->
+  <!-- FOOTER & LEGAL NOTICE                                                 -->
   <!-- ===================================================================== -->
-  <footer class="border-t border-surface-800 bg-surface-950/80 py-12 px-4 sm:px-6 lg:px-8 relative z-10 text-xs font-mono text-slate-400">
+  <footer class="border-t border-borderSubtle bg-void py-12 px-4 sm:px-6 lg:px-8 relative z-10 text-xs font-mono text-slate-400">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       
       <div class="flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
-        <span class="text-white font-medium">Utkarsh Manoj Pandey</span>
-        <span class="text-surface-700">|</span>
-        <span>Systems &amp; Silicon Architecture</span>
+        <span class="w-2 h-2 rounded-full bg-hud-cyan led-live"></span>
+        <span class="text-white font-bold tracking-wider">UTKARSH MANOJ PANDEY</span>
+        <span class="text-slate-600">|</span>
+        <span>SYSTEMS &amp; SILICON ARCHITECT</span>
       </div>
 
       <div class="flex items-center gap-6">
-        <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank" class="hover:text-white transition">LinkedIn</a>
-        <a href="https://github.com/utkarsh-manoj-pandey" target="_blank" class="hover:text-white transition">GitHub</a>
-        <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank" class="hover:text-white transition">X / Twitter</a>
-        <a href="https://utkarshmanojpandey.blogspot.com/" target="_blank" class="hover:text-white transition">Blog</a>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-accent-cyan hover:underline">Top &uarr;</button>
+        <a href="https://linkedin.com/in/itsutkarshpandey/" target="_blank" class="hover:text-hud-cyan transition">LinkedIn</a>
+        <a href="https://github.com/utkarsh-manoj-pandey" target="_blank" class="hover:text-hud-cyan transition">GitHub</a>
+        <a href="https://twitter.com/_Pandey_Utkarsh" target="_blank" class="hover:text-hud-cyan transition">X / Twitter</a>
+        <a href="https://utkarshmanojpandey.blogspot.com/" target="_blank" class="hover:text-hud-cyan transition">Blog</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-hud-cyan hover:underline">Top &uarr;</button>
       </div>
 
       <div>
-        &copy; 2026 Utkarsh Manoj Pandey. All rights reserved.
+        [ 2026 // ALL SYSTEMS OPERATIONAL ]
       </div>
 
     </div>
   </footer>
 
   <!-- ===================================================================== -->
-  <!-- CURRICULUM VITAE MODAL (CLEAN PRINTABLE DOSSIER)                      -->
+  <!-- MASTER TECHNICAL DOSSIER MODAL                                        -->
   <!-- ===================================================================== -->
-  <div id="resume-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-200">
-    <div class="glass-panel rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-surface-700 shadow-2xl">
+  <div id="dossier-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-200">
+    <div class="hud-card corner-bracket rounded-xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-borderSubtle shadow-2xl">
       
-      <div class="h-14 px-6 bg-surface-900 border-b border-surface-800 flex items-center justify-between">
-        <span class="font-bold text-white text-xs sm:text-sm font-mono">UTKARSH_MANOJ_PANDEY_CURRICULUM_VITAE.PDF</span>
+      <div class="h-14 px-6 bg-panel border-b border-borderSubtle flex items-center justify-between select-none">
+        <span class="font-orbitron font-bold text-white text-xs sm:text-sm text-hud-cyan">
+          UTKARSH_MANOJ_PANDEY_TECHNICAL_DOSSIER.PDF
+        </span>
         <div class="flex items-center gap-3">
-          <button onclick="window.print()" class="px-3 py-1 rounded bg-white text-surface-950 font-mono text-xs font-semibold hover:bg-slate-200 transition">
-            Print / Save PDF
+          <button onclick="window.print()" class="px-3.5 py-1.5 rounded bg-hud-cyan text-void font-orbitron font-bold text-xs uppercase hover:bg-sky-300 transition">
+            Print / Export PDF
           </button>
-          <button onclick="closeResumeModal()" class="w-8 h-8 rounded hover:bg-surface-800 text-slate-400 hover:text-white flex items-center justify-center text-sm">
+          <button onclick="closeDossierModal()" class="w-8 h-8 rounded hover:bg-panel text-slate-400 hover:text-white flex items-center justify-center text-sm font-mono">
             ✕
           </button>
         </div>
@@ -1252,26 +1349,26 @@
       <div class="flex-1 p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-200 text-xs sm:text-sm font-sans leading-relaxed">
         
         <!-- Header -->
-        <div class="border-b border-surface-800 pb-4 text-center space-y-1">
-          <h2 class="text-2xl font-bold text-white tracking-tight">UTKARSH MANOJ PANDEY</h2>
-          <div class="text-accent-cyan font-mono text-xs font-semibold">AI &amp; INTELLIGENT SYSTEMS DEVELOPER</div>
+        <div class="border-b border-borderSubtle pb-4 text-center space-y-1">
+          <h2 class="text-2xl font-orbitron font-extrabold text-white tracking-wide">UTKARSH MANOJ PANDEY</h2>
+          <div class="text-hud-cyan font-mono text-xs font-semibold">AI &amp; INTELLIGENT SYSTEMS DEVELOPER</div>
           <div class="font-mono text-xs text-slate-400 pt-1 flex flex-wrap justify-center gap-3">
-            <span>+91 9326625053</span>
+            <span>📞 +91 9326625053</span>
             <span>&bull;</span>
-            <span>utkarsh.manoj.pandey@gmail.com</span>
+            <span>✉️ utkarsh.manoj.pandey@gmail.com</span>
             <span>&bull;</span>
-            <span>Mumbai : 400079, Maharashtra, India</span>
+            <span>📍 Mumbai : 400079, Maharashtra, India</span>
           </div>
           <div class="font-mono text-xs text-slate-400 flex flex-wrap justify-center gap-3">
-            <span>linkedin.com/in/itsutkarshpandey</span>
+            <span>LinkedIn: linkedin.com/in/itsutkarshpandey</span>
             <span>&bull;</span>
-            <span>github.com/utkarsh-manoj-pandey</span>
+            <span>GitHub: github.com/utkarsh-manoj-pandey</span>
           </div>
         </div>
 
         <!-- Executive Summary -->
         <div class="space-y-1">
-          <h4 class="font-bold text-white font-mono text-xs uppercase text-accent-cyan tracking-wider border-b border-surface-800 pb-1">Executive Summary</h4>
+          <h4 class="font-bold text-white font-mono text-xs uppercase text-hud-cyan tracking-wider border-b border-borderSubtle pb-1">Executive Summary</h4>
           <p class="text-slate-300 leading-relaxed pt-1">
             A highly driven and technically versatile developer specializing in AI-driven systems, intelligent assistants, and advanced automation workflows. Experienced in building end-to-end solutions including voice recognition, facial authentication, real-time browser automation, and full-stack application logic. Skilled in Python, Linux systems, embedded development on Raspberry Pi, and integrating modern LLMs such as Llama 3.3, DeepSeek R1, and multimodal pipelines. Known for rapid learning, problem-solving, and delivering cutting-edge, production-ready innovations like the SIFRA Personal Voice Assistant.
           </p>
@@ -1279,54 +1376,54 @@
 
         <!-- Professional Experience -->
         <div class="space-y-4">
-          <h4 class="font-bold text-white font-mono text-xs uppercase text-accent-emerald tracking-wider border-b border-surface-800 pb-1">Professional Experience</h4>
+          <h4 class="font-bold text-white font-mono text-xs uppercase text-hud-emerald tracking-wider border-b border-borderSubtle pb-1">Professional Experience</h4>
           
           <div class="space-y-1">
-            <div class="flex justify-between font-bold text-white">
+            <div class="flex justify-between font-bold text-white font-orbitron">
               <span>National Stock Exchange of India (NSE)</span>
-              <span class="font-mono text-xs text-slate-400">Dec 2024 – Dec 2025</span>
+              <span class="font-mono text-xs text-slate-400 font-normal">Dec 2024 – Dec 2025</span>
             </div>
-            <div class="text-accent-cyan font-mono text-xs">Data Operations Manager</div>
+            <div class="text-hud-cyan font-mono text-xs">Data Operations Manager</div>
             <ul class="list-disc list-inside space-y-1 text-slate-300 text-xs pt-1">
               <li>Conducted UAT (User Acceptance Testing) for the NSE's Nice Plus website, identifying and resolving usability or functionality issues.</li>
               <li>Coordinated UAT cycles with development and business teams, logging and tracking defect resolution to ensure timely sign-off before go-live.</li>
               <li>Validated end-to-end workflows during UAT against business requirements, helping improve platform reliability.</li>
               <li>Developed a complete Complaint Allocation Automation System from scratch, featuring interactive dashboards for complaints and officer performance tracking.</li>
               <li>Managed and analysed trade data across NSE, BSE, NSDL, and CDSL, contributing to data consistency and reliability.</li>
-              <li>Handled conciliation and arbitration case data with confidentiality; prepared Minutes of Meetings for arbitration hearings.</li>
+              <li>Handled conciliation and arbitration case data with confidentiality; prepared formal Minutes of Meetings for arbitration hearings.</li>
             </ul>
           </div>
 
           <div class="space-y-1">
-            <div class="flex justify-between font-bold text-white">
+            <div class="flex justify-between font-bold text-white font-orbitron">
               <span>Meta Scifor Technologies</span>
-              <span class="font-mono text-xs text-slate-400">Jan 2024 – Dec 2024</span>
+              <span class="font-mono text-xs text-slate-400 font-normal">Jan 2024 – Dec 2024</span>
             </div>
-            <div class="text-accent-cyan font-mono text-xs">Data Scientist</div>
+            <div class="text-hud-cyan font-mono text-xs">Data Scientist</div>
             <ul class="list-disc list-inside space-y-1 text-slate-300 text-xs pt-1">
-              <li>Delivered actionable insights to the Board supporting strategic decisions.</li>
+              <li>Delivered actionable outputs to the Board supporting strategic decisions.</li>
               <li>Engineered high-quality frontend and backend modules, optimizing performance.</li>
               <li>Developed and deployed predictive models in Python driving data-driven workflows.</li>
             </ul>
           </div>
 
           <div class="space-y-1">
-            <div class="flex justify-between font-bold text-white">
+            <div class="flex justify-between font-bold text-white font-orbitron">
               <span>Edureka</span>
-              <span class="font-mono text-xs text-slate-400">Jul 2023 – Dec 2023</span>
+              <span class="font-mono text-xs text-slate-400 font-normal">Jul 2023 – Dec 2023</span>
             </div>
-            <div class="text-accent-cyan font-mono text-xs">Data Scientist</div>
+            <div class="text-hud-cyan font-mono text-xs">Data Scientist</div>
             <ul class="list-disc list-inside space-y-1 text-slate-300 text-xs pt-1">
               <li>End-to-end pipeline design across Python, SQL, ML, Deep Learning, NLP, and Tableau.</li>
             </ul>
           </div>
 
           <div class="space-y-1">
-            <div class="flex justify-between font-bold text-white">
+            <div class="flex justify-between font-bold text-white font-orbitron">
               <span>Jaybee Steel Treaters Pvt Ltd.</span>
-              <span class="font-mono text-xs text-slate-400">Jan 2023 – Jul 2023</span>
+              <span class="font-mono text-xs text-slate-400 font-normal">Jan 2023 – Jul 2023</span>
             </div>
-            <div class="text-accent-cyan font-mono text-xs">Data Analyst</div>
+            <div class="text-hud-cyan font-mono text-xs">Data Analyst</div>
             <ul class="list-disc list-inside space-y-1 text-slate-300 text-xs pt-1">
               <li>Conducted analysis on large metallurgical datasets and deployed reporting dashboards.</li>
             </ul>
@@ -1335,19 +1432,19 @@
 
         <!-- Education -->
         <div class="space-y-2">
-          <h4 class="font-bold text-white font-mono text-xs uppercase text-accent-indigo tracking-wider border-b border-surface-800 pb-1">Education</h4>
+          <h4 class="font-bold text-white font-mono text-xs uppercase text-hud-indigo tracking-wider border-b border-borderSubtle pb-1">Education</h4>
           <div class="space-y-2 text-xs">
             <div>
               <div class="flex justify-between font-bold text-white">
                 <span>Master’s of Science in Information Technology (M.Sc. IT)</span>
-                <span class="font-mono text-accent-cyan">CGPA: 8.7</span>
+                <span class="font-mono text-hud-cyan">CGPA: 8.7</span>
               </div>
               <div class="text-slate-400">Mumbai University &bull; Grant Winner &bull; Final Project: Prometheus OS &amp; SIFRA on RPi5</div>
             </div>
             <div>
               <div class="flex justify-between font-bold text-white">
                 <span>Bachelor’s of Science in Information Technology (B.Sc. IT)</span>
-                <span class="font-mono text-accent-cyan">CGPA: 8.3</span>
+                <span class="font-mono text-hud-cyan">CGPA: 8.3</span>
               </div>
               <div class="text-slate-400">Mumbai University &bull; Event Lead &bull; Final Project: EDITH Voice Assistant on x86_64</div>
             </div>
@@ -1356,7 +1453,7 @@
 
         <!-- Certifications -->
         <div class="space-y-1">
-          <h4 class="font-bold text-white font-mono text-xs uppercase text-slate-400 tracking-wider border-b border-surface-800 pb-1">Industry Certifications</h4>
+          <h4 class="font-bold text-white font-mono text-xs uppercase text-slate-400 tracking-wider border-b border-borderSubtle pb-1">Industry Certifications</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs font-mono text-slate-300 pt-1">
             <div>• Data Science for Engineers (IIT Madras)</div>
             <div>• Geographical Information Systems (ISRO)</div>
@@ -1376,177 +1473,223 @@
   </div>
 
   <!-- ===================================================================== -->
-  <!-- TECHNICAL ARCHITECTURE SPECIFICATION MODAL                           -->
+  <!-- TECHNICAL SPECIFICATION MODAL                                         -->
   <!-- ===================================================================== -->
-  <div id="tech-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
-    <div class="glass-panel rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-4 border border-surface-700 shadow-2xl relative">
-      <button onclick="closeTechModal()" class="absolute top-5 right-5 w-8 h-8 rounded hover:bg-surface-800 text-slate-400 hover:text-white flex items-center justify-center text-sm">✕</button>
-      <div id="tech-modal-content"></div>
+  <div id="sys-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+    <div class="hud-card corner-bracket rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-4 border border-borderSubtle shadow-2xl relative">
+      <button onclick="closeSysModal()" class="absolute top-5 right-5 w-8 h-8 rounded hover:bg-panel text-slate-400 hover:text-white flex items-center justify-center text-sm font-mono">✕</button>
+      <div id="sys-modal-body"></div>
     </div>
   </div>
 
   <!-- ===================================================================== -->
-  <!-- JAVASCRIPT LOGIC ENGINE                                              -->
+  <!-- JAVASCRIPT MASTER TELEMETRY & 3D ENGINE                               -->
   <!-- ===================================================================== -->
   <script>
     /* =====================================================================
-     * 1. THREE.JS REFINED MATHEMATICAL NEURAL MESH
+     * 1. THREE.JS 3D KEPLERIAN CELESTIAL ORBITAL SIMULATION
      * ===================================================================== */
-    let scene, camera, renderer, meshGroup;
-    let targetX = 0, targetY = 0;
+    let scene, camera, renderer, solarGroup, planets = [];
+    let mouseX = 0, mouseY = 0;
 
-    function initThreeVisualizer() {
+    function initKeplerianSimulation() {
       const canvas = document.getElementById('three-canvas');
       scene = new THREE.Scene();
 
-      camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 2500);
-      camera.position.z = 850;
+      camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 3500);
+      camera.position.z = 1100;
+      camera.position.y = 350;
 
       renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setSize(window.innerWidth, window.innerHeight);
 
-      meshGroup = new THREE.Group();
+      solarGroup = new THREE.Group();
 
-      // Dual Geodesic Mathematical Core
-      const geo1 = new THREE.IcosahedronGeometry(220, 2);
-      const mat1 = new THREE.MeshBasicMaterial({
-        color: 0x38bdf8,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.18
+      // Central Solar / Core Sphere (Corona Glow)
+      const sunGeo = new THREE.SphereGeometry(65, 32, 32);
+      const sunMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true, transparent: true, opacity: 0.85 });
+      const sunMesh = new THREE.Mesh(sunGeo, sunMat);
+      solarGroup.add(sunMesh);
+
+      // Inner Glowing Core
+      const innerCoreGeo = new THREE.SphereGeometry(35, 16, 16);
+      const innerCoreMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const innerCore = new THREE.Mesh(innerCoreGeo, innerCoreMat);
+      solarGroup.add(innerCore);
+
+      // Planetary Orbits (5 Elliptical Orbits)
+      const orbitRadii = [180, 290, 420, 560, 720];
+      const planetColors = [0x00f0ff, 0x10b981, 0x818cf8, 0xf59e0b, 0xf43f5e];
+
+      orbitRadii.forEach((radius, i) => {
+        // Orbital trajectory line
+        const ringGeo = new THREE.RingGeometry(radius - 0.7, radius + 0.7, 64);
+        const ringMat = new THREE.MeshBasicMaterial({ color: 0x1e293b, side: THREE.DoubleSide, transparent: true, opacity: 0.6 });
+        const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+        ringMesh.rotation.x = Math.PI / 2;
+        solarGroup.add(ringMesh);
+
+        // Planet body
+        const pSize = 7 + (i * 2);
+        const pGeo = new THREE.SphereGeometry(pSize, 16, 16);
+        const pMat = new THREE.MeshBasicMaterial({ color: planetColors[i] });
+        const planet = new THREE.Mesh(pGeo, pMat);
+
+        solarGroup.add(planet);
+
+        planets.push({
+          mesh: planet,
+          radius: radius,
+          speed: 0.006 / (i * 0.4 + 1),
+          angle: Math.random() * Math.PI * 2
+        });
       });
-      const core1 = new THREE.Mesh(geo1, mat1);
-      meshGroup.add(core1);
 
-      const geo2 = new THREE.DodecahedronGeometry(130, 1);
-      const mat2 = new THREE.MeshBasicMaterial({
-        color: 0x818cf8,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.28
-      });
-      const core2 = new THREE.Mesh(geo2, mat2);
-      meshGroup.add(core2);
+      // Starfield Particles
+      const starCount = 1400;
+      const starGeo = new THREE.BufferGeometry();
+      const starPos = new Float32Array(starCount * 3);
+      const starColors = new Float32Array(starCount * 3);
 
-      // Starfield / Latent Space Nodes
-      const particleCount = 700;
-      const pGeometry = new THREE.BufferGeometry();
-      const pPositions = new Float32Array(particleCount * 3);
-      const pColors = new Float32Array(particleCount * 3);
-
-      const colorCyan = new THREE.Color(0x38bdf8);
-      const colorSlate = new THREE.Color(0x64748b);
-      const colorWhite = new THREE.Color(0xf8fafc);
-
-      for (let i = 0; i < particleCount * 3; i += 3) {
-        pPositions[i] = (Math.random() - 0.5) * 1800;
-        pPositions[i + 1] = (Math.random() - 0.5) * 1800;
-        pPositions[i + 2] = (Math.random() - 0.5) * 1800;
+      for (let i = 0; i < starCount * 3; i += 3) {
+        starPos[i] = (Math.random() - 0.5) * 2600;
+        starPos[i + 1] = (Math.random() - 0.5) * 2600;
+        starPos[i + 2] = (Math.random() - 0.5) * 2600;
 
         const rand = Math.random();
-        const c = rand < 0.4 ? colorCyan : (rand < 0.8 ? colorSlate : colorWhite);
-        pColors[i] = c.r;
-        pColors[i + 1] = c.g;
-        pColors[i + 2] = c.b;
+        starColors[i] = rand > 0.7 ? 0.22 : 0.6;
+        starColors[i + 1] = rand > 0.7 ? 0.74 : 0.7;
+        starColors[i + 2] = rand > 0.7 ? 0.97 : 0.85;
       }
 
-      pGeometry.setAttribute('position', new THREE.BufferAttribute(pPositions, 3));
-      pGeometry.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+      starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+      starGeo.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
 
-      const pMaterial = new THREE.PointsMaterial({
-        size: 2.2,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.45
-      });
+      const starMat = new THREE.PointsMaterial({ size: 2.2, vertexColors: true, transparent: true, opacity: 0.55 });
+      const starField = new THREE.Points(starGeo, starMat);
+      solarGroup.add(starField);
 
-      const particlePoints = new THREE.Points(pGeometry, pMaterial);
-      meshGroup.add(particlePoints);
+      // Incline solar group for cinematic Keplerian orbital tilt
+      solarGroup.rotation.x = 0.45;
+      solarGroup.rotation.z = -0.15;
+      scene.add(solarGroup);
 
-      scene.add(meshGroup);
+      window.addEventListener('resize', onSolarResize);
+      document.addEventListener('mousemove', onSolarMouseMove);
 
-      window.addEventListener('resize', onResize);
-      document.addEventListener('mousemove', onMouseMove);
-
-      renderLoop();
+      animateSolar();
     }
 
-    function onResize() {
+    function onSolarResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
-    function onMouseMove(e) {
-      targetX = (e.clientX - window.innerWidth / 2) * 0.25;
-      targetY = (e.clientY - window.innerHeight / 2) * 0.25;
+    function onSolarMouseMove(e) {
+      mouseX = (e.clientX - window.innerWidth / 2) * 0.2;
+      mouseY = (e.clientY - window.innerHeight / 2) * 0.2;
     }
 
-    function renderLoop() {
-      requestAnimationFrame(renderLoop);
+    function animateSolar() {
+      requestAnimationFrame(animateSolar);
 
-      if (meshGroup) {
-        meshGroup.rotation.y += 0.0015;
-        meshGroup.rotation.x += 0.0008;
+      // Rotate planets along Keplerian orbits
+      planets.forEach(p => {
+        p.angle += p.speed;
+        p.mesh.position.x = Math.cos(p.angle) * p.radius;
+        p.mesh.position.z = Math.sin(p.angle) * p.radius;
+      });
+
+      // Slowly rotate solar core
+      if (solarGroup) {
+        solarGroup.children[0].rotation.y += 0.004;
       }
 
-      camera.position.x += (targetX - camera.position.x) * 0.03;
-      camera.position.y += (-targetY - camera.position.y) * 0.03;
-      camera.lookAt(scene.position);
+      camera.position.x += (mouseX - camera.position.x) * 0.03;
+      camera.position.y += (350 - mouseY - camera.position.y) * 0.03;
+      camera.lookAt(0, 0, 0);
 
       renderer.render(scene, camera);
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      initThreeVisualizer();
-      initHeroRoleTyping();
+      initKeplerianSimulation();
+      initMastheadTyping();
+      initRealtimeTelemetry();
     });
 
     /* =====================================================================
-     * 2. TYPED ROLE SUBTITLE
+     * 2. TYPED MASTHEAD SUBTITLE
      * ===================================================================== */
-    const engineeringTitles = [
-      "AI & Intelligent Systems Architect",
-      "Creator of SIFRA Autonomous Voice Engine (RPi5 & NVMe)",
-      "Prometheus Operating System Architect (Arch Linux ARM64)",
-      "Ex-Data Operations Manager @ National Stock Exchange of India",
-      "LLM Optimization & Frontier Reasoning (Llama 3.3 · DeepSeek R1)"
+    const consoleDirectives = [
+      "Designing zero-compromise systems from 32-bit RISC-V silicon to low-latency runtimes.",
+      "Creator of SIFRA: Autonomous Sovereign Voice Assistant on Raspberry Pi 5 & M.2 NVMe.",
+      "Prometheus Operating System Architect: Custom Arch Linux ARM64 Kernel with direct SSD boot.",
+      "Ex-Data Operations Manager @ National Stock Exchange of India (Nice Plus Platform UAT).",
+      "Frontier Reasoning Pipelines: Fine-tuned Llama 3.3 and DeepSeek R1 Hybrid Automation."
     ];
-    let titleIdx = 0, charIdx = 0, isDeleting = false, delay = 60;
+    let directiveIdx = 0, letterIdx = 0, isErasing = false, typeSpeed = 55;
 
-    function initHeroRoleTyping() {
-      const el = document.getElementById('typed-role');
-      if (!el) return;
+    function initMastheadTyping() {
+      const target = document.getElementById('masthead-typing');
+      if (!target) return;
 
-      const current = engineeringTitles[titleIdx];
+      const fullText = consoleDirectives[directiveIdx];
 
-      if (isDeleting) {
-        el.textContent = current.substring(0, charIdx - 1);
-        charIdx--;
-        delay = 25;
+      if (isErasing) {
+        target.textContent = fullText.substring(0, letterIdx - 1);
+        letterIdx--;
+        typeSpeed = 22;
       } else {
-        el.textContent = current.substring(0, charIdx + 1);
-        charIdx++;
-        delay = 55;
+        target.textContent = fullText.substring(0, letterIdx + 1);
+        letterIdx++;
+        typeSpeed = 55;
       }
 
-      if (!isDeleting && charIdx === current.length) {
-        delay = 2400;
-        isDeleting = true;
-      } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        titleIdx = (titleIdx + 1) % engineeringTitles.length;
-        delay = 400;
+      if (!isErasing && letterIdx === fullText.length) {
+        typeSpeed = 2500;
+        isErasing = true;
+      } else if (isErasing && letterIdx === 0) {
+        isErasing = false;
+        directiveIdx = (directiveIdx + 1) % consoleDirectives.length;
+        typeSpeed = 400;
       }
 
-      setTimeout(initHeroRoleTyping, delay);
+      setTimeout(initMastheadTyping, typeSpeed);
     }
 
     /* =====================================================================
-     * 3. TERMINAL SHELL LOGIC
+     * 3. REALTIME CLOCK & JITTER TELEMETRY
      * ===================================================================== */
-    const terminalRoutines = {
+    function initRealtimeTelemetry() {
+      setInterval(() => {
+        const now = new Date();
+        const istStr = now.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour12: false }) + ' IST';
+        const clk = document.getElementById('top-clock');
+        if (clk) clk.textContent = istStr;
+
+        // Dynamic jitter simulation on CPU & NVMe
+        const cpu = (11 + Math.random() * 8).toFixed(1);
+        const io = Math.floor(620 + Math.random() * 120);
+
+        const cpuVal = document.getElementById('hud-cpu-val');
+        const cpuBar = document.getElementById('hud-cpu-bar');
+        const ioVal = document.getElementById('hud-io-val');
+        const ioBar = document.getElementById('hud-io-bar');
+
+        if (cpuVal) cpuVal.textContent = cpu + '%';
+        if (cpuBar) cpuBar.style.width = cpu + '%';
+        if (ioVal) ioVal.textContent = io + ' MB/s (Sequential Read)';
+        if (ioBar) ioBar.style.width = (io / 10) + '%';
+      }, 1000);
+    }
+
+    /* =====================================================================
+     * 4. TERMINAL SHELL LOGIC
+     * ===================================================================== */
+    const shellCommands = {
       help: () => `
 Available Inspection Commands:
   summary     - Architectural overview of Utkarsh Manoj Pandey
@@ -1554,13 +1697,13 @@ Available Inspection Commands:
   projects    - Technical breakdown of SIFRA, Prometheus OS & NSE Systems
   exp         - Professional career record (NSE, Meta Scifor, Edureka)
   edu         - Academic degrees, CGPA & competitive grant awards
-  bench       - Simulated edge inference latency on Broadcom BCM2712
+  bench       - Simulated edge benchmark on Broadcom BCM2712
   contact     - Communication channels & coordinates
   clear       - Clear console viewport
       `,
       summary: () => `
 UTKARSH MANOJ PANDEY
-Role: AI & Intelligent Systems Developer // Systems Architect
+Role: Systems Architect // AI & Intelligent Systems Developer
 Location: Mumbai : 400079, Maharashtra, India
 Credentials: M.Sc. IT (CGPA 8.7), B.Sc. IT (CGPA 8.3)
 Specialization: Embedded ARM/RISC-V, Local LLM inference, Enterprise Exchange Operations
@@ -1612,208 +1755,187 @@ Location: Mumbai : 400079, Maharashtra, India
       clear: () => "CLEAR"
     };
 
-    function handleTerminalInput() {
-      const input = document.getElementById('term-input');
+    function submitCliCommand() {
+      const input = document.getElementById('cli-cmd-input');
       const val = input.value.trim().toLowerCase();
       if (!val) return;
 
-      appendTermLine(`utkarsh@arch:~$ ${escapeHtml(input.value)}`, 'cmd');
+      appendCliLine(`utkarsh@arch:~$ ${escapeHtml(input.value)}`, 'cmd');
 
       if (val === 'clear') {
-        const out = document.getElementById('term-output');
-        if (out) out.innerHTML = '';
-      } else if (terminalRoutines[val]) {
-        appendTermLine(terminalRoutines[val](), 'res');
+        const port = document.getElementById('cli-viewport');
+        if (port) port.innerHTML = '';
+      } else if (shellCommands[val]) {
+        appendCliLine(shellCommands[val](), 'res');
       } else {
-        appendTermLine(`zsh: command not found: ${escapeHtml(val)}. Type 'help' for available inspection commands.`, 'err');
+        appendCliLine(`zsh: command not found: ${escapeHtml(val)}. Type 'help' for inspection commands.`, 'err');
       }
 
       input.value = '';
     }
 
-    function triggerTerminalCmd(cmd) {
-      const input = document.getElementById('term-input');
+    function runCliBtn(cmd) {
+      const input = document.getElementById('cli-cmd-input');
       if (input) {
         input.value = cmd;
-        handleTerminalInput();
+        submitCliCommand();
       }
     }
 
-    function appendTermLine(text, type) {
-      const out = document.getElementById('term-output');
-      if (!out) return;
-      const div = document.createElement('pre');
-      div.className = 'whitespace-pre-wrap font-mono text-xs ' + 
-        (type === 'cmd' ? 'text-accent-cyan font-semibold' : (type === 'err' ? 'text-rose-400' : 'text-slate-300'));
-      div.textContent = text;
-      out.appendChild(div);
-      out.scrollTop = out.scrollHeight;
+    function appendCliLine(text, type) {
+      const port = document.getElementById('cli-viewport');
+      if (!port) return;
+      const pre = document.createElement('pre');
+      pre.className = 'whitespace-pre-wrap font-mono text-xs ' + 
+        (type === 'cmd' ? 'text-hud-cyan font-bold' : (type === 'err' ? 'text-hud-rose' : 'text-slate-300'));
+      pre.textContent = text;
+      port.appendChild(pre);
+      port.scrollTop = port.scrollHeight;
     }
 
-    const termInputEl = document.getElementById('term-input');
-    if (termInputEl) {
-      termInputEl.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') handleTerminalInput();
+    const cliInput = document.getElementById('cli-cmd-input');
+    if (cliInput) {
+      cliInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') submitCliCommand();
       });
     }
 
     /* =====================================================================
-     * 4. SIFRA AI LIVE CONSOLE
+     * 5. SIFRA LIVE CONSOLE
      * ===================================================================== */
-    let voiceOutput = false;
+    let sifraVocalActive = false;
 
-    const sifraKnowledge = [
+    const sifraMemoryBank = [
       {
-        keys: ['nse', 'stock exchange', 'nice plus', 'complaint', 'trade', 'bse', 'nsdl', 'cdsl', 'arbitration'],
-        ans: "At the National Stock Exchange of India (NSE), Utkarsh served as Data Operations Manager (Dec 2024 – Dec 2025). He led User Acceptance Testing (UAT) for the Nice Plus website, ensuring systemic stability prior to production go-live. In addition, he engineered the Complaint Allocation Automation System from scratch with interactive real-time performance dashboards, managed trade data feeds across NSE, BSE, NSDL, and CDSL, and organized arbitration case data and formal Minutes of Meetings."
+        triggers: ['nse', 'stock exchange', 'nice plus', 'complaint', 'trade', 'bse', 'nsdl', 'cdsl', 'arbitration'],
+        response: "At the National Stock Exchange of India (NSE), Utkarsh served as Data Operations Manager (Dec 2024 – Dec 2025). He led User Acceptance Testing (UAT) for the Nice Plus website, ensuring systemic stability prior to production go-live. In addition, he engineered the Complaint Allocation Automation System from scratch with interactive real-time performance dashboards, managed trade data feeds across NSE, BSE, NSDL, and CDSL, and organized arbitration case data and formal Minutes of Meetings."
       },
       {
-        keys: ['sifra', 'hardware', 'raspberry', 'rpi', 'pi 5', 'nvme', 'facial', 'biometric', 'camera', 'i2s'],
-        ans: "SIFRA is Utkarsh's flagship edge assistant built on a physical Raspberry Pi 5 board (Broadcom BCM2712 Quad Cortex-A76 @ 2.4GHz) paired with an M.2 NVMe PCIe Gen 3 SSD. It operates with local fine-tuned open-source weight LLMs, continuous I2S ASR speech capture, dual biometric authentication (OV5647 camera sensor for facial verification and voiceprint matching), and automated browser navigation via Playwright/Selenium."
+        triggers: ['sifra', 'hardware', 'raspberry', 'rpi', 'pi 5', 'nvme', 'facial', 'biometric', 'camera', 'i2s'],
+        response: "SIFRA is Utkarsh's flagship edge assistant built on a physical Raspberry Pi 5 board (Broadcom BCM2712 Quad Cortex-A76 @ 2.4GHz) paired with an M.2 NVMe PCIe Gen 3 SSD. It operates with local fine-tuned open-source weight LLMs, continuous I2S ASR speech capture, dual biometric authentication (OV5647 camera sensor for facial verification and voiceprint matching), and automated browser navigation via Playwright/Selenium."
       },
       {
-        keys: ['prometheus', 'os', 'operating system', 'kernel', 'arch', 'grant', 'boot'],
-        ans: "Prometheus Operating System is an optimized Arch Linux derivative compiled for ARM Cortex-A76 microarchitectures on Raspberry Pi 5. It features direct external NVMe PCIe SSD boot, stripped background daemons for low latency, and automated recovery tools. This research won the competitive Inter-Collegiate Final Year Project Grant at Mumbai University during his M.Sc. IT."
+        triggers: ['prometheus', 'os', 'operating system', 'kernel', 'arch', 'grant', 'boot'],
+        response: "Prometheus Operating System is an optimized Arch Linux derivative compiled for ARM Cortex-A76 microarchitectures on Raspberry Pi 5. It features direct external NVMe PCIe SSD boot, stripped background daemons for low latency, and automated recovery tools. This research won the competitive Inter-Collegiate Final Year Project Grant at Mumbai University during his M.Sc. IT."
       },
       {
-        keys: ['education', 'degree', 'cgpa', 'm.sc', 'b.sc', 'mumbai university', 'score'],
-        ans: "Utkarsh holds a Master’s of Science in Information Technology (M.Sc. IT) with an 8.7 CGPA from Mumbai University, where he received the Final Year Project Grant for Prometheus OS and SIFRA. He also holds a Bachelor’s of Science in Information Technology (B.Sc. IT) with an 8.3 CGPA from Mumbai University, where he served as Event Lead and created the EDITH x86_64 voice assistant."
+        triggers: ['education', 'degree', 'cgpa', 'm.sc', 'b.sc', 'mumbai university', 'score'],
+        response: "Utkarsh holds a Master’s of Science in Information Technology (M.Sc. IT) with an 8.7 CGPA from Mumbai University, where he received the Final Year Project Grant for Prometheus OS and SIFRA. He also holds a Bachelor’s of Science in Information Technology (B.Sc. IT) with an 8.3 CGPA from Mumbai University, where he served as Event Lead and created the EDITH x86_64 voice assistant."
       },
       {
-        keys: ['skills', 'languages', 'tech', 'stack', 'python', 'c++', 'rust', 'go'],
-        ans: "Utkarsh is a polyglot proficient in Python, C++, C, Go, Rust, Java, Scala, Julia, and R. For scripting, he specializes in Bash and PowerShell. In databases, he works with SQL, NoSQL, SQLite, MongoDB, and OracleDB. In AI, he focuses on Llama 3.3, DeepSeek R1, multimodal pipelines, PyTorch, and OpenCV biometrics."
+        triggers: ['skills', 'languages', 'tech', 'stack', 'python', 'c++', 'rust', 'go'],
+        response: "Utkarsh is a polyglot proficient in Python, C++, C, Go, Rust, Java, Scala, Julia, and R. For scripting, he specializes in Bash and PowerShell. In databases, he works with SQL, NoSQL, SQLite, MongoDB, and OracleDB. In AI, he focuses on Llama 3.3, DeepSeek R1, multimodal pipelines, PyTorch, and OpenCV biometrics."
       },
       {
-        keys: ['contact', 'email', 'phone', 'reach', 'hire', 'location'],
-        ans: "You can reach Utkarsh directly via Email at utkarsh.manoj.pandey@gmail.com, Phone at +91 9326625053, or on LinkedIn at linkedin.com/in/itsutkarshpandey/. He is based in Mumbai (400079), Maharashtra, India."
+        triggers: ['contact', 'email', 'phone', 'reach', 'hire', 'location'],
+        response: "You can reach Utkarsh directly via Email at utkarsh.manoj.pandey@gmail.com, Phone at +91 9326625053, or on LinkedIn at linkedin.com/in/itsutkarshpandey/. He is based in Mumbai (400079), Maharashtra, India."
       }
     ];
 
-    function handleSifraMessage(e) {
+    function handleSifraSubmit(e) {
       if (e) e.preventDefault();
-      const input = document.getElementById('sifra-text-input');
+      const input = document.getElementById('sifra-input-field');
       const text = input.value.trim();
       if (!text) return;
 
-      appendChatMessage('USER', text);
+      appendSifraEntry('USER', text);
       input.value = '';
 
       setTimeout(() => {
-        const reply = getSifraResponse(text);
-        appendChatMessage('SIFRA', reply);
-        if (voiceOutput) vocalize(reply);
+        const reply = evaluateSifraQuery(text);
+        appendSifraEntry('SIFRA', reply);
+        if (sifraVocalActive) vocalizeSifra(reply);
       }, 300);
     }
 
-    function sendQuickPrompt(promptText) {
-      const input = document.getElementById('sifra-text-input');
+    function sendSifraPreset(txt) {
+      const input = document.getElementById('sifra-input-field');
       if (input) {
-        input.value = promptText;
-        handleSifraMessage();
+        input.value = txt;
+        handleSifraSubmit();
       }
     }
 
-    function getSifraResponse(query) {
-      const lower = query.toLowerCase();
-      for (const item of sifraKnowledge) {
-        if (item.keys.some(k => lower.includes(k))) return item.ans;
+    function evaluateSifraQuery(q) {
+      const lower = q.toLowerCase();
+      for (const item of sifraMemoryBank) {
+        if (item.triggers.some(t => lower.includes(t))) return item.response;
       }
-      return `Regarding "${query}": Utkarsh specializes in edge AI systems (SIFRA on RPi5), custom operating systems (Prometheus OS), and enterprise financial systems at the National Stock Exchange of India. Feel free to ask about his 8.7 CGPA M.Sc. IT degree, his technical stack, or his IIT Madras certifications.`;
+      return `Regarding "${q}": Utkarsh specializes in edge AI systems (SIFRA on RPi5), custom operating systems (Prometheus OS), and enterprise financial systems at the National Stock Exchange of India. Feel free to ask about his 8.7 CGPA M.Sc. IT degree, his technical stack, or his IIT Madras certifications.`;
     }
 
-    function appendChatMessage(sender, text) {
-      const log = document.getElementById('sifra-chat-log');
-      if (!log) return;
+    function appendSifraEntry(sender, text) {
+      const view = document.getElementById('sifra-chat-viewport');
+      if (!view) return;
 
       const row = document.createElement('div');
       row.className = 'flex items-start gap-3';
 
       if (sender === 'USER') {
         row.innerHTML = `
-          <div class="flex-1 bg-surface-850 border border-surface-750 rounded-xl p-4 text-xs sm:text-sm text-slate-100 leading-relaxed text-right ml-12">
+          <div class="flex-1 bg-panel border border-borderSubtle rounded-xl p-4 text-xs text-slate-100 leading-relaxed text-right ml-12">
             ${escapeHtml(text)}
           </div>
-          <div class="w-7 h-7 rounded bg-surface-750 flex items-center justify-center font-mono text-xs text-white font-bold flex-shrink-0">
+          <div class="w-7 h-7 rounded bg-borderSubtle flex items-center justify-center font-orbitron text-xs text-white font-bold flex-shrink-0">
             U
           </div>
         `;
       } else {
         row.innerHTML = `
-          <div class="w-7 h-7 rounded bg-surface-850 border border-surface-750 flex items-center justify-center font-mono text-xs text-accent-cyan font-bold flex-shrink-0">
+          <div class="w-7 h-7 rounded bg-panel border border-hud-cyan/40 flex items-center justify-center font-orbitron text-xs text-hud-cyan font-bold flex-shrink-0">
             S
           </div>
-          <div class="flex-1 bg-surface-900/90 border border-surface-800 rounded-xl p-4 text-xs sm:text-sm text-slate-200 leading-relaxed mr-12">
+          <div class="flex-1 bg-void border border-borderSubtle rounded-xl p-4 text-xs text-slate-200 leading-relaxed mr-12">
             ${escapeHtml(text)}
           </div>
         `;
       }
 
-      log.appendChild(row);
-      log.scrollTop = log.scrollHeight;
+      view.appendChild(row);
+      view.scrollTop = view.scrollHeight;
     }
 
-    function clearSifraLog() {
-      const log = document.getElementById('sifra-chat-log');
-      if (log) {
-        log.innerHTML = `
+    function clearSifraConsole() {
+      const view = document.getElementById('sifra-chat-viewport');
+      if (view) {
+        view.innerHTML = `
           <div class="flex items-start gap-3">
-            <div class="w-7 h-7 rounded bg-surface-850 border border-surface-750 flex items-center justify-center font-mono text-xs text-accent-cyan font-bold flex-shrink-0">
+            <div class="w-7 h-7 rounded bg-panel border border-hud-cyan/40 flex items-center justify-center font-orbitron text-xs text-hud-cyan font-bold flex-shrink-0">
               S
             </div>
-            <div class="bg-surface-900/90 border border-surface-800 rounded-xl p-4 text-xs sm:text-sm text-slate-200 leading-relaxed max-w-2xl">
-              Session initialized. Standing by for inquiries regarding Utkarsh Manoj Pandey's software engineering credentials and technical projects.
+            <div class="bg-void border border-borderSubtle rounded-xl p-4 text-xs text-slate-200 leading-relaxed max-w-3xl">
+              <span class="text-hud-cyan font-bold uppercase tracking-wider block mb-1">SIFRA Core Cleared:</span>
+              Buffer reset. Standing by for inquiries regarding Utkarsh Manoj Pandey's technical architectures.
             </div>
           </div>
         `;
       }
     }
 
-    function toggleSpeech() {
-      voiceOutput = !voiceOutput;
-      const ind = document.getElementById('tts-indicator');
-      const txt = document.getElementById('tts-text');
-      if (ind) ind.className = voiceOutput ? 'w-2 h-2 rounded-full bg-accent-emerald animate-pulse' : 'w-2 h-2 rounded-full bg-slate-600';
-      if (txt) txt.textContent = voiceOutput ? 'Voice Audio: Active' : 'Voice Audio: Muted';
-      if (voiceOutput) vocalize("Voice synthesis active. SIFRA ready.");
+    function toggleSifraVoice() {
+      sifraVocalActive = !sifraVocalActive;
+      const dot = document.getElementById('voice-dot');
+      const lbl = document.getElementById('voice-label');
+      if (dot) dot.className = sifraVocalActive ? 'w-2 h-2 rounded-full bg-hud-emerald led-live' : 'w-2 h-2 rounded-full bg-slate-600';
+      if (lbl) lbl.textContent = sifraVocalActive ? 'Voice Synthesis: Active' : 'Voice Synthesis: Muted';
+      if (sifraVocalActive) vocalizeSifra("Voice synthesis active. SIFRA neural core ready.");
     }
 
-    function vocalize(msg) {
+    function vocalizeSifra(txt) {
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
-      const utt = new SpeechSynthesisUtterance(msg);
-      utt.rate = 1.05;
-      utt.pitch = 0.95;
-      window.speechSynthesis.speak(utt);
+      const u = new SpeechSynthesisUtterance(txt);
+      u.rate = 1.05;
+      u.pitch = 0.95;
+      window.speechSynthesis.speak(u);
     }
 
     /* =====================================================================
-     * 5. ARCHITECTURE FILTERS & TECHNICAL MODAL
+     * 6. SYSTEM SPECIFICATION INSPECTOR
      * ===================================================================== */
-    function filterArchitectures(cat) {
-      const cards = document.querySelectorAll('.arch-card');
-      const btns = document.querySelectorAll('.arch-filter-btn');
-
-      btns.forEach(b => {
-        if (b.getAttribute('data-filter') === cat) {
-          b.className = 'arch-filter-btn px-3 py-1 rounded bg-surface-800 text-white font-medium';
-        } else {
-          b.className = 'arch-filter-btn px-3 py-1 rounded text-slate-400 hover:text-white';
-        }
-      });
-
-      cards.forEach(c => {
-        const itemCat = c.getAttribute('data-category') || '';
-        if (cat === 'all' || itemCat === cat) {
-          c.style.display = 'flex';
-        } else {
-          c.style.display = 'none';
-        }
-      });
-    }
-
-    const techSpecifications = {
+    const systemDatabase = {
       sifra: {
-        title: "SIFRA — Autonomous Edge Voice Assistant",
+        title: "SIFRA — Autonomous Edge AI Voice Assistant",
         sub: "Physical Hardware & AI Pipeline Specification",
         metrics: [
           { k: "Host Processor", v: "Broadcom BCM2712 Quad-Core ARM Cortex-A76 @ 2.4 GHz" },
@@ -1881,29 +2003,29 @@ Location: Mumbai : 400079, Maharashtra, India
       }
     };
 
-    function openTechModal(key) {
-      const modal = document.getElementById('tech-modal');
-      const content = document.getElementById('tech-modal-content');
-      const data = techSpecifications[key];
-      if (!modal || !content || !data) return;
+    function inspectSystem(k) {
+      const modal = document.getElementById('sys-modal');
+      const body = document.getElementById('sys-modal-body');
+      const sys = systemDatabase[k];
+      if (!modal || !body || !sys) return;
 
-      const metricsHtml = data.metrics.map(m => `
-        <div class="flex justify-between py-1.5 border-b border-surface-800 text-xs font-mono">
+      const mRows = sys.metrics.map(m => `
+        <div class="flex justify-between py-1.5 border-b border-borderSubtle text-xs font-mono">
           <span class="text-slate-400">${escapeHtml(m.k)}:</span>
           <span class="text-white font-medium">${escapeHtml(m.v)}</span>
         </div>
       `).join('');
 
-      content.innerHTML = `
+      body.innerHTML = `
         <div class="space-y-3 font-sans">
-          <div class="text-xs font-mono uppercase tracking-wider text-accent-cyan font-semibold">${escapeHtml(data.sub)}</div>
-          <h3 class="text-xl font-bold text-white">${escapeHtml(data.title)}</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${escapeHtml(data.body)}</p>
-          <div class="p-4 rounded-xl bg-surface-900 border border-surface-800 space-y-1">
-            ${metricsHtml}
+          <div class="text-xs font-mono uppercase tracking-wider text-hud-cyan font-bold">${escapeHtml(sys.sub)}</div>
+          <h3 class="text-xl font-orbitron font-bold text-white">${escapeHtml(sys.title)}</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${escapeHtml(sys.body)}</p>
+          <div class="p-4 rounded bg-void border border-borderSubtle space-y-1">
+            ${mRows}
           </div>
           <div class="pt-4 flex justify-end">
-            <button onclick="closeTechModal()" class="px-4 py-2 rounded-lg bg-surface-800 hover:bg-surface-700 text-white font-mono text-xs transition">
+            <button onclick="closeSysModal()" class="px-4 py-2 rounded bg-panel hover:bg-slate-800 text-white font-mono text-xs transition border border-borderSubtle">
               Close Specification
             </button>
           </div>
@@ -1913,21 +2035,21 @@ Location: Mumbai : 400079, Maharashtra, India
       modal.classList.remove('opacity-0', 'pointer-events-none');
     }
 
-    function closeTechModal() {
-      const modal = document.getElementById('tech-modal');
+    function closeSysModal() {
+      const modal = document.getElementById('sys-modal');
       if (modal) modal.classList.add('opacity-0', 'pointer-events-none');
     }
 
     /* =====================================================================
-     * 6. RESUME MODAL & MOBILE NAV
+     * 7. DOSSIER MODAL & DISPATCH
      * ===================================================================== */
-    function openResumeModal() {
-      const modal = document.getElementById('resume-modal');
+    function openDossierModal() {
+      const modal = document.getElementById('dossier-modal');
       if (modal) modal.classList.remove('opacity-0', 'pointer-events-none');
     }
 
-    function closeResumeModal() {
-      const modal = document.getElementById('resume-modal');
+    function closeDossierModal() {
+      const modal = document.getElementById('dossier-modal');
       if (modal) modal.classList.add('opacity-0', 'pointer-events-none');
     }
 
@@ -1936,21 +2058,18 @@ Location: Mumbai : 400079, Maharashtra, India
       if (nav) nav.classList.toggle('hidden');
     }
 
-    /* =====================================================================
-     * 7. CONTACT DISPATCH
-     * ===================================================================== */
-    function handleContactDispatch(e) {
+    function dispatchTransmission(e) {
       e.preventDefault();
-      const name = document.getElementById('dispatch-name').value;
-      const email = document.getElementById('dispatch-email').value;
-      const sub = document.getElementById('dispatch-subject').value || "Technical Opportunity / Architecture Inquiry";
-      const msg = document.getElementById('dispatch-message').value;
+      const n = document.getElementById('disp-name').value;
+      const em = document.getElementById('disp-email').value;
+      const s = document.getElementById('disp-subject').value || "Technical Transmission";
+      const m = document.getElementById('disp-msg').value;
 
-      const body = encodeURIComponent(`From: ${name} (${email})\n\n${msg}`);
-      const mailto = `mailto:utkarsh.manoj.pandey@gmail.com?subject=${encodeURIComponent(sub)}&body=${body}`;
+      const body = encodeURIComponent(`From: ${n} (${em})\n\n${m}`);
+      const mailto = `mailto:utkarsh.manoj.pandey@gmail.com?subject=${encodeURIComponent(s)}&body=${body}`;
 
-      const status = document.getElementById('dispatch-status');
-      if (status) status.classList.remove('hidden');
+      const fb = document.getElementById('disp-feedback');
+      if (fb) fb.classList.remove('hidden');
 
       window.location.href = mailto;
     }
