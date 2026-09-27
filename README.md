@@ -61,6 +61,13 @@
   </a>
 </p>
 
+<!-- Profile Visitor Counter -->
+<p align="center">
+  <a href="https://github.com/utkarsh-manoj-pandey">
+    <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=PROFILE+VIEWS&color=38bdf8&style=for-the-badge&labelColor=060c18" alt="Profile Views" />
+  </a>
+</p>
+
 <p align="center">
   <code>[ 2026 // UTKARSH MANOJ PANDEY // SYSTEMS &amp; SILICON LAB // ALL SYSTEMS OPERATIONAL ]</code>
 </p>
