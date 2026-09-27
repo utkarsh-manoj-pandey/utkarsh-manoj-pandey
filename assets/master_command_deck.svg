@@ -84,6 +84,13 @@
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
     </linearGradient>
 
+    <!-- Hero Name Typing ClipPath -->
+    <clipPath id="heroNameClip">
+      <rect x="-275" y="15" width="0" height="55">
+        <animate attributeName="width" values="0; 0; 560; 560; 560; 0" keyTimes="0; 0.04; 0.28; 0.90; 0.95; 1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
     <!-- Typing ClipPaths (12s cycle, non-overlapping) -->
     <clipPath id="cmd1Clip">
       <rect x="0" y="-18" width="0" height="30">
@@ -193,16 +200,24 @@
   </g>
 
   <!-- HERO TEXT -->
-  <g transform="translate(460, 55)" text-anchor="middle">
+  <g transform="translate(460, 50)" text-anchor="middle">
     <!-- Domain Pill -->
     <rect x="-185" y="0" width="370" height="22" rx="11" fill="#080e1b" stroke="#1e293b" stroke-width="0.8" />
     <text x="0" y="15" class="mono" font-size="9" fill="#38bdf8" font-weight="700" letter-spacing="1.8">SYSTEMS ARCHITECT · SILICON MICROARCH</text>
 
-    <!-- Name -->
-    <text x="0" y="52" class="sans" font-size="34" font-weight="800" fill="url(#metalType)" letter-spacing="-0.3">UTKARSH MANOJ PANDEY</text>
+    <!-- Name with Typing Reveal Animation (Enlarged: 42px) -->
+    <g clip-path="url(#heroNameClip)">
+      <text x="0" y="58" class="sans" font-size="42" font-weight="800" fill="url(#metalType)" letter-spacing="-0.3">UTKARSH MANOJ PANDEY</text>
+    </g>
+
+    <!-- Glowing Cyber Typing Cursor Bar -->
+    <rect y="24" width="3.5" height="38" rx="1.5" fill="#38bdf8">
+      <animate attributeName="x" values="-275; -275; 280; 280; 280; -275" keyTimes="0; 0.04; 0.28; 0.90; 0.95; 1" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1; 1; 1; 0.15; 1; 0.15; 1; 0.15; 1; 0; 0" keyTimes="0; 0.04; 0.28; 0.38; 0.48; 0.58; 0.68; 0.78; 0.88; 0.95; 1" dur="10s" repeatCount="indefinite" />
+    </rect>
 
     <!-- Subtitle -->
-    <text x="0" y="75" class="mono" font-size="10.5" fill="#64748b" letter-spacing="0.3">Designing zero-compromise systems from 32-bit RISC-V silicon to low-latency runtimes.</text>
+    <text x="0" y="85" class="mono" font-size="10.5" fill="#64748b" letter-spacing="0.3">Designing zero-compromise systems from 32-bit RISC-V silicon to low-latency runtimes.</text>
   </g>
 
   <!-- Orbital Paths (Center: 460, 300) -->
