@@ -1,0 +1,129 @@
+<svg width="850" height="135" viewBox="0 0 850 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hudCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090e1a" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#060912" stop-opacity="0.98" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+
+    <!-- Radar Sweep Gradient -->
+    <radialGradient id="radarSweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#00f5d4" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00f5d4" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+    @keyframes scanHoz {
+      0% { transform: translateY(0px); opacity: 0.3; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(115px); opacity: 0.1; }
+    }
+    .radar-arm {
+      transform-origin: 790px 68px;
+      animation: radarSpin 4s linear infinite;
+    }
+    .radar-blip {
+      animation: blinkDot 1.8s infinite ease-in-out;
+    }
+    .hud-header {
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      fill: #00f5d4;
+    }
+    .hud-sub {
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      fill: #8b949e;
+    }
+    .hud-val {
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #e6edf3;
+    }
+  </style>
+
+  <!-- Outer HUD Frame -->
+  <rect x="1" y="1" width="848" height="133" rx="8" fill="url(#hudCardBg)" stroke="#1a2333" stroke-width="1.5" />
+
+  <!-- Corner Brackets -->
+  <path d="M 4 14 L 4 4 L 14 4" stroke="#00f5d4" stroke-width="2" fill="none" />
+  <path d="M 846 14 L 846 4 L 836 4" stroke="#ff007f" stroke-width="2" fill="none" />
+  <path d="M 4 121 L 4 131 L 14 131" stroke="#7928ca" stroke-width="2" fill="none" />
+  <path d="M 846 121 L 846 131 L 836 131" stroke="#00f5d4" stroke-width="2" fill="none" />
+
+  <!-- Column 1: CORE ARCHITECTURE & FOCUS -->
+  <g transform="translate(24, 18)">
+    <text x="0" y="12" class="hud-header">/// 01. CORE ARCHITECTURE</text>
+    <line x1="0" y1="20" x2="220" y2="20" stroke="#1f293d" stroke-width="1" />
+    
+    <text x="0" y="40" class="hud-sub">PRIMARY DOMAIN:</text>
+    <text x="0" y="56" class="hud-val">AI/ML &amp; Data Engineering</text>
+    
+    <text x="0" y="76" class="hud-sub">SPECIALIZATION:</text>
+    <text x="0" y="92" class="hud-val">NLP, Deep Learning &amp; Predictive Analytics</text>
+  </g>
+
+  <!-- Divider 1 -->
+  <line x1="280" y1="20" x2="280" y2="115" stroke="#1b2537" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Column 2: ACTIVE PIPELINE & METRICS -->
+  <g transform="translate(305, 18)">
+    <text x="0" y="12" class="hud-header">/// 02. ACTIVE TELEMETRY</text>
+    <line x1="0" y1="20" x2="220" y2="20" stroke="#1f293d" stroke-width="1" />
+
+    <text x="0" y="40" class="hud-sub">CORE LANGUAGE RUNTIME:</text>
+    <text x="0" y="56" class="hud-val">Python 3.x (Production Grade)</text>
+
+    <text x="0" y="76" class="hud-sub">DATA ENGINE WORKFLOW:</text>
+    <text x="0" y="92" class="hud-val">Pandas • PyTorch • Scikit-Learn</text>
+  </g>
+
+  <!-- Divider 2 -->
+  <line x1="560" y1="20" x2="560" y2="115" stroke="#1b2537" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Column 3: RADAR & COLLABORATION STATUS -->
+  <g transform="translate(585, 18)">
+    <text x="0" y="12" class="hud-header">/// 03. RADAR &amp; ENGAGEMENT</text>
+    <line x1="0" y1="20" x2="240" y2="20" stroke="#1f293d" stroke-width="1" />
+
+    <text x="0" y="40" class="hud-sub">OPPORTUNITY BEACON:</text>
+    <text x="0" y="56" class="hud-val" fill="#00f5d4">● OPEN TO COLLABORATION</text>
+
+    <text x="0" y="76" class="hud-sub">GLOBAL DISPATCH:</text>
+    <text x="0" y="92" class="hud-val">Full-Time AI/ML &amp; Open Source</text>
+  </g>
+
+  <!-- Animated Radar Graphic -->
+  <g>
+    <circle cx="790" cy="68" r="32" stroke="#1a283e" stroke-width="1" fill="#070c18" />
+    <circle cx="790" cy="68" r="22" stroke="#1f3454" stroke-width="0.8" fill="none" />
+    <circle cx="790" cy="68" r="10" stroke="#2a456e" stroke-width="0.8" fill="none" />
+    <line x1="758" y1="68" x2="822" y2="68" stroke="#1a283e" stroke-width="0.7" />
+    <line x1="790" y1="36" x2="790" y2="100" stroke="#1a283e" stroke-width="0.7" />
+    
+    <!-- Rotating Sweep Beam -->
+    <path d="M 790 68 L 822 68 A 32 32 0 0 0 790 36 Z" fill="url(#radarSweep)" class="radar-arm" opacity="0.6" />
+    
+    <!-- Blinking target dots on radar -->
+    <circle cx="802" cy="55" r="2" fill="#00f5d4" class="radar-blip" />
+    <circle cx="780" cy="80" r="1.5" fill="#ff007f" class="radar-blip" style="animation-delay: 0.9s;" />
+  </g>
+</svg>

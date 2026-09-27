@@ -1,0 +1,20 @@
+<svg width="900" height="32" viewBox="0 0 900 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="snkBotBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#060911" />
+      <stop offset="50%" stop-color="#090f1d" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- Frame Bottom -->
+  <rect x="1" y="1" width="898" height="30" rx="6" fill="url(#snkBotBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Telemetry text -->
+  <text x="20" y="20" class="font-mono" font-size="9" fill="#64748b">AUTOMATED PIPELINE // GITHUB ACTIONS CI/CD ENGINE // 53-WEEK ROLLING GRID</text>
+  <text x="880" y="20" class="font-mono" font-size="9" fill="#38bdf8" text-anchor="end" font-weight="600">FEEDING ON REPOSITORY COMMITS</text>
+</svg>
