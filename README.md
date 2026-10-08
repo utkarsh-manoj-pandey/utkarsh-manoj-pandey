@@ -25,6 +25,12 @@
   </tr>
 </table>
 
+<p align="center">
+  <a href="https://github.com/utkarsh-manoj-pandey">
+    <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=PROFILE+VIEWS&color=38bdf8&style=for-the-badge&labelColor=060c18" alt="Profile Views" />
+  </a>
+</p>
+
 <br/>
 
 <!-- ===================================================================== -->
@@ -58,13 +64,6 @@
   &nbsp;&nbsp;
   <a href="https://utkarshmanojpandey.blogspot.com/" target="_blank">
     <img src="https://img.shields.io/badge/Blog-Articles-FF5722?style=for-the-badge&logo=blogger&logoColor=white" alt="Blog" />
-  </a>
-</p>
-
-<!-- Profile Visitor Counter -->
-<p align="center">
-  <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=PROFILE+VIEWS&color=38bdf8&style=for-the-badge&labelColor=060c18" alt="Profile Views" />
   </a>
 </p>
 
