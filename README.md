@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://komarev.com/ghpvc/?username=utkarsh-manoj-pandey&label=PROFILE+VIEWS&color=38bdf8&style=for-the-badge&labelColor=060c18" alt="Profile Views" />
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Futkarsh-manoj-pandey%2Futkarsh-manoj-pandey.json&style=for-the-badge&label=PROFILE%20VIEWS&labelColor=060c18&color=38bdf8&logo=target&logoColor=38bdf8" alt="Profile Views" />
   </a>
 </p>
 
