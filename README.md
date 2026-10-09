@@ -26,9 +26,13 @@
 </table>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/RADAR-TELEMETRY%20ACTIVE-060c18?style=for-the-badge&labelColor=060c18&color=10b981&logo=radar&logoColor=10b981" alt="Radar Active" />
+  &nbsp;&nbsp;
   <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Futkarsh-manoj-pandey%2Futkarsh-manoj-pandey.json&style=for-the-badge&label=PROFILE%20VIEWS&labelColor=060c18&color=38bdf8&logo=target&logoColor=38bdf8" alt="Profile Views" />
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Futkarsh-manoj-pandey%2Futkarsh-manoj-pandey.json&style=for-the-badge&label=VISITOR%20COUNT&labelColor=060c18&color=38bdf8&logo=target&logoColor=38bdf8" alt="Profile Views" />
   </a>
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/SYSTEM-ONLINE%202026-060c18?style=for-the-badge&labelColor=060c18&color=38bdf8&logo=statuspage&logoColor=38bdf8" alt="System Online" />
 </p>
 
 <br/>
