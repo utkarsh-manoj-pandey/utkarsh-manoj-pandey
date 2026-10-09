@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://github.com/utkarsh-manoj-pandey">
-    <img src="https://github-view-counter.vercel.app/api?username=utkarsh-manoj-pandey&layout=horizontal&style=rounded&label=PROFILE%20VIEWS:&bgColor=%230a0f1c&labelColor=%2394a3b8&color=%2338bdf8&iconColor=%2338bdf8&size=13" alt="Profile Views" />
+    <img src="https://views.igorkowalczyk.dev/api/badge/utkarsh-manoj-pandey?style=classic&color=38bdf8&labelColor=060c18&label=PROFILE+VIEWS" alt="Profile Views" />
   </a>
 </p>
 
